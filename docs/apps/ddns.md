@@ -172,14 +172,23 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: dict
         ddns_role_docker_envs_default:
           TZ: "{{ tz }}"
-          CLOUDFLARE_API_KEY: "{{ cloudflare.api }}"
-          CLOUDFLARE_EMAIL: "{{ cloudflare.email }}"
           CLOUDFLARE_PROXY_DEFAULT: "{{ dns_proxied | string }}"
+          CLOUDFLARE_ALLOW_NESTED_PROXY: "{{ cloudflare_allow_nested_proxy | default(false) | string }}"
           TRAEFIK_API_URL: "http://traefik:8080"
           TRAEFIK_ENTRYPOINTS: "websecure,web"
           CUSTOM_URLS: "{{ lookup('role_var', '_custom_urls', role='ddns', default=omit, default_if_empty=true) }}"
           IP_VERSION: "{{ 'both' if (dns_ipv4_enabled and dns_ipv6_enabled) else ('4' if dns_ipv4_enabled else '6') }}"
           DELAY: "{{ lookup('role_var', '_delay', role='ddns') }}"
+        ```
+
+    ??? variable dict "`ddns_role_docker_envs_cloudflare`"
+
+        ```yaml
+        # Type: dict
+        ddns_role_docker_envs_cloudflare: "{{ {'CLOUDFLARE_API_TOKEN': cloudflare_scoped_token}
+                                                if cloudflare_scoped_token_is_enabled
+                                                else {'CLOUDFLARE_API_KEY': cloudflare_api_key,
+                                                      'CLOUDFLARE_EMAIL': cloudflare_email} }}"
         ```
 
     ??? variable dict "`ddns_role_docker_envs_custom`"

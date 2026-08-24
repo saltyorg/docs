@@ -64,20 +64,21 @@ To edit any of the following configuration files, use the command written in the
 === "accounts.yml"
 
     ```yaml title="nano /srv/git/saltbox/accounts.yml"
-    --- # (11)!
+    --- # (12)!
     apprise: # (1)!
     cloudflare:
-      email: # (2)!
-      api: # (3)!
+      api: # (2)!
+      email: # (3)!
+      scoped_token: # (4)!
     dockerhub:
-      user: # (4)!
-      token: # (5)!
+      user: # (5)!
+      token: # (6)!
     user:
-      name: seed # (6)!
-      pass: password1234 # (7)!
-      domain: testsaltbox.ml # (8)!
-      email: your@email.com # (9)!
-      ssh_key: # (10)!
+      name: seed # (7)!
+      pass: password1234 # (8)!
+      domain: testsaltbox.ml # (9)!
+      email: your@email.com # (10)!
+      ssh_key: # (11)!
     ```
 
     1. apprise url. See <https://github.com/caronc/apprise#popular-notification-services> for more information.
@@ -86,37 +87,39 @@ To edit any of the following configuration files, use the command written in the
         apprise: discord://webhook_id/webhook_token
         ```
 
-    2. Email used for the Cloudflare account.
+    2. Preferred Cloudflare Global API Key. Leave blank when using a scoped token.
 
-    3. Cloudflare Global API Key.
+    3. Cloudflare account email required with the Global API Key. Leave blank when using a scoped token.
 
-    4. Docker Hub account name. Entering these credentials will at least double your image pull capacity from 100 every 6 hours to 200. <https://www.docker.com/blog/checking-your-current-docker-pull-rate-limits-and-status/>
+    4. Supported alternative Cloudflare account-owned or user-owned scoped token. Follow the [Cloudflare credential instructions](../../reference/domain.md#get-cloudflare-credentials) for the exact dashboard sections, permissions, and zone scope. Do not combine it with `api` or `email`.
 
-    5. Docker Hub account token. *Not your password.* A token can be created in the Security tab of your Docker Hub account.
+    5. Docker Hub account name. Entering these credentials will at least double your image pull capacity from 100 every 6 hours to 200. <https://www.docker.com/blog/checking-your-current-docker-pull-rate-limits-and-status/>
 
-    6. Username that will be created (if it doesn't exist) during the installation and apps that have automatic user configuration.
+    6. Docker Hub account token. *Not your password.* A token can be created in the Security tab of your Docker Hub account.
+
+    7. Username that will be created (if it doesn't exist) during the installation and apps that have automatic user configuration.
 
         Do not use root.
 
         Required.
 
-    7. Password used for username account during the installation and apps that have automatic user configuration.
+    8. Password used for username account during the installation and apps that have automatic user configuration.
 
         See the [password considerations.](../../reference/accounts.md#password-considerations)
 
         Required.
 
-    8. Domain that you want to use for the server.
+    9. Domain that you want to use for the server.
 
         Required.
 
-    9. Email address used for Let's Encrypt SSL certificates.
+    10. Email address used for Let's Encrypt SSL certificates.
 
         Required.
 
-    10. SSH Public Key. The key will be added to your configured user's `authorized_keys` file. This parameter accepts either the public key or a GitHub url (i.e. [https://github.com/charlie.keys](https://github.com/charlie.keys)) which will pull the keys you have added to your GitHub account.
+    11. SSH Public Key. The key will be added to your configured user's `authorized_keys` file. This parameter accepts either the public key or a GitHub url (i.e. [https://github.com/charlie.keys](https://github.com/charlie.keys)) which will pull the keys you have added to your GitHub account.
 
-    11. See [accounts configuration](../../reference/accounts.md) for more information about these settings.
+    12. See [accounts configuration](../../reference/accounts.md) for more information about these settings.
 
 === "settings.yml"
 

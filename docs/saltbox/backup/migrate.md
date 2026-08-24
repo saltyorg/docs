@@ -51,7 +51,7 @@ Listed below are some common scenarios and their migration instructions.
 
     1. Register your domain with [Cloudflare](../../faq/cloudflare.md).
 
-    2. Add the Cloudflare API into [Accounts](../install/install.md#step-2-configuration).
+    2. Add the preferred Cloudflare Global API Key and account email, or a scoped token, into [Accounts](../install/install.md#step-2-configuration).
 
 4. If you are not using Cloudflare:
 
@@ -85,7 +85,7 @@ Listed below are some common scenarios and their migration instructions.
 
     1. Register your domain with [Cloudflare](../../faq/cloudflare.md).
 
-    2. Add the Cloudflare API into [Accounts](../install/install.md#step-2-configuration).
+    2. Add the preferred Cloudflare Global API Key and account email, or a scoped token, into [Accounts](../install/install.md#step-2-configuration).
 
 4. If you are not using Cloudflare:
 

@@ -70,17 +70,20 @@ Each tab shows a "section" in the file.
 
     ```yaml
     cloudflare:
-      email:
       api:
+      email:
+      scoped_token:
     ```
 
-    `email`: E-mail address used for the Cloudflare account.
+    `scoped_token`: Supported alternative Cloudflare account-owned or user-owned API token. Follow the [Cloudflare credential instructions](domain.md#get-cloudflare-credentials) for the exact dashboard sections, permissions, and zone scope.
 
-    `api`: [Global API Key](domain.md#get-a-free-cloudflare-api-key).
+    `api`: Preferred [Global API Key](domain.md#get-cloudflare-credentials).
+
+    `email`: E-mail address required with the Global API Key.
 
     These parameters are optional.
     Default is blank.
-    Fill this in to have Saltbox add subdomains on Cloudflare, automatically; leave it blank, to have all Cloudflare related functions disabled.
+    Configure `scoped_token`, or configure `api` and `email` together, to enable Cloudflare automation. The two authentication modes cannot be combined. Leave all three blank to disable Cloudflare functions.
     Cloudflare does not support all top-level domains though its API. Refer to [this page](https://support.cloudflare.com/hc/en-us/articles/360020296512-DNS-Troubleshooting-FAQ#h_84167303211544035341531). As of 2022/11/03:  "DNS API cannot be used for domains with .cf, .ga, .gq, .ml, or .tk TLDs."
 
 === "dockerhub"

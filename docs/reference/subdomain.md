@@ -13,7 +13,7 @@ Setup instructions are separated based on the DNS Provider you use and the type 
 
 Saltbox will automatically add the subdomain on Cloudflare and point it to the correct IP address.
 
-_Note 1: Make sure the Cloudflare API Key is filled in [settings.yml](accounts.md) and the e-mail address matches the one you have in your Cloudflare account profile._
+_Note 1: Configure the preferred Cloudflare Global API Key and account email, or use a scoped token as an alternative, in [accounts.yml](accounts.md)._
 
 _Note 2: There may be some subdomains that you have to add in yourself if Saltbox doesn’t so it for you, such as the Saltbox type ones (eg `saltbox`, `feederbox`, `mediabox`)._
 

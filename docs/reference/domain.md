@@ -63,7 +63,7 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
 
     -   For Cloudflare users.
 
-        Note: if you provide a Cloudflare email and Global API Key in your settings, the Saltbox installer will set this up for you automatically. See the tab to the right for details about this optional automation.
+        Note: if you provide the preferred Cloudflare Global API Key and account email, or a scoped token, the Saltbox installer will set this up for you automatically. See the tab to the right for details about this optional automation.
 
     === "Saltbox Install Type"
         You will need to create A Records for all Saltbox subdomains.
@@ -108,7 +108,7 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
 
 === "Automatic Cloudflare DNS"
 
-    if you provide a Cloudflare email and Global API Key in Saltbox settings, the Saltbox installer will set this stuff up for you automatically.
+    if you provide the preferred Cloudflare Global API Key and account email, or a scoped token, in Saltbox settings, the Saltbox installer will set this stuff up for you automatically.
 
     **Notes:**
 
@@ -121,8 +121,8 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
     If you want Saltbox to work with Cloudflare and automate setting up DNS, you need to:
 
     1.  Set up Cloudflare as your DNS provider
-    2.  Get a (free) Cloudflare Global API Key
-    3.  Enter that Global API key into the Saltbox settings
+    2.  Retrieve the preferred Cloudflare Global API Key, or create a scoped API token
+    3.  Enter the selected credentials into the Saltbox settings
     4.  run the saltbox install, during which all the required subdomains will be created at Cloudflare for you
     5.  do some optional post-install adjustments.
 
@@ -130,7 +130,7 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
 
     [Cloudflare](https://www.cloudflare.com) a service that, among other things, protects and accelerates a wide network of websites. By being the "man in the middle", it can act like a free DNS provider.
 
-    Saltbox makes adding subdomains to Cloudflare's DNS settings a breeze via automation. All you need is the Global API key.
+    Saltbox makes adding subdomains to Cloudflare's DNS settings a breeze via automation. Saltbox prefers the Global API Key and account email. A scoped API token is also supported when limiting access to the required zone and operations is desired.
 
     Note that there are some top-level domains (TLDs) that will not work with this automation. Refer to [this page](https://developers.cloudflare.com/dns/troubleshooting/faq/#why-cant-i-add-certain-tlds-via-the-dns-api).
 
@@ -178,29 +178,69 @@ Pick one of the setups below. Your choice will depend on whether you meet certai
 
     3.  Navigate to **SSL/TLS**:material-chevron-right:**Overview** and ensure encryption mode is set to **Full (strict)**.
 
-    #### Get a (free) Cloudflare API Key
+    #### Get Cloudflare credentials
 
-    1.  Go to [Cloudflare dashboard](https://dash.cloudflare.com) and select your account.
+    Saltbox supports two mutually exclusive Cloudflare authentication methods. The Global API Key and account email are preferred; a scoped token is an alternative.
 
-    2.  Click the **Overview** tab.
+    ##### Preferred: Global API Key
 
-    3.  Click **Get your API token**.
+    1.  Go to the [Cloudflare dashboard](https://dash.cloudflare.com).
 
-        ![Cloudflare Overview tab showing 'Get your API token' button](../images/cloudflare/cloudflare-api-token.png){ width=60% }
+    2.  Open **User Profile** → **API Tokens**.
 
-    4.  Under **API Keys** and then **Global API Key** click **View**.
+    3.  In the **API Keys** section, find **Global API Key** and select **View**.
 
-        ![Cloudflare API Keys section highlighting Global API Key View button](../images/cloudflare/cloudflare-global-api.png){ width=60% }
+    4.  Complete Cloudflare's identity confirmation and save the displayed key securely.
 
-    5.  On the login popup, type in your **password** and click **View**.
+    5.  Configure the Global API Key and the email address of its Cloudflare user in `/srv/git/saltbox/accounts.yml`, leaving the scoped token blank:
 
-        ![Cloudflare password confirmation dialog for viewing API key](../images/cloudflare/cloudflare-api-password.png){ width=50% }
+        ```yaml
+        cloudflare:
+          api: "your-global-api-key"
+          email: "your-cloudflare-account-email"
+          scoped_token:
+        ```
 
-    6.  Save your API key.
+    ##### Alternative: scoped API token
 
-        ![Cloudflare interface displaying the Global API Key for copying](../images/cloudflare/cloudflare-api-show.png){ width=50% }
+    1.  Go to the [Cloudflare dashboard](https://dash.cloudflare.com) and select your account.
 
-    #### Add the Cloudflare API Key to the saltbox settings:
+    2.  Open **Manage Account** → **Account API Tokens**.
+
+    3.  Select **Create Token**, give the token a descriptive name such as `Saltbox`, and add these exact website selections:
+
+        | Section | Setting | Access | Saltbox usage |
+        | --- | --- | --- | --- |
+        | **DNS and Zones** | **Zone** | **Read** | Find the managed zone and its zone ID. |
+        | **DNS and Zones** | **DNS** | **Edit** | Read, create, update, and remove DNS records. |
+        | **DNS and Zones** | **Zone Settings** | **Read** | Read the zone SSL/TLS mode during diagnostics. |
+        | **Cache and Performance** | **Cache Purge** | **Purge** | Purge the zone cache after Saltbox changes. |
+        | **Rules and Configuration** | **Config Settings** | **Edit** | Manage the `http_config_settings` Configuration Rule used for certificate challenges. |
+
+        These are dashboard sections, not API resource scopes. Cloudflare's API catalog describes the two **Edit** selections as `Write`, but the website labels the access level **Edit**. Do not select **Select Configuration** in place of **Config Settings**; it is account-scoped and is not the zone-scoped Configuration Settings permission Saltbox needs.
+
+        Account-owned tokens cannot access Cloudflare Page Rules. Saltbox does not require Page Rules: it uses the zone-scoped `http_config_settings` Configuration Rule to disable Browser Integrity Check for ACME challenge requests, which provides the same behavior for the managed zone.
+
+    4.  Under **Zone Resources**, select **Include** → **Specific zone** and select the zone containing the domain configured in Saltbox. For example, a Saltbox domain of `home.example.com` normally uses the `example.com` Cloudflare zone.
+
+    5.  Optionally set an expiration date, then select **Continue to summary**. Confirm that the summary contains only the five section, setting, and access combinations above and the intended zone.
+
+    6.  Select **Create Token** and save the token securely. Cloudflare displays the secret only once.
+
+    7.  Configure the token in `/srv/git/saltbox/accounts.yml`, leaving the Global API Key and email blank:
+
+        ```yaml
+        cloudflare:
+          api:
+          email:
+          scoped_token: "your-account-token"
+        ```
+
+        Do not configure `scoped_token` together with `api` or `email`; Saltbox rejects mixed authentication modes.
+
+    A user-owned scoped token from **My Profile** → **API Tokens** is also supported. The Global API Key and account email cannot be combined with a scoped token.
+
+    #### Add the Cloudflare credentials to Saltbox
 
     See [here](accounts.md) for more information about these settings.
 

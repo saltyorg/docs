@@ -303,7 +303,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         nzbhydra2_role_config_settings_jvm_memory: "{{ ((ansible_facts['memory_mb']['real']['total'] / 1024)
-                                                       | round(0, 'ceil') | int >= 8)
+                                                        | round(0, 'ceil') | int >= 8)
                                                        | ternary('512', '256') }}"
         ```
 

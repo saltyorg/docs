@@ -635,6 +635,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           - '{ "traefik.http.routers.{{ traefik_router }}-triggers.middlewares": "{{ traefik_middleware | regex_replace(autoscan_role_traefik_regex_middleware_string) }}" }'
         ```
 
+    ??? variable string "`autoscan_role_docker_labels_trigger_certificates`{ .sb-show-on-unchecked }`autoscan2_docker_labels_trigger_certificates`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        autoscan_role_docker_labels_trigger_certificates: "{{ traefik_router_certificate_domains
+                                                              | traefik_certificate_labels(traefik_router + '-triggers') }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        autoscan2_docker_labels_trigger_certificates: "{{ traefik_router_certificate_domains
+                                                          | traefik_certificate_labels(traefik_router + '-triggers') }}"
+        ```
+
     ??? variable dict "`autoscan_role_docker_labels_custom`{ .sb-show-on-unchecked }`autoscan2_docker_labels_custom`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

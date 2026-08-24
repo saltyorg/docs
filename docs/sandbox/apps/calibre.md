@@ -219,16 +219,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         calibre2_web2_port: "8081"
         ```
 
-    ??? variable string "`calibre_role_web2_role_web_url`{ .sb-show-on-unchecked }`calibre2_web2_role_web_url`{ .sb-show-on-checked }"
+    ??? variable string "`calibre_role_web2_url`{ .sb-show-on-unchecked }`calibre2_web2_url`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        calibre_role_web2_role_web_url: "{{ lookup('role_web', role='calibre', endpoint='web2', scheme='https') }}"
+        calibre_role_web2_url: "{{ lookup('role_web', role='calibre', endpoint='web2', scheme='https') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        calibre2_web2_role_web_url: "{{ lookup('role_web', role='calibre', endpoint='web2', scheme='https') }}"
+        calibre2_web2_url: "{{ lookup('role_web', role='calibre', endpoint='web2', scheme='https') }}"
         ```
 
 === "DNS"
@@ -629,6 +629,40 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.tls.certresolver": "{{ lookup("role_var", "_traefik_certresolver", role="calibre") }}" }'
           - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.priority": "20" }'
           - '{ "traefik.http.services.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.loadbalancer.server.port": "{{ lookup("role_var", "_web2_port", role="calibre") }}" }'
+        ```
+
+    ??? variable string "`calibre_role_docker_labels_books_certificate_domains`{ .sb-show-on-unchecked }`calibre2_docker_labels_books_certificate_domains`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        calibre_role_docker_labels_books_certificate_domains: "{{ lookup('role_var', '_web2_domain', role='calibre')
+                                                                  | traefik_certificate_domains([],
+                                                                                                [],
+                                                                                                lookup('role_var', '_traefik_wildcard_enabled', role='calibre', default=(not traefik_http)),
+                                                                                                traefik_certificate_authoritative_zones) }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        calibre2_docker_labels_books_certificate_domains: "{{ lookup('role_var', '_web2_domain', role='calibre')
+                                                              | traefik_certificate_domains([],
+                                                                                            [],
+                                                                                            lookup('role_var', '_traefik_wildcard_enabled', role='calibre', default=(not traefik_http)),
+                                                                                            traefik_certificate_authoritative_zones) }}"
+        ```
+
+    ??? variable string "`calibre_role_docker_labels_books_certificates`{ .sb-show-on-unchecked }`calibre2_docker_labels_books_certificates`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        calibre_role_docker_labels_books_certificates: "{{ calibre_role_docker_labels_books_certificate_domains
+                                                           | traefik_certificate_labels(lookup('role_var', '_web2_subdomain', role='calibre')) }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        calibre2_docker_labels_books_certificates: "{{ calibre_role_docker_labels_books_certificate_domains
+                                                       | traefik_certificate_labels(lookup('role_var', '_web2_subdomain', role='calibre')) }}"
         ```
 
     ??? variable dict "`calibre_role_docker_labels_custom`{ .sb-show-on-unchecked }`calibre2_docker_labels_custom`{ .sb-show-on-checked }"

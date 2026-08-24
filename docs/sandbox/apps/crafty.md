@@ -151,11 +151,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         crafty_role_dynmap_web_port: "8123"
         ```
 
-    ??? variable string "`crafty_role_dynmap_host`"
+    ??? variable string "`crafty_role_dynmap_web_host`"
 
         ```yaml
         # Type: string
-        crafty_role_dynmap_host: "{{ lookup('role_web', role='crafty', endpoint='dynmap_web') }}"
+        crafty_role_dynmap_web_host: "{{ lookup('role_web', role='crafty', endpoint='dynmap_web') }}"
         ```
 
 === "DNS"
@@ -192,7 +192,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        crafty_role_dynmap_dns_zone: "{{ lookup('role_var', '_web_domain', role='crafty') }}"
+        crafty_role_dynmap_dns_zone: "{{ lookup('role_var', '_dynmap_web_domain', role='crafty') }}"
         ```
 
     ??? variable bool "`crafty_role_dynmap_dns_proxy`"
@@ -373,17 +373,36 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         crafty_role_docker_labels_default:
           - '{ "traefik.http.routers.{{ crafty_name }}-map-http.entrypoints": "web" }'
           - '{ "traefik.http.routers.{{ crafty_name }}-map-http.service": "{{ crafty_name }}-map" }'
-          - '{ "traefik.http.routers.{{ crafty_name }}-map-http.rule": "Host(`{{ lookup("role_var", "_dynmap_host", role="crafty") }}`)" }'
+          - '{ "traefik.http.routers.{{ crafty_name }}-map-http.rule": "Host(`{{ lookup("role_var", "_dynmap_web_host", role="crafty") }}`)" }'
           - '{ "traefik.http.routers.{{ crafty_name }}-map-http.middlewares": "{{ traefik_default_middleware_http }}" }'
           - '{ "traefik.http.routers.{{ crafty_name }}-map-http.priority": "20" }'
           - '{ "traefik.http.routers.{{ crafty_name }}-map.entrypoints": "websecure" }'
           - '{ "traefik.http.routers.{{ crafty_name }}-map.service": "{{ crafty_name }}-map" }'
-          - '{ "traefik.http.routers.{{ crafty_name }}-map.rule": "Host(`{{ lookup("role_var", "_dynmap_host", role="crafty") }}`)" }'
+          - '{ "traefik.http.routers.{{ crafty_name }}-map.rule": "Host(`{{ lookup("role_var", "_dynmap_web_host", role="crafty") }}`)" }'
           - '{ "traefik.http.routers.{{ crafty_name }}-map.tls.options": "securetls@file" }'
           - '{ "traefik.http.routers.{{ crafty_name }}-map.tls.certresolver": "{{ lookup("role_var", "_traefik_certresolver", role="crafty") }}" }'
           - '{ "traefik.http.routers.{{ crafty_name }}-map.middlewares": "{{ traefik_default_middleware }}" }'
           - '{ "traefik.http.routers.{{ crafty_name }}-map.priority": "20" }'
           - '{ "traefik.http.services.{{ crafty_name }}-map.loadbalancer.server.port": "{{ lookup("role_var", "_dynmap_web_port", role="crafty") }}" }'
+        ```
+
+    ??? variable string "`crafty_role_docker_labels_dynmap_certificate_domains`"
+
+        ```yaml
+        # Type: string
+        crafty_role_docker_labels_dynmap_certificate_domains: "{{ lookup('role_var', '_dynmap_web_domain', role='crafty')
+                                                                  | traefik_certificate_domains([],
+                                                                                                [],
+                                                                                                lookup('role_var', '_traefik_wildcard_enabled', role='crafty', default=(not traefik_http)),
+                                                                                                traefik_certificate_authoritative_zones) }}"
+        ```
+
+    ??? variable string "`crafty_role_docker_labels_dynmap_certificates`"
+
+        ```yaml
+        # Type: string
+        crafty_role_docker_labels_dynmap_certificates: "{{ crafty_role_docker_labels_dynmap_certificate_domains
+                                                           | traefik_certificate_labels(crafty_name + '-map') }}"
         ```
 
     ??? variable dict "`crafty_role_docker_labels_custom`"

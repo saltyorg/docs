@@ -370,7 +370,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        authentik_role_web_outpost_rule: "Host(`{{ lookup('role_var', '_web_host', role='authentik') }}`) && PathPrefix(`/outpost.goauthentik.io/`)"
+        authentik_role_web_outpost_rule: "{{ traefik_host_template }} && PathPrefix(`/outpost.goauthentik.io/`)"
         ```
 
 === "DNS"
@@ -633,6 +633,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           traefik.http.routers.authentik-outpost.priority: "99"
           traefik.http.services.authentik-outpost-http.loadbalancer.server.port: "{{ lookup('role_var', '_web_port', role='authentik') }}"
           traefik.http.services.authentik-outpost.loadbalancer.server.port: "{{ lookup('role_var', '_web_port', role='authentik') }}"
+        ```
+
+    ??? variable string "`authentik_role_docker_labels_outpost_certificates`"
+
+        ```yaml
+        # Type: string
+        authentik_role_docker_labels_outpost_certificates: "{{ traefik_router_certificate_domains
+                                                               | traefik_certificate_labels('authentik-outpost') }}"
         ```
 
     ??? variable dict "`authentik_role_docker_labels_custom`"

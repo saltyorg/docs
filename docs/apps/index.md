@@ -24,6 +24,7 @@ tags:
 | [Emby](emby.md)                 |                  `emby`                   |         `media_servers_enabled`          |
 | [Jellyfin](jellyfin.md)         |                `jellyfin`                 |         `media_servers_enabled`          |
 | [Silo](../sandbox/apps/silo.md) |              `sandbox-silo`               |             `sandbox_roles`              |
+| [tofa](../sandbox/apps/tofa.md) |              `sandbox-tofa`               |             `sandbox_roles`              |
 
 ### Audio Server
 

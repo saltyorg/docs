@@ -122,6 +122,8 @@ plugins:
   - privacy:
       assets: true
       assets_fetch: true
+      assets_exclude:
+        - img.shields.io/*
       cache: true
       cache_dir: .cache/plugin/privacy
       enabled: !ENV [ CI, false ]

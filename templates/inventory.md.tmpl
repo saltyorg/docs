@@ -407,7 +407,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     <h5>{{ $category }}</h5>
 {{- range $suffix := $vars }}
 {{- $override := index $.DockerInfo.Overrides $suffix }}
-{{- $varType := getDockerVarType $suffix }}
+{{- $varType := index $.DockerInfo.Types $suffix }}
 {{- if and $override $override.Type }}
 {{- $varType = $override.Type }}
 {{- end }}

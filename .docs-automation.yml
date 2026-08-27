@@ -156,6 +156,11 @@ global_overrides:
       default: "true"
       type: "bool"
 
+    _themepark_addons:
+      description: "ThemePark addon names to enable"
+      default: null
+      type: "list"
+
     _paths_folders_list_custom:
       description: "Extra directories to create"
       default: null
@@ -239,6 +244,14 @@ docker_overrides:
         - "_docker_nvidia_disabled"
         - "_docker_dev_dri_disabled"
   variables:
+    _docker_cpus:
+      description: "CPU allocation accepted as a numeric string, such as 1.5"
+      type: "string (number)"
+
+    _docker_healthy_wait_timeout:
+      description: "Healthy-state wait timeout in seconds"
+      type: "int"
+
     _docker_gpu_enabled:
       description: |-
         Set this to true to let the app use a GPU.
@@ -311,6 +324,16 @@ type_inference:
     "_dns_proxy": "bool"
     "_dns_record": "string"
     "_dns_zone": "string"
+    "elasticsearch_role_docker_user": "string"
+  filters:
+    "traefik_certificate_domains": "list"
+    "traefik_certificate_labels": "dict"
+  symbols:
+    "backup_cleanup_custom_rclone_flags": "list"
+    "backup_cleanup_enabled": "bool"
+    "backup_cleanup_number": "int"
+    "saltbox_auto_reboot": "bool"
+    "traefik_http": "bool"
 
 # =============================================================================
 # Docker Variable Categories
@@ -322,19 +345,25 @@ docker_variables:
     - "auto_remove"
     - "cleanup"
     - "detach"
+    - "force_kill"
+    - "hosts_use_common"
+    - "image_pull"
     - "init"
     - "keep_volumes"
+    - "labels_use_common"
     - "oom_killer"
     - "output_logs"
     - "paused"
     - "privileged"
     - "read_only"
     - "recreate"
+    - "volumes_global"
   int:
     - "blkio_weight"
     - "cpu_period"
     - "cpu_quota"
     - "cpu_shares"
+    - "create_timeout"
     - "healthy_wait_timeout"
     - "memory_swappiness"
     - "oom_score_adj"
@@ -345,10 +374,16 @@ docker_variables:
     - "cap_drop"
     - "commands"
     - "device_cgroup_rules"
+    - "device_read_bps"
+    - "device_read_iops"
+    - "device_requests"
+    - "device_write_bps"
+    - "device_write_iops"
     - "devices"
     - "dns_opts"
     - "dns_search_domains"
     - "dns_servers"
+    - "entrypoint"
     - "exposed_ports"
     - "groups"
     - "links"
@@ -356,7 +391,6 @@ docker_variables:
     - "networks"
     - "ports"
     - "security_opts"
-    - "sysctls"
     - "tmpfs"
     - "ulimits"
     - "volumes"
@@ -368,6 +402,7 @@ docker_variables:
     - "labels"
     - "log_options"
     - "storage_opts"
+    - "sysctls"
 
 # =============================================================================
 # CLI Help Configuration

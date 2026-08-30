@@ -312,7 +312,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: list
         portainer_role_docker_volumes_default:
-          - "{{ portainer_role_paths_location }}:/data"
+          - "{{ lookup('role_var', '_paths_location', role='portainer') }}:/data"
           - "/var/run/docker.sock:/var/run/docker.sock"
         ```
 
@@ -448,7 +448,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`portainer_role_docker_cpus`"
 
         ```yaml
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         portainer_role_docker_cpus:
         ```
 
@@ -775,10 +776,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         portainer_role_docker_cleanup:
         ```
 
-    ??? variable string "`portainer_role_docker_force_kill`"
+    ??? variable bool "`portainer_role_docker_force_kill`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         portainer_role_docker_force_kill:
         ```
 
@@ -792,6 +793,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`portainer_role_docker_healthy_wait_timeout`"
 
         ```yaml
+        # Healthy-state wait timeout in seconds
         # Type: int
         portainer_role_docker_healthy_wait_timeout:
         ```
@@ -910,10 +912,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         portainer_role_docker_create_timeout:
         ```
 
-    ??? variable string "`portainer_role_docker_entrypoint`"
+    ??? variable list "`portainer_role_docker_entrypoint`"
 
         ```yaml
-        # Type: string
+        # Type: list
         portainer_role_docker_entrypoint:
         ```
 
@@ -945,10 +947,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         portainer_role_docker_runtime:
         ```
 
-    ??? variable list "`portainer_role_docker_sysctls`"
+    ??? variable dict "`portainer_role_docker_sysctls`"
 
         ```yaml
-        # Type: list
+        # Type: dict
         portainer_role_docker_sysctls:
         ```
 
@@ -1031,10 +1033,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         portainer_role_docker_volumes_download:
         ```
 
-    ??? variable string "`portainer_role_themepark_addons`"
+    ??? variable list "`portainer_role_themepark_addons`"
 
         ```yaml
-        # Type: string
+        # ThemePark addon names to enable
+        # Type: list
         portainer_role_themepark_addons:
         ```
 

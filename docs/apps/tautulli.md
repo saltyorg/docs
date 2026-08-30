@@ -191,16 +191,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tautulli2_config_settings_custom: []
         ```
 
-    ??? variable string "`tautulli_role_config_settings_list`{ .sb-show-on-unchecked }`tautulli2_config_settings_list`{ .sb-show-on-checked }"
+    ??? variable list "`tautulli_role_config_settings_list`{ .sb-show-on-unchecked }`tautulli2_config_settings_list`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: list
         tautulli_role_config_settings_list: "{{ lookup('role_var', '_config_settings_default', role='tautulli')
                                                 + lookup('role_var', '_config_settings_custom', role='tautulli') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: list
         tautulli2_config_settings_list: "{{ lookup('role_var', '_config_settings_default', role='tautulli')
                                             + lookup('role_var', '_config_settings_custom', role='tautulli') }}"
         ```
@@ -592,14 +592,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-unchecked }
         # Type: list
         tautulli_role_docker_volumes_default:
-          - "{{ tautulli_role_paths_location }}:/config"
+          - "{{ lookup('role_var', '_paths_location', role='tautulli') }}:/config"
           - "{{ server_appdata_path }}/scripts:/scripts"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: list
         tautulli2_docker_volumes_default:
-          - "{{ tautulli_role_paths_location }}:/config"
+          - "{{ lookup('role_var', '_paths_location', role='tautulli') }}:/config"
           - "{{ server_appdata_path }}/scripts:/scripts"
         ```
 
@@ -830,12 +830,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`tautulli_role_docker_cpus`{ .sb-show-on-unchecked }`tautulli2_docker_cpus`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         tautulli_role_docker_cpus:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         tautulli2_docker_cpus:
         ```
 
@@ -1387,15 +1389,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tautulli2_docker_cleanup:
         ```
 
-    ??? variable string "`tautulli_role_docker_force_kill`{ .sb-show-on-unchecked }`tautulli2_docker_force_kill`{ .sb-show-on-checked }"
+    ??? variable bool "`tautulli_role_docker_force_kill`{ .sb-show-on-unchecked }`tautulli2_docker_force_kill`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: bool (true/false)
         tautulli_role_docker_force_kill:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: bool (true/false)
         tautulli2_docker_force_kill:
         ```
 
@@ -1414,11 +1416,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`tautulli_role_docker_healthy_wait_timeout`{ .sb-show-on-unchecked }`tautulli2_docker_healthy_wait_timeout`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
+        # Healthy-state wait timeout in seconds
         # Type: int
         tautulli_role_docker_healthy_wait_timeout:
         ```
 
         ```yaml { .sb-show-on-checked }
+        # Healthy-state wait timeout in seconds
         # Type: int
         tautulli2_docker_healthy_wait_timeout:
         ```
@@ -1617,15 +1621,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tautulli2_docker_create_timeout:
         ```
 
-    ??? variable string "`tautulli_role_docker_entrypoint`{ .sb-show-on-unchecked }`tautulli2_docker_entrypoint`{ .sb-show-on-checked }"
+    ??? variable list "`tautulli_role_docker_entrypoint`{ .sb-show-on-unchecked }`tautulli2_docker_entrypoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: list
         tautulli_role_docker_entrypoint:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: list
         tautulli2_docker_entrypoint:
         ```
 
@@ -1677,15 +1681,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tautulli2_docker_runtime:
         ```
 
-    ??? variable list "`tautulli_role_docker_sysctls`{ .sb-show-on-unchecked }`tautulli2_docker_sysctls`{ .sb-show-on-checked }"
+    ??? variable dict "`tautulli_role_docker_sysctls`{ .sb-show-on-unchecked }`tautulli2_docker_sysctls`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: list
+        # Type: dict
         tautulli_role_docker_sysctls:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: list
+        # Type: dict
         tautulli2_docker_sysctls:
         ```
 

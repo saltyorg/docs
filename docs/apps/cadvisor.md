@@ -410,7 +410,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`cadvisor_role_docker_cpus`"
 
         ```yaml
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         cadvisor_role_docker_cpus:
         ```
 
@@ -730,10 +731,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         cadvisor_role_docker_cleanup:
         ```
 
-    ??? variable string "`cadvisor_role_docker_force_kill`"
+    ??? variable bool "`cadvisor_role_docker_force_kill`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         cadvisor_role_docker_force_kill:
         ```
 
@@ -747,6 +748,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`cadvisor_role_docker_healthy_wait_timeout`"
 
         ```yaml
+        # Healthy-state wait timeout in seconds
         # Type: int
         cadvisor_role_docker_healthy_wait_timeout:
         ```
@@ -865,10 +867,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         cadvisor_role_docker_create_timeout:
         ```
 
-    ??? variable string "`cadvisor_role_docker_entrypoint`"
+    ??? variable list "`cadvisor_role_docker_entrypoint`"
 
         ```yaml
-        # Type: string
+        # Type: list
         cadvisor_role_docker_entrypoint:
         ```
 
@@ -907,10 +909,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         cadvisor_role_docker_runtime:
         ```
 
-    ??? variable list "`cadvisor_role_docker_sysctls`"
+    ??? variable dict "`cadvisor_role_docker_sysctls`"
 
         ```yaml
-        # Type: list
+        # Type: dict
         cadvisor_role_docker_sysctls:
         ```
 
@@ -993,10 +995,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         cadvisor_role_docker_volumes_download:
         ```
 
-    ??? variable string "`cadvisor_role_themepark_addons`"
+    ??? variable list "`cadvisor_role_themepark_addons`"
 
         ```yaml
-        # Type: string
+        # ThemePark addon names to enable
+        # Type: list
         cadvisor_role_themepark_addons:
         ```
 

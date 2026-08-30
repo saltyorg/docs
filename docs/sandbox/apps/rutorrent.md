@@ -228,12 +228,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         rutorrent_role_config_diskspace_path: "/mnt"
         ```
 
-    ??? variable string "`rutorrent_role_config_new_installs_rutorrent_rc_settings_default`"
+    ??? variable list "`rutorrent_role_config_new_installs_rutorrent_rc_settings_default`"
 
         ```yaml
         # # New Installs
         # rtorrent.rc
-        # Type: string
+        # Type: list
         rutorrent_role_config_new_installs_rutorrent_rc_settings_default:
           # Minimum number of peers to connect to per torrent
           - { option: "throttle.min_peers.normal.set", value: "1" }
@@ -270,19 +270,19 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         rutorrent_role_config_new_installs_rutorrent_rc_settings_custom: []
         ```
 
-    ??? variable string "`rutorrent_role_config_new_installs_rutorrent_rc_settings_list`"
+    ??? variable list "`rutorrent_role_config_new_installs_rutorrent_rc_settings_list`"
 
         ```yaml
-        # Type: string
+        # Type: list
         rutorrent_role_config_new_installs_rutorrent_rc_settings_list: "{{ lookup('role_var', '_config_new_installs_rutorrent_rc_settings_default', role='rutorrent')
                                                                            + lookup('role_var', '_config_new_installs_rutorrent_rc_settings_custom', role='rutorrent') }}"
         ```
 
-    ??? variable string "`rutorrent_role_config_new_installs_php_local_ini_settings_default`"
+    ??? variable list "`rutorrent_role_config_new_installs_php_local_ini_settings_default`"
 
         ```yaml
         # php-local.ini
-        # Type: string
+        # Type: list
         rutorrent_role_config_new_installs_php_local_ini_settings_default:
           # Maximum Upload File Size via Web Browser (eg Uploading Torrent Files)
           - { option: "upload_max_filesize", value: "20M" }
@@ -295,20 +295,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         rutorrent_role_config_new_installs_php_local_ini_settings_custom: []
         ```
 
-    ??? variable string "`rutorrent_role_config_new_installs_php_local_ini_settings_list`"
+    ??? variable list "`rutorrent_role_config_new_installs_php_local_ini_settings_list`"
 
         ```yaml
-        # Type: string
+        # Type: list
         rutorrent_role_config_new_installs_php_local_ini_settings_list: "{{ lookup('role_var', '_config_new_installs_php_local_ini_settings_default', role='rutorrent')
                                                                             + lookup('role_var', '_config_new_installs_php_local_ini_settings_custom', role='rutorrent') }}"
         ```
 
-    ??? variable string "`rutorrent_role_config_existing_installs_rutorrent_rc_settings_default`"
+    ??? variable list "`rutorrent_role_config_existing_installs_rutorrent_rc_settings_default`"
 
         ```yaml
         # # Existing Installs
         # rtorrent.rc
-        # Type: string
+        # Type: list
         rutorrent_role_config_existing_installs_rutorrent_rc_settings_default:
           # Execute - Initiate Plugins
           - { option: "execute", value: "{sh,-c,/usr/bin/php /app/rutorrent/php/initplugins.php abc &}" }
@@ -330,10 +330,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         rutorrent_role_config_existing_installs_rutorrent_rc_settings_custom: []
         ```
 
-    ??? variable string "`rutorrent_role_config_existing_installs_rutorrent_rc_settings_list`"
+    ??? variable list "`rutorrent_role_config_existing_installs_rutorrent_rc_settings_list`"
 
         ```yaml
-        # Type: string
+        # Type: list
         rutorrent_role_config_existing_installs_rutorrent_rc_settings_list: "{{ lookup('role_var', '_config_existing_installs_rutorrent_rc_settings_default', role='rutorrent')
                                                                                 + lookup('role_var', '_config_existing_installs_rutorrent_rc_settings_custom', role='rutorrent') }}"
         ```
@@ -498,7 +498,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: list
         rutorrent_role_docker_volumes_default:
-          - "{{ rutorrent_role_paths_location }}:/config"
+          - "{{ lookup('role_var', '_paths_location', role='rutorrent') }}:/config"
           - "{{ server_appdata_path }}/scripts:/scripts"
         ```
 
@@ -651,7 +651,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`rutorrent_role_docker_cpus`"
 
         ```yaml
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         rutorrent_role_docker_cpus:
         ```
 
@@ -971,10 +972,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         rutorrent_role_docker_cleanup:
         ```
 
-    ??? variable string "`rutorrent_role_docker_force_kill`"
+    ??? variable bool "`rutorrent_role_docker_force_kill`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         rutorrent_role_docker_force_kill:
         ```
 
@@ -988,6 +989,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`rutorrent_role_docker_healthy_wait_timeout`"
 
         ```yaml
+        # Healthy-state wait timeout in seconds
         # Type: int
         rutorrent_role_docker_healthy_wait_timeout:
         ```
@@ -1099,10 +1101,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         rutorrent_role_docker_create_timeout:
         ```
 
-    ??? variable string "`rutorrent_role_docker_entrypoint`"
+    ??? variable list "`rutorrent_role_docker_entrypoint`"
 
         ```yaml
-        # Type: string
+        # Type: list
         rutorrent_role_docker_entrypoint:
         ```
 
@@ -1134,10 +1136,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         rutorrent_role_docker_runtime:
         ```
 
-    ??? variable list "`rutorrent_role_docker_sysctls`"
+    ??? variable dict "`rutorrent_role_docker_sysctls`"
 
         ```yaml
-        # Type: list
+        # Type: dict
         rutorrent_role_docker_sysctls:
         ```
 

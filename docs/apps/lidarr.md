@@ -897,14 +897,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-unchecked }
         # Type: list
         lidarr_role_docker_volumes_default:
-          - "{{ lidarr_role_paths_location }}:/config"
+          - "{{ lookup('role_var', '_paths_location', role='lidarr') }}:/config"
           - "{{ server_appdata_path }}/scripts:/scripts"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: list
         lidarr2_docker_volumes_default:
-          - "{{ lidarr_role_paths_location }}:/config"
+          - "{{ lookup('role_var', '_paths_location', role='lidarr') }}:/config"
           - "{{ server_appdata_path }}/scripts:/scripts"
         ```
 
@@ -1149,12 +1149,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`lidarr_role_docker_cpus`{ .sb-show-on-unchecked }`lidarr2_docker_cpus`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         lidarr_role_docker_cpus:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         lidarr2_docker_cpus:
         ```
 
@@ -1706,15 +1708,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         lidarr2_docker_cleanup:
         ```
 
-    ??? variable string "`lidarr_role_docker_force_kill`{ .sb-show-on-unchecked }`lidarr2_docker_force_kill`{ .sb-show-on-checked }"
+    ??? variable bool "`lidarr_role_docker_force_kill`{ .sb-show-on-unchecked }`lidarr2_docker_force_kill`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: bool (true/false)
         lidarr_role_docker_force_kill:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: bool (true/false)
         lidarr2_docker_force_kill:
         ```
 
@@ -1733,11 +1735,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`lidarr_role_docker_healthy_wait_timeout`{ .sb-show-on-unchecked }`lidarr2_docker_healthy_wait_timeout`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
+        # Healthy-state wait timeout in seconds
         # Type: int
         lidarr_role_docker_healthy_wait_timeout:
         ```
 
         ```yaml { .sb-show-on-checked }
+        # Healthy-state wait timeout in seconds
         # Type: int
         lidarr2_docker_healthy_wait_timeout:
         ```
@@ -1936,15 +1940,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         lidarr2_docker_create_timeout:
         ```
 
-    ??? variable string "`lidarr_role_docker_entrypoint`{ .sb-show-on-unchecked }`lidarr2_docker_entrypoint`{ .sb-show-on-checked }"
+    ??? variable list "`lidarr_role_docker_entrypoint`{ .sb-show-on-unchecked }`lidarr2_docker_entrypoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: list
         lidarr_role_docker_entrypoint:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: list
         lidarr2_docker_entrypoint:
         ```
 
@@ -1996,15 +2000,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         lidarr2_docker_runtime:
         ```
 
-    ??? variable list "`lidarr_role_docker_sysctls`{ .sb-show-on-unchecked }`lidarr2_docker_sysctls`{ .sb-show-on-checked }"
+    ??? variable dict "`lidarr_role_docker_sysctls`{ .sb-show-on-unchecked }`lidarr2_docker_sysctls`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: list
+        # Type: dict
         lidarr_role_docker_sysctls:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: list
+        # Type: dict
         lidarr2_docker_sysctls:
         ```
 

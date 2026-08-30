@@ -288,7 +288,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           HOST_GID: "{{ gid }}"
           TA_HOST: "localhost 127.0.0.1 {{ tubearchivist_name }} {{ lookup('role_web', role='tubearchivist') }} {{ lookup('role_var', '_web_url', role='tubearchivist') }}"
           TA_ENABLE_AUTH_PROXY: "{{ 'true' if (lookup('role_var', '_traefik_sso_middleware', role='tubearchivist') | length > 0) else omit }}"
-          TA_AUTH_PROXY_USERNAME_HEADER: "{{ lookup('role_var', '_docker_envs_http_header', role='tubearchivist') if (lookup('role_var', '_traefik_sso_middleware', role='tubearchivist') | length > 0) else omit }}"
+          TA_AUTH_PROXY_USERNAME_HEADER: "{{ lookup('role_var', '_docker_envs_http_header', role='tubearchivist')
+                                          if (lookup('role_var', '_traefik_sso_middleware', role='tubearchivist') | length > 0)
+                                          else omit }}"
           TA_USERNAME: "{{ user.name }}"
           TA_PASSWORD: "{{ user.pass }}"
           ELASTIC_PASSWORD: "{{ lookup('role_var', '_docker_env_password', role='elasticsearch') }}"
@@ -459,7 +461,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`tubearchivist_role_docker_cpus`"
 
         ```yaml
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         tubearchivist_role_docker_cpus:
         ```
 
@@ -786,10 +789,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tubearchivist_role_docker_cleanup:
         ```
 
-    ??? variable string "`tubearchivist_role_docker_force_kill`"
+    ??? variable bool "`tubearchivist_role_docker_force_kill`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         tubearchivist_role_docker_force_kill:
         ```
 
@@ -803,6 +806,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`tubearchivist_role_docker_healthy_wait_timeout`"
 
         ```yaml
+        # Healthy-state wait timeout in seconds
         # Type: int
         tubearchivist_role_docker_healthy_wait_timeout:
         ```
@@ -921,10 +925,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tubearchivist_role_docker_create_timeout:
         ```
 
-    ??? variable string "`tubearchivist_role_docker_entrypoint`"
+    ??? variable list "`tubearchivist_role_docker_entrypoint`"
 
         ```yaml
-        # Type: string
+        # Type: list
         tubearchivist_role_docker_entrypoint:
         ```
 
@@ -963,10 +967,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tubearchivist_role_docker_runtime:
         ```
 
-    ??? variable list "`tubearchivist_role_docker_sysctls`"
+    ??? variable dict "`tubearchivist_role_docker_sysctls`"
 
         ```yaml
-        # Type: list
+        # Type: dict
         tubearchivist_role_docker_sysctls:
         ```
 
@@ -1025,10 +1029,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tubearchivist_role_docker_volumes_download:
         ```
 
-    ??? variable string "`tubearchivist_role_themepark_addons`"
+    ??? variable list "`tubearchivist_role_themepark_addons`"
 
         ```yaml
-        # Type: string
+        # ThemePark addon names to enable
+        # Type: list
         tubearchivist_role_themepark_addons:
         ```
 

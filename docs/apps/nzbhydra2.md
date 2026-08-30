@@ -307,10 +307,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
                                                        | ternary('512', '256') }}"
         ```
 
-    ??? variable string "`nzbhydra2_role_config_settings_default`"
+    ??? variable list "`nzbhydra2_role_config_settings_default`"
 
         ```yaml
-        # Type: string
+        # Type: list
         nzbhydra2_role_config_settings_default:
           # NZBGet
           - del(.downloading.downloaders)
@@ -337,10 +337,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         nzbhydra2_role_config_settings_custom: []
         ```
 
-    ??? variable string "`nzbhydra2_role_config_settings_list`"
+    ??? variable list "`nzbhydra2_role_config_settings_list`"
 
         ```yaml
-        # Type: string
+        # Type: list
         nzbhydra2_role_config_settings_list: "{{ lookup('role_var', '_config_settings_default', role='nzbhydra2')
                                                  + lookup('role_var', '_config_settings_custom', role='nzbhydra2') }}"
         ```
@@ -413,7 +413,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: list
         nzbhydra2_role_docker_volumes_default:
-          - "{{ nzbhydra2_role_paths_location }}:/config"
+          - "{{ lookup('role_var', '_paths_location', role='nzbhydra2') }}:/config"
         ```
 
     ??? variable list "`nzbhydra2_role_docker_volumes_custom`"
@@ -555,7 +555,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`nzbhydra2_role_docker_cpus`"
 
         ```yaml
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         nzbhydra2_role_docker_cpus:
         ```
 
@@ -882,10 +883,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         nzbhydra2_role_docker_cleanup:
         ```
 
-    ??? variable string "`nzbhydra2_role_docker_force_kill`"
+    ??? variable bool "`nzbhydra2_role_docker_force_kill`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         nzbhydra2_role_docker_force_kill:
         ```
 
@@ -899,6 +900,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`nzbhydra2_role_docker_healthy_wait_timeout`"
 
         ```yaml
+        # Healthy-state wait timeout in seconds
         # Type: int
         nzbhydra2_role_docker_healthy_wait_timeout:
         ```
@@ -1017,10 +1019,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         nzbhydra2_role_docker_create_timeout:
         ```
 
-    ??? variable string "`nzbhydra2_role_docker_entrypoint`"
+    ??? variable list "`nzbhydra2_role_docker_entrypoint`"
 
         ```yaml
-        # Type: string
+        # Type: list
         nzbhydra2_role_docker_entrypoint:
         ```
 
@@ -1052,10 +1054,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         nzbhydra2_role_docker_runtime:
         ```
 
-    ??? variable list "`nzbhydra2_role_docker_sysctls`"
+    ??? variable dict "`nzbhydra2_role_docker_sysctls`"
 
         ```yaml
-        # Type: list
+        # Type: dict
         nzbhydra2_role_docker_sysctls:
         ```
 

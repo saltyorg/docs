@@ -601,8 +601,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: list
         authentik_role_docker_volumes_default:
-          - "{{ authentik_role_paths_location }}/data:/data"
-          - "{{ authentik_role_paths_location }}/custom-templates:/templates"
+          - "{{ lookup('role_var', '_paths_location', role='authentik') }}/data:/data"
+          - "{{ lookup('role_var', '_paths_location', role='authentik') }}/custom-templates:/templates"
         ```
 
     ??? variable list "`authentik_role_docker_volumes_custom`"
@@ -635,10 +635,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           traefik.http.services.authentik-outpost.loadbalancer.server.port: "{{ lookup('role_var', '_web_port', role='authentik') }}"
         ```
 
-    ??? variable string "`authentik_role_docker_labels_outpost_certificates`"
+    ??? variable dict "`authentik_role_docker_labels_outpost_certificates`"
 
         ```yaml
-        # Type: string
+        # Type: dict
         authentik_role_docker_labels_outpost_certificates: "{{ traefik_router_certificate_domains
                                                                | traefik_certificate_labels('authentik-outpost') }}"
         ```
@@ -789,7 +789,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`authentik_role_docker_cpus`"
 
         ```yaml
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         authentik_role_docker_cpus:
         ```
 
@@ -1116,10 +1117,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         authentik_role_docker_cleanup:
         ```
 
-    ??? variable string "`authentik_role_docker_force_kill`"
+    ??? variable bool "`authentik_role_docker_force_kill`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         authentik_role_docker_force_kill:
         ```
 
@@ -1133,6 +1134,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`authentik_role_docker_healthy_wait_timeout`"
 
         ```yaml
+        # Healthy-state wait timeout in seconds
         # Type: int
         authentik_role_docker_healthy_wait_timeout:
         ```
@@ -1244,10 +1246,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         authentik_role_docker_create_timeout:
         ```
 
-    ??? variable string "`authentik_role_docker_entrypoint`"
+    ??? variable list "`authentik_role_docker_entrypoint`"
 
         ```yaml
-        # Type: string
+        # Type: list
         authentik_role_docker_entrypoint:
         ```
 
@@ -1279,10 +1281,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         authentik_role_docker_runtime:
         ```
 
-    ??? variable list "`authentik_role_docker_sysctls`"
+    ??? variable dict "`authentik_role_docker_sysctls`"
 
         ```yaml
-        # Type: list
+        # Type: dict
         authentik_role_docker_sysctls:
         ```
 
@@ -1341,10 +1343,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         authentik_role_docker_volumes_download:
         ```
 
-    ??? variable string "`authentik_role_themepark_addons`"
+    ??? variable list "`authentik_role_themepark_addons`"
 
         ```yaml
-        # Type: string
+        # ThemePark addon names to enable
+        # Type: list
         authentik_role_themepark_addons:
         ```
 

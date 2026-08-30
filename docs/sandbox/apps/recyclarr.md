@@ -325,7 +325,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`recyclarr_role_docker_cpus`"
 
         ```yaml
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         recyclarr_role_docker_cpus:
         ```
 
@@ -645,10 +646,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         recyclarr_role_docker_cleanup:
         ```
 
-    ??? variable string "`recyclarr_role_docker_force_kill`"
+    ??? variable bool "`recyclarr_role_docker_force_kill`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         recyclarr_role_docker_force_kill:
         ```
 
@@ -662,6 +663,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`recyclarr_role_docker_healthy_wait_timeout`"
 
         ```yaml
+        # Healthy-state wait timeout in seconds
         # Type: int
         recyclarr_role_docker_healthy_wait_timeout:
         ```
@@ -780,10 +782,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         recyclarr_role_docker_create_timeout:
         ```
 
-    ??? variable string "`recyclarr_role_docker_entrypoint`"
+    ??? variable list "`recyclarr_role_docker_entrypoint`"
 
         ```yaml
-        # Type: string
+        # Type: list
         recyclarr_role_docker_entrypoint:
         ```
 
@@ -822,10 +824,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         recyclarr_role_docker_runtime:
         ```
 
-    ??? variable list "`recyclarr_role_docker_sysctls`"
+    ??? variable dict "`recyclarr_role_docker_sysctls`"
 
         ```yaml
-        # Type: list
+        # Type: dict
         recyclarr_role_docker_sysctls:
         ```
 

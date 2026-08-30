@@ -631,10 +631,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           - '{ "traefik.http.services.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.loadbalancer.server.port": "{{ lookup("role_var", "_web2_port", role="calibre") }}" }'
         ```
 
-    ??? variable string "`calibre_role_docker_labels_books_certificate_domains`{ .sb-show-on-unchecked }`calibre2_docker_labels_books_certificate_domains`{ .sb-show-on-checked }"
+    ??? variable list "`calibre_role_docker_labels_books_certificate_domains`{ .sb-show-on-unchecked }`calibre2_docker_labels_books_certificate_domains`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: list
         calibre_role_docker_labels_books_certificate_domains: "{{ lookup('role_var', '_web2_domain', role='calibre')
                                                                   | traefik_certificate_domains([],
                                                                                                 [],
@@ -643,7 +643,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: list
         calibre2_docker_labels_books_certificate_domains: "{{ lookup('role_var', '_web2_domain', role='calibre')
                                                               | traefik_certificate_domains([],
                                                                                             [],
@@ -651,16 +651,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
                                                                                             traefik_certificate_authoritative_zones) }}"
         ```
 
-    ??? variable string "`calibre_role_docker_labels_books_certificates`{ .sb-show-on-unchecked }`calibre2_docker_labels_books_certificates`{ .sb-show-on-checked }"
+    ??? variable dict "`calibre_role_docker_labels_books_certificates`{ .sb-show-on-unchecked }`calibre2_docker_labels_books_certificates`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: dict
         calibre_role_docker_labels_books_certificates: "{{ calibre_role_docker_labels_books_certificate_domains
                                                            | traefik_certificate_labels(lookup('role_var', '_web2_subdomain', role='calibre')) }}"
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: dict
         calibre2_docker_labels_books_certificates: "{{ calibre_role_docker_labels_books_certificate_domains
                                                        | traefik_certificate_labels(lookup('role_var', '_web2_subdomain', role='calibre')) }}"
         ```
@@ -894,12 +894,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`calibre_role_docker_cpus`{ .sb-show-on-unchecked }`calibre2_docker_cpus`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         calibre_role_docker_cpus:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         calibre2_docker_cpus:
         ```
 
@@ -1439,15 +1441,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         calibre2_docker_cleanup:
         ```
 
-    ??? variable string "`calibre_role_docker_force_kill`{ .sb-show-on-unchecked }`calibre2_docker_force_kill`{ .sb-show-on-checked }"
+    ??? variable bool "`calibre_role_docker_force_kill`{ .sb-show-on-unchecked }`calibre2_docker_force_kill`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: bool (true/false)
         calibre_role_docker_force_kill:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: bool (true/false)
         calibre2_docker_force_kill:
         ```
 
@@ -1466,11 +1468,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`calibre_role_docker_healthy_wait_timeout`{ .sb-show-on-unchecked }`calibre2_docker_healthy_wait_timeout`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
+        # Healthy-state wait timeout in seconds
         # Type: int
         calibre_role_docker_healthy_wait_timeout:
         ```
 
         ```yaml { .sb-show-on-checked }
+        # Healthy-state wait timeout in seconds
         # Type: int
         calibre2_docker_healthy_wait_timeout:
         ```
@@ -1669,15 +1673,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         calibre2_docker_create_timeout:
         ```
 
-    ??? variable string "`calibre_role_docker_entrypoint`{ .sb-show-on-unchecked }`calibre2_docker_entrypoint`{ .sb-show-on-checked }"
+    ??? variable list "`calibre_role_docker_entrypoint`{ .sb-show-on-unchecked }`calibre2_docker_entrypoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: list
         calibre_role_docker_entrypoint:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: list
         calibre2_docker_entrypoint:
         ```
 
@@ -1729,15 +1733,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         calibre2_docker_runtime:
         ```
 
-    ??? variable list "`calibre_role_docker_sysctls`{ .sb-show-on-unchecked }`calibre2_docker_sysctls`{ .sb-show-on-checked }"
+    ??? variable dict "`calibre_role_docker_sysctls`{ .sb-show-on-unchecked }`calibre2_docker_sysctls`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: list
+        # Type: dict
         calibre_role_docker_sysctls:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: list
+        # Type: dict
         calibre2_docker_sysctls:
         ```
 
@@ -1877,15 +1881,17 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         calibre2_docker_volumes_download:
         ```
 
-    ??? variable string "`calibre_role_themepark_addons`{ .sb-show-on-unchecked }`calibre2_themepark_addons`{ .sb-show-on-checked }"
+    ??? variable list "`calibre_role_themepark_addons`{ .sb-show-on-unchecked }`calibre2_themepark_addons`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # ThemePark addon names to enable
+        # Type: list
         calibre_role_themepark_addons:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # ThemePark addon names to enable
+        # Type: list
         calibre2_themepark_addons:
         ```
 

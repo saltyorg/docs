@@ -239,10 +239,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         traefik_disable_propagation_check: false
         ```
 
-    ??? variable string "`traefik_enable_http_validation`"
+    ??? variable bool "`traefik_enable_http_validation`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         traefik_enable_http_validation: "{{ traefik_http or (traefik.cert.http_validation | bool) }}"
         ```
 
@@ -784,7 +784,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: list
         traefik_role_docker_volumes_default:
           - "/var/run/docker.sock:/var/run/docker.sock"
-          - "{{ traefik_role_paths_location }}:/etc/traefik"
+          - "{{ lookup('role_var', '_paths_location', role='traefik') }}:/etc/traefik"
         ```
 
     ??? variable list "`traefik_role_docker_volumes_custom`"
@@ -878,19 +878,19 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           traefik.http.routers.traefik.tls.certresolver: "{{ traefik_default_certresolver }}"
         ```
 
-    ??? variable string "`traefik_role_docker_labels_dns_validation_fqdn_overrides`"
+    ??? variable list "`traefik_role_docker_labels_dns_validation_fqdn_overrides`"
 
         ```yaml
-        # Type: string
+        # Type: list
         traefik_role_docker_labels_dns_validation_fqdn_overrides: "{{ lookup('role_var', '_web_fqdn_override', role='traefik', default=[])
                                                                    if (lookup('role_var', '_web_host_override', role='traefik', default='') | length == 0)
                                                                    else [] }}"
         ```
 
-    ??? variable string "`traefik_role_docker_labels_dns_validation_domains`"
+    ??? variable list "`traefik_role_docker_labels_dns_validation_domains`"
 
         ```yaml
-        # Type: string
+        # Type: list
         traefik_role_docker_labels_dns_validation_domains: "{{ lookup('role_var', '_web_domain', role='traefik')
                                                                | traefik_certificate_domains(traefik_role_docker_labels_dns_validation_fqdn_overrides,
                                                                                              traefik.cert.additional_domains | default([]),
@@ -898,10 +898,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
                                                                                              traefik_certificate_authoritative_zones) }}"
         ```
 
-    ??? variable string "`traefik_role_docker_labels_dns_validation`"
+    ??? variable dict "`traefik_role_docker_labels_dns_validation`"
 
         ```yaml
-        # Type: string
+        # Type: dict
         traefik_role_docker_labels_dns_validation: "{{ traefik_role_docker_labels_dns_validation_resolver
                                                        | combine(traefik_role_docker_labels_dns_validation_domains
                                                                  | traefik_certificate_labels(traefik_name)) }}"
@@ -935,10 +935,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           traefik.http.routers.metrics.priority: "20"
         ```
 
-    ??? variable string "`traefik_role_docker_labels_metrics_domains`"
+    ??? variable list "`traefik_role_docker_labels_metrics_domains`"
 
         ```yaml
-        # Type: string
+        # Type: list
         traefik_role_docker_labels_metrics_domains: "{{ lookup('role_var', '_metrics_domain', role='traefik')
                                                         | traefik_certificate_domains([],
                                                                                       [],
@@ -946,10 +946,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
                                                                                       traefik_certificate_authoritative_zones) }}"
         ```
 
-    ??? variable string "`traefik_role_docker_labels_metrics_certificates`"
+    ??? variable dict "`traefik_role_docker_labels_metrics_certificates`"
 
         ```yaml
-        # Type: string
+        # Type: dict
         traefik_role_docker_labels_metrics_certificates: "{{ traefik_role_docker_labels_metrics_domains
                                                              | traefik_certificate_labels('metrics') }}"
         ```
@@ -963,7 +963,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           traefik.http.middlewares.crowdsec.plugin.bouncer.crowdseclapikey: "{{ traefik_crowdsec_bouncer_key | default('') }}"
           traefik.http.middlewares.crowdsec.plugin.bouncer.crowdseclapischeme: "http"
           traefik.http.middlewares.crowdsec.plugin.bouncer.crowdseclapihost: "172.19.0.1:{{ traefik_crowdsec_port }}"
-          traefik.http.middlewares.crowdsec.plugin.bouncer.forwardedheaderstrustedips: "{{ traefik_trusted_ips_template if (traefik_trusted_ips_template | length > 0) else omit }}"
+          traefik.http.middlewares.crowdsec.plugin.bouncer.forwardedheaderstrustedips: "{{ traefik_trusted_ips_template
+                                                                                        if (traefik_trusted_ips_template | length > 0)
+                                                                                        else omit }}"
           traefik.http.middlewares.crowdsec.plugin.bouncer.banfilepath: "{{ traefik_crowdsec_ban_filepath }}"
         ```
 
@@ -1090,7 +1092,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`traefik_role_docker_cpus`"
 
         ```yaml
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         traefik_role_docker_cpus:
         ```
 
@@ -1403,10 +1406,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         traefik_role_docker_cleanup:
         ```
 
-    ??? variable string "`traefik_role_docker_force_kill`"
+    ??? variable bool "`traefik_role_docker_force_kill`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         traefik_role_docker_force_kill:
         ```
 
@@ -1420,6 +1423,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`traefik_role_docker_healthy_wait_timeout`"
 
         ```yaml
+        # Healthy-state wait timeout in seconds
         # Type: int
         traefik_role_docker_healthy_wait_timeout:
         ```
@@ -1531,10 +1535,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         traefik_role_docker_create_timeout:
         ```
 
-    ??? variable string "`traefik_role_docker_entrypoint`"
+    ??? variable list "`traefik_role_docker_entrypoint`"
 
         ```yaml
-        # Type: string
+        # Type: list
         traefik_role_docker_entrypoint:
         ```
 
@@ -1559,10 +1563,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         traefik_role_docker_runtime:
         ```
 
-    ??? variable list "`traefik_role_docker_sysctls`"
+    ??? variable dict "`traefik_role_docker_sysctls`"
 
         ```yaml
-        # Type: list
+        # Type: dict
         traefik_role_docker_sysctls:
         ```
 
@@ -1645,10 +1649,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         traefik_role_docker_volumes_download:
         ```
 
-    ??? variable string "`traefik_role_themepark_addons`"
+    ??? variable list "`traefik_role_themepark_addons`"
 
         ```yaml
-        # Type: string
+        # ThemePark addon names to enable
+        # Type: list
         traefik_role_themepark_addons:
         ```
 

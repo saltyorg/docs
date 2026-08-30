@@ -674,12 +674,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`wordpress_role_docker_cpus`{ .sb-show-on-unchecked }`wordpress2_docker_cpus`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         wordpress_role_docker_cpus:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         wordpress2_docker_cpus:
         ```
 
@@ -1219,15 +1221,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         wordpress2_docker_cleanup:
         ```
 
-    ??? variable string "`wordpress_role_docker_force_kill`{ .sb-show-on-unchecked }`wordpress2_docker_force_kill`{ .sb-show-on-checked }"
+    ??? variable bool "`wordpress_role_docker_force_kill`{ .sb-show-on-unchecked }`wordpress2_docker_force_kill`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: bool (true/false)
         wordpress_role_docker_force_kill:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: bool (true/false)
         wordpress2_docker_force_kill:
         ```
 
@@ -1246,11 +1248,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`wordpress_role_docker_healthy_wait_timeout`{ .sb-show-on-unchecked }`wordpress2_docker_healthy_wait_timeout`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
+        # Healthy-state wait timeout in seconds
         # Type: int
         wordpress_role_docker_healthy_wait_timeout:
         ```
 
         ```yaml { .sb-show-on-checked }
+        # Healthy-state wait timeout in seconds
         # Type: int
         wordpress2_docker_healthy_wait_timeout:
         ```
@@ -1449,15 +1453,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         wordpress2_docker_create_timeout:
         ```
 
-    ??? variable string "`wordpress_role_docker_entrypoint`{ .sb-show-on-unchecked }`wordpress2_docker_entrypoint`{ .sb-show-on-checked }"
+    ??? variable list "`wordpress_role_docker_entrypoint`{ .sb-show-on-unchecked }`wordpress2_docker_entrypoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: list
         wordpress_role_docker_entrypoint:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: list
         wordpress2_docker_entrypoint:
         ```
 
@@ -1521,15 +1525,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         wordpress2_docker_runtime:
         ```
 
-    ??? variable list "`wordpress_role_docker_sysctls`{ .sb-show-on-unchecked }`wordpress2_docker_sysctls`{ .sb-show-on-checked }"
+    ??? variable dict "`wordpress_role_docker_sysctls`{ .sb-show-on-unchecked }`wordpress2_docker_sysctls`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: list
+        # Type: dict
         wordpress_role_docker_sysctls:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: list
+        # Type: dict
         wordpress2_docker_sysctls:
         ```
 
@@ -1627,15 +1631,17 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         wordpress2_docker_volumes_download:
         ```
 
-    ??? variable string "`wordpress_role_themepark_addons`{ .sb-show-on-unchecked }`wordpress2_themepark_addons`{ .sb-show-on-checked }"
+    ??? variable list "`wordpress_role_themepark_addons`{ .sb-show-on-unchecked }`wordpress2_themepark_addons`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # ThemePark addon names to enable
+        # Type: list
         wordpress_role_themepark_addons:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # ThemePark addon names to enable
+        # Type: list
         wordpress2_themepark_addons:
         ```
 

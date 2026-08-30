@@ -264,11 +264,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
 === "Config"
 
-    ??? variable string "`nzbget_role_config_new_installs_settings_default`"
+    ??? variable list "`nzbget_role_config_new_installs_settings_default`"
 
         ```yaml
         # New Installs
-        # Type: string
+        # Type: list
         nzbget_role_config_new_installs_settings_default:
           # Authentication
           - { regexp: '^ControlUsername\s?=.*', line: "ControlUsername={{ user.name }}" }
@@ -328,19 +328,19 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         nzbget_role_config_new_installs_settings_custom: []
         ```
 
-    ??? variable string "`nzbget_role_config_new_installs_settings_list`"
+    ??? variable list "`nzbget_role_config_new_installs_settings_list`"
 
         ```yaml
-        # Type: string
+        # Type: list
         nzbget_role_config_new_installs_settings_list: "{{ lookup('role_var', '_config_new_installs_settings_default', role='nzbget')
                                                            + lookup('role_var', '_config_new_installs_settings_custom', role='nzbget') }}"
         ```
 
-    ??? variable string "`nzbget_role_config_existing_installs_settings_default`"
+    ??? variable list "`nzbget_role_config_existing_installs_settings_default`"
 
         ```yaml
         # Existing Installs
-        # Type: string
+        # Type: list
         nzbget_role_config_existing_installs_settings_default:
           # Logging
           - { regexp: '^WriteLog\s?=.*', line: 'WriteLog=rotate' }
@@ -359,10 +359,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         nzbget_role_config_existing_installs_settings_custom: []
         ```
 
-    ??? variable string "`nzbget_role_config_existing_installs_settings_list`"
+    ??? variable list "`nzbget_role_config_existing_installs_settings_list`"
 
         ```yaml
-        # Type: string
+        # Type: list
         nzbget_role_config_existing_installs_settings_list: "{{ lookup('role_var', '_config_existing_installs_settings_default', role='nzbget')
                                                                 + lookup('role_var', '_config_existing_installs_settings_custom', role='nzbget') }}"
         ```
@@ -375,7 +375,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Paths
         # Default nzbget_scripts_paths_location = /opt/scripts/nzbget
         # Type: string
-        nzbget_role_scripts_paths_location: "{{ server_appdata_path }}/scripts/{{ nzbget_role_paths_folder }}"
+        nzbget_role_scripts_paths_location: "{{ server_appdata_path }}/scripts/{{ lookup('role_var', '_paths_folder', role='nzbget') }}"
         ```
 
     ??? variable list "`nzbget_role_scripts_paths_folders_list`"
@@ -410,10 +410,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         nzbget_role_scripts_repos_custom: []
         ```
 
-    ??? variable string "`nzbget_role_scripts_repos_list`"
+    ??? variable list "`nzbget_role_scripts_repos_list`"
 
         ```yaml
-        # Type: string
+        # Type: list
         nzbget_role_scripts_repos_list: "{{ lookup('role_var', '_scripts_repos_default', role='nzbget') + lookup('role_var', '_scripts_repos_custom', role='nzbget') }}"
         ```
 
@@ -436,10 +436,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         nzbget_role_scripts_direct_downloads_custom: []
         ```
 
-    ??? variable string "`nzbget_role_scripts_direct_downloads_list`"
+    ??? variable list "`nzbget_role_scripts_direct_downloads_list`"
 
         ```yaml
-        # Type: string
+        # Type: list
         nzbget_role_scripts_direct_downloads_list: "{{ lookup('role_var', '_scripts_direct_downloads_default', role='nzbget')
                                                        + lookup('role_var', '_scripts_direct_downloads_custom', role='nzbget') }}"
         ```
@@ -459,10 +459,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         nzbget_role_scripts_local_copy_custom: []
         ```
 
-    ??? variable string "`nzbget_role_scripts_local_copy_list`"
+    ??? variable list "`nzbget_role_scripts_local_copy_list`"
 
         ```yaml
-        # Type: string
+        # Type: list
         nzbget_role_scripts_local_copy_list: "{{ lookup('role_var', '_scripts_local_copy_default', role='nzbget')
                                                  + lookup('role_var', '_scripts_local_copy_custom', role='nzbget') }}"
         ```
@@ -574,7 +574,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: list
         nzbget_role_docker_volumes_default:
-          - "{{ nzbget_role_paths_location }}:/config"
+          - "{{ lookup('role_var', '_paths_location', role='nzbget') }}:/config"
           - "{{ server_appdata_path }}/scripts:/scripts"
         ```
 
@@ -717,7 +717,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`nzbget_role_docker_cpus`"
 
         ```yaml
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         nzbget_role_docker_cpus:
         ```
 
@@ -1044,10 +1045,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         nzbget_role_docker_cleanup:
         ```
 
-    ??? variable string "`nzbget_role_docker_force_kill`"
+    ??? variable bool "`nzbget_role_docker_force_kill`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         nzbget_role_docker_force_kill:
         ```
 
@@ -1061,6 +1062,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`nzbget_role_docker_healthy_wait_timeout`"
 
         ```yaml
+        # Healthy-state wait timeout in seconds
         # Type: int
         nzbget_role_docker_healthy_wait_timeout:
         ```
@@ -1179,10 +1181,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         nzbget_role_docker_create_timeout:
         ```
 
-    ??? variable string "`nzbget_role_docker_entrypoint`"
+    ??? variable list "`nzbget_role_docker_entrypoint`"
 
         ```yaml
-        # Type: string
+        # Type: list
         nzbget_role_docker_entrypoint:
         ```
 
@@ -1214,10 +1216,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         nzbget_role_docker_runtime:
         ```
 
-    ??? variable list "`nzbget_role_docker_sysctls`"
+    ??? variable dict "`nzbget_role_docker_sysctls`"
 
         ```yaml
-        # Type: list
+        # Type: dict
         nzbget_role_docker_sysctls:
         ```
 

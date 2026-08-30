@@ -276,7 +276,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: list
         profilarr_role_docker_volumes_default:
-          - "{{ profilarr_role_paths_location }}:/config"
+          - "{{ lookup('role_var', '_paths_location', role='profilarr') }}:/config"
         ```
 
     ??? variable list "`profilarr_role_docker_volumes_custom`"
@@ -402,7 +402,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`profilarr_role_docker_cpus`"
 
         ```yaml
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         profilarr_role_docker_cpus:
         ```
 
@@ -729,10 +730,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         profilarr_role_docker_cleanup:
         ```
 
-    ??? variable string "`profilarr_role_docker_force_kill`"
+    ??? variable bool "`profilarr_role_docker_force_kill`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         profilarr_role_docker_force_kill:
         ```
 
@@ -746,6 +747,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`profilarr_role_docker_healthy_wait_timeout`"
 
         ```yaml
+        # Healthy-state wait timeout in seconds
         # Type: int
         profilarr_role_docker_healthy_wait_timeout:
         ```
@@ -864,10 +866,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         profilarr_role_docker_create_timeout:
         ```
 
-    ??? variable string "`profilarr_role_docker_entrypoint`"
+    ??? variable list "`profilarr_role_docker_entrypoint`"
 
         ```yaml
-        # Type: string
+        # Type: list
         profilarr_role_docker_entrypoint:
         ```
 
@@ -906,10 +908,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         profilarr_role_docker_runtime:
         ```
 
-    ??? variable list "`profilarr_role_docker_sysctls`"
+    ??? variable dict "`profilarr_role_docker_sysctls`"
 
         ```yaml
-        # Type: list
+        # Type: dict
         profilarr_role_docker_sysctls:
         ```
 
@@ -992,10 +994,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         profilarr_role_docker_volumes_download:
         ```
 
-    ??? variable string "`profilarr_role_themepark_addons`"
+    ??? variable list "`profilarr_role_themepark_addons`"
 
         ```yaml
-        # Type: string
+        # ThemePark addon names to enable
+        # Type: list
         profilarr_role_themepark_addons:
         ```
 

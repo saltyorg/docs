@@ -379,7 +379,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
-          INGEST_DIR: "{{ shelfmark_role_paths_downloads_location }}"
+          INGEST_DIR: "{{ lookup('role_var', '_paths_downloads_location', role='shelfmark') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
@@ -388,7 +388,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
-          INGEST_DIR: "{{ shelfmark_role_paths_downloads_location }}"
+          INGEST_DIR: "{{ lookup('role_var', '_paths_downloads_location', role='shelfmark') }}"
         ```
 
     ??? variable dict "`shelfmark_role_docker_envs_custom`{ .sb-show-on-unchecked }`shelfmark2_docker_envs_custom`{ .sb-show-on-checked }"
@@ -410,13 +410,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-unchecked }
         # Type: list
         shelfmark_role_docker_volumes_default:
-          - "{{ shelfmark_role_paths_location }}:/config"
+          - "{{ lookup('role_var', '_paths_location', role='shelfmark') }}:/config"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: list
         shelfmark2_docker_volumes_default:
-          - "{{ shelfmark_role_paths_location }}:/config"
+          - "{{ lookup('role_var', '_paths_location', role='shelfmark') }}:/config"
         ```
 
     ??? variable list "`shelfmark_role_docker_volumes_custom`{ .sb-show-on-unchecked }`shelfmark2_docker_volumes_custom`{ .sb-show-on-checked }"
@@ -620,12 +620,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`shelfmark_role_docker_cpus`{ .sb-show-on-unchecked }`shelfmark2_docker_cpus`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         shelfmark_role_docker_cpus:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         shelfmark2_docker_cpus:
         ```
 
@@ -1177,15 +1179,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         shelfmark2_docker_cleanup:
         ```
 
-    ??? variable string "`shelfmark_role_docker_force_kill`{ .sb-show-on-unchecked }`shelfmark2_docker_force_kill`{ .sb-show-on-checked }"
+    ??? variable bool "`shelfmark_role_docker_force_kill`{ .sb-show-on-unchecked }`shelfmark2_docker_force_kill`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: bool (true/false)
         shelfmark_role_docker_force_kill:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: bool (true/false)
         shelfmark2_docker_force_kill:
         ```
 
@@ -1204,11 +1206,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`shelfmark_role_docker_healthy_wait_timeout`{ .sb-show-on-unchecked }`shelfmark2_docker_healthy_wait_timeout`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
+        # Healthy-state wait timeout in seconds
         # Type: int
         shelfmark_role_docker_healthy_wait_timeout:
         ```
 
         ```yaml { .sb-show-on-checked }
+        # Healthy-state wait timeout in seconds
         # Type: int
         shelfmark2_docker_healthy_wait_timeout:
         ```
@@ -1407,15 +1411,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         shelfmark2_docker_create_timeout:
         ```
 
-    ??? variable string "`shelfmark_role_docker_entrypoint`{ .sb-show-on-unchecked }`shelfmark2_docker_entrypoint`{ .sb-show-on-checked }"
+    ??? variable list "`shelfmark_role_docker_entrypoint`{ .sb-show-on-unchecked }`shelfmark2_docker_entrypoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: list
         shelfmark_role_docker_entrypoint:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: list
         shelfmark2_docker_entrypoint:
         ```
 
@@ -1479,15 +1483,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         shelfmark2_docker_runtime:
         ```
 
-    ??? variable list "`shelfmark_role_docker_sysctls`{ .sb-show-on-unchecked }`shelfmark2_docker_sysctls`{ .sb-show-on-checked }"
+    ??? variable dict "`shelfmark_role_docker_sysctls`{ .sb-show-on-unchecked }`shelfmark2_docker_sysctls`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: list
+        # Type: dict
         shelfmark_role_docker_sysctls:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: list
+        # Type: dict
         shelfmark2_docker_sysctls:
         ```
 
@@ -1627,15 +1631,17 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         shelfmark2_docker_volumes_download:
         ```
 
-    ??? variable string "`shelfmark_role_themepark_addons`{ .sb-show-on-unchecked }`shelfmark2_themepark_addons`{ .sb-show-on-checked }"
+    ??? variable list "`shelfmark_role_themepark_addons`{ .sb-show-on-unchecked }`shelfmark2_themepark_addons`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # ThemePark addon names to enable
+        # Type: list
         shelfmark_role_themepark_addons:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # ThemePark addon names to enable
+        # Type: list
         shelfmark2_themepark_addons:
         ```
 

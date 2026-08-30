@@ -551,7 +551,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`immich_role_docker_cpus`"
 
         ```yaml
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         immich_role_docker_cpus:
         ```
 
@@ -878,10 +879,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         immich_role_docker_cleanup:
         ```
 
-    ??? variable string "`immich_role_docker_force_kill`"
+    ??? variable bool "`immich_role_docker_force_kill`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         immich_role_docker_force_kill:
         ```
 
@@ -895,6 +896,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`immich_role_docker_healthy_wait_timeout`"
 
         ```yaml
+        # Healthy-state wait timeout in seconds
         # Type: int
         immich_role_docker_healthy_wait_timeout:
         ```
@@ -1013,10 +1015,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         immich_role_docker_create_timeout:
         ```
 
-    ??? variable string "`immich_role_docker_entrypoint`"
+    ??? variable list "`immich_role_docker_entrypoint`"
 
         ```yaml
-        # Type: string
+        # Type: list
         immich_role_docker_entrypoint:
         ```
 
@@ -1055,10 +1057,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         immich_role_docker_runtime:
         ```
 
-    ??? variable list "`immich_role_docker_sysctls`"
+    ??? variable dict "`immich_role_docker_sysctls`"
 
         ```yaml
-        # Type: list
+        # Type: dict
         immich_role_docker_sysctls:
         ```
 
@@ -1117,10 +1119,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         immich_role_docker_volumes_download:
         ```
 
-    ??? variable string "`immich_role_themepark_addons`"
+    ??? variable list "`immich_role_themepark_addons`"
 
         ```yaml
-        # Type: string
+        # ThemePark addon names to enable
+        # Type: list
         immich_role_themepark_addons:
         ```
 

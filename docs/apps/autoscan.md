@@ -582,13 +582,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-unchecked }
         # Type: list
         autoscan_role_docker_volumes_default:
-          - "{{ autoscan_role_paths_location }}:/config"
+          - "{{ lookup('role_var', '_paths_location', role='autoscan') }}:/config"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: list
         autoscan2_docker_volumes_default:
-          - "{{ autoscan_role_paths_location }}:/config"
+          - "{{ lookup('role_var', '_paths_location', role='autoscan') }}:/config"
         ```
 
     ??? variable list "`autoscan_role_docker_volumes_custom`{ .sb-show-on-unchecked }`autoscan2_docker_volumes_custom`{ .sb-show-on-checked }"
@@ -635,16 +635,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           - '{ "traefik.http.routers.{{ traefik_router }}-triggers.middlewares": "{{ traefik_middleware | regex_replace(autoscan_role_traefik_regex_middleware_string) }}" }'
         ```
 
-    ??? variable string "`autoscan_role_docker_labels_trigger_certificates`{ .sb-show-on-unchecked }`autoscan2_docker_labels_trigger_certificates`{ .sb-show-on-checked }"
+    ??? variable dict "`autoscan_role_docker_labels_trigger_certificates`{ .sb-show-on-unchecked }`autoscan2_docker_labels_trigger_certificates`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: dict
         autoscan_role_docker_labels_trigger_certificates: "{{ traefik_router_certificate_domains
                                                               | traefik_certificate_labels(traefik_router + '-triggers') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: dict
         autoscan2_docker_labels_trigger_certificates: "{{ traefik_router_certificate_domains
                                                           | traefik_certificate_labels(traefik_router + '-triggers') }}"
         ```
@@ -850,12 +850,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`autoscan_role_docker_cpus`{ .sb-show-on-unchecked }`autoscan2_docker_cpus`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         autoscan_role_docker_cpus:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         autoscan2_docker_cpus:
         ```
 
@@ -1407,15 +1409,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         autoscan2_docker_cleanup:
         ```
 
-    ??? variable string "`autoscan_role_docker_force_kill`{ .sb-show-on-unchecked }`autoscan2_docker_force_kill`{ .sb-show-on-checked }"
+    ??? variable bool "`autoscan_role_docker_force_kill`{ .sb-show-on-unchecked }`autoscan2_docker_force_kill`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: bool (true/false)
         autoscan_role_docker_force_kill:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: bool (true/false)
         autoscan2_docker_force_kill:
         ```
 
@@ -1434,11 +1436,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`autoscan_role_docker_healthy_wait_timeout`{ .sb-show-on-unchecked }`autoscan2_docker_healthy_wait_timeout`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
+        # Healthy-state wait timeout in seconds
         # Type: int
         autoscan_role_docker_healthy_wait_timeout:
         ```
 
         ```yaml { .sb-show-on-checked }
+        # Healthy-state wait timeout in seconds
         # Type: int
         autoscan2_docker_healthy_wait_timeout:
         ```
@@ -1637,15 +1641,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         autoscan2_docker_create_timeout:
         ```
 
-    ??? variable string "`autoscan_role_docker_entrypoint`{ .sb-show-on-unchecked }`autoscan2_docker_entrypoint`{ .sb-show-on-checked }"
+    ??? variable list "`autoscan_role_docker_entrypoint`{ .sb-show-on-unchecked }`autoscan2_docker_entrypoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: list
         autoscan_role_docker_entrypoint:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: list
         autoscan2_docker_entrypoint:
         ```
 
@@ -1697,15 +1701,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         autoscan2_docker_runtime:
         ```
 
-    ??? variable list "`autoscan_role_docker_sysctls`{ .sb-show-on-unchecked }`autoscan2_docker_sysctls`{ .sb-show-on-checked }"
+    ??? variable dict "`autoscan_role_docker_sysctls`{ .sb-show-on-unchecked }`autoscan2_docker_sysctls`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: list
+        # Type: dict
         autoscan_role_docker_sysctls:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: list
+        # Type: dict
         autoscan2_docker_sysctls:
         ```
 
@@ -1845,15 +1849,17 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         autoscan2_docker_volumes_download:
         ```
 
-    ??? variable string "`autoscan_role_themepark_addons`{ .sb-show-on-unchecked }`autoscan2_themepark_addons`{ .sb-show-on-checked }"
+    ??? variable list "`autoscan_role_themepark_addons`{ .sb-show-on-unchecked }`autoscan2_themepark_addons`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # ThemePark addon names to enable
+        # Type: list
         autoscan_role_themepark_addons:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # ThemePark addon names to enable
+        # Type: list
         autoscan2_themepark_addons:
         ```
 

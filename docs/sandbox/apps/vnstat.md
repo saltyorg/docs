@@ -422,7 +422,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`vnstat_role_docker_cpus`"
 
         ```yaml
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         vnstat_role_docker_cpus:
         ```
 
@@ -759,6 +760,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`vnstat_role_docker_healthy_wait_timeout`"
 
         ```yaml
+        # Healthy-state wait timeout in seconds
         # Type: int
         vnstat_role_docker_healthy_wait_timeout:
         ```
@@ -877,10 +879,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         vnstat_role_docker_create_timeout:
         ```
 
-    ??? variable string "`vnstat_role_docker_entrypoint`"
+    ??? variable list "`vnstat_role_docker_entrypoint`"
 
         ```yaml
-        # Type: string
+        # Type: list
         vnstat_role_docker_entrypoint:
         ```
 
@@ -919,10 +921,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         vnstat_role_docker_runtime:
         ```
 
-    ??? variable list "`vnstat_role_docker_sysctls`"
+    ??? variable dict "`vnstat_role_docker_sysctls`"
 
         ```yaml
-        # Type: list
+        # Type: dict
         vnstat_role_docker_sysctls:
         ```
 
@@ -1005,10 +1007,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         vnstat_role_docker_volumes_download:
         ```
 
-    ??? variable string "`vnstat_role_themepark_addons`"
+    ??? variable list "`vnstat_role_themepark_addons`"
 
         ```yaml
-        # Type: string
+        # ThemePark addon names to enable
+        # Type: list
         vnstat_role_themepark_addons:
         ```
 

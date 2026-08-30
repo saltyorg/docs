@@ -581,11 +581,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: list
         silo_role_docker_volumes_default:
-          - "{{ silo_role_paths_location }}/plugins:/var/lib/silo/plugins"
-          - "{{ silo_role_paths_location }}/compat:/var/lib/silo/compat"
-          - "{{ silo_role_paths_transcodes_location }}:/tmp/silo-transcode"
-          - "{{ silo_role_paths_location }}/audiobook-covers:/var/lib/silo/audiobook-covers"
-          - "{{ silo_role_paths_location }}/catalog-seeds:/catalog-seeds:ro"
+          - "{{ lookup('role_var', '_paths_location', role='silo') }}/plugins:/var/lib/silo/plugins"
+          - "{{ lookup('role_var', '_paths_location', role='silo') }}/compat:/var/lib/silo/compat"
+          - "{{ lookup('role_var', '_paths_transcodes_location', role='silo') }}:/tmp/silo-transcode"
+          - "{{ lookup('role_var', '_paths_location', role='silo') }}/audiobook-covers:/var/lib/silo/audiobook-covers"
+          - "{{ lookup('role_var', '_paths_location', role='silo') }}/catalog-seeds:/catalog-seeds:ro"
           - "/proc/meminfo:/host/proc/meminfo:ro"
         ```
 
@@ -618,10 +618,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           - '{ "traefik.http.services.{{ silo_name }}-jf.loadbalancer.server.port": "{{ lookup("role_var", "_web_jf_port", role="silo") }}" }'
         ```
 
-    ??? variable string "`silo_role_docker_labels_jf_certificate_domains`"
+    ??? variable list "`silo_role_docker_labels_jf_certificate_domains`"
 
         ```yaml
-        # Type: string
+        # Type: list
         silo_role_docker_labels_jf_certificate_domains: "{{ lookup('role_var', '_web_jf_domain', role='silo')
                                                             | traefik_certificate_domains([],
                                                                                           [],
@@ -629,18 +629,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
                                                                                           traefik_certificate_authoritative_zones) }}"
         ```
 
-    ??? variable string "`silo_role_docker_labels_jf_certificates`"
+    ??? variable dict "`silo_role_docker_labels_jf_certificates`"
 
         ```yaml
-        # Type: string
+        # Type: dict
         silo_role_docker_labels_jf_certificates: "{{ silo_role_docker_labels_jf_certificate_domains
                                                      | traefik_certificate_labels(silo_name + '-jf') }}"
         ```
 
-    ??? variable string "`silo_role_docker_labels_jf`"
+    ??? variable dict "`silo_role_docker_labels_jf`"
 
         ```yaml
-        # Type: string
+        # Type: dict
         silo_role_docker_labels_jf: "{{ ((silo_role_docker_labels_jf_template | map('from_json') | combine)
                                          | combine(silo_role_docker_labels_jf_certificates))
                                      if (lookup('role_var', '_jf_enabled', role='silo') | bool)
@@ -667,10 +667,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           - '{ "traefik.http.services.{{ silo_name }}-abs.loadbalancer.server.port": "{{ lookup("role_var", "_web_abs_port", role="silo") }}" }'
         ```
 
-    ??? variable string "`silo_role_docker_labels_abs_certificate_domains`"
+    ??? variable list "`silo_role_docker_labels_abs_certificate_domains`"
 
         ```yaml
-        # Type: string
+        # Type: list
         silo_role_docker_labels_abs_certificate_domains: "{{ lookup('role_var', '_web_abs_domain', role='silo')
                                                              | traefik_certificate_domains([],
                                                                                            [],
@@ -678,18 +678,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
                                                                                            traefik_certificate_authoritative_zones) }}"
         ```
 
-    ??? variable string "`silo_role_docker_labels_abs_certificates`"
+    ??? variable dict "`silo_role_docker_labels_abs_certificates`"
 
         ```yaml
-        # Type: string
+        # Type: dict
         silo_role_docker_labels_abs_certificates: "{{ silo_role_docker_labels_abs_certificate_domains
                                                       | traefik_certificate_labels(silo_name + '-abs') }}"
         ```
 
-    ??? variable string "`silo_role_docker_labels_abs`"
+    ??? variable dict "`silo_role_docker_labels_abs`"
 
         ```yaml
-        # Type: string
+        # Type: dict
         silo_role_docker_labels_abs: "{{ ((silo_role_docker_labels_abs_template | map('from_json') | combine)
                                           | combine(silo_role_docker_labels_abs_certificates))
                                       if (lookup('role_var', '_abs_enabled', role='silo') | bool)
@@ -815,7 +815,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`silo_role_docker_cpus`"
 
         ```yaml
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         silo_role_docker_cpus:
         ```
 
@@ -1135,10 +1136,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         silo_role_docker_cleanup:
         ```
 
-    ??? variable string "`silo_role_docker_force_kill`"
+    ??? variable bool "`silo_role_docker_force_kill`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         silo_role_docker_force_kill:
         ```
 
@@ -1152,6 +1153,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`silo_role_docker_healthy_wait_timeout`"
 
         ```yaml
+        # Healthy-state wait timeout in seconds
         # Type: int
         silo_role_docker_healthy_wait_timeout:
         ```
@@ -1270,10 +1272,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         silo_role_docker_create_timeout:
         ```
 
-    ??? variable string "`silo_role_docker_entrypoint`"
+    ??? variable list "`silo_role_docker_entrypoint`"
 
         ```yaml
-        # Type: string
+        # Type: list
         silo_role_docker_entrypoint:
         ```
 
@@ -1305,10 +1307,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         silo_role_docker_runtime:
         ```
 
-    ??? variable list "`silo_role_docker_sysctls`"
+    ??? variable dict "`silo_role_docker_sysctls`"
 
         ```yaml
-        # Type: list
+        # Type: dict
         silo_role_docker_sysctls:
         ```
 
@@ -1367,10 +1369,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         silo_role_docker_volumes_download:
         ```
 
-    ??? variable string "`silo_role_themepark_addons`"
+    ??? variable list "`silo_role_themepark_addons`"
 
         ```yaml
-        # Type: string
+        # ThemePark addon names to enable
+        # Type: list
         silo_role_themepark_addons:
         ```
 

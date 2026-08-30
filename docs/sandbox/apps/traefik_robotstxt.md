@@ -263,7 +263,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`traefik_robotstxt_role_docker_cpus`"
 
         ```yaml
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         traefik_robotstxt_role_docker_cpus:
         ```
 
@@ -597,10 +598,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         traefik_robotstxt_role_docker_cleanup:
         ```
 
-    ??? variable string "`traefik_robotstxt_role_docker_force_kill`"
+    ??? variable bool "`traefik_robotstxt_role_docker_force_kill`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         traefik_robotstxt_role_docker_force_kill:
         ```
 
@@ -614,6 +615,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`traefik_robotstxt_role_docker_healthy_wait_timeout`"
 
         ```yaml
+        # Healthy-state wait timeout in seconds
         # Type: int
         traefik_robotstxt_role_docker_healthy_wait_timeout:
         ```
@@ -732,10 +734,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         traefik_robotstxt_role_docker_create_timeout:
         ```
 
-    ??? variable string "`traefik_robotstxt_role_docker_entrypoint`"
+    ??? variable list "`traefik_robotstxt_role_docker_entrypoint`"
 
         ```yaml
-        # Type: string
+        # Type: list
         traefik_robotstxt_role_docker_entrypoint:
         ```
 
@@ -774,10 +776,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         traefik_robotstxt_role_docker_runtime:
         ```
 
-    ??? variable list "`traefik_robotstxt_role_docker_sysctls`"
+    ??? variable dict "`traefik_robotstxt_role_docker_sysctls`"
 
         ```yaml
-        # Type: list
+        # Type: dict
         traefik_robotstxt_role_docker_sysctls:
         ```
 

@@ -181,14 +181,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           DELAY: "{{ lookup('role_var', '_delay', role='ddns') }}"
         ```
 
-    ??? variable string "`ddns_role_docker_envs_cloudflare`"
+    ??? variable dict "`ddns_role_docker_envs_cloudflare`"
 
         ```yaml
-        # Type: string
+        # Type: dict
         ddns_role_docker_envs_cloudflare: "{{ {'CLOUDFLARE_API_TOKEN': cloudflare_scoped_token}
                                            if cloudflare_scoped_token_is_enabled
                                            else {'CLOUDFLARE_API_KEY': cloudflare_api_key,
-                                                      'CLOUDFLARE_EMAIL': cloudflare_email} }}"
+                                                 'CLOUDFLARE_EMAIL': cloudflare_email} }}"
         ```
 
     ??? variable dict "`ddns_role_docker_envs_custom`"
@@ -373,7 +373,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`ddns_role_docker_cpus`"
 
         ```yaml
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         ddns_role_docker_cpus:
         ```
 
@@ -693,10 +694,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ddns_role_docker_cleanup:
         ```
 
-    ??? variable string "`ddns_role_docker_force_kill`"
+    ??? variable bool "`ddns_role_docker_force_kill`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         ddns_role_docker_force_kill:
         ```
 
@@ -710,6 +711,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`ddns_role_docker_healthy_wait_timeout`"
 
         ```yaml
+        # Healthy-state wait timeout in seconds
         # Type: int
         ddns_role_docker_healthy_wait_timeout:
         ```
@@ -821,10 +823,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ddns_role_docker_create_timeout:
         ```
 
-    ??? variable string "`ddns_role_docker_entrypoint`"
+    ??? variable list "`ddns_role_docker_entrypoint`"
 
         ```yaml
-        # Type: string
+        # Type: list
         ddns_role_docker_entrypoint:
         ```
 
@@ -863,10 +865,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ddns_role_docker_runtime:
         ```
 
-    ??? variable list "`ddns_role_docker_sysctls`"
+    ??? variable dict "`ddns_role_docker_sysctls`"
 
         ```yaml
-        # Type: list
+        # Type: dict
         ddns_role_docker_sysctls:
         ```
 

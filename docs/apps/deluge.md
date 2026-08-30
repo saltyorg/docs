@@ -573,14 +573,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-unchecked }
         # Type: list
         deluge_role_docker_volumes_default:
-          - "{{ deluge_role_paths_location }}:/config"
+          - "{{ lookup('role_var', '_paths_location', role='deluge') }}:/config"
           - "{{ server_appdata_path }}/scripts:/scripts"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: list
         deluge2_docker_volumes_default:
-          - "{{ deluge_role_paths_location }}:/config"
+          - "{{ lookup('role_var', '_paths_location', role='deluge') }}:/config"
           - "{{ server_appdata_path }}/scripts:/scripts"
         ```
 
@@ -825,12 +825,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`deluge_role_docker_cpus`{ .sb-show-on-unchecked }`deluge2_docker_cpus`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         deluge_role_docker_cpus:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         deluge2_docker_cpus:
         ```
 
@@ -1370,15 +1372,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         deluge2_docker_cleanup:
         ```
 
-    ??? variable string "`deluge_role_docker_force_kill`{ .sb-show-on-unchecked }`deluge2_docker_force_kill`{ .sb-show-on-checked }"
+    ??? variable bool "`deluge_role_docker_force_kill`{ .sb-show-on-unchecked }`deluge2_docker_force_kill`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: bool (true/false)
         deluge_role_docker_force_kill:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: bool (true/false)
         deluge2_docker_force_kill:
         ```
 
@@ -1397,11 +1399,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`deluge_role_docker_healthy_wait_timeout`{ .sb-show-on-unchecked }`deluge2_docker_healthy_wait_timeout`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
+        # Healthy-state wait timeout in seconds
         # Type: int
         deluge_role_docker_healthy_wait_timeout:
         ```
 
         ```yaml { .sb-show-on-checked }
+        # Healthy-state wait timeout in seconds
         # Type: int
         deluge2_docker_healthy_wait_timeout:
         ```
@@ -1588,15 +1592,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         deluge2_docker_create_timeout:
         ```
 
-    ??? variable string "`deluge_role_docker_entrypoint`{ .sb-show-on-unchecked }`deluge2_docker_entrypoint`{ .sb-show-on-checked }"
+    ??? variable list "`deluge_role_docker_entrypoint`{ .sb-show-on-unchecked }`deluge2_docker_entrypoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: list
         deluge_role_docker_entrypoint:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: list
         deluge2_docker_entrypoint:
         ```
 
@@ -1648,15 +1652,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         deluge2_docker_runtime:
         ```
 
-    ??? variable list "`deluge_role_docker_sysctls`{ .sb-show-on-unchecked }`deluge2_docker_sysctls`{ .sb-show-on-checked }"
+    ??? variable dict "`deluge_role_docker_sysctls`{ .sb-show-on-unchecked }`deluge2_docker_sysctls`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: list
+        # Type: dict
         deluge_role_docker_sysctls:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: list
+        # Type: dict
         deluge2_docker_sysctls:
         ```
 

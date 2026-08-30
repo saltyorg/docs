@@ -123,12 +123,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         docker_memory_default: ""
         ```
 
-    ??? variable string "`docker_skip_start_during_meta_tag`"
+    ??? variable bool "`docker_skip_start_during_meta_tag`"
 
         ```yaml
         # Skip Container startup during core, saltbox, mediabox or feederbox
         # If the kernel has been updated and a reboot will happen
-        # Type: string
+        # Type: bool (true/false)
         docker_skip_start_during_meta_tag: "{{ saltbox_auto_reboot }}"
         ```
 

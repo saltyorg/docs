@@ -423,7 +423,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`archivebox_role_docker_cpus`"
 
         ```yaml
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         archivebox_role_docker_cpus:
         ```
 
@@ -750,10 +751,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         archivebox_role_docker_cleanup:
         ```
 
-    ??? variable string "`archivebox_role_docker_force_kill`"
+    ??? variable bool "`archivebox_role_docker_force_kill`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         archivebox_role_docker_force_kill:
         ```
 
@@ -767,6 +768,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`archivebox_role_docker_healthy_wait_timeout`"
 
         ```yaml
+        # Healthy-state wait timeout in seconds
         # Type: int
         archivebox_role_docker_healthy_wait_timeout:
         ```
@@ -885,10 +887,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         archivebox_role_docker_create_timeout:
         ```
 
-    ??? variable string "`archivebox_role_docker_entrypoint`"
+    ??? variable list "`archivebox_role_docker_entrypoint`"
 
         ```yaml
-        # Type: string
+        # Type: list
         archivebox_role_docker_entrypoint:
         ```
 
@@ -927,10 +929,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         archivebox_role_docker_runtime:
         ```
 
-    ??? variable list "`archivebox_role_docker_sysctls`"
+    ??? variable dict "`archivebox_role_docker_sysctls`"
 
         ```yaml
-        # Type: list
+        # Type: dict
         archivebox_role_docker_sysctls:
         ```
 
@@ -1013,10 +1015,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         archivebox_role_docker_volumes_download:
         ```
 
-    ??? variable string "`archivebox_role_themepark_addons`"
+    ??? variable list "`archivebox_role_themepark_addons`"
 
         ```yaml
-        # Type: string
+        # ThemePark addon names to enable
+        # Type: list
         archivebox_role_themepark_addons:
         ```
 

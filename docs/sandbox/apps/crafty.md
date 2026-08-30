@@ -386,10 +386,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           - '{ "traefik.http.services.{{ crafty_name }}-map.loadbalancer.server.port": "{{ lookup("role_var", "_dynmap_web_port", role="crafty") }}" }'
         ```
 
-    ??? variable string "`crafty_role_docker_labels_dynmap_certificate_domains`"
+    ??? variable list "`crafty_role_docker_labels_dynmap_certificate_domains`"
 
         ```yaml
-        # Type: string
+        # Type: list
         crafty_role_docker_labels_dynmap_certificate_domains: "{{ lookup('role_var', '_dynmap_web_domain', role='crafty')
                                                                   | traefik_certificate_domains([],
                                                                                                 [],
@@ -397,10 +397,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
                                                                                                 traefik_certificate_authoritative_zones) }}"
         ```
 
-    ??? variable string "`crafty_role_docker_labels_dynmap_certificates`"
+    ??? variable dict "`crafty_role_docker_labels_dynmap_certificates`"
 
         ```yaml
-        # Type: string
+        # Type: dict
         crafty_role_docker_labels_dynmap_certificates: "{{ crafty_role_docker_labels_dynmap_certificate_domains
                                                            | traefik_certificate_labels(crafty_name + '-map') }}"
         ```
@@ -537,7 +537,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`crafty_role_docker_cpus`"
 
         ```yaml
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         crafty_role_docker_cpus:
         ```
 
@@ -857,10 +858,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         crafty_role_docker_cleanup:
         ```
 
-    ??? variable string "`crafty_role_docker_force_kill`"
+    ??? variable bool "`crafty_role_docker_force_kill`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         crafty_role_docker_force_kill:
         ```
 
@@ -874,6 +875,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`crafty_role_docker_healthy_wait_timeout`"
 
         ```yaml
+        # Healthy-state wait timeout in seconds
         # Type: int
         crafty_role_docker_healthy_wait_timeout:
         ```
@@ -985,10 +987,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         crafty_role_docker_create_timeout:
         ```
 
-    ??? variable string "`crafty_role_docker_entrypoint`"
+    ??? variable list "`crafty_role_docker_entrypoint`"
 
         ```yaml
-        # Type: string
+        # Type: list
         crafty_role_docker_entrypoint:
         ```
 
@@ -1020,10 +1022,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         crafty_role_docker_runtime:
         ```
 
-    ??? variable list "`crafty_role_docker_sysctls`"
+    ??? variable dict "`crafty_role_docker_sysctls`"
 
         ```yaml
-        # Type: list
+        # Type: dict
         crafty_role_docker_sysctls:
         ```
 
@@ -1106,10 +1108,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         crafty_role_docker_volumes_download:
         ```
 
-    ??? variable string "`crafty_role_themepark_addons`"
+    ??? variable list "`crafty_role_themepark_addons`"
 
         ```yaml
-        # Type: string
+        # ThemePark addon names to enable
+        # Type: list
         crafty_role_themepark_addons:
         ```
 

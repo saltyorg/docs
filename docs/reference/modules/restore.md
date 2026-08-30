@@ -274,24 +274,24 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         restore_sftp_template: ""
         ```
 
-    ??? variable string "`restore_google_template_args`"
+    ??? variable list "`restore_google_template_args`"
 
         ```yaml
-        # Type: string
+        # Type: list
         restore_google_template_args: "{{ restore_google_template | saltbox_argv('restore_google_template') }}"
         ```
 
-    ??? variable string "`restore_dropbox_template_args`"
+    ??? variable list "`restore_dropbox_template_args`"
 
         ```yaml
-        # Type: string
+        # Type: list
         restore_dropbox_template_args: "{{ restore_dropbox_template | saltbox_argv('restore_dropbox_template') }}"
         ```
 
-    ??? variable string "`restore_sftp_template_args`"
+    ??? variable list "`restore_sftp_template_args`"
 
         ```yaml
-        # Type: string
+        # Type: list
         restore_sftp_template_args: "{{ restore_sftp_template | saltbox_argv('restore_sftp_template') }}"
         ```
 

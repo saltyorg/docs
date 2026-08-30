@@ -211,24 +211,32 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        qbittorrent_role_webui_custom_headers_enabled: "{{ 'true' if lookup('role_var', '_themepark_enabled', role='qbittorrent') and global_themepark_plugin_enabled else 'false' }}"
+        qbittorrent_role_webui_custom_headers_enabled: "{{ 'true'
+                                                        if lookup('role_var', '_themepark_enabled', role='qbittorrent') and global_themepark_plugin_enabled
+                                                        else 'false' }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        qbittorrent2_webui_custom_headers_enabled: "{{ 'true' if lookup('role_var', '_themepark_enabled', role='qbittorrent') and global_themepark_plugin_enabled else 'false' }}"
+        qbittorrent2_webui_custom_headers_enabled: "{{ 'true'
+                                                    if lookup('role_var', '_themepark_enabled', role='qbittorrent') and global_themepark_plugin_enabled
+                                                    else 'false' }}"
         ```
 
     ??? variable string "`qbittorrent_role_webui_custom_headers_default`{ .sb-show-on-unchecked }`qbittorrent2_webui_custom_headers_default`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        qbittorrent_role_webui_custom_headers_default: "{{ (qbittorrent_role_themepark_headers if lookup('role_var', '_themepark_enabled', role='qbittorrent') and global_themepark_plugin_enabled else '') }}"
+        qbittorrent_role_webui_custom_headers_default: "{{ (qbittorrent_role_themepark_headers
+                                                            if lookup('role_var', '_themepark_enabled', role='qbittorrent') and global_themepark_plugin_enabled
+                                                            else '') }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        qbittorrent2_webui_custom_headers_default: "{{ (qbittorrent_role_themepark_headers if lookup('role_var', '_themepark_enabled', role='qbittorrent') and global_themepark_plugin_enabled else '') }}"
+        qbittorrent2_webui_custom_headers_default: "{{ (qbittorrent_role_themepark_headers
+                                                        if lookup('role_var', '_themepark_enabled', role='qbittorrent') and global_themepark_plugin_enabled
+                                                        else '') }}"
         ```
 
     ??? variable string "`qbittorrent_role_webui_custom_headers_custom`{ .sb-show-on-unchecked }`qbittorrent2_webui_custom_headers_custom`{ .sb-show-on-checked }"
@@ -311,16 +319,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        qbittorrent_role_host_download_url: "{{ lookup('role_var', '_host_download_endpoint', role='qbittorrent') }}{{ lookup('role_var', '_host_specific_version', role='qbittorrent')
-                                                                                                                    if (lookup('role_var', '_host_specific_version', role='qbittorrent') | length > 0)
-                                                                                                                    else qbittorrent_release_version.stdout }}/x86_64-qbittorrent-nox"
+        qbittorrent_role_host_download_url: "{{ lookup('role_var', '_host_download_endpoint', role='qbittorrent') }}{{ lookup('role_var', '_host_download_version', role='qbittorrent') }}/x86_64-qbittorrent-nox"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        qbittorrent2_host_download_url: "{{ lookup('role_var', '_host_download_endpoint', role='qbittorrent') }}{{ lookup('role_var', '_host_specific_version', role='qbittorrent')
-                                                                                                                if (lookup('role_var', '_host_specific_version', role='qbittorrent') | length > 0)
-                                                                                                                else qbittorrent_release_version.stdout }}/x86_64-qbittorrent-nox"
+        qbittorrent2_host_download_url: "{{ lookup('role_var', '_host_download_endpoint', role='qbittorrent') }}{{ lookup('role_var', '_host_download_version', role='qbittorrent') }}/x86_64-qbittorrent-nox"
         ```
 
     ??? variable string "`qbittorrent_role_host_release_url`{ .sb-show-on-unchecked }`qbittorrent2_host_release_url`{ .sb-show-on-checked }"
@@ -339,42 +343,22 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
                                         else 'https://github.com/userdocs/qbittorrent-nox-static-legacy/releases/latest/download/dependency-version.json' }}"
         ```
 
-    ??? variable string "`qbittorrent_role_host_lookup_libtorrent1`{ .sb-show-on-unchecked }`qbittorrent2_host_lookup_libtorrent1`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrent_role_host_lookup_libtorrent1: 'release-\(.qbittorrent)_v\(.libtorrent_1_2)'
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrent2_host_lookup_libtorrent1: 'release-\(.qbittorrent)_v\(.libtorrent_1_2)'
-        ```
-
-    ??? variable string "`qbittorrent_role_host_lookup_libtorrent2`{ .sb-show-on-unchecked }`qbittorrent2_host_lookup_libtorrent2`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        qbittorrent_role_host_lookup_libtorrent2: 'release-\(.qbittorrent)_v\(.libtorrent_2_0)'
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        qbittorrent2_host_lookup_libtorrent2: 'release-\(.qbittorrent)_v\(.libtorrent_2_0)'
-        ```
-
     ??? variable string "`qbittorrent_role_host_version`{ .sb-show-on-unchecked }`qbittorrent2_host_version`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        qbittorrent_role_host_version: |
-          curl -sL {{ lookup('role_var', '_host_release_url', role='qbittorrent') }} | jq -r '. | "{{ lookup('role_var', '_host_release_lookup', role='qbittorrent') }}"'
+        qbittorrent_role_host_version: "{{ 'release-' + (qbittorrent_host_version_response.content | from_json).qbittorrent
+                                           + '_v' + ((qbittorrent_host_version_response.content | from_json).libtorrent_2_0
+                                                     if lookup('role_var', '_host_branch', role='qbittorrent') == 'libtorrent2'
+                                                     else (qbittorrent_host_version_response.content | from_json).libtorrent_1_2) }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        qbittorrent2_host_version: |
-          curl -sL {{ lookup('role_var', '_host_release_url', role='qbittorrent') }} | jq -r '. | "{{ lookup('role_var', '_host_release_lookup', role='qbittorrent') }}"'
+        qbittorrent2_host_version: "{{ 'release-' + (qbittorrent_host_version_response.content | from_json).qbittorrent
+                                       + '_v' + ((qbittorrent_host_version_response.content | from_json).libtorrent_2_0
+                                                 if lookup('role_var', '_host_branch', role='qbittorrent') == 'libtorrent2'
+                                                 else (qbittorrent_host_version_response.content | from_json).libtorrent_1_2) }}"
         ```
 
     ??? variable string "`qbittorrent_role_service_name`{ .sb-show-on-unchecked }`qbittorrent2_service_name`{ .sb-show-on-checked }"
@@ -912,14 +896,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-unchecked }
         # Type: list
         qbittorrent_role_docker_volumes_default:
-          - "{{ qbittorrent_role_paths_location }}:/config"
+          - "{{ lookup('role_var', '_paths_location', role='qbittorrent') }}:/config"
           - "{{ server_appdata_path }}/scripts:/scripts"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: list
         qbittorrent2_docker_volumes_default:
-          - "{{ qbittorrent_role_paths_location }}:/config"
+          - "{{ lookup('role_var', '_paths_location', role='qbittorrent') }}:/config"
           - "{{ server_appdata_path }}/scripts:/scripts"
         ```
 
@@ -1164,12 +1148,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`qbittorrent_role_docker_cpus`{ .sb-show-on-unchecked }`qbittorrent2_docker_cpus`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         qbittorrent_role_docker_cpus:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         qbittorrent2_docker_cpus:
         ```
 
@@ -1709,15 +1695,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         qbittorrent2_docker_cleanup:
         ```
 
-    ??? variable string "`qbittorrent_role_docker_force_kill`{ .sb-show-on-unchecked }`qbittorrent2_docker_force_kill`{ .sb-show-on-checked }"
+    ??? variable bool "`qbittorrent_role_docker_force_kill`{ .sb-show-on-unchecked }`qbittorrent2_docker_force_kill`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: bool (true/false)
         qbittorrent_role_docker_force_kill:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: bool (true/false)
         qbittorrent2_docker_force_kill:
         ```
 
@@ -1736,11 +1722,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`qbittorrent_role_docker_healthy_wait_timeout`{ .sb-show-on-unchecked }`qbittorrent2_docker_healthy_wait_timeout`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
+        # Healthy-state wait timeout in seconds
         # Type: int
         qbittorrent_role_docker_healthy_wait_timeout:
         ```
 
         ```yaml { .sb-show-on-checked }
+        # Healthy-state wait timeout in seconds
         # Type: int
         qbittorrent2_docker_healthy_wait_timeout:
         ```
@@ -1927,15 +1915,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         qbittorrent2_docker_create_timeout:
         ```
 
-    ??? variable string "`qbittorrent_role_docker_entrypoint`{ .sb-show-on-unchecked }`qbittorrent2_docker_entrypoint`{ .sb-show-on-checked }"
+    ??? variable list "`qbittorrent_role_docker_entrypoint`{ .sb-show-on-unchecked }`qbittorrent2_docker_entrypoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: list
         qbittorrent_role_docker_entrypoint:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: list
         qbittorrent2_docker_entrypoint:
         ```
 
@@ -1987,15 +1975,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         qbittorrent2_docker_runtime:
         ```
 
-    ??? variable list "`qbittorrent_role_docker_sysctls`{ .sb-show-on-unchecked }`qbittorrent2_docker_sysctls`{ .sb-show-on-checked }"
+    ??? variable dict "`qbittorrent_role_docker_sysctls`{ .sb-show-on-unchecked }`qbittorrent2_docker_sysctls`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: list
+        # Type: dict
         qbittorrent_role_docker_sysctls:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: list
+        # Type: dict
         qbittorrent2_docker_sysctls:
         ```
 

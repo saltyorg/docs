@@ -100,6 +100,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         your_spotify_role_secret_key: ""
         ```
 
+    ??? variable string "`your_spotify_mongodb_role_docker_image_tag`"
+
+        ```yaml
+        # Type: string
+        your_spotify_mongodb_role_docker_image_tag: "8.0"
+        ```
+
 === "Web"
 
     ??? variable string "`your_spotify_role_web_subdomain`"
@@ -422,7 +429,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`your_spotify_role_docker_cpus`"
 
         ```yaml
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         your_spotify_role_docker_cpus:
         ```
 
@@ -756,10 +764,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         your_spotify_role_docker_cleanup:
         ```
 
-    ??? variable string "`your_spotify_role_docker_force_kill`"
+    ??? variable bool "`your_spotify_role_docker_force_kill`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         your_spotify_role_docker_force_kill:
         ```
 
@@ -773,6 +781,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`your_spotify_role_docker_healthy_wait_timeout`"
 
         ```yaml
+        # Healthy-state wait timeout in seconds
         # Type: int
         your_spotify_role_docker_healthy_wait_timeout:
         ```
@@ -891,10 +900,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         your_spotify_role_docker_create_timeout:
         ```
 
-    ??? variable string "`your_spotify_role_docker_entrypoint`"
+    ??? variable list "`your_spotify_role_docker_entrypoint`"
 
         ```yaml
-        # Type: string
+        # Type: list
         your_spotify_role_docker_entrypoint:
         ```
 
@@ -933,10 +942,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         your_spotify_role_docker_runtime:
         ```
 
-    ??? variable list "`your_spotify_role_docker_sysctls`"
+    ??? variable dict "`your_spotify_role_docker_sysctls`"
 
         ```yaml
-        # Type: list
+        # Type: dict
         your_spotify_role_docker_sysctls:
         ```
 
@@ -995,10 +1004,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         your_spotify_role_docker_volumes_download:
         ```
 
-    ??? variable string "`your_spotify_role_themepark_addons`"
+    ??? variable list "`your_spotify_role_themepark_addons`"
 
         ```yaml
-        # Type: string
+        # ThemePark addon names to enable
+        # Type: list
         your_spotify_role_themepark_addons:
         ```
 

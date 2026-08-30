@@ -54,7 +54,11 @@ sb install mongodb
 
 ## Usage
 
-MongoDB 6 is deployed in a Docker container with data persisting to `/opt/mongo/`. Connect from other containers using `mongodb://mongo:27017/`. Multiple instances are supported via the `mongodb_instances` variable in your [Saltbox inventory](../saltbox/inventory/index.md).
+MongoDB 8.0 is deployed in a Docker container with data persisting to `/opt/mongo/`. Connect from other containers using `mongodb://mongo:27017/`. Multiple instances are supported via the `mongodb_instances` variable in your [Saltbox inventory](../saltbox/inventory/index.md).
+
+For official `mongo` images, Saltbox discovers the source version of existing data from MongoDB FTDC metadata and applies every required binary and feature compatibility version transition. Before a cross-series upgrade, Saltbox retains a verified cold copy at `<data path>_backup`; this copy is retained after success, and another cross-series upgrade is refused until it is removed manually. Unknown upgrade paths, missing FTDC metadata, downgrades, and incompatible host kernels fail before the data is changed.
+
+Automatic upgrades require the `/data/db` and `/data/configdb` bindings to use `mongodb_role_paths_location`; change that path variable instead of overriding those two Docker volume targets. Custom image repositories continue to use ordinary deployment without automatic version upgrades.
 
 Note: No authentication is configured by default.
 
@@ -153,12 +157,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        mongodb_role_docker_image_tag: "6"
+        mongodb_role_docker_image_tag: "8.0"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        mongodb2_docker_image_tag: "6"
+        mongodb2_docker_image_tag: "8.0"
         ```
 
     ??? variable string "`mongodb_role_docker_image`{ .sb-show-on-unchecked }`mongodb2_docker_image`{ .sb-show-on-checked }"
@@ -212,15 +216,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-unchecked }
         # Type: list
         mongodb_role_docker_volumes_default:
-          - "{{ mongodb_role_paths_location }}:/data/db:rw"
-          - "{{ mongodb_role_paths_location }}/config:/data/configdb"
+          - "{{ lookup('role_var', '_paths_location', role='mongodb') }}:/data/db:rw"
+          - "{{ lookup('role_var', '_paths_location', role='mongodb') }}/config:/data/configdb"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: list
         mongodb2_docker_volumes_default:
-          - "{{ mongodb_role_paths_location }}:/data/db:rw"
-          - "{{ mongodb_role_paths_location }}/config:/data/configdb"
+          - "{{ lookup('role_var', '_paths_location', role='mongodb') }}:/data/db:rw"
+          - "{{ lookup('role_var', '_paths_location', role='mongodb') }}/config:/data/configdb"
         ```
 
     ??? variable list "`mongodb_role_docker_volumes_custom`{ .sb-show-on-unchecked }`mongodb2_docker_volumes_custom`{ .sb-show-on-checked }"
@@ -438,12 +442,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`mongodb_role_docker_cpus`{ .sb-show-on-unchecked }`mongodb2_docker_cpus`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         mongodb_role_docker_cpus:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # CPU allocation accepted as a numeric string, such as 1.5
+        # Type: string (quoted number)
         mongodb2_docker_cpus:
         ```
 
@@ -983,15 +989,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         mongodb2_docker_cleanup:
         ```
 
-    ??? variable string "`mongodb_role_docker_force_kill`{ .sb-show-on-unchecked }`mongodb2_docker_force_kill`{ .sb-show-on-checked }"
+    ??? variable bool "`mongodb_role_docker_force_kill`{ .sb-show-on-unchecked }`mongodb2_docker_force_kill`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: bool (true/false)
         mongodb_role_docker_force_kill:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: bool (true/false)
         mongodb2_docker_force_kill:
         ```
 
@@ -1010,11 +1016,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable int "`mongodb_role_docker_healthy_wait_timeout`{ .sb-show-on-unchecked }`mongodb2_docker_healthy_wait_timeout`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
+        # Healthy-state wait timeout in seconds
         # Type: int
         mongodb_role_docker_healthy_wait_timeout:
         ```
 
         ```yaml { .sb-show-on-checked }
+        # Healthy-state wait timeout in seconds
         # Type: int
         mongodb2_docker_healthy_wait_timeout:
         ```
@@ -1213,15 +1221,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         mongodb2_docker_create_timeout:
         ```
 
-    ??? variable string "`mongodb_role_docker_entrypoint`{ .sb-show-on-unchecked }`mongodb2_docker_entrypoint`{ .sb-show-on-checked }"
+    ??? variable list "`mongodb_role_docker_entrypoint`{ .sb-show-on-unchecked }`mongodb2_docker_entrypoint`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: string
+        # Type: list
         mongodb_role_docker_entrypoint:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: string
+        # Type: list
         mongodb2_docker_entrypoint:
         ```
 
@@ -1285,15 +1293,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         mongodb2_docker_runtime:
         ```
 
-    ??? variable list "`mongodb_role_docker_sysctls`{ .sb-show-on-unchecked }`mongodb2_docker_sysctls`{ .sb-show-on-checked }"
+    ??? variable dict "`mongodb_role_docker_sysctls`{ .sb-show-on-unchecked }`mongodb2_docker_sysctls`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: list
+        # Type: dict
         mongodb_role_docker_sysctls:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: list
+        # Type: dict
         mongodb2_docker_sysctls:
         ```
 

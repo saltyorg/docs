@@ -326,10 +326,11 @@ type_inference:
     "_dns_zone": "string"
     "elasticsearch_role_docker_user": "string"
   filters:
+    "saltbox_argv": "list"
     "traefik_certificate_domains": "list"
     "traefik_certificate_labels": "dict"
   symbols:
-    "backup_cleanup_custom_rclone_flags": "list"
+    "backup_cleanup_custom_rclone_flags": "string"
     "backup_cleanup_enabled": "bool"
     "backup_cleanup_number": "int"
     "saltbox_auto_reboot": "bool"

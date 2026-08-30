@@ -126,6 +126,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         shell_misc_argcomplete_command: "activate-global-python-argcomplete"
         ```
 
+    ??? variable list "`shell_misc_argcomplete_command_args`"
+
+        ```yaml
+        # Type: list
+        shell_misc_argcomplete_command_args: "{{ shell_misc_argcomplete_command
+                                                 | saltbox_argv('shell_misc_argcomplete_command') }}"
+        ```
+
 === "z (jump around)"
 
     ??? variable string "`shell_z_git_repo_url`"

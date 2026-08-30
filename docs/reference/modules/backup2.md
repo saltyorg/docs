@@ -72,27 +72,50 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         backup2_sftp_template: ""
         ```
 
+    ??? variable list "`backup2_google_template_args`"
+
+        ```yaml
+        # Type: list
+        backup2_google_template_args: "{{ backup2_google_template | saltbox_argv('backup2_google_template') }}"
+        ```
+
+    ??? variable list "`backup2_dropbox_template_args`"
+
+        ```yaml
+        # Type: list
+        backup2_dropbox_template_args: "{{ backup2_dropbox_template | saltbox_argv('backup2_dropbox_template') }}"
+        ```
+
+    ??? variable list "`backup2_sftp_template_args`"
+
+        ```yaml
+        # Type: list
+        backup2_sftp_template_args: "{{ backup2_sftp_template | saltbox_argv('backup2_sftp_template') }}"
+        ```
+
     ??? variable string "`backup2_user_agent`"
 
         ```yaml
         # Type: string
-        backup2_user_agent: "{{ 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36' if backup.rclone.template != 'sftp' else '' }}"
+        backup2_user_agent: "{{ 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36'
+                             if backup.rclone.template != 'sftp'
+                             else '' }}"
         ```
 
 === "Cleanup"
 
-    ??? variable string "`backup2_cleanup_number`"
+    ??? variable int "`backup2_cleanup_number`"
 
         ```yaml
         # Defines how many of the archived backups to keep, so current backup is not counted in this
-        # Type: string
+        # Type: int
         backup2_cleanup_number: "{{ backup_cleanup_number }}" # Int
         ```
 
-    ??? variable string "`backup2_cleanup_enabled`"
+    ??? variable bool "`backup2_cleanup_enabled`"
 
         ```yaml
-        # Type: string
+        # Type: bool (true/false)
         backup2_cleanup_enabled: "{{ backup_cleanup_enabled }}" # Bool
         ```
 
@@ -101,5 +124,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         backup2_cleanup_custom_rclone_flags: "{{ backup_cleanup_custom_rclone_flags }}" # String
+        ```
+
+    ??? variable list "`backup2_cleanup_custom_rclone_args`"
+
+        ```yaml
+        # Type: list
+        backup2_cleanup_custom_rclone_args: "{{ backup2_cleanup_custom_rclone_flags
+                                                | saltbox_argv('backup2_cleanup_custom_rclone_flags') }}"
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

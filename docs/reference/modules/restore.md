@@ -267,10 +267,40 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         restore_dropbox_template: '--dropbox-chunk-size=128M --disable-http2 --dropbox-pacer-min-sleep=85ms'
         ```
 
+    ??? variable string "`restore_sftp_template`"
+
+        ```yaml
+        # Type: string
+        restore_sftp_template: ""
+        ```
+
+    ??? variable list "`restore_google_template_args`"
+
+        ```yaml
+        # Type: list
+        restore_google_template_args: "{{ restore_google_template | saltbox_argv('restore_google_template') }}"
+        ```
+
+    ??? variable list "`restore_dropbox_template_args`"
+
+        ```yaml
+        # Type: list
+        restore_dropbox_template_args: "{{ restore_dropbox_template | saltbox_argv('restore_dropbox_template') }}"
+        ```
+
+    ??? variable list "`restore_sftp_template_args`"
+
+        ```yaml
+        # Type: list
+        restore_sftp_template_args: "{{ restore_sftp_template | saltbox_argv('restore_sftp_template') }}"
+        ```
+
     ??? variable string "`restore_user_agent`"
 
         ```yaml
         # Type: string
-        restore_user_agent: "{{ 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36' if backup.rclone.template != 'sftp' else '' }}"
+        restore_user_agent: "{{ 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36'
+                             if backup.rclone.template != 'sftp'
+                             else '' }}"
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

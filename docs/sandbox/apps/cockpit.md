@@ -241,10 +241,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         cockpit_role_dns_enabled: true
         ```
 
-    ??? variable string "`cockpit_role_themepark_addons`"
+    ??? variable list "`cockpit_role_themepark_addons`"
 
         ```yaml
-        # Type: string
+        # ThemePark addon names to enable
+        # Type: list
         cockpit_role_themepark_addons:
         ```
 

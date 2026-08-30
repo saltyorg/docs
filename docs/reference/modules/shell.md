@@ -126,10 +126,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         shell_misc_argcomplete_command: "activate-global-python-argcomplete"
         ```
 
-    ??? variable list "`shell_misc_argcomplete_command_args`"
+    ??? variable string "`shell_misc_argcomplete_command_args`"
 
         ```yaml
-        # Type: list
+        # Type: string
         shell_misc_argcomplete_command_args: "{{ shell_misc_argcomplete_command
                                                  | saltbox_argv('shell_misc_argcomplete_command') }}"
         ```

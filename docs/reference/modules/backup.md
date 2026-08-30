@@ -137,15 +137,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 1.  !!! example "Example override"
 
         ```yaml
-        backup_size_exclude_folders: ["item1", "item2"]
+        backup_size_exclude_folders: "custom_value"
         ```
 
 === "Size Check"
 
-    ??? variable list "`backup_size_exclude_folders`"
+    ??? variable string "`backup_size_exclude_folders`"
 
         ```yaml
-        # Type: list
+        # Type: string
         backup_size_exclude_folders: "{{ (plex_instances | default(['plex'])
                                           | map('regex_replace', '^', server_appdata_path ~ '/')
                                           | map('regex_replace', '$', '/Library/Application Support/Plex Media Server/Cache/PhotoTranscoder')
@@ -225,24 +225,24 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         backup_sftp_template: ""
         ```
 
-    ??? variable list "`backup_google_template_args`"
+    ??? variable string "`backup_google_template_args`"
 
         ```yaml
-        # Type: list
+        # Type: string
         backup_google_template_args: "{{ backup_google_template | saltbox_argv('backup_google_template') }}"
         ```
 
-    ??? variable list "`backup_dropbox_template_args`"
+    ??? variable string "`backup_dropbox_template_args`"
 
         ```yaml
-        # Type: list
+        # Type: string
         backup_dropbox_template_args: "{{ backup_dropbox_template | saltbox_argv('backup_dropbox_template') }}"
         ```
 
-    ??? variable list "`backup_sftp_template_args`"
+    ??? variable string "`backup_sftp_template_args`"
 
         ```yaml
-        # Type: list
+        # Type: string
         backup_sftp_template_args: "{{ backup_sftp_template | saltbox_argv('backup_sftp_template') }}"
         ```
 
@@ -279,10 +279,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         backup_cleanup_custom_rclone_flags: ""
         ```
 
-    ??? variable list "`backup_cleanup_custom_rclone_args`"
+    ??? variable string "`backup_cleanup_custom_rclone_args`"
 
         ```yaml
-        # Type: list
+        # Type: string
         backup_cleanup_custom_rclone_args: "{{ backup_cleanup_custom_rclone_flags
                                                | saltbox_argv('backup_cleanup_custom_rclone_flags') }}"
         ```

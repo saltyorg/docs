@@ -93,6 +93,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         postgres_host_role_versions: ["17"]
         ```
 
+    ??? variable bool "`put_postgres_host_dpkg_into_hold`"
+
+        ```yaml
+        # Type: bool (true/false)
+        put_postgres_host_dpkg_into_hold: true
+        ```
+
 === "Superuser"
 
     ??? variable bool "`postgres_host_role_create_root_superuser`"

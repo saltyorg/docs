@@ -72,24 +72,24 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         backup2_sftp_template: ""
         ```
 
-    ??? variable list "`backup2_google_template_args`"
+    ??? variable string "`backup2_google_template_args`"
 
         ```yaml
-        # Type: list
+        # Type: string
         backup2_google_template_args: "{{ backup2_google_template | saltbox_argv('backup2_google_template') }}"
         ```
 
-    ??? variable list "`backup2_dropbox_template_args`"
+    ??? variable string "`backup2_dropbox_template_args`"
 
         ```yaml
-        # Type: list
+        # Type: string
         backup2_dropbox_template_args: "{{ backup2_dropbox_template | saltbox_argv('backup2_dropbox_template') }}"
         ```
 
-    ??? variable list "`backup2_sftp_template_args`"
+    ??? variable string "`backup2_sftp_template_args`"
 
         ```yaml
-        # Type: list
+        # Type: string
         backup2_sftp_template_args: "{{ backup2_sftp_template | saltbox_argv('backup2_sftp_template') }}"
         ```
 
@@ -104,18 +104,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
 === "Cleanup"
 
-    ??? variable int "`backup2_cleanup_number`"
+    ??? variable string "`backup2_cleanup_number`"
 
         ```yaml
         # Defines how many of the archived backups to keep, so current backup is not counted in this
-        # Type: int
+        # Type: string
         backup2_cleanup_number: "{{ backup_cleanup_number }}" # Int
         ```
 
-    ??? variable bool "`backup2_cleanup_enabled`"
+    ??? variable string "`backup2_cleanup_enabled`"
 
         ```yaml
-        # Type: bool (true/false)
+        # Type: string
         backup2_cleanup_enabled: "{{ backup_cleanup_enabled }}" # Bool
         ```
 
@@ -126,10 +126,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         backup2_cleanup_custom_rclone_flags: "{{ backup_cleanup_custom_rclone_flags }}" # String
         ```
 
-    ??? variable list "`backup2_cleanup_custom_rclone_args`"
+    ??? variable string "`backup2_cleanup_custom_rclone_args`"
 
         ```yaml
-        # Type: list
+        # Type: string
         backup2_cleanup_custom_rclone_args: "{{ backup2_cleanup_custom_rclone_flags
                                                 | saltbox_argv('backup2_cleanup_custom_rclone_flags') }}"
         ```

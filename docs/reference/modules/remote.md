@@ -222,7 +222,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         rclone_vfs_refresh_command: |-
-          /usr/bin/rclone rc vfs/refresh recursive=true --url http://127.0.0.1:{{ rclone_port_assignment.ports.rc }}{{ rclone_vfs_refresh_auth_args if (rclone_enable_metrics | bool) else '' }} _async=true
+          /usr/bin/rclone rc vfs/refresh recursive=true --url http://127.0.0.1:{{ rclone_port_assignment.ports.rc }}{{ rclone_vfs_refresh_auth_args
+                                                                                                                    if (rclone_enable_metrics | bool)
+                                                                                                                    else '' }} _async=true
         ```
 
 === "NFS"

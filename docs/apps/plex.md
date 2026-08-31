@@ -375,13 +375,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable bool "`plex_role_open_main_ports`{ .sb-show-on-unchecked }`plex2_open_main_ports`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Do not enable globally if deploying multiple instances
         # Type: bool (true/false)
         plex_role_open_main_ports: false
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Do not enable globally if deploying multiple instances
         # Type: bool (true/false)
         plex2_open_main_ports: false
         ```

@@ -875,7 +875,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         traefik_role_docker_labels_dns_validation_resolver:
-          traefik.http.routers.traefik.tls.certresolver: "{{ traefik_default_certresolver }}"
+          traefik.http.routers.traefik.tls.certresolver: "{{ traefik_role_docker_labels_dns_validation_plan.certresolver }}"
         ```
 
     ??? variable list "`traefik_role_docker_labels_dns_validation_fqdn_overrides`"
@@ -887,15 +887,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
                                                                    else [] }}"
         ```
 
-    ??? variable list "`traefik_role_docker_labels_dns_validation_domains`"
+    ??? variable string "`traefik_role_docker_labels_dns_validation_domains`"
 
         ```yaml
-        # Type: list
-        traefik_role_docker_labels_dns_validation_domains: "{{ lookup('role_var', '_web_domain', role='traefik')
-                                                               | traefik_certificate_domains(traefik_role_docker_labels_dns_validation_fqdn_overrides,
-                                                                                             traefik.cert.additional_domains | default([]),
-                                                                                             true,
-                                                                                             traefik_certificate_authoritative_zones) }}"
+        # Type: string
+        traefik_role_docker_labels_dns_validation_domains: "{{ traefik_role_docker_labels_dns_validation_plan.domains }}"
         ```
 
     ??? variable dict "`traefik_role_docker_labels_dns_validation`"
@@ -930,20 +926,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           traefik.http.routers.metrics.entrypoints: "{{ traefik_entrypoint_websecure }}"
           traefik.http.routers.metrics.tls: "true"
           traefik.http.routers.metrics.tls.options: "securetls@file"
-          traefik.http.routers.metrics.tls.certresolver: "{{ traefik_default_certresolver }}"
+          traefik.http.routers.metrics.tls.certresolver: "{{ traefik_role_docker_labels_metrics_plan.certresolver }}"
           traefik.http.routers.metrics.middlewares: "traefik-auth,{{ traefik_default_middleware_api }}"
           traefik.http.routers.metrics.priority: "20"
         ```
 
-    ??? variable list "`traefik_role_docker_labels_metrics_domains`"
+    ??? variable string "`traefik_role_docker_labels_metrics_domains`"
 
         ```yaml
-        # Type: list
-        traefik_role_docker_labels_metrics_domains: "{{ lookup('role_var', '_metrics_domain', role='traefik')
-                                                        | traefik_certificate_domains([],
-                                                                                      [],
-                                                                                      not traefik_http,
-                                                                                      traefik_certificate_authoritative_zones) }}"
+        # Type: string
+        traefik_role_docker_labels_metrics_domains: "{{ traefik_role_docker_labels_metrics_plan.domains }}"
         ```
 
     ??? variable dict "`traefik_role_docker_labels_metrics_certificates`"

@@ -380,21 +380,17 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           - '{ "traefik.http.routers.{{ crafty_name }}-map.service": "{{ crafty_name }}-map" }'
           - '{ "traefik.http.routers.{{ crafty_name }}-map.rule": "Host(`{{ lookup("role_var", "_dynmap_web_host", role="crafty") }}`)" }'
           - '{ "traefik.http.routers.{{ crafty_name }}-map.tls.options": "securetls@file" }'
-          - '{ "traefik.http.routers.{{ crafty_name }}-map.tls.certresolver": "{{ lookup("role_var", "_traefik_certresolver", role="crafty") }}" }'
+          - '{ "traefik.http.routers.{{ crafty_name }}-map.tls.certresolver": "{{ crafty_role_docker_labels_dynmap_certificate_plan_lookup.certresolver }}" }'
           - '{ "traefik.http.routers.{{ crafty_name }}-map.middlewares": "{{ traefik_default_middleware }}" }'
           - '{ "traefik.http.routers.{{ crafty_name }}-map.priority": "20" }'
           - '{ "traefik.http.services.{{ crafty_name }}-map.loadbalancer.server.port": "{{ lookup("role_var", "_dynmap_web_port", role="crafty") }}" }'
         ```
 
-    ??? variable list "`crafty_role_docker_labels_dynmap_certificate_domains`"
+    ??? variable string "`crafty_role_docker_labels_dynmap_certificate_domains`"
 
         ```yaml
-        # Type: list
-        crafty_role_docker_labels_dynmap_certificate_domains: "{{ lookup('role_var', '_dynmap_web_domain', role='crafty')
-                                                                  | traefik_certificate_domains([],
-                                                                                                [],
-                                                                                                lookup('role_var', '_traefik_wildcard_enabled', role='crafty', default=(not traefik_http)),
-                                                                                                traefik_certificate_authoritative_zones) }}"
+        # Type: string
+        crafty_role_docker_labels_dynmap_certificate_domains: "{{ crafty_role_docker_labels_dynmap_certificate_plan_lookup.domains }}"
         ```
 
     ??? variable dict "`crafty_role_docker_labels_dynmap_certificates`"

@@ -608,7 +608,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.rule": "Host(`{{ lookup("role_web", role="calibre", endpoint="web2") }}`)" }'
           - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.middlewares": "{{ lookup("role_var", "_books_traefik_middleware", role="calibre") }}" }'
           - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.tls.options": "securetls@file" }'
-          - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.tls.certresolver": "{{ lookup("role_var", "_traefik_certresolver", role="calibre") }}" }'
+          - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.tls.certresolver": "{{ calibre_role_docker_labels_books_certificate_plan_lookup.certresolver }}" }'
           - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.priority": "20" }'
           - '{ "traefik.http.services.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.loadbalancer.server.port": "{{ lookup("role_var", "_web2_port", role="calibre") }}" }'
         ```
@@ -626,29 +626,21 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.rule": "Host(`{{ lookup("role_web", role="calibre", endpoint="web2") }}`)" }'
           - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.middlewares": "{{ lookup("role_var", "_books_traefik_middleware", role="calibre") }}" }'
           - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.tls.options": "securetls@file" }'
-          - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.tls.certresolver": "{{ lookup("role_var", "_traefik_certresolver", role="calibre") }}" }'
+          - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.tls.certresolver": "{{ calibre_role_docker_labels_books_certificate_plan_lookup.certresolver }}" }'
           - '{ "traefik.http.routers.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.priority": "20" }'
           - '{ "traefik.http.services.{{ lookup("role_var", "_web2_subdomain", role="calibre") }}.loadbalancer.server.port": "{{ lookup("role_var", "_web2_port", role="calibre") }}" }'
         ```
 
-    ??? variable list "`calibre_role_docker_labels_books_certificate_domains`{ .sb-show-on-unchecked }`calibre2_docker_labels_books_certificate_domains`{ .sb-show-on-checked }"
+    ??? variable string "`calibre_role_docker_labels_books_certificate_domains`{ .sb-show-on-unchecked }`calibre2_docker_labels_books_certificate_domains`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        calibre_role_docker_labels_books_certificate_domains: "{{ lookup('role_var', '_web2_domain', role='calibre')
-                                                                  | traefik_certificate_domains([],
-                                                                                                [],
-                                                                                                lookup('role_var', '_traefik_wildcard_enabled', role='calibre', default=(not traefik_http)),
-                                                                                                traefik_certificate_authoritative_zones) }}"
+        # Type: string
+        calibre_role_docker_labels_books_certificate_domains: "{{ calibre_role_docker_labels_books_certificate_plan_lookup.domains }}"
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Type: list
-        calibre2_docker_labels_books_certificate_domains: "{{ lookup('role_var', '_web2_domain', role='calibre')
-                                                              | traefik_certificate_domains([],
-                                                                                            [],
-                                                                                            lookup('role_var', '_traefik_wildcard_enabled', role='calibre', default=(not traefik_http)),
-                                                                                            traefik_certificate_authoritative_zones) }}"
+        # Type: string
+        calibre2_docker_labels_books_certificate_domains: "{{ calibre_role_docker_labels_books_certificate_plan_lookup.domains }}"
         ```
 
     ??? variable dict "`calibre_role_docker_labels_books_certificates`{ .sb-show-on-unchecked }`calibre2_docker_labels_books_certificates`{ .sb-show-on-checked }"

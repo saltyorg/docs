@@ -612,21 +612,17 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           - '{ "traefik.http.routers.{{ silo_name }}-jf.service": "{{ silo_name }}-jf" }'
           - '{ "traefik.http.routers.{{ silo_name }}-jf.rule": "Host(`{{ lookup("role_var", "_web_jf_host", role="silo") }}`)" }'
           - '{ "traefik.http.routers.{{ silo_name }}-jf.tls.options": "securetls@file" }'
-          - '{ "traefik.http.routers.{{ silo_name }}-jf.tls.certresolver": "{{ lookup("role_var", "_traefik_certresolver", role="silo") }}" }'
+          - '{ "traefik.http.routers.{{ silo_name }}-jf.tls.certresolver": "{{ silo_role_docker_labels_jf_certificate_plan_lookup.certresolver }}" }'
           - '{ "traefik.http.routers.{{ silo_name }}-jf.middlewares": "{{ lookup("role_var", "_traefik_middleware_default", role="silo") }}" }'
           - '{ "traefik.http.routers.{{ silo_name }}-jf.priority": "20" }'
           - '{ "traefik.http.services.{{ silo_name }}-jf.loadbalancer.server.port": "{{ lookup("role_var", "_web_jf_port", role="silo") }}" }'
         ```
 
-    ??? variable list "`silo_role_docker_labels_jf_certificate_domains`"
+    ??? variable string "`silo_role_docker_labels_jf_certificate_domains`"
 
         ```yaml
-        # Type: list
-        silo_role_docker_labels_jf_certificate_domains: "{{ lookup('role_var', '_web_jf_domain', role='silo')
-                                                            | traefik_certificate_domains([],
-                                                                                          [],
-                                                                                          lookup('role_var', '_traefik_wildcard_enabled', role='silo', default=(not traefik_http)),
-                                                                                          traefik_certificate_authoritative_zones) }}"
+        # Type: string
+        silo_role_docker_labels_jf_certificate_domains: "{{ silo_role_docker_labels_jf_certificate_plan_lookup.domains }}"
         ```
 
     ??? variable dict "`silo_role_docker_labels_jf_certificates`"
@@ -661,21 +657,17 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           - '{ "traefik.http.routers.{{ silo_name }}-abs.service": "{{ silo_name }}-abs" }'
           - '{ "traefik.http.routers.{{ silo_name }}-abs.rule": "Host(`{{ lookup("role_var", "_web_abs_host", role="silo") }}`)" }'
           - '{ "traefik.http.routers.{{ silo_name }}-abs.tls.options": "securetls@file" }'
-          - '{ "traefik.http.routers.{{ silo_name }}-abs.tls.certresolver": "{{ lookup("role_var", "_traefik_certresolver", role="silo") }}" }'
+          - '{ "traefik.http.routers.{{ silo_name }}-abs.tls.certresolver": "{{ silo_role_docker_labels_abs_certificate_plan_lookup.certresolver }}" }'
           - '{ "traefik.http.routers.{{ silo_name }}-abs.middlewares": "{{ lookup("role_var", "_traefik_middleware_default", role="silo") }}" }'
           - '{ "traefik.http.routers.{{ silo_name }}-abs.priority": "20" }'
           - '{ "traefik.http.services.{{ silo_name }}-abs.loadbalancer.server.port": "{{ lookup("role_var", "_web_abs_port", role="silo") }}" }'
         ```
 
-    ??? variable list "`silo_role_docker_labels_abs_certificate_domains`"
+    ??? variable string "`silo_role_docker_labels_abs_certificate_domains`"
 
         ```yaml
-        # Type: list
-        silo_role_docker_labels_abs_certificate_domains: "{{ lookup('role_var', '_web_abs_domain', role='silo')
-                                                             | traefik_certificate_domains([],
-                                                                                           [],
-                                                                                           lookup('role_var', '_traefik_wildcard_enabled', role='silo', default=(not traefik_http)),
-                                                                                           traefik_certificate_authoritative_zones) }}"
+        # Type: string
+        silo_role_docker_labels_abs_certificate_domains: "{{ silo_role_docker_labels_abs_certificate_plan_lookup.domains }}"
         ```
 
     ??? variable dict "`silo_role_docker_labels_abs_certificates`"

@@ -329,6 +329,7 @@ type_inference:
     "saltbox_argv": "list"
     "traefik_certificate_domains": "list"
     "traefik_certificate_labels": "dict"
+    "traefik_certificate_plan": "dict"
   symbols:
     "backup_cleanup_custom_rclone_flags": "string"
     "backup_cleanup_enabled": "bool"

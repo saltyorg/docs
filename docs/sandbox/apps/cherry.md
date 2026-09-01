@@ -338,7 +338,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         cherry_role_docker_healthcheck:
-          test: ["NONE"]
+          test:
+            - "NONE"
         ```
 
 === "Docker+"

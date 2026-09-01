@@ -137,4 +137,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: string
         tqm_role_download_client: "qbt"
         ```
+
+    ??? variable string "`tqm_role_releases_url`"
+
+        ```yaml
+        # Direct GitHub API URL used to resolve the latest TQM release metadata.
+        # Type: string
+        tqm_role_releases_url: "https://api.github.com/repos/autobrr/tqm/releases/latest"
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

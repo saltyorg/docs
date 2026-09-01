@@ -309,7 +309,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         dashy_role_docker_healthcheck:
-          test: ["CMD", "yarn", "health-check"]
+          test:
+            - "CMD"
+            - "yarn"
+            - "health-check"
           interval: 10s
           timeout: 5s
           retries: 10

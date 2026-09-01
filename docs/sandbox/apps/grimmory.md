@@ -445,7 +445,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         grimmory_role_docker_healthcheck:
-          test: wget -q -O - http://localhost:6060/api/v1/healthcheck
+          test:
+            - "CMD"
+            - "wget"
+            - "-q"
+            - "-O"
+            - "-"
+            - "http://localhost:6060/api/v1/healthcheck"
           interval: 60s
           retries: 5
           start_period: 60s

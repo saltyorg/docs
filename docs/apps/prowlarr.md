@@ -90,6 +90,38 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         prowlarr_role_external_auth: true
         ```
 
+    ??? variable list "`prowlarr_role_allowed_hosts_public_custom`"
+
+        ```yaml
+        # Adds public hosts accepted by Prowlarr. This is required when using a raw
+        # Traefik host override.
+        # Valid values are hostnames, IP addresses, or wildcard DNS names beginning
+        # with "*.". Do not include schemes, paths, or ports.
+        # Type: list
+        prowlarr_role_allowed_hosts_public_custom: []
+        ```
+
+    ??? variable list "`prowlarr_role_allowed_hosts_custom`"
+
+        ```yaml
+        # Adds extra hosts accepted by Prowlarr, such as additional Docker or host-DNS
+        # aliases. This does not satisfy the public-host requirement for a raw Traefik
+        # host override. Valid values are hostnames, IP addresses, or wildcard DNS names
+        # beginning with "*.". Do not include schemes, paths, or ports.
+        # Type: list
+        prowlarr_role_allowed_hosts_custom: []
+        ```
+
+    ??? variable list "`prowlarr_role_trusted_networks_custom`"
+
+        ```yaml
+        # Adds reverse-proxy peers that Prowlarr trusts to supply forwarded headers.
+        # Valid values are IPv4 or IPv6 addresses and CIDRs. Do not use hostnames or
+        # client networks.
+        # Type: list
+        prowlarr_role_trusted_networks_custom: []
+        ```
+
 === "Web"
 
     ??? variable string "`prowlarr_role_web_subdomain`"

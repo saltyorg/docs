@@ -610,6 +610,64 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         radarr2_external_auth: true
         ```
 
+    ??? variable list "`radarr_role_allowed_hosts_public_custom`{ .sb-show-on-unchecked }`radarr2_allowed_hosts_public_custom`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Adds public hosts accepted by Radarr. This is required when using a raw
+        # Traefik host override.
+        # Valid values are hostnames, IP addresses, or wildcard DNS names beginning
+        # with "*.". Do not include schemes, paths, or ports.
+        # Type: list
+        radarr_role_allowed_hosts_public_custom: []
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Adds public hosts accepted by Radarr. This is required when using a raw
+        # Traefik host override.
+        # Valid values are hostnames, IP addresses, or wildcard DNS names beginning
+        # with "*.". Do not include schemes, paths, or ports.
+        # Type: list
+        radarr2_allowed_hosts_public_custom: []
+        ```
+
+    ??? variable list "`radarr_role_allowed_hosts_custom`{ .sb-show-on-unchecked }`radarr2_allowed_hosts_custom`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Adds extra hosts accepted by Radarr, such as additional Docker or host-DNS
+        # aliases. This does not satisfy the public-host requirement for a raw Traefik
+        # host override. Valid values are hostnames, IP addresses, or wildcard DNS names
+        # beginning with "*.". Do not include schemes, paths, or ports.
+        # Type: list
+        radarr_role_allowed_hosts_custom: []
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Adds extra hosts accepted by Radarr, such as additional Docker or host-DNS
+        # aliases. This does not satisfy the public-host requirement for a raw Traefik
+        # host override. Valid values are hostnames, IP addresses, or wildcard DNS names
+        # beginning with "*.". Do not include schemes, paths, or ports.
+        # Type: list
+        radarr2_allowed_hosts_custom: []
+        ```
+
+    ??? variable list "`radarr_role_trusted_networks_custom`{ .sb-show-on-unchecked }`radarr2_trusted_networks_custom`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Adds reverse-proxy peers that Radarr trusts to supply forwarded headers.
+        # Valid values are IPv4 or IPv6 addresses and CIDRs. Do not use hostnames or
+        # client networks.
+        # Type: list
+        radarr_role_trusted_networks_custom: []
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Adds reverse-proxy peers that Radarr trusts to supply forwarded headers.
+        # Valid values are IPv4 or IPv6 addresses and CIDRs. Do not use hostnames or
+        # client networks.
+        # Type: list
+        radarr2_trusted_networks_custom: []
+        ```
+
 === "Web"
 
     ??? variable string "`radarr_role_web_subdomain`{ .sb-show-on-unchecked }`radarr2_web_subdomain`{ .sb-show-on-checked }"

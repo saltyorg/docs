@@ -399,7 +399,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         lldap_role_docker_healthcheck:
-          test: ["CMD", "/app/lldap", "healthcheck", "--config-file", "/data/lldap_config.toml"]
+          test:
+            - "CMD"
+            - "/app/lldap"
+            - "healthcheck"
+            - "--config-file"
+            - "/data/lldap_config.toml"
           interval: 30s
           timeout: 30s
           retries: 3

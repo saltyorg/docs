@@ -38,7 +38,9 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://github.com/ZeroQI/Absolute-Series-Scanner/wiki){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](){ .md-button .md-button--stretch }
+[:fontawesome-brands-github:**ASS Source**](https://github.com/ZeroQI/Absolute-Series-Scanner){ .md-button .md-button--stretch }
+
+[:fontawesome-brands-github:**HAMA Source**](https://github.com/ZeroQI/Hama.bundle){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Community**](https://github.com/ZeroQI/Absolute-Series-Scanner/discussions){ .md-button .md-button--stretch }
 

@@ -46,12 +46,44 @@ blacklist:
     sandbox:
       - "homarr_legacy"
       - "koito_migrate"
+      - "n8n_runner"  # internal helper documented by n8n
       - "sanity_check"
+      - "sure_worker"  # internal helper documented by sure
       # Deprecated roles
       - "booklore"  # deprecated
       - "unifi"  # deprecated
       - "hoarder"  # deprecated
       - "plex_meta_manager"  # deprecated
+
+# =============================================================================
+# Documentation Health Policy
+# =============================================================================
+# Check paths are docs-root-relative exact paths. Keep these lists empty unless
+# a page needs a deliberate, check-specific exemption.
+
+checks:
+  coverage:
+    enabled: true
+    exclude_paths: []
+  frontmatter:
+    enabled: true
+    exclude_paths: []
+  editorial:
+    enabled: true
+    exclude_paths: []
+    statuses:
+      - draft2
+      - outdated
+
+# Source repositories used for source links and provenance in docs-health issues.
+issue:
+  source_repositories:
+    saltbox:
+      slug: saltyorg/Saltbox
+      ref: master
+    sandbox:
+      slug: saltyorg/Sandbox
+      ref: master
 
 # =============================================================================
 # Path Overrides

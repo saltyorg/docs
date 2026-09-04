@@ -1010,6 +1010,46 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         resiliosync_role_docker_volumes_download:
         ```
 
+    ??? variable list "`resiliosync_role_paths_folders_list_custom`"
+
+        ```yaml
+        # Extra directories to create
+        # Type: list
+        resiliosync_role_paths_folders_list_custom:
+        ```
+
+    ??? variable string "`resiliosync_role_paths_group`"
+
+        ```yaml
+        # Group for directories created by the role
+        # Type: string
+        resiliosync_role_paths_group:
+        ```
+
+    ??? variable string "`resiliosync_role_paths_owner`"
+
+        ```yaml
+        # Owner for directories created by the role
+        # Type: string
+        resiliosync_role_paths_owner:
+        ```
+
+    ??? variable string "`resiliosync_role_paths_permissions`"
+
+        ```yaml
+        # Permissions for directories created by the role
+        # Type: string
+        resiliosync_role_paths_permissions:
+        ```
+
+    ??? variable bool "`resiliosync_role_paths_recursive`"
+
+        ```yaml
+        # Apply ownership and permissions recursively
+        # Type: bool (true/false)
+        resiliosync_role_paths_recursive:
+        ```
+
     ??? variable list "`resiliosync_role_themepark_addons`"
 
         ```yaml

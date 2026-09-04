@@ -1097,6 +1097,46 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         unifi_network_application_role_docker_volumes_download:
         ```
 
+    ??? variable list "`unifi_network_application_role_paths_folders_list_custom`"
+
+        ```yaml
+        # Extra directories to create
+        # Type: list
+        unifi_network_application_role_paths_folders_list_custom:
+        ```
+
+    ??? variable string "`unifi_network_application_role_paths_group`"
+
+        ```yaml
+        # Group for directories created by the role
+        # Type: string
+        unifi_network_application_role_paths_group:
+        ```
+
+    ??? variable string "`unifi_network_application_role_paths_owner`"
+
+        ```yaml
+        # Owner for directories created by the role
+        # Type: string
+        unifi_network_application_role_paths_owner:
+        ```
+
+    ??? variable string "`unifi_network_application_role_paths_permissions`"
+
+        ```yaml
+        # Permissions for directories created by the role
+        # Type: string
+        unifi_network_application_role_paths_permissions:
+        ```
+
+    ??? variable bool "`unifi_network_application_role_paths_recursive`"
+
+        ```yaml
+        # Apply ownership and permissions recursively
+        # Type: bool (true/false)
+        unifi_network_application_role_paths_recursive:
+        ```
+
     ??? variable list "`unifi_network_application_role_themepark_addons`"
 
         ```yaml

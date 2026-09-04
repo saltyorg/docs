@@ -990,6 +990,46 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         comixed_role_docker_volumes_download:
         ```
 
+    ??? variable list "`comixed_role_paths_folders_list_custom`"
+
+        ```yaml
+        # Extra directories to create
+        # Type: list
+        comixed_role_paths_folders_list_custom:
+        ```
+
+    ??? variable string "`comixed_role_paths_group`"
+
+        ```yaml
+        # Group for directories created by the role
+        # Type: string
+        comixed_role_paths_group:
+        ```
+
+    ??? variable string "`comixed_role_paths_owner`"
+
+        ```yaml
+        # Owner for directories created by the role
+        # Type: string
+        comixed_role_paths_owner:
+        ```
+
+    ??? variable string "`comixed_role_paths_permissions`"
+
+        ```yaml
+        # Permissions for directories created by the role
+        # Type: string
+        comixed_role_paths_permissions:
+        ```
+
+    ??? variable bool "`comixed_role_paths_recursive`"
+
+        ```yaml
+        # Apply ownership and permissions recursively
+        # Type: bool (true/false)
+        comixed_role_paths_recursive:
+        ```
+
     ??? variable list "`comixed_role_themepark_addons`"
 
         ```yaml

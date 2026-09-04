@@ -993,6 +993,46 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         makemkv_role_docker_volumes_download:
         ```
 
+    ??? variable list "`makemkv_role_paths_folders_list_custom`"
+
+        ```yaml
+        # Extra directories to create
+        # Type: list
+        makemkv_role_paths_folders_list_custom:
+        ```
+
+    ??? variable string "`makemkv_role_paths_group`"
+
+        ```yaml
+        # Group for directories created by the role
+        # Type: string
+        makemkv_role_paths_group:
+        ```
+
+    ??? variable string "`makemkv_role_paths_owner`"
+
+        ```yaml
+        # Owner for directories created by the role
+        # Type: string
+        makemkv_role_paths_owner:
+        ```
+
+    ??? variable string "`makemkv_role_paths_permissions`"
+
+        ```yaml
+        # Permissions for directories created by the role
+        # Type: string
+        makemkv_role_paths_permissions:
+        ```
+
+    ??? variable bool "`makemkv_role_paths_recursive`"
+
+        ```yaml
+        # Apply ownership and permissions recursively
+        # Type: bool (true/false)
+        makemkv_role_paths_recursive:
+        ```
+
     ??? variable list "`makemkv_role_themepark_addons`"
 
         ```yaml

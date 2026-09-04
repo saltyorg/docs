@@ -1096,6 +1096,46 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         teslamate_role_docker_volumes_download:
         ```
 
+    ??? variable list "`teslamate_role_paths_folders_list_custom`"
+
+        ```yaml
+        # Extra directories to create
+        # Type: list
+        teslamate_role_paths_folders_list_custom:
+        ```
+
+    ??? variable string "`teslamate_role_paths_group`"
+
+        ```yaml
+        # Group for directories created by the role
+        # Type: string
+        teslamate_role_paths_group:
+        ```
+
+    ??? variable string "`teslamate_role_paths_owner`"
+
+        ```yaml
+        # Owner for directories created by the role
+        # Type: string
+        teslamate_role_paths_owner:
+        ```
+
+    ??? variable string "`teslamate_role_paths_permissions`"
+
+        ```yaml
+        # Permissions for directories created by the role
+        # Type: string
+        teslamate_role_paths_permissions:
+        ```
+
+    ??? variable bool "`teslamate_role_paths_recursive`"
+
+        ```yaml
+        # Apply ownership and permissions recursively
+        # Type: bool (true/false)
+        teslamate_role_paths_recursive:
+        ```
+
     ??? variable list "`teslamate_role_themepark_addons`"
 
         ```yaml

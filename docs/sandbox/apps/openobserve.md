@@ -14,7 +14,7 @@ saltbox_automation:
       type: documentation
       purpose: manual
     - name: Releases
-      url:
+      url: https://gallery.ecr.aws/zinclabs/openobserve
       type: releases
       purpose: release
     - name: Community
@@ -40,7 +40,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://openobserve.ai/docs){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-newspaper:**Releases**](https://gallery.ecr.aws/zinclabs/openobserve){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
@@ -1009,6 +1009,46 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         openobserve_role_docker_volumes_download:
+        ```
+
+    ??? variable list "`openobserve_role_paths_folders_list_custom`"
+
+        ```yaml
+        # Extra directories to create
+        # Type: list
+        openobserve_role_paths_folders_list_custom:
+        ```
+
+    ??? variable string "`openobserve_role_paths_group`"
+
+        ```yaml
+        # Group for directories created by the role
+        # Type: string
+        openobserve_role_paths_group:
+        ```
+
+    ??? variable string "`openobserve_role_paths_owner`"
+
+        ```yaml
+        # Owner for directories created by the role
+        # Type: string
+        openobserve_role_paths_owner:
+        ```
+
+    ??? variable string "`openobserve_role_paths_permissions`"
+
+        ```yaml
+        # Permissions for directories created by the role
+        # Type: string
+        openobserve_role_paths_permissions:
+        ```
+
+    ??? variable bool "`openobserve_role_paths_recursive`"
+
+        ```yaml
+        # Apply ownership and permissions recursively
+        # Type: bool (true/false)
+        openobserve_role_paths_recursive:
         ```
 
     ??? variable list "`openobserve_role_themepark_addons`"

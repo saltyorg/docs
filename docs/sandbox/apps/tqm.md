@@ -148,4 +148,46 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: string
         tqm_role_releases_url: "https://api.github.com/repos/autobrr/tqm/releases/latest"
         ```
+
+=== "Global Override Options"
+
+    ??? variable list "`tqm_role_paths_folders_list_custom`"
+
+        ```yaml
+        # Extra directories to create
+        # Type: list
+        tqm_role_paths_folders_list_custom:
+        ```
+
+    ??? variable string "`tqm_role_paths_group`"
+
+        ```yaml
+        # Group for directories created by the role
+        # Type: string
+        tqm_role_paths_group:
+        ```
+
+    ??? variable string "`tqm_role_paths_owner`"
+
+        ```yaml
+        # Owner for directories created by the role
+        # Type: string
+        tqm_role_paths_owner:
+        ```
+
+    ??? variable string "`tqm_role_paths_permissions`"
+
+        ```yaml
+        # Permissions for directories created by the role
+        # Type: string
+        tqm_role_paths_permissions:
+        ```
+
+    ??? variable bool "`tqm_role_paths_recursive`"
+
+        ```yaml
+        # Apply ownership and permissions recursively
+        # Type: bool (true/false)
+        tqm_role_paths_recursive:
+        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

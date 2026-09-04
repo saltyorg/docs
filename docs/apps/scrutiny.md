@@ -998,6 +998,46 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         scrutiny_role_docker_volumes_download:
         ```
 
+    ??? variable list "`scrutiny_role_paths_folders_list_custom`"
+
+        ```yaml
+        # Extra directories to create
+        # Type: list
+        scrutiny_role_paths_folders_list_custom:
+        ```
+
+    ??? variable string "`scrutiny_role_paths_group`"
+
+        ```yaml
+        # Group for directories created by the role
+        # Type: string
+        scrutiny_role_paths_group:
+        ```
+
+    ??? variable string "`scrutiny_role_paths_owner`"
+
+        ```yaml
+        # Owner for directories created by the role
+        # Type: string
+        scrutiny_role_paths_owner:
+        ```
+
+    ??? variable string "`scrutiny_role_paths_permissions`"
+
+        ```yaml
+        # Permissions for directories created by the role
+        # Type: string
+        scrutiny_role_paths_permissions:
+        ```
+
+    ??? variable bool "`scrutiny_role_paths_recursive`"
+
+        ```yaml
+        # Apply ownership and permissions recursively
+        # Type: bool (true/false)
+        scrutiny_role_paths_recursive:
+        ```
+
     ??? variable list "`scrutiny_role_themepark_addons`"
 
         ```yaml

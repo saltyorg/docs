@@ -11,7 +11,7 @@ saltbox_automation:
       type: documentation
       purpose: manual
     - name: Releases
-      url:
+      url: https://hub.docker.com/r/itzg/minecraft-server/tags
       type: releases
       purpose: release
     - name: Community
@@ -37,7 +37,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://docker-minecraft-server.readthedocs.io/en/latest/commands){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-newspaper:**Releases**](https://hub.docker.com/r/itzg/minecraft-server/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
@@ -1707,6 +1707,76 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         minecraft2_docker_volumes_download:
+        ```
+
+    ??? variable list "`minecraft_role_paths_folders_list_custom`{ .sb-show-on-unchecked }`minecraft2_paths_folders_list_custom`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Extra directories to create
+        # Type: list
+        minecraft_role_paths_folders_list_custom:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Extra directories to create
+        # Type: list
+        minecraft2_paths_folders_list_custom:
+        ```
+
+    ??? variable string "`minecraft_role_paths_group`{ .sb-show-on-unchecked }`minecraft2_paths_group`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Group for directories created by the role
+        # Type: string
+        minecraft_role_paths_group:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Group for directories created by the role
+        # Type: string
+        minecraft2_paths_group:
+        ```
+
+    ??? variable string "`minecraft_role_paths_owner`{ .sb-show-on-unchecked }`minecraft2_paths_owner`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Owner for directories created by the role
+        # Type: string
+        minecraft_role_paths_owner:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Owner for directories created by the role
+        # Type: string
+        minecraft2_paths_owner:
+        ```
+
+    ??? variable string "`minecraft_role_paths_permissions`{ .sb-show-on-unchecked }`minecraft2_paths_permissions`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Permissions for directories created by the role
+        # Type: string
+        minecraft_role_paths_permissions:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Permissions for directories created by the role
+        # Type: string
+        minecraft2_paths_permissions:
+        ```
+
+    ??? variable bool "`minecraft_role_paths_recursive`{ .sb-show-on-unchecked }`minecraft2_paths_recursive`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Apply ownership and permissions recursively
+        # Type: bool (true/false)
+        minecraft_role_paths_recursive:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Apply ownership and permissions recursively
+        # Type: bool (true/false)
+        minecraft2_paths_recursive:
         ```
 
     ??? variable list "`minecraft_role_themepark_addons`{ .sb-show-on-unchecked }`minecraft2_themepark_addons`{ .sb-show-on-checked }"

@@ -991,6 +991,46 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         grocy_role_docker_volumes_download:
         ```
 
+    ??? variable list "`grocy_role_paths_folders_list_custom`"
+
+        ```yaml
+        # Extra directories to create
+        # Type: list
+        grocy_role_paths_folders_list_custom:
+        ```
+
+    ??? variable string "`grocy_role_paths_group`"
+
+        ```yaml
+        # Group for directories created by the role
+        # Type: string
+        grocy_role_paths_group:
+        ```
+
+    ??? variable string "`grocy_role_paths_owner`"
+
+        ```yaml
+        # Owner for directories created by the role
+        # Type: string
+        grocy_role_paths_owner:
+        ```
+
+    ??? variable string "`grocy_role_paths_permissions`"
+
+        ```yaml
+        # Permissions for directories created by the role
+        # Type: string
+        grocy_role_paths_permissions:
+        ```
+
+    ??? variable bool "`grocy_role_paths_recursive`"
+
+        ```yaml
+        # Apply ownership and permissions recursively
+        # Type: bool (true/false)
+        grocy_role_paths_recursive:
+        ```
+
     ??? variable list "`grocy_role_themepark_addons`"
 
         ```yaml

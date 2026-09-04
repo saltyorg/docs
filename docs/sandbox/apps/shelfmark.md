@@ -1634,6 +1634,76 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         shelfmark2_docker_volumes_download:
         ```
 
+    ??? variable list "`shelfmark_role_paths_folders_list_custom`{ .sb-show-on-unchecked }`shelfmark2_paths_folders_list_custom`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Extra directories to create
+        # Type: list
+        shelfmark_role_paths_folders_list_custom:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Extra directories to create
+        # Type: list
+        shelfmark2_paths_folders_list_custom:
+        ```
+
+    ??? variable string "`shelfmark_role_paths_group`{ .sb-show-on-unchecked }`shelfmark2_paths_group`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Group for directories created by the role
+        # Type: string
+        shelfmark_role_paths_group:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Group for directories created by the role
+        # Type: string
+        shelfmark2_paths_group:
+        ```
+
+    ??? variable string "`shelfmark_role_paths_owner`{ .sb-show-on-unchecked }`shelfmark2_paths_owner`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Owner for directories created by the role
+        # Type: string
+        shelfmark_role_paths_owner:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Owner for directories created by the role
+        # Type: string
+        shelfmark2_paths_owner:
+        ```
+
+    ??? variable string "`shelfmark_role_paths_permissions`{ .sb-show-on-unchecked }`shelfmark2_paths_permissions`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Permissions for directories created by the role
+        # Type: string
+        shelfmark_role_paths_permissions:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Permissions for directories created by the role
+        # Type: string
+        shelfmark2_paths_permissions:
+        ```
+
+    ??? variable bool "`shelfmark_role_paths_recursive`{ .sb-show-on-unchecked }`shelfmark2_paths_recursive`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Apply ownership and permissions recursively
+        # Type: bool (true/false)
+        shelfmark_role_paths_recursive:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Apply ownership and permissions recursively
+        # Type: bool (true/false)
+        shelfmark2_paths_recursive:
+        ```
+
     ??? variable list "`shelfmark_role_themepark_addons`{ .sb-show-on-unchecked }`shelfmark2_themepark_addons`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

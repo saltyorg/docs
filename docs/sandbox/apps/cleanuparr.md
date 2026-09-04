@@ -12,7 +12,7 @@ saltbox_automation:
       type: documentation
       purpose: manual
     - name: Releases
-      url:
+      url: https://github.com/cleanuparr/cleanuparr/pkgs/container/cleanuparr
       type: github
       purpose: release
     - name: Community
@@ -37,7 +37,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](){ .md-button .md-button--stretch }
+[:fontawesome-brands-github:**Releases**](https://github.com/cleanuparr/cleanuparr/pkgs/container/cleanuparr){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
@@ -983,6 +983,46 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         cleanuparr_role_docker_volumes_download:
+        ```
+
+    ??? variable list "`cleanuparr_role_paths_folders_list_custom`"
+
+        ```yaml
+        # Extra directories to create
+        # Type: list
+        cleanuparr_role_paths_folders_list_custom:
+        ```
+
+    ??? variable string "`cleanuparr_role_paths_group`"
+
+        ```yaml
+        # Group for directories created by the role
+        # Type: string
+        cleanuparr_role_paths_group:
+        ```
+
+    ??? variable string "`cleanuparr_role_paths_owner`"
+
+        ```yaml
+        # Owner for directories created by the role
+        # Type: string
+        cleanuparr_role_paths_owner:
+        ```
+
+    ??? variable string "`cleanuparr_role_paths_permissions`"
+
+        ```yaml
+        # Permissions for directories created by the role
+        # Type: string
+        cleanuparr_role_paths_permissions:
+        ```
+
+    ??? variable bool "`cleanuparr_role_paths_recursive`"
+
+        ```yaml
+        # Apply ownership and permissions recursively
+        # Type: bool (true/false)
+        cleanuparr_role_paths_recursive:
         ```
 
     ??? variable list "`cleanuparr_role_themepark_addons`"

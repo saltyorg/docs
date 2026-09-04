@@ -1633,6 +1633,76 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         wizarr2_docker_volumes_download:
         ```
 
+    ??? variable list "`wizarr_role_paths_folders_list_custom`{ .sb-show-on-unchecked }`wizarr2_paths_folders_list_custom`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Extra directories to create
+        # Type: list
+        wizarr_role_paths_folders_list_custom:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Extra directories to create
+        # Type: list
+        wizarr2_paths_folders_list_custom:
+        ```
+
+    ??? variable string "`wizarr_role_paths_group`{ .sb-show-on-unchecked }`wizarr2_paths_group`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Group for directories created by the role
+        # Type: string
+        wizarr_role_paths_group:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Group for directories created by the role
+        # Type: string
+        wizarr2_paths_group:
+        ```
+
+    ??? variable string "`wizarr_role_paths_owner`{ .sb-show-on-unchecked }`wizarr2_paths_owner`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Owner for directories created by the role
+        # Type: string
+        wizarr_role_paths_owner:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Owner for directories created by the role
+        # Type: string
+        wizarr2_paths_owner:
+        ```
+
+    ??? variable string "`wizarr_role_paths_permissions`{ .sb-show-on-unchecked }`wizarr2_paths_permissions`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Permissions for directories created by the role
+        # Type: string
+        wizarr_role_paths_permissions:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Permissions for directories created by the role
+        # Type: string
+        wizarr2_paths_permissions:
+        ```
+
+    ??? variable bool "`wizarr_role_paths_recursive`{ .sb-show-on-unchecked }`wizarr2_paths_recursive`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Apply ownership and permissions recursively
+        # Type: bool (true/false)
+        wizarr_role_paths_recursive:
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Apply ownership and permissions recursively
+        # Type: bool (true/false)
+        wizarr2_paths_recursive:
+        ```
+
     ??? variable list "`wizarr_role_themepark_addons`{ .sb-show-on-unchecked }`wizarr2_themepark_addons`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

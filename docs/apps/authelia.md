@@ -1952,6 +1952,46 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         authelia_role_docker_volumes_download:
         ```
 
+    ??? variable list "`authelia_role_paths_folders_list_custom`"
+
+        ```yaml
+        # Extra directories to create
+        # Type: list
+        authelia_role_paths_folders_list_custom:
+        ```
+
+    ??? variable string "`authelia_role_paths_group`"
+
+        ```yaml
+        # Group for directories created by the role
+        # Type: string
+        authelia_role_paths_group:
+        ```
+
+    ??? variable string "`authelia_role_paths_owner`"
+
+        ```yaml
+        # Owner for directories created by the role
+        # Type: string
+        authelia_role_paths_owner:
+        ```
+
+    ??? variable string "`authelia_role_paths_permissions`"
+
+        ```yaml
+        # Permissions for directories created by the role
+        # Type: string
+        authelia_role_paths_permissions:
+        ```
+
+    ??? variable bool "`authelia_role_paths_recursive`"
+
+        ```yaml
+        # Apply ownership and permissions recursively
+        # Type: bool (true/false)
+        authelia_role_paths_recursive:
+        ```
+
     ??? variable list "`authelia_role_themepark_addons`"
 
         ```yaml

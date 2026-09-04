@@ -13,7 +13,7 @@ saltbox_automation:
       type: documentation
       purpose: manual
     - name: Releases
-      url:
+      url: https://hub.docker.com/r/haishanh/cherry/tags
       type: releases
       purpose: release
     - name: Community
@@ -39,7 +39,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://cherry.haishan.me/docs/intro){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-newspaper:**Releases**](){ .md-button .md-button--stretch }
+[:fontawesome-solid-newspaper:**Releases**](https://hub.docker.com/r/haishanh/cherry/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 
@@ -1003,6 +1003,46 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         cherry_role_docker_volumes_download:
+        ```
+
+    ??? variable list "`cherry_role_paths_folders_list_custom`"
+
+        ```yaml
+        # Extra directories to create
+        # Type: list
+        cherry_role_paths_folders_list_custom:
+        ```
+
+    ??? variable string "`cherry_role_paths_group`"
+
+        ```yaml
+        # Group for directories created by the role
+        # Type: string
+        cherry_role_paths_group:
+        ```
+
+    ??? variable string "`cherry_role_paths_owner`"
+
+        ```yaml
+        # Owner for directories created by the role
+        # Type: string
+        cherry_role_paths_owner:
+        ```
+
+    ??? variable string "`cherry_role_paths_permissions`"
+
+        ```yaml
+        # Permissions for directories created by the role
+        # Type: string
+        cherry_role_paths_permissions:
+        ```
+
+    ??? variable bool "`cherry_role_paths_recursive`"
+
+        ```yaml
+        # Apply ownership and permissions recursively
+        # Type: bool (true/false)
+        cherry_role_paths_recursive:
         ```
 
     ??? variable list "`cherry_role_themepark_addons`"

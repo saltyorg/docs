@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/Yooooomi/your_spotify?tab=readme-ov-file#table-of-contents
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/linuxserver/your_spotify/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://linuxserver.io/discord
       type: discord
+      purpose: community
   project_description:
     name: Your Spotify
     summary: |-

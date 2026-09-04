@@ -13,12 +13,15 @@ saltbox_automation:
     - name: Manual
       url: https://xbackbone.app/clients.html
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/linuxserver/xbackbone/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://github.com/sergix44/XBackBone/discussions
       type: github
+      purpose: community
   project_description:
     name: XBackBone
     summary: |-

@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url: http://beets.readthedocs.org
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/linuxserver/beets/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://linuxserver.io/discord
       type: discord
+      purpose: community
   project_description:
     name: Beets
     summary: |-

@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://thelounge.chat/docs
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/linuxserver/thelounge/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://thelounge.chat/community
       type: community
+      purpose: community
   project_description:
     name: The Lounge
     summary: |-

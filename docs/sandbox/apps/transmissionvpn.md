@@ -13,12 +13,15 @@ saltbox_automation:
     - name: Manual
       url:
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/haugene/transmission-openvpn/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://github.com/haugene/docker-transmission-openvpn/discussions
       type: github
+      purpose: community
   project_description:
     name: OpenVPN and Transmission with WebUI
     summary: |-

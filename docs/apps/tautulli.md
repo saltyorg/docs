@@ -9,12 +9,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/Tautulli/Tautulli/wiki
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/hotio/tautulli/pkgs/container/tautulli
       type: github
+      purpose: release
     - name: Community
       url: https://tautulli.com/discord
       type: discord
+      purpose: community
   project_description:
     name: Tautulli
     summary: |-

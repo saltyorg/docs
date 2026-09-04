@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url: https://support.plex.tv/articles/categories/plex-media-server
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/jlesage/firefox/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://github.com/jlesage/docker-firefox/discussions
       type: github
+      purpose: community
   project_description:
     name: Docker container for Firefox
     summary: |-

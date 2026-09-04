@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://www.mongodb.com/docs
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/_/mongo/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: MongoDB
     summary: |-

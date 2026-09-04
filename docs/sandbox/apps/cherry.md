@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url: https://cherry.haishan.me/docs/intro
       type: documentation
+      purpose: manual
     - name: Releases
       url:
       type: releases
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Cherry
     summary: |-

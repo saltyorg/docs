@@ -8,12 +8,15 @@ saltbox_automation:
     - name: Manual
       url: https://rclone.org/docs
       type: documentation
+      purpose: manual
     - name: Releases
       url:
       type: releases
+      purpose: release
     - name: Community
       url: https://forum.rclone.org
       type: community
+      purpose: community
   project_description:
     name: Rclone
     summary: |-

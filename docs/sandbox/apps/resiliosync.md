@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://help.resilio.com/hc/en-us/categories/200140177-Get-started-with-Sync
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/resilio/sync/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Resilio Sync
     summary: |-

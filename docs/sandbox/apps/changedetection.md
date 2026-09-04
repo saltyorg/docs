@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://docs.linuxserver.io/general/container-customization
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/linuxserver/changedetection.io/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://github.com/dgtlmoon/changedetection.io/discussions
       type: github
+      purpose: community
   project_description:
     name: changedetection.io
     summary: |-

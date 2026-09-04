@@ -9,12 +9,15 @@ saltbox_automation:
     - name: Manual
       url: https://wiki.sonarr.tv
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/hotio/sonarr/pkgs/container/sonarr
       type: github
+      purpose: release
     - name: Community
       url: https://discord.sonarr.tv
       type: discord
+      purpose: community
   project_description:
     name: Sonarr
     summary: |-

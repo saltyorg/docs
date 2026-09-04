@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/mstroecker/zig-robotstxt
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/mstroecker/zig-robotstxt/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Zig robots.txt
     summary: |-

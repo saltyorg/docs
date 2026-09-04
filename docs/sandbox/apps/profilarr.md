@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://dictionarry.dev/profilarr-setup/101
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/dictionarry-hub/profilarr/pkgs/container/profilarr
       type: docker
+      purpose: release
     - name: Community
       url: https://discord.gg/XGdTJP5G8a
       type: discord
+      purpose: community
   project_description:
     name: Profilarr
     summary: |-

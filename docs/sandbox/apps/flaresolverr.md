@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/FlareSolverr/FlareSolverr
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/flaresolverr/flaresolverr/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://github.com/FlareSolverr/FlareSolverr/discussions
       type: github
+      purpose: community
   project_description:
     name: FlareSolverr
     summary: |-

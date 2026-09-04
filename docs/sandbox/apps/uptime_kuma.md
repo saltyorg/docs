@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/louislam/uptime-kuma/wiki
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/louislam/uptime-kuma/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Uptime Kuma
     summary: |-

@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://sabnzbd.org/wiki
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/hotio/sabnzbd/pkgs/container/sabnzbd
       type: github
+      purpose: release
     - name: Community
       url: https://forums.sabnzbd.org
       type: community
+      purpose: community
   project_description:
     name: SABnzbd
     summary: |-

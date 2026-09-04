@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://docs.tdarr.io/docs/installation/getting-started
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/haveagitgat/tdarr/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Tdarr Node
     summary: |-

@@ -10,15 +10,19 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/ZeroQI/Absolute-Series-Scanner/wiki
       type: documentation
+      purpose: manual
     - name: ASS Source
       url: https://github.com/ZeroQI/Absolute-Series-Scanner
       type: github
+      purpose: other
     - name: HAMA Source
       url: https://github.com/ZeroQI/Hama.bundle
       type: github
+      purpose: other
     - name: Community
       url: https://github.com/ZeroQI/Absolute-Series-Scanner/discussions
       type: github
+      purpose: community
   project_description:
     name: ASSHAMA
     summary: |-

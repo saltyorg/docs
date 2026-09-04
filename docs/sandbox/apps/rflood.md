@@ -10,12 +10,15 @@ saltbox_automation:
     - name: Manual
       url:
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/hotio/rflood/pkgs/container/rflood
       type: github
+      purpose: release
     - name: Community
       url: https://hotio.dev/discord
       type: discord
+      purpose: community
   project_description:
     name: rflood
     summary: |-

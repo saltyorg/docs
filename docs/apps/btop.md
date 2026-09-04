@@ -14,12 +14,15 @@ saltbox_automation:
     - name: Manual
       url:
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/aristocratos/btop/tags
       type: github
+      purpose: release
     - name: Community
       url: https://github.com/aristocratos/btop/discussions
       type: github
+      purpose: community
   project_description:
     name: btop
     summary: |-

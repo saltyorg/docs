@@ -7,12 +7,15 @@ saltbox_automation:
     - name: Manual
       url: https://nicolargo.github.io/glances/#documentation
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/nicolargo/glances/tags
       type: releases
+      purpose: release
     - name: Community
       url: https://nicolargo.github.io/glances/#community
       type: community
+      purpose: community
   project_description:
     name: Glances
     summary: |-

@@ -15,12 +15,15 @@ saltbox_automation:
     - name: Manual
       url: https://software.es.net/iperf/invoking.html#iperf3-manual-page
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://software.es.net/iperf/news.html
       type: releases
+      purpose: release
     - name: Community
       url: https://github.com/esnet/iperf/discussions
       type: github
+      purpose: community
   project_description:
     name: iPerf3
     summary: |-

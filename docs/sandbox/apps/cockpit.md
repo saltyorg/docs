@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url: https://cockpit-project.org/documentation.html
       type: documentation
+      purpose: manual
     - name: Releases
       url:
       type: releases
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Cockpit
     summary: |-

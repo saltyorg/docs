@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url:
       type: manual
+      purpose: manual
     - name: Releases
       url: https://console.cloud.google.com/artifacts/docker/zenika-hub/us/gcr.io/alpine-chrome
       type: releases
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Headless Chrome
     summary: |-

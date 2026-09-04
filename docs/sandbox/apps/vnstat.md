@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/alexandermarston/vnstat-dashboard/blob/master/README.md
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/amarston/vnstat-dashboard/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: vnStat Dashboard
     summary: |-

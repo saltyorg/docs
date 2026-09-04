@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url:
       type: manual
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/corentinth/it-tools/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: IT Tools
     summary: |-

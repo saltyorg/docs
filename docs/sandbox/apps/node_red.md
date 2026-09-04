@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://www.nodered.org/docs/user-guide
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/nodered/node-red/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Node Red
     summary: |-

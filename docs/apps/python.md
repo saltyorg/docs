@@ -7,12 +7,15 @@ saltbox_automation:
     - name: Manual
       url: https://www.python.org/doc
       type: documentation
+      purpose: manual
     - name: Releases
       url:
       type: releases
+      purpose: release
     - name: Community
       url: https://www.python.org/community
       type: community
+      purpose: community
   project_description:
     name: Python
     summary: |-

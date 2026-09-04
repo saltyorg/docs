@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/tubearchivist/tubearchivist/wiki
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/bbilly1/tubearchivist/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Tube Archivist
     summary: |-

@@ -10,12 +10,15 @@ saltbox_automation:
     - name: Manual
       url: https://foundryvtt.com/kb
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/ajnart/Foundry/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Foundry
     summary: |-

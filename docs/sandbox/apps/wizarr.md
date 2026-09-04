@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url: https://docs.wizarr.dev
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/-/wizarrrr/packages/container/package/wizarr
       type: github
+      purpose: release
     - name: Community
       url: https://discord.gg/wsSTsHGsqu
       type: discord
+      purpose: community
   project_description:
     name: Wizarr
     summary: |-

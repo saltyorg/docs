@@ -13,12 +13,15 @@ saltbox_automation:
     - name: Manual
       url: https://www.postgresql.org/docs/12/index.html
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://www.postgresql.org/ftp/source
       type: releases
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: PostgreSQL (Host Install)
     summary: |-

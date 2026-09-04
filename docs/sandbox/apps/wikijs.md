@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url: https://docs.requarks.io
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/requarks/wiki/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Wikijs
     summary: |-

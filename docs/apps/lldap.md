@@ -13,12 +13,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/lldap/lldap/blob/main/README.md
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/nitnelave/lldap/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://github.com/lldap/lldap/discussions
       type: github
+      purpose: community
   project_description:
     name: LLDAP
     summary: |-

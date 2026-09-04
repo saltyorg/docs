@@ -6,12 +6,15 @@ saltbox_automation:
     - name: Manual
       url:
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/linuxserver/socket-proxy/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://github.com/Tecnativa/docker-socket-proxy/discussions
       type: github
+      purpose: community
   project_description:
     name: Docker Socket Proxy
     summary: |-

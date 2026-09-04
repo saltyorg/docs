@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url: https://komga.org/installation/docker.html
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/gotson/komga/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Komga
     summary: |-

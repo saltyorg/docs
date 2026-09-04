@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://docs.linuxserver.io/images/docker-znc
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/linuxserver/znc/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://linuxserver.io/discord
       type: discord
+      purpose: community
   project_description:
     name: ZNC
     summary: |-

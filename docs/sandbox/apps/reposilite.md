@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://reposilite.com/guide/about
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/dzikoysk/reposilite/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: reposilite
     summary: |-

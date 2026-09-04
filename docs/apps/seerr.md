@@ -13,12 +13,15 @@ saltbox_automation:
     - name: Manual
       url: https://docs.seerr.dev/category/using-seerr
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/hotio/seerr/pkgs/container/seerr
       type: github
+      purpose: release
     - name: Community
       url: https://discord.gg/seerr
       type: discord
+      purpose: community
   project_description:
     name: Seerr
     summary: |-

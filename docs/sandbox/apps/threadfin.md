@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/Threadfin/Threadfin
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/fyb3roptik/threadfin/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Threadfin
     summary: |-

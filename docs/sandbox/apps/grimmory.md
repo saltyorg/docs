@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://grimmory.org/docs/getting-started
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/grimmory/grimmory/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://discord.gg/9YJ7HB4n8T
       type: discord
+      purpose: community
   project_description:
     name: Grimmory
     summary: |-

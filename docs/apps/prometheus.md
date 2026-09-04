@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://prometheus.io/docs/introduction/overview
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/prom/prometheus/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://prometheus.io/community
       type: community
+      purpose: community
   project_description:
     name: Prometheus
     summary: |-

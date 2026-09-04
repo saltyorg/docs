@@ -10,12 +10,15 @@ saltbox_automation:
     - name: Manual
       url:
       type: documentation
+      purpose: manual
     - name: Releases
       url:
       type: github
+      purpose: release
     - name: Community
       url:
       type: discord
+      purpose: community
   project_description:
     name:
     summary:

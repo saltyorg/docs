@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/theotherp/nzbhydra2/wiki
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/linuxserver/nzbhydra2/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://discord.gg/uh9W3rd
       type: discord
+      purpose: community
   project_description:
     name: NZBHydra2
     summary: |-

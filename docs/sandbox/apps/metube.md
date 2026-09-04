@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url:
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/alexta69/metube/pkgs/container/metube
       type: github
+      purpose: release
     - name: Community
       url: https://github.com/alexta69/metube/discussions
       type: community
+      purpose: community
   project_description:
     name: MeTube
     summary: a self-hosted web UI for `yt-dlp`, for downloading media from YouTube and dozens of other sites.

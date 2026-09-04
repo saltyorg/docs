@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url: https://www.meilisearch.com/docs
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/getmeili/meilisearch/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://discord.meilisearch.com
       type: discord
+      purpose: community
   project_description:
     name: Meilisearch
     summary: |-

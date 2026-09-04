@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://mosquitto.org/man/mosquitto-conf-5.html
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/_/eclipse-mosquitto/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: MQTT
     summary: |-

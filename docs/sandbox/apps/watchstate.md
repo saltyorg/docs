@@ -13,12 +13,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/ArabCoders/watchstate/blob/master/FAQ.md
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/arabcoders/watchstate/pkgs/container/watchstate
       type: github
+      purpose: release
     - name: Community
       url: https://discord.gg/haUXHJyj6Y
       type: discord
+      purpose: community
   project_description:
     name: WatchState
     summary: |-

@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/zadam/trilium/wiki
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/zadam/trilium/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Trilium Notes
     summary: |-

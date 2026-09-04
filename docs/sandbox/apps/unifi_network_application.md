@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/linuxserver/docker-unifi-network-application/blob/main/README.md
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/linuxserver/unifi-network-application/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://linuxserver.io/discord
       type: discord
+      purpose: community
   project_description:
     name: UniFi Network Application
     summary: |-

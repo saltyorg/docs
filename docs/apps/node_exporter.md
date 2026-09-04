@@ -15,12 +15,15 @@ saltbox_automation:
     - name: Manual
       url: https://prometheus.io/docs/guides/node-exporter
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/prometheus/node_exporter/releases
       type: github
+      purpose: release
     - name: Community
       url: https://prometheus.io/community
       type: community
+      purpose: community
   project_description:
     name: Node Exporter
     summary: |-

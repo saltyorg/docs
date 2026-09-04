@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://autobrr.com/3rd-party-tools/manage-torrents#tqm
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/autobrr/tqm/tags
       type: github
+      purpose: release
     - name: Community
       url: https://discord.autobrr.com
       type: discord
+      purpose: community
   project_description:
     name: tqm
     summary: |-

@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://beta.jdownloader.org/support
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/jlesage/jdownloader-2/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: JDownloader
     summary: |-

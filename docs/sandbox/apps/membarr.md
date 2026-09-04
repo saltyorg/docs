@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/Yoruio/Membarr
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/yoruio/membarr/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://discord.gg/7hAUKKTyTd
       type: discord
+      purpose: community
   project_description:
     name: Membarr
     summary: |-

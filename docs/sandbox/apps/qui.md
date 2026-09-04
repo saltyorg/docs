@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/autobrr/qui/blob/main/README.md#configuration
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/autobrr/qui/pkgs/container/qui
       type: github
+      purpose: release
     - name: Community
       url: https://discord.autobrr.com/qui
       type: discord
+      purpose: community
   project_description:
     name: qui
     summary: |-

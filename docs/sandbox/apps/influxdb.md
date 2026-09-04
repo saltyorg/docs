@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: hhttps://docs.influxdata.com/influxdb/v1
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/_/influxdb/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: InfluxDB
     summary: |-

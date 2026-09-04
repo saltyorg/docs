@@ -15,12 +15,15 @@ saltbox_automation:
     - name: Manual
       url: https://ddclient.net/general
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/linuxserver/ddclient/tags
       type: releases
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: DDClient
     summary: |-

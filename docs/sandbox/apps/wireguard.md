@@ -10,12 +10,15 @@ saltbox_automation:
     - name: Manual
       url: https://wg-easy.github.io/wg-easy/edge/guides/setup
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/wg-easy/wg-easy/pkgs/container/wg-easy
       type: github
+      purpose: release
     - name: Community
       url: https://github.com/wg-easy/wg-easy/discussions
       type: github
+      purpose: community
   project_description:
     name: Wireguard
     summary: |-

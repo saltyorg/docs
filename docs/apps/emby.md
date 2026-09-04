@@ -9,12 +9,15 @@ saltbox_automation:
     - name: Manual
       url: https://support.emby.media/support/home
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/linuxserver/emby/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://emby.media/community
       type: community
+      purpose: community
   project_description:
     name: Emby
     summary: |-

@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/google/cadvisor/tree/master/docs
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://console.cloud.google.com/artifacts/docker/cadvisor/us/gcr.io/cadvisor
       type: releases
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: cAdvisor
     summary: |-

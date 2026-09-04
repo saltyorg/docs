@@ -9,12 +9,15 @@ saltbox_automation:
     - name: Manual
       url: https://grafana.com/docs/grafana
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/grafana/grafana/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Grafana
     summary: |-

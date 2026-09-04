@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://ytdl-sub.readthedocs.io
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/jmbannon/ytdl-sub/pkgs/container/ytdl-sub
       type: github
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: ytdl-sub
     summary: |-

@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://lazylibrarian.gitlab.io
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/linuxserver/lazylibrarian/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://linuxserver.io/discord
       type: discord
+      purpose: community
   project_description:
     name: LazyLibrarian
     summary: |-

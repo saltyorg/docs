@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/pymedusa/Medusa/wiki
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/linuxserver/medusa/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://linuxserver.io/discord
       type: discord
+      purpose: community
   project_description:
     name: Medusa
     summary: |-

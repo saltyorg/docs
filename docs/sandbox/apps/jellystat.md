@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url:
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/cyfershepard/jellystat/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://discord.gg/9SMBj2RyEe
       type: discord
+      purpose: community
   project_description:
     name: Jellystat
     summary: |-

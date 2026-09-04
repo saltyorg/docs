@@ -10,12 +10,15 @@ saltbox_automation:
     - name: Manual
       url: https://docs.docker.com
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://docs.docker.com/engine/release-notes
       type: releases
+      purpose: release
     - name: Community
       url: https://forums.docker.com
       type: community
+      purpose: community
   project_description:
     name: Docker CE
     summary: |-

@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url: https://www.navidrome.org/docs
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/deluan/navidrome/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Navidrome
     summary: |-

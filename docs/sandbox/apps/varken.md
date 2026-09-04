@@ -13,12 +13,15 @@ saltbox_automation:
     - name: Manual
       url:
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/thezak48/Varken/pkgs/container/varken
       type: github
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
      name: Varken
      summary: |-

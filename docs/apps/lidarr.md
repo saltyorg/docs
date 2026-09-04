@@ -9,12 +9,15 @@ saltbox_automation:
     - name: Manual
       url: https://wiki.servarr.com/en/lidarr
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/hotio/lidarr/pkgs/container/lidarr
       type: github
+      purpose: release
     - name: Community
       url: https://lidarr.audio/discord
       type: discord
+      purpose: community
   project_description:
     name: Lidarr
     summary: |-

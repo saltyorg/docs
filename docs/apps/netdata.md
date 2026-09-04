@@ -9,12 +9,15 @@ saltbox_automation:
     - name: Manual
       url: https://learn.netdata.cloud/docs
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/netdata/netdata/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Netdata
     summary: |-

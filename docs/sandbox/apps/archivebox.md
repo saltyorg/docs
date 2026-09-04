@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/ArchiveBox/ArchiveBox/wiki
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/archivebox/archivebox/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: ArchiveBox
     summary: |-

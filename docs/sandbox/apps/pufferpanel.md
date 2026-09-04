@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url:
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/pufferpanel/pufferpanel/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: PufferPanel
     summary: |-

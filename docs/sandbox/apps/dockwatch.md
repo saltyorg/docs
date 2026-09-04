@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/Notifiarr/dockwatch#environment-variables
       type: documentation
+      purpose: manual
     - name: Releases
       url:
       type: releases
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Dockwatch
     summary: |-

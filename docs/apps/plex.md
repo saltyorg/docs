@@ -19,12 +19,15 @@ saltbox_automation:
     - name: Manual
       url: https://support.plex.tv/articles/categories/plex-media-server
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/plexinc/pms-docker/tags
       type: releases-docker
+      purpose: release
     - name: Community
       url: https://forums.plex.tv
       type: community-plex
+      purpose: community
   project_description:
     name: Plex Media Server
     summary: |-

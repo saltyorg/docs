@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://docs.linkwarden.app
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/linkwarden/linkwarden/pkgs/container/linkwarden
       type: github
+      purpose: release
     - name: Community
       url: https://discord.gg/CtuYV47nuJ
       type: discord
+      purpose: community
   project_description:
     name: LinkWarden
     summary: |-

@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url: https://wiki.factorio.com/Multiplayer
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/goofball222/factorio/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Factorio
     summary: |-

@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url: https://homarr.dev/docs/getting-started
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/ajnart/homarr/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Homarr
     summary: |-

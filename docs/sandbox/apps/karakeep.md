@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url: https://docs.karakeep.app
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/karakeep-app/karakeep/pkgs/container/karakeep
       type: github
+      purpose: release
     - name: Community
       url: https://discord.gg/NrgeYywsFh
       type: discord
+      purpose: community
   project_description:
     name: Karakeep
     summary: |-

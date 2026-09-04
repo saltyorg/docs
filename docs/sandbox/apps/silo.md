@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://siloserver.org/docs
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/Silo-Server/silo-server/pkgs/container/silo-server
       type: github
+      purpose: release
     - name: Community
       url: https://discord.gg/4RxuUQAEnW
       type: discord
+      purpose: community
   project_description:
     name: Silo
     summary: |-

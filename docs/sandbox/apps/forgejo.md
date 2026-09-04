@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url: https://forgejo.org/docs
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://codeberg.org/forgejo/-/packages/container/forgejo/versions
       type: releases
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Forgejo
     summary: |-

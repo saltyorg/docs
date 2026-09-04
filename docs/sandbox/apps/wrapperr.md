@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/aunefyren/wrapperr/wiki
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/aunefyren/wrapperr/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Wrapperr
     summary: |-

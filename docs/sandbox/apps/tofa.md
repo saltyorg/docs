@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://docs.tofa.tv
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/orgs/tofatv/packages/container/package/tofa
       type: releases
+      purpose: release
     - name: Community
       url: https://tofa.tv/discord
       type: discord
+      purpose: community
   project_description:
     name: tofa
     summary: |-

@@ -9,12 +9,15 @@ saltbox_automation:
     - name: Manual
       url: https://dozzle.dev/guide/what-is-dozzle
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/amir20/dozzle/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Dozzle
     summary: |-

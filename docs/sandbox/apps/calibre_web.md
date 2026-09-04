@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/janeczku/calibre-web/wiki
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/linuxserver/calibre-web/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://discord.gg/h2VsJ2NEfB
       type: discord
+      purpose: community
   project_description:
     name: Calibre-Web
     summary: |-

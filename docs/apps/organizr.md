@@ -10,12 +10,15 @@ saltbox_automation:
     - name: Manual
       url: https://docs.organizr.app
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/organizr/organizr/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://organizr.app/discord
       type: discord
+      purpose: community
   project_description:
     name: Organizr
     summary: |-

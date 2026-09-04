@@ -9,12 +9,15 @@ saltbox_automation:
     - name: Manual
       url: https://docker-minecraft-server.readthedocs.io/en/latest/commands
       type: documentation
+      purpose: manual
     - name: Releases
       url:
       type: releases
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Minecraft Server on Docker
     summary: |-

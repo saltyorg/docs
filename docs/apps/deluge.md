@@ -9,12 +9,15 @@ saltbox_automation:
     - name: Manual
       url: https://docs.linuxserver.io/general/container-customization
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/linuxserver/deluge/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://forum.deluge-torrent.org
       type: community
+      purpose: community
   project_description:
     name: Deluge
     summary: |-

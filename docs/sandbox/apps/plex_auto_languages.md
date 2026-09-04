@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/RemiRigal/Plex-Auto-Languages
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/remirigal/plex-auto-languages/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Plex Auto Languages
     summary: |-

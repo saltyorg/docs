@@ -9,12 +9,15 @@ saltbox_automation:
     - name: Manual
       url: https://wiki.servarr.com/en/whisparr/quick-start-guide
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/hotio/whisparr/pkgs/container/whisparr
       type: github
+      purpose: release
     - name: Community
       url: https://whisparr.com/discord
       type: discord
+      purpose: community
   project_description:
     name: Whisparr
     summary: |-

@@ -13,12 +13,15 @@ saltbox_automation:
     - name: Manual
       url: https://docs.saltbox.dev
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/saltydk/dns/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: DDNS
     summary: |-

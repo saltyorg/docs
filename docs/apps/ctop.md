@@ -14,12 +14,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/bcicen/ctop/blob/master/README.md#usage
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/bcicen/ctop/tags
       type: github
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: ctop
     summary: |-

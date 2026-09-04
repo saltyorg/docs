@@ -13,12 +13,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/Novik/ruTorrent/wiki
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/kudeta/ru-rtorrent/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://github.com/Novik/ruTorrent/discussions
       type: github
+      purpose: community
   project_description:
     name: ruTorrent
     summary: |-

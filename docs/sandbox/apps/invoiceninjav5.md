@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://invoiceninja.github.io
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/invoiceninja/invoiceninja/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: InvoiceNinja
     summary: |-

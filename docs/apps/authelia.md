@@ -9,12 +9,15 @@ saltbox_automation:
     - name: Manual
       url: https://www.authelia.com/configuration/prologue/introduction
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/authelia/authelia/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://discord.authelia.com
       type: discord
+      purpose: community
   project_description:
     name: Authelia
     summary: |-

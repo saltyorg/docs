@@ -13,12 +13,15 @@ saltbox_automation:
     - name: Manual
       url: https://code.visualstudio.com/docs
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/codercom/code-server/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: code-server
     summary: |-

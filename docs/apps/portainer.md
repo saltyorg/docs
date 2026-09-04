@@ -9,12 +9,15 @@ saltbox_automation:
     - name: Manual
       url: https://docs.portainer.io
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/portainer/portainer-ce/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://portainer.io/slack
       type: community
+      purpose: community
   project_description:
     name: Portainer
     summary: |-

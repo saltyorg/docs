@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://wiki.filezilla-project.org/Main_Page
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/jlesage/filezilla/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: FileZilla
     summary: |-

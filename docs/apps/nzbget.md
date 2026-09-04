@@ -10,12 +10,15 @@ saltbox_automation:
     - name: Manual
       url: https://nzbget.com/documentation
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/hotio/nzbget/pkgs/container/nzbget
       type: github
+      purpose: release
     - name: Community
       url: https://nzbget.com/contact
       type: community
+      purpose: community
   project_description:
     name: NZBGet
     summary: |-

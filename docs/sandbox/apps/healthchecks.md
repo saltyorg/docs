@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url: https://healthchecks.io/docs
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/linuxserver/healthchecks/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://github.com/healthchecks/healthchecks/discussions
       type: github
+      purpose: community
   project_description:
     name: Healthchecks
     summary: |-

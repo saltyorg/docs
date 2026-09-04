@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://docs.firefly-iii.org/tutorials/firefly-iii/importing-data
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/fireflyiii/data-importer/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://github.com/orgs/firefly-iii/discussions
       type: github
+      purpose: community
   project_description:
     name: Firefly III Data Importer
     summary: |-

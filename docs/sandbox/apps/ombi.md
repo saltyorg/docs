@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url: https://docs.linuxserver.io/general/container-customization
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/linuxserver/ombi/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://linuxserver.io/discord
       type: discord
+      purpose: community
   project_description:
     name: Ombi
     summary: |-

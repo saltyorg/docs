@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://docs.craftycontrol.com
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/arcadiatechnology/crafty-4/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Crafty Controller
     summary: |-

@@ -15,12 +15,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/xtaci/kcptun
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/horjulf/kcptun/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: kcptun Server
     summary: |-

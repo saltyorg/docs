@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://docs.tandoor.dev
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/vabene1111/recipes/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Tandoor Recipes
     summary: |-

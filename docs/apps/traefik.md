@@ -14,12 +14,15 @@ saltbox_automation:
     - name: Manual
       url: https://doc.traefik.io/traefik
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/_/traefik/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://community.traefik.io
       type: community
+      purpose: community
   project_description:
     name: Traefik Proxy
     summary: |-

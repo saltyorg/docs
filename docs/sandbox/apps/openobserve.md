@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://openobserve.ai/docs
       type: documentation
+      purpose: manual
     - name: Releases
       url:
       type: releases
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: OpenObserve
     summary: |-

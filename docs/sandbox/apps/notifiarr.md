@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://notifiarr.wiki
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/golift/notifiarr/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://notifiarr.com/discord
       type: discord
+      purpose: community
   project_description:
     name: Notifiarr Client
     summary: |-

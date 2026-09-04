@@ -9,12 +9,15 @@ saltbox_automation:
     - name: Manual
       url: https://wiki.servarr.com/en/prowlarr
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/hotio/prowlarr/pkgs/container/prowlarr
       type: github
+      purpose: release
     - name: Community
       url: https://prowlarr.com/discord
       type: discord
+      purpose: community
   project_description:
     name: Prowlarr
     summary: |-

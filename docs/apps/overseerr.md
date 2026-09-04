@@ -9,12 +9,15 @@ saltbox_automation:
     - name: Manual
       url: https://docs.overseerr.dev
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/sctx/overseerr/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://discord.gg/seerr
       type: discord
+      purpose: community
   project_description:
     name: Overseerr
     summary: |-

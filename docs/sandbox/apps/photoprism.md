@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://docs.photoprism.app
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/photoprism/photoprism/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Photoprism®
     summary: |-

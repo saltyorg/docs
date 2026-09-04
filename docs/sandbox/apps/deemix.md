@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://gitlab.com/Bockiii/deemix-docker
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://gitlab.com/Bockiii/deemix-docker/container_registry
       type: gitlab
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: deemix-docker
     summary: |-

@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://mylarcomics.com/docs/category/guides
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/linuxserver/mylar3/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://forum.mylarcomics.com
       type: community
+      purpose: community
   project_description:
     name: Mylar3
     summary: |-

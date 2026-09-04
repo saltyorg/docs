@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url: https://docs.mealie.io/documentation/getting-started/introduction
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/-/mealie-recipes/packages/container/package/mealie
       type: github
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Mealie
     summary: |-

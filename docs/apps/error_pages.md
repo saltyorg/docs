@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/tarampampam/error-pages/blob/master/README.md#-usage-scenarios
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/tarampampam/error-pages/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Error Pages
     summary: |-

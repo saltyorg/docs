@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://airdcpp-web.github.io/docs
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/gangefors/airdcpp-webclient/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: AirDC++
     summary: |-

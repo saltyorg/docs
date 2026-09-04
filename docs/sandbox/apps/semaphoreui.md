@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://docs.semaphoreui.com/user-guide/projects
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/semaphoreui/semaphore/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Semaphore UI
     summary: |-

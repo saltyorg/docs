@@ -13,12 +13,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/StuffAnThings/qbit_manage/wiki
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/hotio/qbitmanage/pkgs/container/qbitmanage
       type: github
+      purpose: release
     - name: Community
       url: https://notifiarr.com/discord
       type: discord
+      purpose: community
   project_description:
     name: qBit Manage
     summary: |-

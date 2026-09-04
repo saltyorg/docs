@@ -10,12 +10,15 @@ saltbox_automation:
     - name: Manual
       url: https://mariadb.com/docs
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/_/mariadb/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: MariaDB Server
     summary: |-

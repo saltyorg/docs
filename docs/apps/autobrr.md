@@ -9,12 +9,15 @@ saltbox_automation:
     - name: Manual
       url: https://autobrr.com/configuration/indexers
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/autobrr/autobrr/pkgs/container/autobrr
       type: github
+      purpose: release
     - name: Community
       url: https://discord.autobrr.com
       type: discord
+      purpose: community
   project_description:
     name: Autobrr
     summary: |-

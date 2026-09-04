@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url: https://docs.stashapp.cc
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/hotio/stash/pkgs/container/stash
       type: github
+      purpose: release
     - name: Community
       url: https://docs.stashapp.cc/#support
       type: community
+      purpose: community
   project_description:
     name: Stash
     summary: |-

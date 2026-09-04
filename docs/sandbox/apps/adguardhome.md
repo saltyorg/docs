@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://kb.adguard.com/en/home/overview
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/adguard/adguardhome/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: AdGuard Home
     summary: |-

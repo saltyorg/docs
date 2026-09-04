@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://actualbudget.org/docs
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/actualbudget/actual-server/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Actual Budget
     summary: |-

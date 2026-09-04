@@ -9,12 +9,15 @@ saltbox_automation:
     - name: Manual
       url: https://wiki.bazarr.media
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/hotio/bazarr/pkgs/container/bazarr
       type: github
+      purpose: release
     - name: Community
       url: https://discord.gg/MH2e2eb
       type: discord
+      purpose: community
   project_description:
     name: Bazarr
     summary: |-

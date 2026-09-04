@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://paperless-ngx.readthedocs.io/en/latest/index.html
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/paperlessngx/paperless-ngx/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Paperless NGX
     summary: |-

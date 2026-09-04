@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url:
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/bkw777/mainline/tags
       type: releases
+      purpose: release
     - name: Community
       url: https://github.com/bkw777/mainline/discussions
       type: github
+      purpose: community
   project_description:
     name: Mainline
     summary: |-

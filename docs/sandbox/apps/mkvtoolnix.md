@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://mkvtoolnix.download/docs.html
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/jlesage/mkvtoolnix/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: MKVToolNix
     summary: |-

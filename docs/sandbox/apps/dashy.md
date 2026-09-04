@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url: https://dashy.to/docs
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/lissy93/dashy/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Dashy
     summary: |-

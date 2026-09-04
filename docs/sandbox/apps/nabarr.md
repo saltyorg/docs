@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/saltydk/nabarr/blob/master/README.md#introduction
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/saltydk/nabarr/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://discord.gg/ugfKXpFND8
       type: discord
+      purpose: community
   project_description:
     name: Nabarr
     summary: |-

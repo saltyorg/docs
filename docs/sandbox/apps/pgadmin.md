@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://www.pgadmin.org/docs/pgadmin4/6.14/getting_started.html
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/dpage/pgadmin4/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: pgAdmin
     summary: |-

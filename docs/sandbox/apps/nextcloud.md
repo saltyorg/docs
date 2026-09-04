@@ -11,12 +11,15 @@ saltbox_automation:
     - name: Manual
       url: https://docs.nextcloud.com/server/latest/admin_manual/contents.html
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/_/nextcloud/tags
       type: docker
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Nextcloud
     summary: |-

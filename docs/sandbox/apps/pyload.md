@@ -13,12 +13,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/pyload/pyload/wiki
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://hub.docker.com/r/linuxserver/pyload-ng/tags
       type: docker
+      purpose: release
     - name: Community
       url: https://github.com/pyload/pyload/discussions
       type: github
+      purpose: community
   project_description:
     name: pyload-ng
     summary: |-

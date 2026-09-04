@@ -12,12 +12,15 @@ saltbox_automation:
     - name: Manual
       url: https://github.com/AnalogJ/scrutiny/blob/master/README.md
       type: documentation
+      purpose: manual
     - name: Releases
       url: https://github.com/analogj/scrutiny/pkgs/container/scrutiny
       type: github
+      purpose: release
     - name: Community
       url:
       type: community
+      purpose: community
   project_description:
     name: Scrutiny
     summary: |-

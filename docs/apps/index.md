@@ -447,7 +447,7 @@ tags:
 |---------------------------------------------------------------------|:----------------------------------:|:----------------------------------------:|
 | [Actual Budget](../sandbox/apps/actualbudget.md)                    |       `sandbox-actualbudget`       |             `sandbox_roles`              |
 | [Firefly III](../sandbox/apps/fireflyiii.md)                        |        `sandbox-fireflyiii`        |             `sandbox_roles`              |
-| [Firefly III Data Importer](../sandbox/apps/fireflyiii_importer.md) |   `sandbox-fireflyiii_importer`    |             `sandbox_roles`              |
+| [Firefly III Data Importer](../sandbox/apps/fireflyiii_importer.md) |    `sandbox-fireflyiii-importer`    |             `sandbox_roles`              |
 | [Invoice Ninja](../sandbox/apps/invoiceninjav5.md)                  |       `sandbox-invoiceninja`       |             `sandbox_roles`              |
 
 #### Home

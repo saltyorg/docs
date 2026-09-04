@@ -52,7 +52,7 @@ saltbox_automation:
 ## Deployment
 
 ```shell
-sb install sandbox-fireflyiii_importer
+sb install sandbox-fireflyiii-importer
 ```
 
 ## Usage
@@ -1028,7 +1028,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable bool "`fireflyiii_importer_role_paths_recursive`"
 
         ```yaml
-        # Apply ownership and permissions recursively
+        # Apply owner and group recursively without changing child modes
         # Type: bool (true/false)
         fireflyiii_importer_role_paths_recursive:
         ```

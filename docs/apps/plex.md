@@ -2312,13 +2312,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable bool "`plex_role_paths_recursive`{ .sb-show-on-unchecked }`plex2_paths_recursive`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Apply ownership and permissions recursively
+        # Apply owner and group recursively without changing child modes
         # Type: bool (true/false)
         plex_role_paths_recursive:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Apply ownership and permissions recursively
+        # Apply owner and group recursively without changing child modes
         # Type: bool (true/false)
         plex2_paths_recursive:
         ```

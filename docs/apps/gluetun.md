@@ -3464,13 +3464,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable bool "`gluetun_role_paths_recursive`{ .sb-show-on-unchecked }`gluetun2_paths_recursive`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Apply ownership and permissions recursively
+        # Apply owner and group recursively without changing child modes
         # Type: bool (true/false)
         gluetun_role_paths_recursive:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Apply ownership and permissions recursively
+        # Apply owner and group recursively without changing child modes
         # Type: bool (true/false)
         gluetun2_paths_recursive:
         ```

@@ -1891,13 +1891,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable bool "`tautulli_role_paths_recursive`{ .sb-show-on-unchecked }`tautulli2_paths_recursive`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Apply ownership and permissions recursively
+        # Apply owner and group recursively without changing child modes
         # Type: bool (true/false)
         tautulli_role_paths_recursive:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Apply ownership and permissions recursively
+        # Apply owner and group recursively without changing child modes
         # Type: bool (true/false)
         tautulli2_paths_recursive:
         ```

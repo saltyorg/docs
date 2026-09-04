@@ -279,7 +279,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable bool "`cockpit_role_paths_recursive`"
 
         ```yaml
-        # Apply ownership and permissions recursively
+        # Apply owner and group recursively without changing child modes
         # Type: bool (true/false)
         cockpit_role_paths_recursive:
         ```

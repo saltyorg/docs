@@ -1848,13 +1848,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable bool "`whisparr_role_paths_recursive`{ .sb-show-on-unchecked }`whisparr2_paths_recursive`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Apply ownership and permissions recursively
+        # Apply owner and group recursively without changing child modes
         # Type: bool (true/false)
         whisparr_role_paths_recursive:
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Apply ownership and permissions recursively
+        # Apply owner and group recursively without changing child modes
         # Type: bool (true/false)
         whisparr2_paths_recursive:
         ```

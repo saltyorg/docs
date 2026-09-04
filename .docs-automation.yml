@@ -215,7 +215,7 @@ global_overrides:
       type: "string"
 
     _paths_recursive:
-      description: "Apply ownership and permissions recursively"
+      description: "Apply owner and group recursively without changing child modes"
       default: null
       type: "bool"
 

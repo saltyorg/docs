@@ -1132,7 +1132,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable bool "`unifi_network_application_role_paths_recursive`"
 
         ```yaml
-        # Apply ownership and permissions recursively
+        # Apply owner and group recursively without changing child modes
         # Type: bool (true/false)
         unifi_network_application_role_paths_recursive:
         ```

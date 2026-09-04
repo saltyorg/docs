@@ -1,0 +1,52 @@
+name: CI - Workflow Result
+
+on:
+  pull_request:
+    paths:
+      - '.github/scripts/pr_preview.py'
+      - '.github/scripts/test_pr_preview.py'
+      - '.github/workflows/build-pr.yml'
+      - '.github/workflows/notify.yml'
+      - '.github/workflows/trigger-pr-build.yml'
+      - '.github/workflows/workflow-result-ci.yml'
+      - '.github/renovate.json'
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/scripts/pr_preview.py'
+      - '.github/scripts/test_pr_preview.py'
+      - '.github/workflows/build-pr.yml'
+      - '.github/workflows/notify.yml'
+      - '.github/workflows/trigger-pr-build.yml'
+      - '.github/workflows/workflow-result-ci.yml'
+      - '.github/renovate.json'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Test PR preview reporting
+        run: python3 .github/scripts/test_pr_preview.py -v
+
+      - name: Compile PR preview reporting
+        run: python3 -m compileall -q .github/scripts/pr_preview.py
+
+      - name: Validate result workflows
+        run: |
+          docker run --rm \
+            --volume "$PWD:/repo:ro" \
+            --workdir /repo \
+            rhysd/actionlint:1.7.12 \
+            .github/workflows/build-pr.yml \
+            .github/workflows/notify.yml \
+            .github/workflows/trigger-pr-build.yml \
+            .github/workflows/workflow-result-ci.yml
+
+      - name: Check whitespace errors
+        run: git diff --check

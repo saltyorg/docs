@@ -1,4 +1,5 @@
 name: Build PR & Deploy
+run-name: PR #${{ github.event.workflow_run.pull_requests[0].number }} - ${{ github.event.workflow_run.display_title }}
 
 on:
   workflow_run:
@@ -11,21 +12,26 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: write
-  pull-requests: write
   actions: read
+  contents: read
+  pull-requests: write
 
 jobs:
-  deploy:
+  preview:
+    if: contains(fromJSON('["success", "failure", "timed_out", "startup_failure", "cancelled"]'), github.event.workflow_run.conclusion)
     runs-on: ubuntu-latest
-    if: github.event.workflow_run.conclusion == 'success' && github.event.repository.fork == false
-    outputs:
-      url: ${{ steps.cloudflare.outputs.deployment-url }}
-      branch_url: ${{ steps.cloudflare.outputs.pages-deployment-alias-url }}
-      pr_number: ${{ steps.pr_info.outputs.pr_number }}
-      pr_sha: ${{ steps.pr_info.outputs.pr_sha }}
     steps:
-      - name: Download Build Artifacts
+      - name: Checkout trusted reporting code
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Resolve triggering PR context
+        id: context
+        run: python .github/scripts/pr_preview.py resolve
+
+      - name: Download built site
+        if: github.event.workflow_run.conclusion == 'success'
         uses: actions/download-artifact@v8
         with:
           run-id: ${{ github.event.workflow_run.id }}
@@ -33,52 +39,33 @@ jobs:
           name: pr_build_artifacts
           path: ${{ github.workspace }}/pr_bundle
 
-      - name: Read PR metadata
-        id: pr_info
-        run: |
-          echo "pr_number=$(cat ${{ github.workspace }}/pr_bundle/PR_NUMBER)" >> $GITHUB_OUTPUT
-          echo "pr_sha=$(cat ${{ github.workspace }}/pr_bundle/PR_SHA)" >> $GITHUB_OUTPUT
+      - name: Resolve built site path
+        if: github.event.workflow_run.conclusion == 'success'
+        id: site
+        env:
+          ARTIFACT_PATH: ${{ github.workspace }}/pr_bundle
+        run: python .github/scripts/pr_preview.py site-path
 
       - name: Publish to Cloudflare Pages
+        if: github.event.workflow_run.conclusion == 'success'
         id: cloudflare
+        continue-on-error: true
         uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           command: >
-            pages deploy ${{ github.workspace }}/pr_bundle/site
+            pages deploy ${{ steps.site.outputs.site-path }}
             --project-name=docs
-            --branch=pr-${{ steps.pr_info.outputs.pr_number }}
-            --commit-hash=${{ steps.pr_info.outputs.pr_sha }}
+            --branch=pr-${{ steps.context.outputs.pr-number }}
+            --commit-hash=${{ steps.context.outputs.pr-sha }}
             --commit-dirty=true
 
-  comment:
-    needs: deploy
-    runs-on: ubuntu-latest
-    if: always() && github.event.repository.fork == false
-    steps:
-      - name: Comment PR
-        run: |
-          PREVIEW_URL="${{ needs.deploy.outputs.url }}"
-          BRANCH_PREVIEW_URL="${{ needs.deploy.outputs.branch_url }}"
-          BUILD_STATUS="${{ needs.deploy.result }}"
-          BUILD_LOGS_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-
-          if [ "$BUILD_STATUS" == "success" ]; then
-            STATUS_EMOJI="✅"
-            STATUS_MESSAGE="Deploy successful!"
-          else
-            STATUS_EMOJI="❌"
-            STATUS_MESSAGE="Build failed!"
-          fi
-
-          COMMENT_BODY="Deploying with ⚡ Cloudflare Pages<br><table><tr><td><strong>Latest commit:</strong></td><td><code>${{ needs.deploy.outputs.pr_sha }}</code></td></tr><tr><td><strong>Status:</strong></td><td>&nbsp;$STATUS_EMOJI&nbsp; $STATUS_MESSAGE</td></tr><tr><td><strong>Preview URL:</strong></td><td><a href='$PREVIEW_URL'>$PREVIEW_URL</a></td></tr><tr><td><strong>Branch Preview URL:</strong></td><td><a href='$BRANCH_PREVIEW_URL'>$BRANCH_PREVIEW_URL</a></td></tr><tr><td><strong>Build logs:</strong></td><td><a href='$BUILD_LOGS_URL'>View build logs</a></td></tr></table>"
-
-          ESCAPED_BODY=$(echo "$COMMENT_BODY" | jq -aRs .)
-          COMMENTS_URL="https://api.github.com/repos/${{ github.repository }}/issues/${{ needs.deploy.outputs.pr_number }}/comments"
-
-          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-              -H "Accept: application/vnd.github+json" \
-              -X POST \
-              -d "{\"body\": $ESCAPED_BODY }" \
-              $COMMENTS_URL
+      - name: Report PR preview result
+        if: always() && steps.context.outcome == 'success'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          DEPLOY_OUTCOME: ${{ steps.cloudflare.outcome }}
+          DEPLOYMENT_URL: ${{ steps.cloudflare.outputs.deployment-url }}
+          BRANCH_URL: ${{ steps.cloudflare.outputs.pages-deployment-alias-url }}
+        run: python .github/scripts/pr_preview.py report

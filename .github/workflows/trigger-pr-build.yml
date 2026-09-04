@@ -57,15 +57,9 @@ jobs:
           path: .cache
           key: docs-${{ github.event.pull_request.number }}-${{ github.run_id }}
 
-      - name: Prepare Artifact Bundle
-        run: |
-          mkdir -p ./pr_bundle
-          echo ${{ github.event.pull_request.number }} > ./pr_bundle/PR_NUMBER
-          echo ${{ github.event.pull_request.head.sha }} > ./pr_bundle/PR_SHA
-          mv site ./pr_bundle/site
-
-      - name: Upload Build Artifacts
+      - name: Upload built site
         uses: actions/upload-artifact@v7
         with:
           name: pr_build_artifacts
-          path: pr_bundle/
+          path: site/
+          retention-days: 1

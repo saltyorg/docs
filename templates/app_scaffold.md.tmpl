@@ -1,9 +1,13 @@
 ---
+{{if .Icon}}icon: "{{.Icon}}"
+{{end}}
 saltbox_automation:
   app_links:
-    - name: Project home
-      url: "https://{{.RoleName}}.com"
-      type: home
+{{range .AppLinks}}    - name: "{{.Name}}"
+      url: "{{.URL}}"
+      type: "{{.Type}}"
+      purpose: "{{.Purpose}}"
+{{end}}
   project_description:
     name: "{{.RoleTitle}}"
     summary: "TODO: Add description"

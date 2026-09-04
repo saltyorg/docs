@@ -142,6 +142,7 @@ global_overrides:
     - "_docker_network_mode"
     - "_docker_networks_alias"
     - "_docker_stop_timeout"
+    - "_paths_folders_list"
     - "_traefik_api_enabled"
     - "_traefik_enabled"
     - "_traefik_entrypoint_web"
@@ -197,6 +198,26 @@ global_overrides:
       description: "Extra directories to create"
       default: null
       type: "list"
+
+    _paths_group:
+      description: "Group for directories created by the role"
+      default: null
+      type: "string"
+
+    _paths_owner:
+      description: "Owner for directories created by the role"
+      default: null
+      type: "string"
+
+    _paths_permissions:
+      description: "Permissions for directories created by the role"
+      default: null
+      type: "string"
+
+    _paths_recursive:
+      description: "Apply ownership and permissions recursively"
+      default: null
+      type: "bool"
 
     _traefik_autodetect_enabled:
       description: "Enable Traefik autodetect middleware for containers"
@@ -311,6 +332,49 @@ docker_overrides:
         NVIDIA-specific access may remain.
       default: "false"
       type: "bool"
+
+# =============================================================================
+# Docker Image Metadata
+# =============================================================================
+
+docker_metadata:
+  icon: material/docker
+  release_link:
+    name: Image tags
+  overrides:
+    ghcr.io/imagegenius/immich:
+      url: https://github.com/imagegenius/docker-immich/pkgs/container/immich
+      type: github
+  rules:
+    - pattern: '^ghcr\.io/([^/]+)/([^/]+)$'
+      url: https://github.com/$1/$2/pkgs/container/$2
+      type: github
+    - pattern: '^lscr\.io/linuxserver/([^/]+)$'
+      url: https://hub.docker.com/r/linuxserver/$1/tags
+      type: docker
+    - pattern: '^public\.ecr\.aws/([^/]+)/([^/]+)$'
+      url: https://gallery.ecr.aws/$1/$2
+      type: docker
+    - pattern: '^codeberg\.org/([^/]+)/([^/]+)$'
+      url: https://codeberg.org/$1/-/packages/container/$2/versions
+      type: docker
+    - pattern: '^docker\.io/library/([^/]+)$'
+      url: https://hub.docker.com/_/$1/tags
+      type: docker
+    - pattern: '^docker\.io/([^/]+)/([^/]+)$'
+      url: https://hub.docker.com/r/$1/$2/tags
+      type: docker
+    - pattern: '^([^/]+)/([^/]+)$'
+      url: https://hub.docker.com/r/$1/$2/tags
+      type: docker
+    - pattern: '^([^/]+)$'
+      url: https://hub.docker.com/_/$1/tags
+      type: docker
+  ignore:
+    - gcr.io/cadvisor/cadvisor
+    - docker.n8n.io/n8nio/n8n
+    - docker.io/ajslater/codex
+    - docker.elastic.co/elasticsearch/elasticsearch
 
 # =============================================================================
 # Section Explainers

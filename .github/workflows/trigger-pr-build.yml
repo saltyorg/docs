@@ -26,6 +26,25 @@ jobs:
           python-version: '3.x'
           cache: 'pip'
 
+      - name: Checkout docs automation consumer
+        uses: actions/checkout@v6
+        with:
+          repository: saltyorg/docs-automation
+          path: docs-automation
+
+      - name: Setup Go
+        uses: actions/setup-go@v6
+        with:
+          go-version-file: docs-automation/go.mod
+          cache-dependency-path: docs-automation/go.sum
+
+      - name: Build docs automation consumer
+        working-directory: docs-automation
+        run: go build -o "$RUNNER_TEMP/sb-docs" .
+
+      - name: Test inventory template consumer behavior
+        run: python3 .github/scripts/test_inventory_template.py --sb-docs "$RUNNER_TEMP/sb-docs"
+
       - name: Restore MkDocs build cache
         id: cache-docs-restore
         uses: actions/cache/restore@v5

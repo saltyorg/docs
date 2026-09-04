@@ -59,25 +59,4 @@ python3
 ```
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
-<!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-## Role Defaults
-
-Use the [Inventory](/saltbox/inventory/index.md#overriding-variables){ data-preview } to customize variables. <span title="View override specifics for this role" markdown>(1)</span>
-{ .annotate .sb-annotated }
-
-1.  !!! example "Example override"
-
-        ```yaml
-        python_version: "custom_value"
-        ```
-
-=== "Settings"
-
-    ??? variable string "`python_version`"
-
-        ```yaml
-        # Install of Python is handled by uv so any versions they support will be valid here.
-        # Type: string
-        python_version: "3.8"
-        ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

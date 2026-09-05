@@ -157,7 +157,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        ddns_role_docker_image_tag: "latest"
+        ddns_role_docker_image_tag: "1.0.8"
         ```
 
     ??? variable string "`ddns_role_docker_image`"

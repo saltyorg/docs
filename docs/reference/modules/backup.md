@@ -5,6 +5,13 @@ hide:
 tags:
   - backup
 saltbox_automation:
+  inventory:
+    example_overrides:
+      backup_excludes_list_extra:
+        - "./nobackupapp/*"
+        - "./traefik/*.log*"
+        - "./sonarr/logs/*"
+        - "./seerr/.cache/*"
   project_description:
     name: Standard Backup
     summary: |-

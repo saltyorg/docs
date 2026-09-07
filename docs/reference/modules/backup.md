@@ -165,7 +165,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: list
-        backup_excludes_list_extra: []
+        backup_excludes_list_extra: ["./nobackupapp/*", "./traefik/*.log*", "./sonarr/logs/*", "./seerr/.cache/*"]
         ```
 
 === "Notifications"

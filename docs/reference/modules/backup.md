@@ -144,24 +144,23 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 1.  !!! example "Example override"
 
         ```yaml
-        backup_size_exclude_folders: "custom_value"
+        backup_size_exclude_folders: ["item1", "item2"]
         ```
 
 === "Size Check"
 
-    ??? variable string "`backup_size_exclude_folders`"
+    ??? variable list "`backup_size_exclude_folders`"
 
         ```yaml
-        # Type: string
-        backup_size_exclude_folders: >-
-          {{ (plex_instances | default(['plex'])
-              | map('regex_replace', '^', server_appdata_path ~ '/')
-              | map('regex_replace', '$', '/Library/Application Support/Plex Media Server/Cache/PhotoTranscoder')
-              | list)
-             + (plex_instances | default(['plex'])
-              | map('regex_replace', '^', server_appdata_path ~ '/')
-              | map('regex_replace', '$', '/Library/Application Support/Plex Media Server/Cache/Transcode')
-              | list) }}
+        # Type: list
+        backup_size_exclude_folders: "{{ (plex_instances | default(['plex'])
+                                          | map('regex_replace', '^', server_appdata_path ~ '/')
+                                          | map('regex_replace', '$', '/Library/Application Support/Plex Media Server/Cache/PhotoTranscoder')
+                                          | list)
+                                         + (plex_instances | default(['plex'])
+                                            | map('regex_replace', '^', server_appdata_path ~ '/')
+                                            | map('regex_replace', '$', '/Library/Application Support/Plex Media Server/Cache/Transcode')
+                                            | list) }}"
         ```
 
 === "Backup Excludes"
@@ -177,10 +176,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
             ```yaml
             backup_excludes_list_extra:
-              - "./nobackupapp/*"
+              - "./nobackupapp"
               - "./traefik/*.log*"
-              - "./sonarr/logs/*"
               - "./seerr/.cache/*"
+              - ".*/[Ll]ogs/*" # Use this pattern with caution. Matches any path containing a "Logs"/"logs" folder.
             ```
 
 === "Notifications"
@@ -243,11 +242,34 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         backup_sftp_template: ""
         ```
 
+    ??? variable list "`backup_google_template_args`"
+
+        ```yaml
+        # Type: list
+        backup_google_template_args: "{{ backup_google_template | saltbox_argv('backup_google_template') }}"
+        ```
+
+    ??? variable list "`backup_dropbox_template_args`"
+
+        ```yaml
+        # Type: list
+        backup_dropbox_template_args: "{{ backup_dropbox_template | saltbox_argv('backup_dropbox_template') }}"
+        ```
+
+    ??? variable list "`backup_sftp_template_args`"
+
+        ```yaml
+        # Type: list
+        backup_sftp_template_args: "{{ backup_sftp_template | saltbox_argv('backup_sftp_template') }}"
+        ```
+
     ??? variable string "`backup_user_agent`"
 
         ```yaml
         # Type: string
-        backup_user_agent: "{{ 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36' if backup.rclone.template != 'sftp' else '' }}"
+        backup_user_agent: "{{ 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36'
+                            if backup.rclone.template != 'sftp'
+                            else '' }}"
         ```
 
 === "Cleanup"
@@ -272,6 +294,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         backup_cleanup_custom_rclone_flags: ""
+        ```
+
+    ??? variable list "`backup_cleanup_custom_rclone_args`"
+
+        ```yaml
+        # Type: list
+        backup_cleanup_custom_rclone_args: "{{ backup_cleanup_custom_rclone_flags
+                                               | saltbox_argv('backup_cleanup_custom_rclone_flags') }}"
         ```
 
 === "Snapshot Defaults"

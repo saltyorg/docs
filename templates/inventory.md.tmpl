@@ -82,6 +82,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
             {{ $var.Name }}: {{ $var.RawValue }}
 {{- end }}
             ```
+{{- $example := renderExampleOverride $.Config $var.Name $var.Name }}
+{{- if $example }}
+
+            !!! example "Example Override"
+
+{{ $example | indent 16 }}
+{{- else }}
 
             !!! example "Example Override"
 
@@ -101,6 +108,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
                 {{ $var.Name }}: {{ $var.RawValue }}
 {{- end }}
                 ```
+{{- end }}
 {{- end }}
 {{- else if eq $sectionName "Docker" }}
 {{- /* Docker section for multi-instance: show toggle */}}
@@ -140,6 +148,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
             {{ $var.InstanceName }}: {{ $var.RawValue }}
 {{- end }}
             ```
+{{- $roleExample := renderExampleOverride $.Config $var.Name $var.Name }}
+{{- if $roleExample }}
+
+            !!! example sb-show-on-unchecked "Example Override"
+
+{{ $roleExample | indent 16 }}
+{{- end }}
+{{- $instanceExample := renderExampleOverride $.Config $var.Name $var.InstanceName }}
+{{- if $instanceExample }}
+
+            !!! example sb-show-on-checked "Example Override"
+
+{{ $instanceExample | indent 16 }}
+{{- end }}
 {{- end }}
 {{- else }}
 {{- /* Other sections for multi-instance: show toggle */}}
@@ -173,6 +195,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
             {{ $var.InstanceName }}: {{ $var.RawValue }}
 {{- end }}
             ```
+{{- $roleExample := renderExampleOverride $.Config $var.Name $var.Name }}
+{{- if $roleExample }}
+
+            !!! example sb-show-on-unchecked "Example Override"
+
+{{ $roleExample | indent 16 }}
+{{- end }}
+{{- $instanceExample := renderExampleOverride $.Config $var.Name $var.InstanceName }}
+{{- if $instanceExample }}
+
+            !!! example sb-show-on-checked "Example Override"
+
+{{ $instanceExample | indent 16 }}
+{{- end }}
 {{- end }}
 {{- end }}
 {{- else }}
@@ -202,6 +238,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
             {{ $var.Name }}: {{ $var.RawValue }}
 {{- end }}
             ```
+{{- $example := renderExampleOverride $.Config $var.Name $var.Name }}
+{{- if $example }}
+
+            !!! example "Example Override"
+
+{{ $example | indent 16 }}
+{{- end }}
 {{- end }}
 {{- else }}
 {{- range $var := $subVars }}
@@ -222,6 +265,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
             {{ $var.Name }}: {{ $var.RawValue }}
 {{- end }}
             ```
+{{- $example := renderExampleOverride $.Config $var.Name $var.Name }}
+{{- if $example }}
+
+            !!! example "Example Override"
+
+{{ $example | indent 16 }}
+{{- end }}
 {{- end }}
 {{- end }}
 {{- end }}
@@ -249,6 +299,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         {{ $var.Name }}: {{ $var.RawValue }}
 {{- end }}
         ```
+{{- $example := renderExampleOverride $.Config $var.Name $var.Name }}
+{{- if $example }}
+
+        !!! example "Example Override"
+
+{{ $example | indent 12 }}
+{{- else }}
 
         !!! example "Example Override"
 
@@ -268,6 +325,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
             {{ $var.Name }}: {{ $var.RawValue }}
 {{- end }}
             ```
+{{- end }}
 {{- end }}
 {{- else if eq $sectionName "Docker" }}
 {{- range $var := $section.Variables }}
@@ -306,6 +364,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         {{ $var.InstanceName }}: {{ $var.RawValue }}
 {{- end }}
         ```
+{{- $roleExample := renderExampleOverride $.Config $var.Name $var.Name }}
+{{- if $roleExample }}
+
+        !!! example sb-show-on-unchecked "Example Override"
+
+{{ $roleExample | indent 12 }}
+{{- end }}
+{{- $instanceExample := renderExampleOverride $.Config $var.Name $var.InstanceName }}
+{{- if $instanceExample }}
+
+        !!! example sb-show-on-checked "Example Override"
+
+{{ $instanceExample | indent 12 }}
+{{- end }}
 {{- end }}
 {{- else }}
 {{- range $var := $section.Variables }}
@@ -338,6 +410,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         {{ $var.InstanceName }}: {{ $var.RawValue }}
 {{- end }}
         ```
+{{- $roleExample := renderExampleOverride $.Config $var.Name $var.Name }}
+{{- if $roleExample }}
+
+        !!! example sb-show-on-unchecked "Example Override"
+
+{{ $roleExample | indent 12 }}
+{{- end }}
+{{- $instanceExample := renderExampleOverride $.Config $var.Name $var.InstanceName }}
+{{- if $instanceExample }}
+
+        !!! example sb-show-on-checked "Example Override"
+
+{{ $instanceExample | indent 12 }}
+{{- end }}
 {{- end }}
 {{- end }}
 {{- else }}
@@ -367,6 +453,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         {{ $var.Name }}: {{ $var.RawValue }}
 {{- end }}
         ```
+{{- $example := renderExampleOverride $.Config $var.Name $var.Name }}
+{{- if $example }}
+
+        !!! example "Example Override"
+
+{{ $example | indent 12 }}
+{{- end }}
 {{- end }}
 {{- else }}
 {{- range $var := $section.Variables }}
@@ -387,6 +480,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         {{ $var.Name }}: {{ $var.RawValue }}
 {{- end }}
         ```
+{{- $example := renderExampleOverride $.Config $var.Name $var.Name }}
+{{- if $example }}
+
+        !!! example "Example Override"
+
+{{ $example | indent 12 }}
+{{- end }}
 {{- end }}
 {{- end }}
 {{- end }}
@@ -428,15 +528,31 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         {{ formatTypeComment $varType }}
         {{ $.InstanceName }}_docker_{{ $suffix }}:{{ if and $override $override.HasDefault }} {{ formatOverrideDefault $override.Default $varType }}{{ end }}
         ```
-{{- if and $override $override.Example }}
+{{- $roleVarName := printf "%s_role_docker_%s" $.RoleName $suffix }}
+{{- $instanceVarName := printf "%s_docker_%s" $.InstanceName $suffix }}
+{{- $roleExample := renderExampleOverride $.Config $roleVarName $roleVarName }}
+{{- if $roleExample }}
 
         !!! example sb-show-on-unchecked "Example Override"
 
-{{ $override.Example | replaceVariable (printf "%s_role_docker_%s" $.RoleName $suffix) | replaceRole $.RoleName | indent 12 }}
+{{ $roleExample | indent 12 }}
+{{- else if and $override $override.Example }}
+
+        !!! example sb-show-on-unchecked "Example Override"
+
+{{ $override.Example | replaceVariable $roleVarName | replaceRole $.RoleName | indent 12 }}
+{{- end }}
+{{- $instanceExample := renderExampleOverride $.Config $roleVarName $instanceVarName }}
+{{- if $instanceExample }}
 
         !!! example sb-show-on-checked "Example Override"
 
-{{ $override.Example | replaceVariable (printf "%s_docker_%s" $.InstanceName $suffix) | replaceRole $.RoleName | indent 12 }}
+{{ $instanceExample | indent 12 }}
+{{- else if and $override $override.Example }}
+
+        !!! example sb-show-on-checked "Example Override"
+
+{{ $override.Example | replaceVariable $instanceVarName | replaceRole $.RoleName | indent 12 }}
 {{- end }}
 {{- else }}
 
@@ -449,11 +565,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         {{ formatTypeComment $varType }}
         {{ $.RoleName }}_role_docker_{{ $suffix }}:{{ if and $override $override.HasDefault }} {{ formatOverrideDefault $override.Default $varType }}{{ end }}
         ```
-{{- if and $override $override.Example }}
+{{- $roleVarName := printf "%s_role_docker_%s" $.RoleName $suffix }}
+{{- $example := renderExampleOverride $.Config $roleVarName $roleVarName }}
+{{- if $example }}
 
         !!! example "Example Override"
 
-{{ $override.Example | replaceVariable (printf "%s_role_docker_%s" $.RoleName $suffix) | replaceRole $.RoleName | indent 12 }}
+{{ $example | indent 12 }}
+{{- else if and $override $override.Example }}
+
+        !!! example "Example Override"
+
+{{ $override.Example | replaceVariable $roleVarName | replaceRole $.RoleName | indent 12 }}
 {{- end }}
 {{- end }}
 {{- end }}
@@ -487,11 +610,25 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         {{ formatTypeComment $var.Type }}
         {{ $instanceVarName }}:{{ if $var.HasDefault }} {{ formatOverrideDefault $var.Default $var.Type }}{{ end }}
         ```
-{{- if $var.Example }}
+{{- $roleExample := renderExampleOverride $.Config $roleVarName $roleVarName }}
+{{- if $roleExample }}
+
+        !!! example sb-show-on-unchecked "Example Override"
+
+{{ $roleExample | indent 12 }}
+{{- else if $var.Example }}
 
         !!! example sb-show-on-unchecked "Example Override"
 
 {{ $var.Example | replaceVariable $roleVarName | replaceRole $.RoleName | indent 12 }}
+{{- end }}
+{{- $instanceExample := renderExampleOverride $.Config $roleVarName $instanceVarName }}
+{{- if $instanceExample }}
+
+        !!! example sb-show-on-checked "Example Override"
+
+{{ $instanceExample | indent 12 }}
+{{- else if $var.Example }}
 
         !!! example sb-show-on-checked "Example Override"
 
@@ -511,7 +648,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         {{ formatTypeComment $var.Type }}
         {{ $roleVarName }}:{{ if $var.HasDefault }} {{ formatOverrideDefault $var.Default $var.Type }}{{ end }}
         ```
-{{- if $var.Example }}
+{{- $example := renderExampleOverride $.Config $roleVarName $roleVarName }}
+{{- if $example }}
+
+        !!! example "Example Override"
+
+{{ $example | indent 12 }}
+{{- else if $var.Example }}
 
         !!! example "Example Override"
 

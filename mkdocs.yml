@@ -9,6 +9,9 @@ repo_url: https://github.com/saltyorg/docs
 
 edit_uri: edit/main/docs/
 
+hooks:
+  - scripts/example_metadata.py
+
 validation:
   absolute_links: relative_to_docs
   anchors: warn

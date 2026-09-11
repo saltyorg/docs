@@ -265,6 +265,7 @@ tags:
 |-------------------------------------------|:--------------------------------------------------------------------------------------:|:----------------------------------------:|
 | [Portainer](portainer.md)                 |                                      `portainer`                                       |    `feederbox_roles` `saltbox_roles`     |
 | [Docker CE](docker.md)                    | `docker` `docker-compose` `docker-filesystem-resize` `docker-housekeeping` `dockerhub` |        :octicons-shield-lock-24:         |
+| [Dockhand](../sandbox/apps/dockhand.md)   |                                   `sandbox-dockhand`                                   |             `sandbox_roles`              |
 | [Dockwatch](../sandbox/apps/dockwatch.md) |                                  `sandbox-dockwatch`                                   |             `sandbox_roles`              |
 
 #### Misc
@@ -447,7 +448,7 @@ tags:
 |---------------------------------------------------------------------|:----------------------------------:|:----------------------------------------:|
 | [Actual Budget](../sandbox/apps/actualbudget.md)                    |       `sandbox-actualbudget`       |             `sandbox_roles`              |
 | [Firefly III](../sandbox/apps/fireflyiii.md)                        |        `sandbox-fireflyiii`        |             `sandbox_roles`              |
-| [Firefly III Data Importer](../sandbox/apps/fireflyiii_importer.md) |    `sandbox-fireflyiii-importer`    |             `sandbox_roles`              |
+| [Firefly III Data Importer](../sandbox/apps/fireflyiii_importer.md) |   `sandbox-fireflyiii-importer`    |             `sandbox_roles`              |
 | [Invoice Ninja](../sandbox/apps/invoiceninjav5.md)                  |       `sandbox-invoiceninja`       |             `sandbox_roles`              |
 
 #### Home

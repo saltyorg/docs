@@ -350,7 +350,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
             ```yaml { .sb-show-on-unchecked }
             # Reference: https://github.com/qdm12/gluetun-wiki
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
-            # VPN server endpoint IP address (optional override)
+            # Legacy fallback for OpenVPN and WireGuard endpoint IP overrides; prefer protocol-specific settings
             # Type: string
             gluetun_role_vpn_endpoint_ip: ""
             ```
@@ -358,7 +358,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
             ```yaml { .sb-show-on-checked }
             # Reference: https://github.com/qdm12/gluetun-wiki
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
-            # VPN server endpoint IP address (optional override)
+            # Legacy fallback for OpenVPN and WireGuard endpoint IP overrides; prefer protocol-specific settings
             # Type: string
             gluetun2_vpn_endpoint_ip: ""
             ```
@@ -368,7 +368,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
             ```yaml { .sb-show-on-unchecked }
             # Reference: https://github.com/qdm12/gluetun-wiki
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
-            # VPN server endpoint port (optional override)
+            # Legacy fallback for OpenVPN and WireGuard endpoint port overrides; prefer protocol-specific settings
             # Type: string
             gluetun_role_vpn_endpoint_port: ""
             ```
@@ -376,7 +376,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
             ```yaml { .sb-show-on-checked }
             # Reference: https://github.com/qdm12/gluetun-wiki
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/vpn-server-selection.md
-            # VPN server endpoint port (optional override)
+            # Legacy fallback for OpenVPN and WireGuard endpoint port overrides; prefer protocol-specific settings
             # Type: string
             gluetun2_vpn_endpoint_port: ""
             ```
@@ -595,14 +595,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
             ```yaml { .sb-show-on-unchecked }
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
-            # OpenVPN client certificate (base64 or path)
+            # OpenVPN client certificate content (base64 part only)
             # Type: string
             gluetun_role_openvpn_cert: ""
             ```
 
             ```yaml { .sb-show-on-checked }
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
-            # OpenVPN client certificate (base64 or path)
+            # OpenVPN client certificate content (base64 part only)
             # Type: string
             gluetun2_openvpn_cert: ""
             ```
@@ -611,14 +611,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
             ```yaml { .sb-show-on-unchecked }
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
-            # OpenVPN client private key (base64 or path)
+            # OpenVPN client private key content (base64 part only)
             # Type: string
             gluetun_role_openvpn_key: ""
             ```
 
             ```yaml { .sb-show-on-checked }
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
-            # OpenVPN client private key (base64 or path)
+            # OpenVPN client private key content (base64 part only)
             # Type: string
             gluetun2_openvpn_key: ""
             ```
@@ -627,14 +627,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
             ```yaml { .sb-show-on-unchecked }
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
-            # Set to "yes" if the OpenVPN key is encrypted
+            # OpenVPN encrypted private key content (base64 part only)
             # Type: string
             gluetun_role_openvpn_encrypted_key: ""
             ```
 
             ```yaml { .sb-show-on-checked }
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/openvpn.md
-            # Set to "yes" if the OpenVPN key is encrypted
+            # OpenVPN encrypted private key content (base64 part only)
             # Type: string
             gluetun2_openvpn_encrypted_key: ""
             ```
@@ -789,14 +789,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
             ```yaml { .sb-show-on-unchecked }
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/wireguard.md
-            # WireGuard implementation: kernelspace or userspace
+            # WireGuard implementation: auto, kernelspace, or userspace
             # Type: string
             gluetun_role_wireguard_implementation: ""
             ```
 
             ```yaml { .sb-show-on-checked }
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/wireguard.md
-            # WireGuard implementation: kernelspace or userspace
+            # WireGuard implementation: auto, kernelspace, or userspace
             # Type: string
             gluetun2_wireguard_implementation: ""
             ```
@@ -1147,14 +1147,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
             ```yaml { .sb-show-on-unchecked }
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
-            # DNS server type: local or remote
+            # Enable the built-in DNS server (on/off)
             # Type: string
             gluetun_role_dns_server: ""
             ```
 
             ```yaml { .sb-show-on-checked }
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
-            # DNS server type: local or remote
+            # Enable the built-in DNS server (on/off)
             # Type: string
             gluetun2_dns_server: ""
             ```
@@ -1163,14 +1163,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
             ```yaml { .sb-show-on-unchecked }
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
-            # Upstream resolver type: dot, doh, or plaintext
+            # Upstream resolver type: dot, doh, or plain
             # Type: string
             gluetun_role_dns_upstream_resolver_type: ""
             ```
 
             ```yaml { .sb-show-on-checked }
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
-            # Upstream resolver type: dot, doh, or plaintext
+            # Upstream resolver type: dot, doh, or plain
             # Type: string
             gluetun2_dns_upstream_resolver_type: ""
             ```
@@ -1211,14 +1211,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
             ```yaml { .sb-show-on-unchecked }
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
-            # Allow IPv6 DNS queries (on/off)
+            # Use IPv6 to contact upstream DNS resolvers (on/off)
             # Type: string
             gluetun_role_dns_upstream_ipv6: ""
             ```
 
             ```yaml { .sb-show-on-checked }
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
-            # Allow IPv6 DNS queries (on/off)
+            # Use IPv6 to contact upstream DNS resolvers (on/off)
             # Type: string
             gluetun2_dns_upstream_ipv6: ""
             ```
@@ -1339,14 +1339,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
             ```yaml { .sb-show-on-unchecked }
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
-            # Comma-separated list of private address ranges for DNS
+            # Legacy fallback for dns_block_ip_prefixes; comma-separated CIDR ranges to block
             # Type: string
             gluetun_role_dns_private_addresses: ""
             ```
 
             ```yaml { .sb-show-on-checked }
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
-            # Comma-separated list of private address ranges for DNS
+            # Legacy fallback for dns_block_ip_prefixes; comma-separated CIDR ranges to block
             # Type: string
             gluetun2_dns_private_addresses: ""
             ```
@@ -1371,14 +1371,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
             ```yaml { .sb-show-on-unchecked }
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
-            # Address for DNS server to listen on (e.g., 127.0.0.1:53)
+            # DNS server IP address used by Gluetun and the system (e.g., 127.0.0.1, without a port)
             # Type: string
             gluetun_role_dns_address: ""
             ```
 
             ```yaml { .sb-show-on-checked }
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
-            # Address for DNS server to listen on (e.g., 127.0.0.1:53)
+            # DNS server IP address used by Gluetun and the system (e.g., 127.0.0.1, without a port)
             # Type: string
             gluetun2_dns_address: ""
             ```
@@ -1387,14 +1387,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
             ```yaml { .sb-show-on-unchecked }
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
-            # Keep original nameserver - deprecated in v3.41+, Saltbox default: false
+            # Keep the container nameserver and disable the built-in DNS server (bypasses VPN DNS); Saltbox default: false
             # Type: bool (true/false)
             gluetun_role_docker_resolver: false
             ```
 
             ```yaml { .sb-show-on-checked }
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/dns.md
-            # Keep original nameserver - deprecated in v3.41+, Saltbox default: false
+            # Keep the container nameserver and disable the built-in DNS server (bypasses VPN DNS); Saltbox default: false
             # Type: bool (true/false)
             gluetun2_docker_resolver: false
             ```
@@ -1453,14 +1453,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
             ```yaml { .sb-show-on-unchecked }
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/faq/healthcheck.md
-            # Type of small health check: ping or http
+            # Type of small health check: icmp or dns
             # Type: string
             gluetun_role_health_small_check_type: ""
             ```
 
             ```yaml { .sb-show-on-checked }
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/faq/healthcheck.md
-            # Type of small health check: ping or http
+            # Type of small health check: icmp or dns
             # Type: string
             gluetun2_health_small_check_type: ""
             ```
@@ -1715,14 +1715,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
             ```yaml { .sb-show-on-unchecked }
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/control-server.md
-            # Default role for control server auth (admin/viewer/none)
+            # JSON-encoded default authentication role for the control server (e.g., '{}')
             # Type: string
             gluetun_role_http_control_server_auth_default_role: ""
             ```
 
             ```yaml { .sb-show-on-checked }
             # Reference: https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/control-server.md
-            # Default role for control server auth (admin/viewer/none)
+            # JSON-encoded default authentication role for the control server (e.g., '{}')
             # Type: string
             gluetun2_http_control_server_auth_default_role: ""
             ```
@@ -2026,13 +2026,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ??? variable string "`gluetun_role_private_internet_access_openvpn_encryption_preset`{ .sb-show-on-unchecked }`gluetun2_private_internet_access_openvpn_encryption_preset`{ .sb-show-on-checked }"
 
             ```yaml { .sb-show-on-unchecked }
-            # PIA OpenVPN encryption preset: normal, strong, none
+            # PIA OpenVPN encryption preset: normal or strong
             # Type: string
             gluetun_role_private_internet_access_openvpn_encryption_preset: ""
             ```
 
             ```yaml { .sb-show-on-checked }
-            # PIA OpenVPN encryption preset: normal, strong, none
+            # PIA OpenVPN encryption preset: normal or strong
             # Type: string
             gluetun2_private_internet_access_openvpn_encryption_preset: ""
             ```

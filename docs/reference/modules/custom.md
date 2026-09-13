@@ -9,6 +9,11 @@ tags:
   - package
   - pip
 saltbox_automation:
+  inventory:
+    example_overrides:
+      custom_apt: ["nethogs", "tailscale"]
+      custom_deb: ["https://example.com/package.deb"]
+      custom_pip: ["plex-mpv-shim", "yt-dlp"]
   project_description:
     name: Custom
     summary: |-

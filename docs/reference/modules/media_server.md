@@ -2,6 +2,9 @@
 icon: material/tag
 title: Media Server
 saltbox_automation:
+  inventory:
+    example_overrides:
+      media_servers_enabled: ["emby", "jellyfin"]
   project_description:
     name: Media Server
     summary: |-

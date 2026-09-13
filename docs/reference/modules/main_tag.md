@@ -2,6 +2,9 @@
 icon: material/tag
 title: Sandbox Main Tag
 saltbox_automation:
+  inventory:
+    example_overrides:
+      sandbox_roles: ["flaresolverr", "qui", "requestrr"]
   project_description:
     name: Sandbox Main Tag
     summary: |-

@@ -2,6 +2,9 @@
 icon: material/tag
 title: Download Clients
 saltbox_automation:
+  inventory:
+    example_overrides:
+      download_clients_enabled: ["deluge", "nzbget"]
   project_description:
     name: Download Clients
     summary: |-

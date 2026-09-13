@@ -49,9 +49,9 @@ Saltbox consists of a "Core" with various extra components added onto that core.
 
     The relevant variables and their default values are:
     ```
-    saltbox_roles: ["media_server", "download_clients", "download_indexers", "tautulli", "seerr", "portainer", "organizr", "sonarr", "radarr", "lidarr", "iperf3", "nethogs", "glances", "btop"]
-    mediabox_roles: ["media_server", "tautulli", "overseerr", "iperf3", "nethogs", "glances", "btop"]
-    feederbox_roles: ["download_clients", "download_indexers", "portainer", "organizr", "sonarr", "radarr", "lidarr", "iperf3", "nethogs", "glances", "btop"]
+    saltbox_roles: ["media_server", "download_clients", "download_indexers", "tautulli", "seerr", "portainer", "organizr", "sonarr", "radarr", "lidarr", "iperf3", "glances", "btop"]
+    mediabox_roles: ["media_server", "tautulli", "overseerr", "iperf3", "glances", "btop"]
+    feederbox_roles: ["download_clients", "download_indexers", "portainer", "organizr", "sonarr", "radarr", "lidarr", "iperf3", "glances", "btop"]
     ```
 
     There is a similar mechanism for defining a top-level `sandbox-roles` tag described [here](../../reference/modules/main_tag.md).

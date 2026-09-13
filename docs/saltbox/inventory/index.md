@@ -72,7 +72,7 @@ When deploying [multiple instances](../../reference/multiple-instances.md), you 
 :material-cards-playing: **Role-scoped** (default)
 
 ```yaml
-xROLE_NAMEx_role_setting_enabled: false # (1)!
+xROLE_NAMEx_role_example_key: "value" # (1)!
 ```
 
 1.  Variable name unchanged (default when no instances are defined)
@@ -86,7 +86,7 @@ xROLE_NAMEx_role_setting_enabled: false # (1)!
 :material-cards-playing-diamond: **Instance-scoped**
 
 ```yaml
-dROLE_NAMEdxINSTANCE_SUFFIXx_setting_enabled: true # (1)!
+dROLE_NAMEdxINSTANCE_SUFFIXx_example_key: "value" # (1)!
 ```
 
 1.  -   `_role` segment removed

@@ -49,4 +49,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: list
         download_clients_enabled: ["qbittorrent", "sabnzbd"]
         ```
+
+        !!! example "Example Override"
+
+            ```yaml
+            download_clients_enabled: ["deluge", "nzbget"]
+            ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

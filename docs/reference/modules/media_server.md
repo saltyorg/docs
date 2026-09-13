@@ -49,4 +49,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: list
         media_servers_enabled: ["plex"]
         ```
+
+        !!! example "Example Override"
+
+            ```yaml
+            media_servers_enabled: ["emby", "jellyfin"]
+            ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

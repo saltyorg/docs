@@ -49,4 +49,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: list
         download_indexers_enabled: ["jackett", "nzbhydra2"]
         ```
+
+        !!! example "Example Override"
+
+            ```yaml
+            download_indexers_enabled: ["prowlarr"]
+            ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

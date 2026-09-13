@@ -51,4 +51,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: list
         sandbox_roles: []
         ```
+
+        !!! example "Example Override"
+
+            ```yaml
+            sandbox_roles: ["flaresolverr", "qui", "requestrr"]
+            ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

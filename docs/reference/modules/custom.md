@@ -91,6 +91,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         custom_apt: []
         ```
 
+        !!! example "Example Override"
+
+            ```yaml
+            custom_apt: ["nethogs", "tailscale"]
+            ```
+
     ??? variable list "`custom_deb`"
 
         ```yaml
@@ -98,10 +104,22 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         custom_deb: []
         ```
 
+        !!! example "Example Override"
+
+            ```yaml
+            custom_deb: ["https://example.com/package.deb"]
+            ```
+
     ??? variable list "`custom_pip`"
 
         ```yaml
         # Type: list
         custom_pip: []
         ```
+
+        !!! example "Example Override"
+
+            ```yaml
+            custom_pip: ["plex-mpv-shim", "yt-dlp"]
+            ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

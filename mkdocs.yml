@@ -443,6 +443,7 @@ nav:
           - sandbox/apps/tofa.md
           - sandbox/apps/tqm.md
           - sandbox/apps/traccar.md
+          - sandbox/apps/tracearr.md
           - sandbox/apps/traefik_robotstxt.md
           - sandbox/apps/transmission.md
           - sandbox/apps/transmissionvpn.md

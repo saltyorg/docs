@@ -77,24 +77,32 @@ sb install sandbox-dockhand-oidc # (1)!
 
     #### Finishing the setup
 
-    1.  **Authelia**: copy and paste the client block from the snippet into your Authelia configuration, adjusting the values to your preference, and restart the Authelia container.
-        
-        **Authentik** (or another OIDC provider): you can use the snippet as a reference to fill out its OIDC form.
-    
-    1.  Turn on authentication in the Dockhand UI.
+    === "Authelia"
 
-    1.  Confirm success by logging out and in through OIDC
+        1.  Copy and paste the client block from the snippet into your Authelia configuration, adjusting the values to your preference, and restart the Authelia container.
 
-    #### Pre-deployment
+        1.  Turn on authentication in the Dockhand UI.
 
-    Next, you will likely want to disable local login and Traefik SSO with the following Inventory entries:
+        1.  Confirm success by logging out and in through OIDC
+
+    === "Authentik (or another OIDC provider)"
+
+        1.  You can use the snippet as a reference to fill out the provider's OIDC form.
+
+        1.  Turn on authentication in the Dockhand UI.
+
+        1.  Confirm success by logging out and in through OIDC
+
+    #### Aligning deployment
+
+    With authentication now handled by OIDC, you may want to disable Traefik SSO and local login:
 
     ```yaml
     dockhand_role_disable_local_login: "true"
     dockhand_role_traefik_sso_middleware: ""
     ```
 
-    Redeploy with the regular tag to apply.
+    Redeploy with the regular tag for changes to take effect.
 
 ## Usage
 

@@ -44,12 +44,7 @@ Visit <https://tracearr.iYOUR_DOMAIN_NAMEi>.
 
 The first account created becomes the owner. Add media servers by their container address, for example `http://plex:32400` or `http://jellyfin:8096`.
 
-To require a code before that first account can be created, set one in `/srv/git/saltbox/inventories/host_vars/localhost.yml` before deploying:
-
-```yaml
-tracearr_role_docker_envs_custom:
-  CLAIM_CODE: "your-code"
-```
+For SSO through Authelia or Authentik, create an OIDC client with the redirect URI `https://tracearr.iYOUR_DOMAIN_NAMEi/api/v1/auth/oauth2/callback/oidc` and set `tracearr_role_oidc_issuer_url`, `tracearr_role_oidc_client_id` and `tracearr_role_oidc_client_secret`.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

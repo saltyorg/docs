@@ -560,15 +560,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         dockhand_role_traefik_api_endpoint: "PathPrefix(`/api`)"
         ```
 
-=== "Setup"
-
-    ??? variable string "`dockhand_role_host`"
-
-        ```yaml
-        # Type: string
-        dockhand_role_host: "http://{{ lookup('role_var', '_docker_networks_alias', role='dockhand') }}:{{ lookup('role_var', '_web_port', role='dockhand') }}"
-        ```
-
 === "Docker"
 
     <h5>Container</h5>

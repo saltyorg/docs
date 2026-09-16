@@ -11,6 +11,7 @@ saltbox_automation:
   inventory:
     hide_sections:
       - OIDC
+      - Setup
   app_links:
     - name: Manual
       url: https://dockhand.pro/manual
@@ -80,17 +81,13 @@ sb install sandbox-dockhand-oidc # (1)!
     === "Authelia"
 
         1.  Copy and paste the client block from the snippet into your Authelia configuration, adjusting the values to your preference, and restart the Authelia container.
-
         1.  Turn on authentication in the Dockhand UI.
-
         1.  Confirm success by logging out and in through OIDC
 
     === "Authentik (or another OIDC provider)"
 
         1.  You can use the snippet as a reference to fill out the provider's OIDC form.
-
         1.  Turn on authentication in the Dockhand UI.
-
         1.  Confirm success by logging out and in through OIDC
 
     #### Aligning deployment

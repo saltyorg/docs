@@ -14,7 +14,7 @@ permissions:
 jobs:
   notify:
     if: contains(fromJSON('["success", "failure", "timed_out", "startup_failure", "cancelled"]'), github.event.workflow_run.conclusion)
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
       - name: Notify workflow completion
         uses: saltyorg/github-actions/notify@cbf157255aff0ff6fc4738b11ee595646455e55a # v1.1.0

@@ -139,6 +139,30 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         timescaledb2_docker_env_db: "saltbox"
         ```
 
+    ??? variable int "`timescaledb_role_ready_retries`{ .sb-show-on-unchecked }`timescaledb2_ready_retries`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        timescaledb_role_ready_retries: 60
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        timescaledb2_ready_retries: 60
+        ```
+
+    ??? variable int "`timescaledb_role_ready_delay`{ .sb-show-on-unchecked }`timescaledb2_ready_delay`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        timescaledb_role_ready_delay: 5
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        timescaledb2_ready_delay: 5
+        ```
+
 === "Docker"
 
     <h5>Container</h5>

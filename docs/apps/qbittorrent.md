@@ -230,16 +230,16 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        qbittorrent_role_webui_custom_headers_default: "{{ (qbittorrent_role_themepark_headers
-                                                            if lookup('role_var', '_themepark_enabled', role='qbittorrent') and global_themepark_plugin_enabled
-                                                            else '') }}"
+        qbittorrent_role_webui_custom_headers_default: "{{ qbittorrent_role_themepark_headers
+                                                        if lookup('role_var', '_themepark_enabled', role='qbittorrent') and global_themepark_plugin_enabled
+                                                        else '' }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        qbittorrent2_webui_custom_headers_default: "{{ (qbittorrent_role_themepark_headers
-                                                        if lookup('role_var', '_themepark_enabled', role='qbittorrent') and global_themepark_plugin_enabled
-                                                        else '') }}"
+        qbittorrent2_webui_custom_headers_default: "{{ qbittorrent_role_themepark_headers
+                                                    if lookup('role_var', '_themepark_enabled', role='qbittorrent') and global_themepark_plugin_enabled
+                                                    else '' }}"
         ```
 
     ??? variable string "`qbittorrent_role_webui_custom_headers_custom`{ .sb-show-on-unchecked }`qbittorrent2_webui_custom_headers_custom`{ .sb-show-on-checked }"

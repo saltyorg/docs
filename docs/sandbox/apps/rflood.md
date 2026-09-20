@@ -384,11 +384,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
 === "Ports"
 
-    When no saved assignment exists, the role allocates the first available port within the inclusive low and high bounds and retains it for future runs.
-    Override an instance's bounds to control new allocation; set both bounds to the same value to require one exact port.
+    The role allocates the first available port within the inclusive low and high bounds and retains it while it remains within those bounds and free of conflicts.
+    Override an instance's bounds to change the allowed range; set both bounds to the same value to require one exact port, including for an existing assignment.
 
-    Existing assignments are stored in `/opt/saltbox/port-assignments.json`. A conflict-free saved port remains authoritative even outside the current bounds, including a port manually changed in that file.
-    If a saved assignment conflicts, another available port is selected from the current bounds and a warning shows the old port, new port, and conflict source.
+    Existing assignments are stored in `/opt/saltbox/port-assignments.json`. On each role run, a saved port outside the current bounds or in conflict is reassigned within the current bounds, with a warning showing the old port, new port, and reason.
+    These bounds also apply to ports manually changed in that file. If no port is available within the bounds, allocation fails without changing the registry.
 
     ??? variable int "`rflood_role_port_peer_low_bound`{ .sb-show-on-unchecked }`rflood2_port_peer_low_bound`{ .sb-show-on-checked }"
 

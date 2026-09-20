@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Notify workflow completion
-        uses: saltyorg/github-actions/notify@cbf157255aff0ff6fc4738b11ee595646455e55a # v1.1.0
+        uses: saltyorg/github-actions/notify@v1.2.0
         with:
           github-token: ${{ github.token }}
           discord-webhook: ${{ secrets.DISCORD_WEBHOOK }}

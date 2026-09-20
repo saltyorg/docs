@@ -88,6 +88,7 @@
             "matchPackageNames": [
                 "saltyorg/github-actions"
             ],
+            "pinDigests": false,
             "groupName": "workflow-result-actions",
             "labels": [
                 "dependencies",

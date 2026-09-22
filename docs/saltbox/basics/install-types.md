@@ -47,14 +47,9 @@ Saltbox consists of a "Core" with various extra components added onto that core.
 
     [Sandbox](../../reference/modules/sandbox.md) roles cannot be used here.
 
-    The relevant variables and their default values are:
-    ```
-    saltbox_roles: ["media_server", "download_clients", "download_indexers", "tautulli", "seerr", "portainer", "organizr", "sonarr", "radarr", "lidarr", "iperf3", "glances", "btop"]
-    mediabox_roles: ["media_server", "tautulli", "overseerr", "iperf3", "glances", "btop"]
-    feederbox_roles: ["download_clients", "download_indexers", "portainer", "organizr", "sonarr", "radarr", "lidarr", "iperf3", "glances", "btop"]
-    ```
+    The relevant variables and their default values can be reviewed in [Main Tags Role Defaults](../../reference/modules/main_tags.md#role-defaults){ data-preview }.
 
-    There is a similar mechanism for defining a top-level `sandbox-roles` tag described [here](../../reference/modules/main_tag.md).
+    There is a similar mechanism for defining a top-level `sandbox-roles` tag described [here](../../reference/modules/main_tag.md#overview){ data-preview }.
 
 
 [^2]:
@@ -62,21 +57,14 @@ Saltbox consists of a "Core" with various extra components added onto that core.
 
     [Sandbox](../../reference/modules/sandbox.md) roles cannot be used here.
 
-    The relevant variables and their default values are:
-    ```
-    media_servers_enabled: ["plex"]
-    ```
+    The relevant variables and their default values can be reviewed in [Media Server Role Defaults](../../reference/modules/media_server.md#role-defaults){ data-preview }.
 
 [^3]:
     Note that these default download clients and indexers can be overridden with other Saltbox roles in the [inventory](../inventory/index.md). If the roles do not exist in Saltbox the install will fail.
 
     [Sandbox](../../reference/modules/sandbox.md) roles cannot be used here.
 
-    The relevant variables and their default values are:
-    ```
-    download_clients_enabled: ["qbittorrent", "sabnzbd"]
-    download_indexers_enabled: ["jackett", "nzbhydra2"]
-    ```
+    The relevant variables and their default values can be reviewed in [Download Clients Role Defaults](../../reference/modules/download_clients.md#role-defaults){ data-preview } and [Download Indexers Role Defaults](../../reference/modules/download_indexers.md#role-defaults){ data-preview }.
 
 As with any Ansible tags provided by saltbox, it is safe to run these install tag(s) at will. Existing configurations are not overwritten (except for some "reset" tags and the "mounts" tag).
 

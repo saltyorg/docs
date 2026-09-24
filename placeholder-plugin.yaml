@@ -10,6 +10,12 @@ placeholders:
   ROLE_NAME:
     default: sonarr
     description: Name of the role
+  ROLE_TAG:
+    computed:
+      depends_on: ROLE_NAME
+      function: |
+        return ROLE_NAME.replace(/_/g, "-");
+    description: Role name with underscores replaced by hyphens
   INSTANCE_SUFFIX:
     default: 4k
     description: Instance suffix

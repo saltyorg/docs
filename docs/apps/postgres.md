@@ -398,6 +398,22 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         postgres2_docker_shm_size: "128M"
         ```
 
+    <h5>Ulimits</h5>
+
+    ??? variable list "`postgres_role_docker_ulimits`{ .sb-show-on-unchecked }`postgres2_docker_ulimits`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        postgres_role_docker_ulimits:
+          - "nofile:65536:65536"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        postgres2_docker_ulimits:
+          - "nofile:65536:65536"
+        ```
+
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
@@ -1370,18 +1386,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: dict
         postgres2_docker_sysctls:
-        ```
-
-    ??? variable list "`postgres_role_docker_ulimits`{ .sb-show-on-unchecked }`postgres2_docker_ulimits`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        postgres_role_docker_ulimits:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        postgres2_docker_ulimits:
         ```
 
 === "Global Override Options"

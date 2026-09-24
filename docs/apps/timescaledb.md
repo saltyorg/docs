@@ -389,6 +389,22 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         timescaledb2_docker_shm_size: "128M"
         ```
 
+    <h5>Ulimits</h5>
+
+    ??? variable list "`timescaledb_role_docker_ulimits`{ .sb-show-on-unchecked }`timescaledb2_docker_ulimits`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: list
+        timescaledb_role_docker_ulimits:
+          - "nofile:65536:65536"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: list
+        timescaledb2_docker_ulimits:
+          - "nofile:65536:65536"
+        ```
+
     <h5>CI</h5>
 
     ??? variable int "`timescaledb_role_docker_create_timeout`{ .sb-show-on-unchecked }`timescaledb2_docker_create_timeout`{ .sb-show-on-checked }"
@@ -1363,18 +1379,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: dict
         timescaledb2_docker_sysctls:
-        ```
-
-    ??? variable list "`timescaledb_role_docker_ulimits`{ .sb-show-on-unchecked }`timescaledb2_docker_ulimits`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: list
-        timescaledb_role_docker_ulimits:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: list
-        timescaledb2_docker_ulimits:
         ```
 
 === "Global Override Options"

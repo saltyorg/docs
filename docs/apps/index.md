@@ -67,12 +67,13 @@ tags:
 
 ### Reader
 
-|                                         | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
-|-----------------------------------------|:----------------------------------:|:----------------------------------------:|
-| [Codex](../sandbox/apps/codex.md)       |          `sandbox-codex`           |             `sandbox_roles`              |
-| [Grimmory](../sandbox/apps/grimmory.md) |         `sandbox-grimmory`         |             `sandbox_roles`              |
-| [Kavita](../sandbox/apps/kavita.md)     |          `sandbox-kavita`          |             `sandbox_roles`              |
-| [Komga](../sandbox/apps/komga.md)       |          `sandbox-komga`           |             `sandbox_roles`              |
+|                                           | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
+|-------------------------------------------|:----------------------------------:|:----------------------------------------:|
+| [BookOrbit](../sandbox/apps/bookorbit.md) |        `sandbox-bookorbit`         |             `sandbox_roles`              |
+| [Codex](../sandbox/apps/codex.md)         |          `sandbox-codex`           |             `sandbox_roles`              |
+| [Grimmory](../sandbox/apps/grimmory.md)   |         `sandbox-grimmory`         |             `sandbox_roles`              |
+| [Kavita](../sandbox/apps/kavita.md)       |          `sandbox-kavita`          |             `sandbox_roles`              |
+| [Komga](../sandbox/apps/komga.md)         |          `sandbox-komga`           |             `sandbox_roles`              |
 
 ## :ocean: Content Acquisition Apps
 

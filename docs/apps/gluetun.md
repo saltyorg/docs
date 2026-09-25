@@ -16,8 +16,8 @@ saltbox_automation:
       type: docker
       purpose: release
     - name: Community
-      url:
-      type: community
+      url: https://github.com/passteque/gluetun/discussions
+      type: github
       purpose: community
   project_description:
     name: Gluetun
@@ -49,178 +49,128 @@ saltbox_automation:
 
 ## Pre-deployment
 
-The Gluetun role is configured via the [inventory system](../saltbox/inventory/index.md). It is recommended to review the upstream documentation for your VPN provider to determine the proper configuration. The following variables are available to set and correspond to the similarly named Docker envs.
+Gluetun is configured through the [inventory system](../saltbox/inventory/index.md). Review the upstream Gluetun documentation for the values required by your VPN provider, then set the corresponding variables listed in [Role Defaults](#role-defaults).
 
-```yaml
-gluetun_vpn_service_provider: ""
-gluetun_vpn_type: ""
-gluetun_openvpn_custom_config: ""
-gluetun_openvpn_endpoint_ip: ""
-gluetun_openvpn_endpoint_port: ""
-gluetun_openvpn_user: ""
-gluetun_openvpn_password: ""
-gluetun_openvpn_key_passphrase: ""
-gluetun_wireguard_endpoint_ip: ""
-gluetun_wireguard_endpoint_port: ""
-gluetun_wireguard_public_key: ""
-gluetun_wireguard_private_key: ""
-gluetun_wireguard_preshared_key: ""
-gluetun_wireguard_addresses: ""
-gluetun_wireguard_mtu: ""
-gluetun_server_countries: ""
-gluetun_server_cities: ""
-gluetun_server_hostnames: ""
-gluetun_server_names: ""
-gluetun_server_regions: ""
-gluetun_firewall_vpn_input_ports: ""
-gluetun_firewall_input_ports: ""
-gluetun_firewall_outbound_subnets: ""
-```
+??? example "Example Gluetun Configs"
 
-!!! caution
-    Any values which are entirely numeric or contain special characters should be wrapped in quotes:
+    Below are some example inventory entries for some common VPN providers. These are intended as templates only and should not be expected to copy and paste without any edits. For a Wireguard implementation, you will typically generate a config file (wg0.conf) with the provider and grab some of the values from that config to configure Gluetun.
 
-    ```yaml
-    gluetun_openvpn_user: "ePWh!Y^fs6p%B*6S"
-    gluetun_openvpn_password: "qA5V6&#ASx4DY8qG"
-    gluetun_openvpn_endpoint_port: "12345"
-    ```
+    ???+caution
 
-    Generally speaking it's safest to just wrap everything in quotes rather than worrying about what needs to be. Quotes are plentiful and free.
+        Any values which are entirely numeric or contain special characters should be wrapped in quotes:
 
-Additional Docker envs may be set via `gluetun_docker_envs_custom`.
+        ```yaml
+        gluetun_openvpn_user: "ePWh!Y^fs6p%B*6S"
+        gluetun_openvpn_password: "qA5V6&#ASx4DY8qG"
+        gluetun_openvpn_endpoint_port: "12345"
+        ```
 
-### Route Plex through Gluetun
+    === "Custom Wireguard provider"
 
-!!! caution
-    It is important to disable remote access in Plex when using this workaround to avoid having media traffic routed through the VPN. Multiple instances of Plex will need their own unique instance of gluetun due to port conflicts.
+        ```yaml
+        gluetun_vpn_service_provider: "custom"
+        gluetun_vpn_type: "wireguard"
+        gluetun_wireguard_private_key: "your_wireguard_private_key"
+        gluetun_wireguard_addresses: "your_wireguard_address_with_cidr"
+        gluetun_wireguard_public_key: "server_wireguard_public_key"
+        gluetun_wireguard_endpoint_ip: "wireguard_server_ip"
+        gluetun_wireguard_endpoint_port: "wireguard_server_port"
+        # Not always required (only if server is configured to use a pre-shared key)
+        gluetun_wireguard_preshared_key: "your_wireguard_preshared_key"
+        ```
 
-To route Plex via your Gluetun container, you must set the following via the inventory system. These settings will also DNS block the metrics servers and use Gluetun's HTTP proxy when connecting with the Plex API for Saltbox tasks such as generating auth tokens:
+    === "Proton VPN Free"
 
-```yaml
-gluetun_docker_hosts_default:
-  "metric.plex.tv": "{{ ip_address_localhost }}"
-  "metrics.plex.tv": "{{ ip_address_localhost }}"
-  "analytics.plex.tv": "{{ ip_address_localhost }}"
+        ```yaml
+        gluetun_vpn_service_provider: "protonvpn"
+        gluetun_openvpn_user: "your_openvpn_user"
+        gluetun_openvpn_password: "your_openvpn_password"
+        gluetun_docker_envs_custom:
+          FREE_ONLY: "on"
+        ```
 
-gluetun_docker_networks_alias_custom:
-  - "plex"
+    === "Mullvad"
 
-plex_auth_token_proxy: "http://gluetun:8888"
-plex_docker_network_mode: "container:gluetun"
+        ```yaml
+        gluetun_vpn_service_provider: "mullvad"
+        gluetun_vpn_type: "wireguard"
+        gluetun_wireguard_public_key: "your_wireguard_public_key"
+        gluetun_wireguard_private_key: "your_wireguard_private_key"
+        gluetun_wireguard_addresses: "your_wireguard_address"
+        # Include the below line to only connect to Amsterdam servers - replace with a different city if desired
+        gluetun_server_cities: "amsterdam"
+        ```
 
-# If using multiple instances.
-gluetun2_docker_networks_alias_custom:
-  - "plex2"
-plex2_docker_network_mode: "container:gluetun2"
-plex2_auth_token_proxy: "http://gluetun2:8888"
-```
+    === "Surfshark"
 
-Once you have made these changes to the inventory, run the plex tag to apply the changes (i.e. `sb install plex`). This will update all your plex containers.
+        ```yaml
+        gluetun_vpn_service_provider: "surfshark"
+        gluetun_vpn_type: "wireguard"
+        gluetun_wireguard_private_key: "your_wireguard_private_key"
+        gluetun_wireguard_addresses: "your_wireguard_address"
+        # Include the below line to only connect to Netherlands servers - replace with a different city if desired
+        gluetun_server_countries: "Netherlands"
+        ```
 
-!!! caution
-    When routing Plex through Gluetun, you must access Plex between containers at `http://gluetun:32400` where you would previously use the Plex container name.
+    === "AirVPN"
 
-    The above note is only the case if you do not add each linked container alias to gluetun like in the config example above.
+        ```yaml
+        gluetun_vpn_service_provider: "airvpn"
+        gluetun_vpn_type: "wireguard"
+        gluetun_wireguard_public_key: "your_wireguard_public_key"
+        gluetun_wireguard_private_key: "your_wireguard_private_key"
+        gluetun_wireguard_preshared_key: "your_wireguard_preshared_key"
+        gluetun_wireguard_addresses: "your_wireguard_address"
+        ```
 
-    Additionally the Plex container will become unable to start if you redeploy gluetun (restart is fine) at any point so you must redeploy Plex in that case.
+    === "Custom .ovpn file"
 
-### Route other containers through Gluetun
+        ```yaml
+        # Configure via a ovpn file located on the host at `/opt/gluetun/custom.ovpn`.
+        gluetun_vpn_service_provider: "custom"
+        gluetun_vpn_type: "openvpn"
+        gluetun_openvpn_custom_config: "/gluetun/custom.ovpn"
+        ```
 
-Depending on if the role in question supports instances or not there will be two ways to set the network mode.
+### Routing a container through Gluetun
 
-=== "With instances"
+To route a Saltbox-managed container through Gluetun, set that app's Docker network mode to the Gluetun container.
 
-    To route a Saltbox-configured container through Gluetun, you must set `<rolename_instance>_docker_network_mode: "container:gluetun"` via the inventory system.
+???+warning "Warning: multiple instances port collision"
 
-    For example, to route `qbittorrent` through Gluetun, the entry would be `qbittorrent_docker_network_mode: "container:gluetun"`.
+    If routing multiple instances of the same app, the caveat is that each instance will need a unique Gluetun instance to avoid port collision.
 
-    For example, to route `qbittorrent2` through Gluetun, the entry would be `qbittorrent2_docker_network_mode: "container:gluetun2"`.
+    While multiple containers may be routed through a single Gluetun instance, you would have to manually ensure each container involved has a unique listening port.
 
-    !!! important
-        The caveat with instances is that each instance will need a unique Gluetun instance to avoid port collision.
-
-=== "Without instances"
-
-    To route a Saltbox-configured container through Gluetun, you must set `<rolename>_docker_network_mode: "container:gluetun"` via the inventory system.
-
-    For example, to route `jackett` through Gluetun, the entry would be `jackett_docker_network_mode: "container:gluetun"`.
-
-Once you have made these changes to the inventory, run the relevant tags to apply the changes (i.e. `sb install qbittorrent` or `sb install jackett,sonarr,radarr`).
-
-!!! caution
-    While multiple containers may be routed through a single Gluetun instance, you must manually ensure there are no port clashes as all port binds for the connected containers will be through the Gluetun container and must have unique ports inside that container.
-
-### Example Gluetun Configs
-
-Below are some example inventory entries for some common VPN providers. These are intended as templates only and should not be expected to copy and paste without any edits. For a Wireguard implementation, you will typically generate a config file (wg0.conf) with the provider and grab some of the values from that config to configure Gluetun.
-
-=== "Custom Wireguard provider"
+???+example "Instance-scoped example"
 
     ```yaml
-    gluetun_vpn_service_provider: "custom"
-    gluetun_vpn_type: "wireguard"
-    gluetun_wireguard_private_key: "your_wireguard_private_key"
-    gluetun_wireguard_addresses: "your_wireguard_address_with_cidr"
-    gluetun_wireguard_public_key: "server_wireguard_public_key"
-    gluetun_wireguard_endpoint_ip: "wireguard_server_ip"
-    gluetun_wireguard_endpoint_port: "wireguard_server_port"
-    # Not always required (only if server is configured to use a pre-shared key)
-    gluetun_wireguard_preshared_key: "your_wireguard_preshared_key"
+    xROLE_NAMExxINSTANCE_SUFFIXx_docker_network_mode: "container:gluetunxINSTANCE_SUFFIXx"
     ```
+<div class="sb-cta" markdown>
 
-=== "Proton VPN Free"
+<div markdown>
+
+[Looking for Plex?](plex.md#gluetun){ .md-button }
+
+</div>
+
+</div>
+
+### Keep a routed container reachable by its name
+
+When a container is routed through Gluetun with `container:gluetun`, it no longer has its own Docker network namespace. Other containers may need to reach services exposed from that shared namespace through the Gluetun container instead.
+
+Use `_docker_networks_alias_custom` to add names that should resolve to the Gluetun container on Docker networks.
+
+???+ example "Instance-scoped example"
 
     ```yaml
-    gluetun_vpn_service_provider: "protonvpn"
-    gluetun_openvpn_user: "your_openvpn_user"
-    gluetun_openvpn_password: "your_openvpn_password"
-    gluetun_docker_envs_custom:
-      FREE_ONLY: "on"
+    gluetunxINSTANCE_SUFFIXx_docker_networks_alias_custom:
+      - "xROLE_NAMExxINSTANCE_SUFFIXx"
     ```
 
-=== "Mullvad"
-
-    ```yaml
-    gluetun_vpn_service_provider: "mullvad"
-    gluetun_vpn_type: "wireguard"
-    gluetun_wireguard_public_key: "your_wireguard_public_key"
-    gluetun_wireguard_private_key: "your_wireguard_private_key"
-    gluetun_wireguard_addresses: "your_wireguard_address"
-    # Include the below line to only connect to Amsterdam servers - replace with a different city if desired
-    gluetun_server_cities: "amsterdam"
-    ```
-
-=== "Surfshark"
-
-    ```yaml
-    gluetun_vpn_service_provider: "surfshark"
-    gluetun_vpn_type: "wireguard"
-    gluetun_wireguard_private_key: "your_wireguard_private_key"
-    gluetun_wireguard_addresses: "your_wireguard_address"
-    # Include the below line to only connect to Netherlands servers - replace with a different city if desired
-    gluetun_server_countries: "Netherlands"
-    ```
-
-=== "AirVPN"
-
-    ```yaml
-    gluetun_vpn_service_provider: "airvpn"
-    gluetun_vpn_type: "wireguard"
-    gluetun_wireguard_public_key: "your_wireguard_public_key"
-    gluetun_wireguard_private_key: "your_wireguard_private_key"
-    gluetun_wireguard_preshared_key: "your_wireguard_preshared_key"
-    gluetun_wireguard_addresses: "your_wireguard_address"
-    ```
-
-=== "Custom .ovpn file"
-
-    ```yaml
-    # Configure via a ovpn file located on the host at `/opt/gluetun/custom.ovpn`.
-    gluetun_vpn_service_provider: "custom"
-    gluetun_vpn_type: "openvpn"
-    gluetun_openvpn_custom_config: "/gluetun/custom.ovpn"
-    ```
+This is useful when another container expects to connect to the routed app by its usual container name, but that app is now sharing Gluetun's network namespace.
 
 ## Deployment
 
@@ -230,7 +180,7 @@ sb install gluetun
 
 ## Usage
 
-To verify VPN connectivity, inspect the container's IP address:
+To verify VPN egress:
 
 ```shell
 docker exec gluetun curl ifconfig.me

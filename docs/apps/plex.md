@@ -310,6 +310,47 @@ To do so:
 
 3.  Repeat steps 1-2 for each library.
 
+## FAQ
+
+??? question "How to route Plex.tv traffic through Gluetun?"
+
+    ### Gluetun { .hidden-anchor }
+
+    ???+caution
+
+        It is important to disable remote access in Plex when using this workaround to avoid having media traffic routed through the VPN. Multiple instances of Plex will need their own unique instance of gluetun due to port conflicts.
+
+    To route Plex via your Gluetun container, you must set the following via the inventory system. These settings will also DNS block the metrics servers and use Gluetun's HTTP proxy when connecting with the Plex API for Saltbox tasks such as generating auth tokens:
+
+    ```yaml
+    gluetun_docker_hosts_default:
+      "metric.plex.tv": "{{ ip_address_localhost }}"
+      "metrics.plex.tv": "{{ ip_address_localhost }}"
+      "analytics.plex.tv": "{{ ip_address_localhost }}"
+
+    gluetun_docker_networks_alias_custom:
+      - "plex"
+
+    plex_auth_token_proxy: "http://gluetun:8888"
+    plex_docker_network_mode: "container:gluetun"
+
+    # If using multiple instances.
+    gluetun2_docker_networks_alias_custom:
+      - "plex2"
+    plex2_docker_network_mode: "container:gluetun2"
+    plex2_auth_token_proxy: "http://gluetun2:8888"
+    ```
+
+    Once you have made these changes to the inventory, run the plex tag to apply the changes (i.e. `sb install plex`). This will update all your plex containers.
+
+    ???+caution
+
+        When routing Plex through Gluetun, you must access Plex between containers at `http://gluetun:32400` where you would previously use the Plex container name.
+
+        The above note is only the case if you do not add each linked container alias to gluetun as instructed [here](gluetun.md#keep-a-routed-container-reachable-by-its-name).
+
+        Additionally the Plex container will become unable to start if you redeploy gluetun (restart is fine) at any point so you must redeploy Plex in that case.
+
 ## Next
 
 <div class="sb-cta" markdown>

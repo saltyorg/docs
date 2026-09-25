@@ -40,7 +40,7 @@ saltbox_automation:
 
 [:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/qmcgaw/gluetun/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
+[:fontawesome-brands-github:**Community**](https://github.com/passteque/gluetun/discussions){ .md-button .md-button--stretch }
 
 </div>
 

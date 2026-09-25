@@ -366,6 +366,15 @@ Custom admonitions for variables.
   .md-button {
     border-radius: 0.5rem;
   }
+
+  .hidden-anchor {
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 /* Rounded search bar */

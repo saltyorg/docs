@@ -204,12 +204,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        postgres_role_docker_image_tag: "17-alpine"
+        postgres_role_docker_image_tag: "17"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        postgres2_docker_image_tag: "17-alpine"
+        postgres2_docker_image_tag: "17"
         ```
 
     ??? variable string "`postgres_role_docker_image_repo`{ .sb-show-on-unchecked }`postgres2_docker_image_repo`{ .sb-show-on-checked }"

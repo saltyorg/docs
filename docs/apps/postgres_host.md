@@ -194,13 +194,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
 === "User & Database Configuration"
 
+    ??? variable string "`postgres_host_role_password`"
+
+        ```yaml
+        # Type: string
+        postgres_host_role_password: "password4321"
+        ```
+
     ??? variable list "`postgres_host_role_users`"
 
         ```yaml
         # Type: list
         postgres_host_role_users:
           - name: "{{ user.name }}"
-            password: "{{ user.pass }}"
+            password: "{{ postgres_host_role_password }}"
         ```
 
     ??? variable list "`postgres_host_role_databases`"

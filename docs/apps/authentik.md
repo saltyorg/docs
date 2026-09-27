@@ -304,7 +304,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        authentik_role_postgres_docker_image_tag: "16-alpine"
+        authentik_role_postgres_docker_image_tag: "18"
         ```
 
     ??? variable string "`authentik_role_postgres_docker_image_repo`"
@@ -537,7 +537,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        authentik_role_docker_image_tag: "2026.5"
+        authentik_role_docker_image_tag: "2026.8"
         ```
 
     ??? variable string "`authentik_role_docker_image`"
@@ -554,23 +554,24 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: dict
         authentik_role_docker_envs_default:
-          AUTHENTIK_POSTGRESQL__HOST: "{{ lookup('role_var', '_postgres_name', role='authentik') }}"
-          AUTHENTIK_POSTGRESQL__USER: "{{ lookup('role_var', '_postgres_user', role='authentik', default=lookup('role_var', '_docker_env_user', role='postgres'), default_if_empty=true) }}"
-          AUTHENTIK_POSTGRESQL__NAME: "{{ lookup('role_var', '_postgres_docker_env_db', role='authentik') }}"
-          AUTHENTIK_POSTGRESQL__PASSWORD: "{{ lookup('role_var', '_postgres_password', role='authentik', default=lookup('role_var', '_docker_env_password', role='postgres'), default_if_empty=true) }}"
-          AUTHENTIK_SECRET_KEY: "{{ authentik_saltbox_facts.facts.secret_key }}"
           AUTHENTIK_BOOTSTRAP_TOKEN: "{{ omit
                                       if authentik_data_folder.stat.exists
                                       else authentik_bootstrap_token }}"
-          AUTHENTIK_EMAIL__HOST: "{{ lookup('role_var', '_email_host', role='authentik') }}"
-          AUTHENTIK_EMAIL__PORT: "{{ lookup('role_var', '_email_port', role='authentik') }}"
-          AUTHENTIK_EMAIL__USERNAME: "{{ lookup('role_var', '_email_username', role='authentik') }}"
-          AUTHENTIK_EMAIL__PASSWORD: "{{ lookup('role_var', '_email_password', role='authentik') }}"
-          AUTHENTIK_EMAIL__USE_TLS: "{{ lookup('role_var', '_email_tls', role='authentik') }}"
-          AUTHENTIK_EMAIL__USE_SSL: "{{ lookup('role_var', '_email_ssl', role='authentik') }}"
-          AUTHENTIK_EMAIL__TIMEOUT: "{{ lookup('role_var', '_email_timeout', role='authentik') }}"
           AUTHENTIK_EMAIL__FROM: "{{ lookup('role_var', '_email_from', role='authentik') }}"
-          AUTHENTIK_LISTEN__TRUSTED_PROXY_CIDRS: "172.19.0.0/16"
+          AUTHENTIK_EMAIL__HOST: "{{ lookup('role_var', '_email_host', role='authentik') }}"
+          AUTHENTIK_EMAIL__PASSWORD: "{{ lookup('role_var', '_email_password', role='authentik') }}"
+          AUTHENTIK_EMAIL__PORT: "{{ lookup('role_var', '_email_port', role='authentik') }}"
+          AUTHENTIK_EMAIL__TIMEOUT: "{{ lookup('role_var', '_email_timeout', role='authentik') }}"
+          AUTHENTIK_EMAIL__USERNAME: "{{ lookup('role_var', '_email_username', role='authentik') }}"
+          AUTHENTIK_EMAIL__USE_SSL: "{{ lookup('role_var', '_email_ssl', role='authentik') }}"
+          AUTHENTIK_EMAIL__USE_TLS: "{{ lookup('role_var', '_email_tls', role='authentik') }}"
+          AUTHENTIK_LISTEN__TRUSTED_PROXY_CIDRS: "172.19.0.0/16{{ ',fd00:dead:beef::/48' if docker_ipv6 else '' }}"
+          AUTHENTIK_POSTGRESQL__HOST: "{{ lookup('role_var', '_postgres_name', role='authentik') }}"
+          AUTHENTIK_POSTGRESQL__NAME: "{{ lookup('role_var', '_postgres_docker_env_db', role='authentik') }}"
+          AUTHENTIK_POSTGRESQL__PASSWORD: "{{ lookup('role_var', '_postgres_password', role='authentik', default=lookup('role_var', '_docker_env_password', role='postgres'), default_if_empty=true) }}"
+          AUTHENTIK_POSTGRESQL__USER: "{{ lookup('role_var', '_postgres_user', role='authentik', default=lookup('role_var', '_docker_env_user', role='postgres'), default_if_empty=true) }}"
+          AUTHENTIK_SECRET_KEY: "{{ authentik_saltbox_facts.facts.secret_key }}"
+          AUTHENTIK_WEB__BASE_URL: "{{ lookup('role_var', '_web_url', role='authentik') }}"
         ```
 
     ??? variable dict "`authentik_role_docker_envs_custom`"
@@ -692,6 +693,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         authentik_role_docker_restart_policy: unless-stopped
+        ```
+
+    <h5>Shared Memory</h5>
+
+    ??? variable string "`authentik_role_docker_shm_size`"
+
+        ```yaml
+        # Type: string
+        authentik_role_docker_shm_size: "512M"
         ```
 
     <h5>Dependencies</h5>
@@ -844,13 +854,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: int
         authentik_role_docker_memory_swappiness:
-        ```
-
-    ??? variable string "`authentik_role_docker_shm_size`"
-
-        ```yaml
-        # Type: string
-        authentik_role_docker_shm_size:
         ```
 
     <h5>Security & Devices</h5>

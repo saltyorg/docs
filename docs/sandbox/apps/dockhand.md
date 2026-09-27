@@ -307,7 +307,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        dockhand_role_postgres_docker_image_tag: "16-alpine"
+        dockhand_role_postgres_docker_image_tag: "16"
         ```
 
     ??? variable string "`dockhand_role_postgres_docker_image_repo`"

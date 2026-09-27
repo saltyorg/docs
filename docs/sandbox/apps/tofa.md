@@ -168,6 +168,54 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tofa2_media_path: "/mnt/unionfs/Media"
         ```
 
+    ??? variable string "`tofa_role_setup_access_token`{ .sb-show-on-unchecked }`tofa2_setup_access_token`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Protects first-time setup. Generated and saved per instance on new installs.
+        # Type: string
+        tofa_role_setup_access_token: "{{ tofa_saltbox_facts.facts.setup_access_token }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Protects first-time setup. Generated and saved per instance on new installs.
+        # Type: string
+        tofa2_setup_access_token: "{{ tofa_saltbox_facts.facts.setup_access_token }}"
+        ```
+
+    ??? variable string "`tofa_role_session_signing_key`{ .sb-show-on-unchecked }`tofa2_session_signing_key`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Preserved from an existing installation, or generated once for a new instance.
+        # Type: string
+        tofa_role_session_signing_key: "{{ tofa_saltbox_facts.facts.session_signing_key }}"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Preserved from an existing installation, or generated once for a new instance.
+        # Type: string
+        tofa2_session_signing_key: "{{ tofa_saltbox_facts.facts.session_signing_key }}"
+        ```
+
+=== "Postgres"
+
+    ??? variable string "`tofa_role_postgres_url`{ .sb-show-on-unchecked }`tofa2_postgres_url`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Leave empty to use embedded PostgreSQL. Set a connection URL to use a database
+        # you manage; provisioning and data migration must be handled separately.
+        # Example: "postgres://username:password@postgres:5432/tofa"
+        # Type: string
+        tofa_role_postgres_url: ""
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Leave empty to use embedded PostgreSQL. Set a connection URL to use a database
+        # you manage; provisioning and data migration must be handled separately.
+        # Example: "postgres://username:password@postgres:5432/tofa"
+        # Type: string
+        tofa2_postgres_url: ""
+        ```
+
 === "Web"
 
     ??? variable string "`tofa_role_web_subdomain`{ .sb-show-on-unchecked }`tofa2_web_subdomain`{ .sb-show-on-checked }"
@@ -563,10 +611,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tofa_role_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
+          TOFA_DATA_DIR: "/data"
+          DATABASE_URL: "{{ lookup('role_var', '_postgres_url', role='tofa', default=omit, default_if_empty=true) }}"
+          SESSION_SIGNING_KEY: "{{ lookup('role_var', '_session_signing_key', role='tofa') }}"
           MEDIA_PATH: "{{ lookup('role_var', '_media_path', role='tofa') }}"
           TZ: "{{ tz }}"
           TOFA_CUSTOM_ACCESS_URLS: "{{ lookup('role_var', '_web_url', role='tofa') }}"
           TOFA_PORT: "{{ lookup('role_var', '_web_port', role='tofa') | string }}"
+          SETUP_ACCESS_TOKEN: "{{ lookup('role_var', '_setup_access_token', role='tofa') }}"
           ADVERTISED_LAN_IP: "{{ lookup('role_var', '_lan_ip', role='tofa')
                               if ((lookup('role_var', '_lan_ip', role='tofa') | length > 0) and lookup('role_var', '_open_main_ports', role='tofa'))
                               else omit }}"
@@ -577,10 +629,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tofa2_docker_envs_default:
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
+          TOFA_DATA_DIR: "/data"
+          DATABASE_URL: "{{ lookup('role_var', '_postgres_url', role='tofa', default=omit, default_if_empty=true) }}"
+          SESSION_SIGNING_KEY: "{{ lookup('role_var', '_session_signing_key', role='tofa') }}"
           MEDIA_PATH: "{{ lookup('role_var', '_media_path', role='tofa') }}"
           TZ: "{{ tz }}"
           TOFA_CUSTOM_ACCESS_URLS: "{{ lookup('role_var', '_web_url', role='tofa') }}"
           TOFA_PORT: "{{ lookup('role_var', '_web_port', role='tofa') | string }}"
+          SETUP_ACCESS_TOKEN: "{{ lookup('role_var', '_setup_access_token', role='tofa') }}"
           ADVERTISED_LAN_IP: "{{ lookup('role_var', '_lan_ip', role='tofa')
                               if ((lookup('role_var', '_lan_ip', role='tofa') | length > 0) and lookup('role_var', '_open_main_ports', role='tofa'))
                               else omit }}"

@@ -135,7 +135,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        paperless_ngx_role_postgres_docker_image_tag: "18-alpine"
+        paperless_ngx_role_postgres_docker_image_tag: "18"
         ```
 
     ??? variable string "`paperless_ngx_role_postgres_docker_image_repo`"

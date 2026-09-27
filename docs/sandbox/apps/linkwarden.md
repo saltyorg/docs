@@ -130,7 +130,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        linkwarden_role_postgres_docker_image_tag: "16-alpine"
+        linkwarden_role_postgres_docker_image_tag: "16"
         ```
 
     ??? variable string "`linkwarden_role_postgres_docker_image_repo`"

@@ -145,7 +145,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        jellystat_role_postgres_docker_image_tag: "15.2-alpine"
+        jellystat_role_postgres_docker_image_tag: "15.2"
         ```
 
     ??? variable string "`jellystat_role_postgres_docker_image_repo`"

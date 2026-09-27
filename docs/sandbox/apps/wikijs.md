@@ -134,7 +134,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        wikijs_role_postgres_docker_image_tag: "15-alpine"
+        wikijs_role_postgres_docker_image_tag: "15"
         ```
 
     ??? variable string "`wikijs_role_postgres_docker_image_repo`"

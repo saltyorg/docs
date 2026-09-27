@@ -159,7 +159,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        miniflux_role_postgres_docker_image_tag: "14-alpine"
+        miniflux_role_postgres_docker_image_tag: "14"
         ```
 
     ??? variable string "`miniflux_role_postgres_docker_image_repo`"

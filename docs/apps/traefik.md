@@ -845,6 +845,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           traefik.http.routers.traefik.service: "api@internal"
           traefik.http.middlewares.traefik-auth.basicauth.usersfile: "/etc/traefik/auth"
           traefik.http.middlewares.gzip.compress: "true"
+          traefik.http.middlewares.gzip.compress.excludedcontenttypes: "text/event-stream"
           traefik.http.middlewares.autodetect.contenttype: "true"
           traefik.http.middlewares.redirect-to-https.redirectscheme.scheme: "https"
           traefik.http.middlewares.redirect-to-https.redirectscheme.permanent: "true"

@@ -40,7 +40,6 @@ tags:
 |                                                | :material-monitor-arrow-down:{.xl} | :material-format-list-group-plus:{ .xl } |
 |------------------------------------------------|:----------------------------------:|:----------------------------------------:|
 | [transfer.sh](transfer.md)                     |             `transfer`             |     `mediabox_roles` `saltbox_roles`     |
-| [File Browser](../sandbox/apps/filebrowser.md) |       `sandbox-filebrowser`        |             `sandbox_roles`              |
 | [Karakeep](../sandbox/apps/karakeep.md)        |         `sandbox-karakeep`         |             `sandbox_roles`              |
 | [Nextcloud](../sandbox/apps/nextcloud.md)      |        `sandbox-nextcloud`         |             `sandbox_roles`              |
 | [PrivateBin](../sandbox/apps/privatebin.md)    |        `sandbox-privatebin`        |             `sandbox_roles`              |

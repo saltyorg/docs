@@ -57,17 +57,13 @@ saltbox_automation:
 sb install sandbox-tofa
 ```
 
+???+info
+
+    On the first run, when prompted, follow the displayed setup link to sign in to your Tofa account and complete the initial setup.
+
 ## Usage
 
 Visit <https://tofa.iYOUR_DOMAIN_NAMEi>.
-
-The server is claimed once, on first run, which links it to your tofa account. Because the Saltbox install is reached through a public domain, that first claim has to carry the setup token the server generates on boot:
-
-```shell
-sudo cat /opt/tofa/identity/setup_key.secret
-```
-
-Then open `https://tofa.iYOUR_DOMAIN_NAMEi/setup?setup_token=<token>` and follow the wizard. The token is only consulted while the server is unclaimed.
 
 Add libraries from the usual `/mnt/unionfs/Media` paths in `Admin > Libraries`.
 

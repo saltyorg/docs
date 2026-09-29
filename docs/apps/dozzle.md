@@ -128,6 +128,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         dozzle_docker_socket_proxy_envs:
           ALLOW_LOGS: "1"
           CONTAINERS: "1"
+          IMAGES: "1"
           INFO: "1"
         ```
 
@@ -138,20 +139,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         dozzle_role_additional_hosts: ""
-        ```
-
-    ??? variable string "`dozzle_role_agent_hosts`"
-
-        ```yaml
-        # Type: string
-        dozzle_role_agent_hosts: ""
-        ```
-
-    ??? variable bool "`dozzle_role_agent_mode`"
-
-        ```yaml
-        # Type: bool (true/false)
-        dozzle_role_agent_mode: false
         ```
 
 === "Web"
@@ -362,9 +349,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: dict
         dozzle_role_docker_envs_default:
           DOZZLE_AUTH_PROVIDER: "{{ 'forward-proxy' if (lookup('role_var', '_traefik_sso_middleware', role='dozzle') | length > 0) else omit }}"
-          DOZZLE_REMOTE_AGENT: "{{ lookup('role_var', '_agent_hosts', role='dozzle')
-                                if (lookup('role_var', '_additional_hosts', role='dozzle') | length > 0)
-                                else omit }}"
           DOZZLE_REMOTE_HOST: "{{ 'tcp://' + dozzle_name + '-docker-socket-proxy:2375|' + traefik_host + ',' + lookup('role_var', '_additional_hosts', role='dozzle')
                                if (lookup('role_var', '_additional_hosts', role='dozzle') | length > 0)
                                else 'tcp://' + dozzle_name + '-docker-socket-proxy:2375|' + traefik_host }}"
@@ -380,27 +364,21 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         dozzle_role_docker_envs_custom: {}
         ```
 
-    <h5>Commands</h5>
+    <h5>Volumes</h5>
 
-    ??? variable string "`dozzle_role_docker_commands_agent`"
-
-        ```yaml
-        # Type: string
-        dozzle_role_docker_commands_agent: "agent"
-        ```
-
-    ??? variable list "`dozzle_role_docker_commands_default`"
+    ??? variable list "`dozzle_role_docker_volumes_default`"
 
         ```yaml
         # Type: list
-        dozzle_role_docker_commands_default: []
+        dozzle_role_docker_volumes_default:
+          - "{{ lookup('role_var', '_paths_location', role='dozzle') }}:/data"
         ```
 
-    ??? variable list "`dozzle_role_docker_commands_custom`"
+    ??? variable list "`dozzle_role_docker_volumes_custom`"
 
         ```yaml
         # Type: list
-        dozzle_role_docker_commands_custom: []
+        dozzle_role_docker_volumes_custom: []
         ```
 
     <h5>Labels</h5>
@@ -849,13 +827,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         dozzle_role_docker_volume_driver:
         ```
 
-    ??? variable list "`dozzle_role_docker_volumes`"
-
-        ```yaml
-        # Type: list
-        dozzle_role_docker_volumes:
-        ```
-
     ??? variable list "`dozzle_role_docker_volumes_from`"
 
         ```yaml
@@ -1013,6 +984,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         dozzle_role_docker_cgroup_parent:
+        ```
+
+    ??? variable list "`dozzle_role_docker_commands`"
+
+        ```yaml
+        # Type: list
+        dozzle_role_docker_commands:
         ```
 
     ??? variable int "`dozzle_role_docker_create_timeout`"

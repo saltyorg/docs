@@ -694,20 +694,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         tofa2_docker_hostname: "{{ tofa_name }}"
         ```
 
-    <h5>Init</h5>
-
-    ??? variable bool "`tofa_role_docker_init`{ .sb-show-on-unchecked }`tofa2_docker_init`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: bool (true/false)
-        tofa_role_docker_init: true
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: bool (true/false)
-        tofa2_docker_init: true
-        ```
-
     <h5>Networks</h5>
 
     ??? variable string "`tofa_role_docker_networks_alias`{ .sb-show-on-unchecked }`tofa2_docker_networks_alias`{ .sb-show-on-checked }"
@@ -758,6 +744,34 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: string
         tofa2_docker_restart_policy: unless-stopped
+        ```
+
+    <h5>Init</h5>
+
+    ??? variable bool "`tofa_role_docker_init`{ .sb-show-on-unchecked }`tofa2_docker_init`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: bool (true/false)
+        tofa_role_docker_init: true
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: bool (true/false)
+        tofa2_docker_init: true
+        ```
+
+    <h5>Shared Memory</h5>
+
+    ??? variable string "`tofa_role_docker_shm_size`{ .sb-show-on-unchecked }`tofa2_docker_shm_size`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        tofa_role_docker_shm_size: "512M"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        tofa2_docker_shm_size: "512M"
         ```
 
 === "Docker+"
@@ -912,18 +926,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: int
         tofa2_docker_memory_swappiness:
-        ```
-
-    ??? variable string "`tofa_role_docker_shm_size`{ .sb-show-on-unchecked }`tofa2_docker_shm_size`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        tofa_role_docker_shm_size:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        tofa2_docker_shm_size:
         ```
 
     <h5>Security & Devices</h5>

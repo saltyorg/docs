@@ -195,9 +195,9 @@ Copy the js and css files from where pip installed the files (use a throwaway ve
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/kzndotsh>
-            <img src=https://avatars.githubusercontent.com/u/94737187?v=4 width="100;"  alt=kzndotsh/>
+            <img src=https://avatars.githubusercontent.com/u/94737187?v=4 width="100;"  alt=Logan Honeycutt/>
             <br />
-            <sub style="font-size:14px"><b>kzndotsh</b></sub>
+            <sub style="font-size:14px"><b>Logan Honeycutt</b></sub>
         </a>
     </td>
 </tr>

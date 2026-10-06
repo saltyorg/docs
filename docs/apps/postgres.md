@@ -280,7 +280,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: list
         postgres_role_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='postgres') }}:/data"
-          - "{{ lookup('role_var', '_paths_location', role='postgres') }}:/var/lib/postgresql/data"
+          - "{{ lookup('role_var', '_paths_location', role='postgres') }}:{{ postgres_image_volume_path | default('/var/lib/postgresql/data') }}"
           - "/etc/passwd:/etc/passwd:ro"
         ```
 
@@ -288,7 +288,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: list
         postgres2_docker_volumes_default:
           - "{{ lookup('role_var', '_paths_location', role='postgres') }}:/data"
-          - "{{ lookup('role_var', '_paths_location', role='postgres') }}:/var/lib/postgresql/data"
+          - "{{ lookup('role_var', '_paths_location', role='postgres') }}:{{ postgres_image_volume_path | default('/var/lib/postgresql/data') }}"
           - "/etc/passwd:/etc/passwd:ro"
         ```
 

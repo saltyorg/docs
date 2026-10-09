@@ -244,6 +244,7 @@ nav:
           - apps/iperf3.md
 
       - Saltbox Expanded:
+          - apps/arcane.md
           - apps/asshama.md
           - apps/authelia.md
           - apps/authentik.md

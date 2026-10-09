@@ -261,12 +261,13 @@ tags:
 
 #### Management
 
-|                                           |                           :material-monitor-arrow-down:{.xl}                           | :material-format-list-group-plus:{ .xl } |
-|-------------------------------------------|:--------------------------------------------------------------------------------------:|:----------------------------------------:|
-| [Portainer](portainer.md)                 |                                      `portainer`                                       |    `feederbox_roles` `saltbox_roles`     |
-| [Docker CE](docker.md)                    | `docker` `docker-compose` `docker-filesystem-resize` `docker-housekeeping` `dockerhub` |        :octicons-shield-lock-24:         |
-| [Dockhand](../sandbox/apps/dockhand.md)   |                                   `sandbox-dockhand`                                   |             `sandbox_roles`              |
-| [Dockwatch](../sandbox/apps/dockwatch.md) |                                  `sandbox-dockwatch`                                   |             `sandbox_roles`              |
+|                                           |                           :material-monitor-arrow-down:{.xl}                           |      :material-format-list-group-plus:{ .xl }      |
+|-------------------------------------------|:--------------------------------------------------------------------------------------:|:--------------------------------------------------:|
+| [Portainer](portainer.md)                 |                                      `portainer`                                       | `mediabox_roles` `feederbox_roles` `saltbox_roles` |
+| [Arcane](arcane.md)                       |                                        `arcane`                                        | `mediabox_roles` `feederbox_roles` `saltbox_roles` |
+| [Docker CE](docker.md)                    | `docker` `docker-compose` `docker-filesystem-resize` `docker-housekeeping` `dockerhub` |             :octicons-shield-lock-24:              |
+| [Dockhand](../sandbox/apps/dockhand.md)   |                       `sandbox-dockhand` `sandbox-dockhand-oidc`                       |                  `sandbox_roles`                   |
+| [Dockwatch](../sandbox/apps/dockwatch.md) |                                  `sandbox-dockwatch`                                   |                  `sandbox_roles`                   |
 
 #### Misc
 

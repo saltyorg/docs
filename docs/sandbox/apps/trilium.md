@@ -195,14 +195,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: bool (true/false)
-        trilium_role_traefik_api_enabled: false
+        trilium_role_traefik_api_enabled: true
         ```
 
     ??? variable string "`trilium_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: string
-        trilium_role_traefik_api_endpoint: ""
+        trilium_role_traefik_api_endpoint: "PathPrefix(`/api/clipper`) || PathPrefix(`/etapi`) || PathPrefix(`/mcp`)"
         ```
 
 === "Docker"

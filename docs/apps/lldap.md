@@ -50,21 +50,33 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Deployment
+## Pre-deployment
 
-Opt in via Authelia authentication backend.
+Opt in via:
+
+```yaml
+authelia_role_authentication_backend: "ldap"
+```
+
+## Deployment
 
 ```shell
 sb install authelia
 ```
 
+```shell
+sb install lldap-reset # (1)!
+```
+
+1.  This optional tag deploys Authelia and deletes LLDAP user data for a fresh start.
+
 ## Usage
 
 Visit <https://lldap.iYOUR_DOMAIN_NAMEi>.
 
-LLDAP provides a lightweight LDAP server with a user-friendly web interface for managing users and groups. The configuration file is at `/opt/lldap/lldap_config.toml`. Optional SMTP settings for password resets can be configured in your [Saltbox inventory](../saltbox/inventory/index.md) using `lldap_role_smtp_*` variables.
+LLDAP provides a lightweight LDAP server with a user-friendly web interface for managing users and groups. The configuration file is at `/opt/lldap/lldap_config.toml`.
 
-Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI). To reset LLDAP, run `sb install lldap-reset`.
+Applications can connect using host `lldap`, port 3890 (LDAP) or 17170 (Web UI).
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

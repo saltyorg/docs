@@ -84,6 +84,18 @@ saltbox_automation:
 sb install plex
 ```
 
+```shell
+sb install plex-reset-codecs # (1)!
+```
+
+1.  This optional tag deploys Plex and deletes existing codecs so they are re-downloaded on the next startup.
+
+```shell
+sb install plex-reclaim # (1)!
+```
+
+1.  This optional tag deploys Plex and clears the server’s claim so it can be reclaimed cleanly.
+
 ## Usage
 
 Visit <https://plex.iYOUR_DOMAIN_NAMEi>.

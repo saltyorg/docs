@@ -4,6 +4,7 @@ hide:
   - tags
 tags:
   - authelia
+  - sso
 saltbox_automation:
   app_links:
     - name: Manual
@@ -61,6 +62,12 @@ Saltbox offers an optional LDAP authentication backend for Authelia. This can be
 ```shell
 sb install authelia
 ```
+
+```shell
+sb install authelia-reset # (1)!
+```
+
+1.  This optional tag deploys Authelia and deletes its user data for a fresh start.
 
 ## Usage
 

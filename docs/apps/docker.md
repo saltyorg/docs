@@ -1,6 +1,10 @@
 ---
 icon: material/server-network-outline
 title: Docker CE
+hide:
+  - tags
+tags:
+  - docker
 saltbox_automation:
   inventory:
     show_sections:
@@ -54,6 +58,16 @@ Saltbox dependency.
 ```shell
 sb install docker
 ```
+
+```shell
+sb install docker-filesystem-resize # (1)!
+```
+
+1.  This optional tag deploys Docker and resizes the dedicated Docker filesystem (`/var/lib/docker`) to the `docker_filesystem_size` value.
+
+    ???+note
+
+        Intended for cases where Saltbox was installed on a host with a BTRFS root filesystem. On a standard root filesystem (e.g., ext4), this will typically do nothing.
 
 ## Usage
 

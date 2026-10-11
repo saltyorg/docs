@@ -5,6 +5,7 @@ hide:
   - tags
 tags:
   - authentik
+  - sso
 saltbox_automation:
   app_links:
     - name: Manual
@@ -120,6 +121,12 @@ Redeploy the Authentik role to apply these changes.
 ```shell
 sb install authentik
 ```
+
+```shell
+sb install authentik-reset # (1)!
+```
+
+1.  This optional tag deploys Authentik and deletes its user data for a fresh start.
 
 ## Usage
 

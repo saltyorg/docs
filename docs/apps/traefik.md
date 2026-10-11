@@ -1,6 +1,12 @@
 ---
 icon: material/docker
 title: Traefik Proxy
+hide:
+  - tags
+tags:
+  - proxy
+  - router
+  - traefik
 status: draft
 saltbox_automation:
   inventory:
@@ -58,6 +64,12 @@ Saltbox dependency.
 ```shell
 sb install traefik
 ```
+
+```shell
+sb install traefik-reset-certs # (1)!
+```
+
+1.  This optional tag deploys Traefik and deletes Traefik’s ACME certificate store, so it will recreate certificates on the next startup.
 
 ## Usage
 

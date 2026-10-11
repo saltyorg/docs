@@ -49,9 +49,11 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Deployment
+## Pre-deployment
 
-Opt in via Inventory toggle.
+Opt in via the Inventory toggle.
+
+## Deployment
 
 ```shell
 sb install crowdsec

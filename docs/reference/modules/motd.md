@@ -31,6 +31,12 @@ MOTD is a Saltbox module that enhances the Message of the Day (MOTD) displayed u
 sb install motd
 ```
 
+```shell
+sb install motd-generate-config # (1)!
+```
+
+1.  This optional tag deploys MOTD and regenerates the Saltbox MOTD config file based on current instance info (Plex, Sonarr, Radarr, Lidarr, NZBGet, SABnzbd, etc.), effectively synchronizing the MOTD with your services' configuration.
+
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults

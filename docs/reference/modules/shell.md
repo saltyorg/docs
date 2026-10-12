@@ -131,7 +131,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: list
         shell_misc_argcomplete_command_args: "{{ shell_misc_argcomplete_command
-                                                 | saltbox_argv('shell_misc_argcomplete_command') }}"
+                                                 | saltbox_argv(error_label='shell_misc_argcomplete_command') }}"
         ```
 
 === "z (jump around)"

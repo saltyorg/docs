@@ -601,6 +601,24 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         sonarr2_external_auth: true
         ```
 
+    ??? variable bool "`sonarr_role_allow_external_auth_without_sso`{ .sb-show-on-unchecked }`sonarr2_allow_external_auth_without_sso`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Allow External authentication without Traefik SSO. External authentication
+        # bypasses the application login. Set true only if access is protected another
+        # way and you accept the risk of unauthenticated access.
+        # Type: bool (true/false)
+        sonarr_role_allow_external_auth_without_sso: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Allow External authentication without Traefik SSO. External authentication
+        # bypasses the application login. Set true only if access is protected another
+        # way and you accept the risk of unauthenticated access.
+        # Type: bool (true/false)
+        sonarr2_allow_external_auth_without_sso: false
+        ```
+
     ??? variable list "`sonarr_role_allowed_hosts_public_custom`{ .sb-show-on-unchecked }`sonarr2_allowed_hosts_public_custom`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

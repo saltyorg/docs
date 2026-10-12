@@ -246,21 +246,21 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: list
-        backup_google_template_args: "{{ backup_google_template | saltbox_argv('backup_google_template') }}"
+        backup_google_template_args: "{{ backup_google_template | saltbox_argv(error_label='backup_google_template') }}"
         ```
 
     ??? variable list "`backup_dropbox_template_args`"
 
         ```yaml
         # Type: list
-        backup_dropbox_template_args: "{{ backup_dropbox_template | saltbox_argv('backup_dropbox_template') }}"
+        backup_dropbox_template_args: "{{ backup_dropbox_template | saltbox_argv(error_label='backup_dropbox_template') }}"
         ```
 
     ??? variable list "`backup_sftp_template_args`"
 
         ```yaml
         # Type: list
-        backup_sftp_template_args: "{{ backup_sftp_template | saltbox_argv('backup_sftp_template') }}"
+        backup_sftp_template_args: "{{ backup_sftp_template | saltbox_argv(error_label='backup_sftp_template') }}"
         ```
 
     ??? variable string "`backup_user_agent`"
@@ -301,7 +301,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: list
         backup_cleanup_custom_rclone_args: "{{ backup_cleanup_custom_rclone_flags
-                                               | saltbox_argv('backup_cleanup_custom_rclone_flags') }}"
+                                               | saltbox_argv(error_label='backup_cleanup_custom_rclone_flags') }}"
         ```
 
 === "Snapshot Defaults"

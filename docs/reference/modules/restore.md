@@ -278,21 +278,21 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: list
-        restore_google_template_args: "{{ restore_google_template | saltbox_argv('restore_google_template') }}"
+        restore_google_template_args: "{{ restore_google_template | saltbox_argv(error_label='restore_google_template') }}"
         ```
 
     ??? variable list "`restore_dropbox_template_args`"
 
         ```yaml
         # Type: list
-        restore_dropbox_template_args: "{{ restore_dropbox_template | saltbox_argv('restore_dropbox_template') }}"
+        restore_dropbox_template_args: "{{ restore_dropbox_template | saltbox_argv(error_label='restore_dropbox_template') }}"
         ```
 
     ??? variable list "`restore_sftp_template_args`"
 
         ```yaml
         # Type: list
-        restore_sftp_template_args: "{{ restore_sftp_template | saltbox_argv('restore_sftp_template') }}"
+        restore_sftp_template_args: "{{ restore_sftp_template | saltbox_argv(error_label='restore_sftp_template') }}"
         ```
 
     ??? variable string "`restore_user_agent`"

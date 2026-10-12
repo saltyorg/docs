@@ -119,6 +119,24 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         whisparr2_external_auth: true
         ```
 
+    ??? variable bool "`whisparr_role_allow_external_auth_without_sso`{ .sb-show-on-unchecked }`whisparr2_allow_external_auth_without_sso`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Allow External authentication without Traefik SSO. External authentication
+        # bypasses the application login. Set true only if access is protected another
+        # way and you accept the risk of unauthenticated access.
+        # Type: bool (true/false)
+        whisparr_role_allow_external_auth_without_sso: false
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Allow External authentication without Traefik SSO. External authentication
+        # bypasses the application login. Set true only if access is protected another
+        # way and you accept the risk of unauthenticated access.
+        # Type: bool (true/false)
+        whisparr2_allow_external_auth_without_sso: false
+        ```
+
     ??? variable list "`whisparr_role_allowed_hosts_public_custom`{ .sb-show-on-unchecked }`whisparr2_allowed_hosts_public_custom`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }

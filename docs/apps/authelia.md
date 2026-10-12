@@ -314,7 +314,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ??? variable bool "`authelia_role_access_control_whitelist_docker`"
 
             ```yaml
-            # Whitelists the saltbox Docker network IP subnet
+            # Whitelists the IPv4 and IPv6 subnets of the Saltbox Docker network
             # Type: bool (true/false)
             authelia_role_access_control_whitelist_docker: false
             ```

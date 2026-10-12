@@ -76,21 +76,21 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: list
-        backup2_google_template_args: "{{ backup2_google_template | saltbox_argv('backup2_google_template') }}"
+        backup2_google_template_args: "{{ backup2_google_template | saltbox_argv(error_label='backup2_google_template') }}"
         ```
 
     ??? variable list "`backup2_dropbox_template_args`"
 
         ```yaml
         # Type: list
-        backup2_dropbox_template_args: "{{ backup2_dropbox_template | saltbox_argv('backup2_dropbox_template') }}"
+        backup2_dropbox_template_args: "{{ backup2_dropbox_template | saltbox_argv(error_label='backup2_dropbox_template') }}"
         ```
 
     ??? variable list "`backup2_sftp_template_args`"
 
         ```yaml
         # Type: list
-        backup2_sftp_template_args: "{{ backup2_sftp_template | saltbox_argv('backup2_sftp_template') }}"
+        backup2_sftp_template_args: "{{ backup2_sftp_template | saltbox_argv(error_label='backup2_sftp_template') }}"
         ```
 
     ??? variable string "`backup2_user_agent`"
@@ -131,6 +131,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: list
         backup2_cleanup_custom_rclone_args: "{{ backup2_cleanup_custom_rclone_flags
-                                                | saltbox_argv('backup2_cleanup_custom_rclone_flags') }}"
+                                                | saltbox_argv(error_label='backup2_cleanup_custom_rclone_flags') }}"
         ```
 <!-- END SALTBOX MANAGED VARIABLES SECTION -->

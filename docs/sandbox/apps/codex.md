@@ -227,7 +227,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        codex_role_docker_image_repo: "docker.io/ajslater/codex"
+        codex_role_docker_image_repo: "ghcr.io/ajslater/codex"
         ```
 
     ??? variable string "`codex_role_docker_image_tag`"

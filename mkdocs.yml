@@ -565,7 +565,6 @@ nav:
           - reference/modules/diag.md
           - reference/modules/download_clients.md
           - reference/modules/download_indexers.md
-          - reference/modules/hetzner_nfs.md
           - reference/modules/hetzner_vlan.md
           - reference/modules/kernel.md
           - reference/modules/main_tag.md

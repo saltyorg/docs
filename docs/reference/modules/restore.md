@@ -108,7 +108,6 @@ Next retrieve the configuration files from a backup by following the instruction
     * `adv_settings.yml`
     * `backup_config.yml`
     * `providers.yml`
-    * `hetzner_nfs.yml`
     * `rclone.conf`
     * `localhost.yml`
 

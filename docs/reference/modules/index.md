@@ -19,7 +19,7 @@ tags:
 | [Media Server](media_server.md)           |            `media-server`            |     `mediabox_roles` `saltbox_roles`     |
 | [Download Clients](download_clients.md)   |          `download-clients`          |    `feederbox_roles` `saltbox_roles`     |
 | [Download Indexers](download_indexers.md) |         `download-indexers`          |    `feederbox_roles` `saltbox_roles`     |
-| [Sandbox Main Tag](main_tag.md)                |           `sandbox-roles`            |           :material-set-none:            |
+| [Sandbox Main Tag](main_tag.md)           |           `sandbox-roles`            |           :material-set-none:            |
 
 ## Backup
 
@@ -54,7 +54,6 @@ tags:
 
 |                               |                                     :material-monitor-arrow-down:{.xl}                                      |
 |-------------------------------|:-----------------------------------------------------------------------------------------------------------:|
-| [Hetzner NFS](hetzner_nfs.md) | `hetzner-nfs-server` `hetzner-nfs-server-uninstall` `hetzner-nfs-client-mount` `hetzner-nfs-client-unmount` |
 | [Permissions](permissions.md) |                                              `fix-permissions`                                              |
 | [Remote](remote.md)           |                                                  `mounts`                                                   |
 | [UnionFS](unionfs.md)         |                                                  `mounts`                                                   |

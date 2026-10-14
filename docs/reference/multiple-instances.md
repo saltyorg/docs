@@ -25,7 +25,6 @@ deluge
 emby
 gluetun
 jellyfin
-jellyseerr
 lgsm
 lidarr
 mariadb

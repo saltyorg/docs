@@ -560,7 +560,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: dict
         silo_role_docker_envs_default:
           HOME: "/tmp"
-          SILO_PUBLIC_URL: "{{ lookup('role_var', '_web_url', role='silo') }}"
           MODE: "integrated"
           SECRET_KEY: "{{ silo_saltbox_facts.facts.secret_key }}"
           DATABASE_URL: "{{ lookup('role_var', '_database_url', role='silo') }}"
@@ -587,9 +586,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           - "{{ lookup('role_var', '_paths_location', role='silo') }}/plugins:/var/lib/silo/plugins"
           - "{{ lookup('role_var', '_paths_location', role='silo') }}/compat:/var/lib/silo/compat"
           - "{{ lookup('role_var', '_paths_transcodes_location', role='silo') }}:/tmp/silo-transcode"
-          - "{{ lookup('role_var', '_paths_location', role='silo') }}/audiobook-covers:/var/lib/silo/audiobook-covers"
+          - "{{ lookup('role_var', '_paths_location', role='silo') }}/artwork:/var/lib/silo/artwork"
           - "{{ lookup('role_var', '_paths_location', role='silo') }}/catalog-seeds:/catalog-seeds:ro"
           - "/proc/meminfo:/host/proc/meminfo:ro"
+          - "/proc/stat:/host/proc/stat:ro"
+          - "/proc/loadavg:/host/proc/loadavg:ro"
         ```
 
     ??? variable list "`silo_role_docker_volumes_custom`"

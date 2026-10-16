@@ -60,10 +60,29 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable bool "`cpu_performance_mode`"
 
         ```yaml
-        # Performance mode sets the CPU to run at its maximum frequency
-        # Set to false to enable dynamic CPU frequency scaling instead
+        # Manage CPU governor settings in performance mode on non-virtualized hosts.
+        # Set to false to leave the existing CPU governor configuration unchanged.
         # Type: bool (true/false)
         cpu_performance_mode: true
+        ```
+
+    ??? variable bool "`system_mount_tuning_enabled`"
+
+        ```yaml
+        # Ensure nodiratime and relatime on mounted local ext4 filesystems.
+        # Preserve existing noatime and explicit diratime or strictatime settings.
+        # Set to false to leave existing mount options unmanaged.
+        # Type: bool (true/false)
+        system_mount_tuning_enabled: true
+        ```
+
+    ??? variable list "`system_mount_tuning_excluded_mounts`"
+
+        ```yaml
+        # Mount points to exclude from automatic access-time tuning.
+        # Example: ["/mnt/archive", "/mnt/backups"]
+        # Type: list
+        system_mount_tuning_excluded_mounts: []
         ```
 
     ??? variable string "`system_inotify`"

@@ -212,6 +212,13 @@ The container will then be created with the new volumes included, and the target
     global_themepark_plugin_enabled: false
     ```
 
+??? variable bool "`cloudflare_records_enabled`"
+
+    ```yaml
+    # Type: bool (true/false)
+    cloudflare_records_enabled: "{{ cloudflare_is_enabled }}"
+    ```
+
 ??? variable string "`traefik_default_middleware_custom`"
 
     ```yaml
@@ -245,6 +252,20 @@ The container will then be created with the new volumes included, and the target
     ```yaml
     # Type: dict
     docker_hosts_common: {}
+    ```
+
+??? variable dict "`docker_labels_diun_enabled`"
+
+    ```yaml
+    # Type: bool (true/false)
+    docker_labels_diun_enabled: true
+    ```
+
+??? variable dict "`docker_labels_autoheal_enabled`"
+
+    ```yaml
+    # Type: bool (true/false)
+    docker_labels_autoheal_enabled: true
     ```
 
 ??? variable dict "`docker_labels_custom_common`"

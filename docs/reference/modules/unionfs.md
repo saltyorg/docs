@@ -65,8 +65,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`custom_mount_branch`"
 
         ```yaml
+        # Format: "/mnt/remote/someremote=NC"
         # Type: string
-        custom_mount_branch: "" # Format: "/mnt/remote/someremote=NC"
+        custom_mount_branch: "" # saltbox-lint ignore role-variable-prefix
         ```
 
     ??? variable bool "`mergerfs_override_service`"

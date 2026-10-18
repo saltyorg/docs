@@ -55,7 +55,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36
+        user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36" # saltbox-lint ignore role-variable-prefix
         ```
 
     ??? variable string "`rclone_config_path`"
@@ -63,6 +63,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         rclone_config_path: "/home/{{ user.name }}/.config/rclone/rclone.conf"
+        ```
+
+    ??? variable string "`rclone_binary_path`"
+
+        ```yaml
+        # Type: string
+        rclone_binary_path: "/usr/bin/rclone"
         ```
 
     ??? variable string "`rclone_vfs_cache_dir`"

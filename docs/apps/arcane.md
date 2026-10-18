@@ -337,14 +337,14 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: bool (true/false)
-        arcane_role_traefik_api_enabled: false
+        arcane_role_traefik_api_enabled: true
         ```
 
     ??? variable string "`arcane_role_traefik_api_endpoint`"
 
         ```yaml
         # Type: string
-        arcane_role_traefik_api_endpoint: ""
+        arcane_role_traefik_api_endpoint: "PathPrefix(`/api/`)"
         ```
 
 === "Docker"

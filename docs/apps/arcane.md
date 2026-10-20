@@ -29,11 +29,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Arcane
+# Arcane Manager
 
 ## Overview
 
-[Arcane](https://getarcane.app) is a free, open-source Docker management UI designed to simplify the administration of container infrastructure through a modern, web-based interface.
+[Arcane Manager](https://getarcane.app) is a free, open-source Docker management UI designed to simplify the administration of container infrastructure through a modern, web-based interface.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 

@@ -245,6 +245,7 @@ nav:
 
       - Saltbox Expanded:
           - apps/arcane.md
+          - apps/arcane_agent.md
           - apps/asshama.md
           - apps/authelia.md
           - apps/authentik.md

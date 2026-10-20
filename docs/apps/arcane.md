@@ -1,5 +1,6 @@
 ---
-icon: "material/docker"
+icon: material/docker
+title: Arcane Manager
 hide:
   - tags
 tags:
@@ -8,22 +9,22 @@ tags:
   - docker
 saltbox_automation:
   app_links:
-    - name: "Manual"
-      url: "https://getarcane.app/docs"
-      type: "documentation"
-      purpose: "manual"
-    - name: "Versions"
-      url: "https://github.com/getarcaneapp/manager/pkgs/container/manager"
-      type: "github"
-      purpose: "release"
-    - name: "Community"
-      url: "https://discord.gg/WyXYpdyV3Z"
-      type: "discord"
-      purpose: "community"
+    - name: Manual
+      url: https://getarcane.app/docs
+      type: documentation
+      purpose: manual
+    - name: Versions
+      url: https://github.com/getarcaneapp/manager/pkgs/container/manager
+      type: github
+      purpose: release
+    - name: Community
+      url: https://discord.gg/WyXYpdyV3Z
+      type: discord
+      purpose: community
   project_description:
-    name: "Arcane"
-    summary: "a free, open-source Docker management UI designed to simplify the administration of container infrastructure through a modern, web-based interface."
-    link: "https://getarcane.app"
+    name: Arcane Manager
+    summary: a free, open-source Docker management UI designed to simplify the administration of container infrastructure through a modern, web-based interface.
+    link: https://getarcane.app
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->

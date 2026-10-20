@@ -50,7 +50,9 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-??? warning "Migration from the old `coder` role"
+## Pre-deployment
+
+??? warning "Migrating from `coder`"
 
     The old `coder` role was renamed to `code-server` on Dec 19th 2022.
     

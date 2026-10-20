@@ -47,9 +47,11 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-???+warning "Migration Notes"
+## Pre-deployment
 
-    Saltbox recently swapped Docker images used for MariaDB. The migration path that is run for a default `mariadb` instance is roughly as follows:
+??? warning "Migrating the database"
+
+    Saltbox has swapped Docker images used for MariaDB. The migration path that is run for a default `mariadb` instance is roughly as follows:
 
     1. Dump all data to a dump.sql file
     2. Move `/opt/mariadb` to `/opt/mariadb_legacy`

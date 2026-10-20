@@ -51,7 +51,9 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-??? warning "Migration notice for Booklore users"
+## Pre-deployment
+
+??? warning "Migrating from Booklore"
 
     1. Remove the existing container and rename the existing directory.
 

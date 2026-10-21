@@ -189,7 +189,6 @@ tags:
 | [ASSHAMA](asshama.md)                                         |             `asshama`              |     `mediabox_roles` `saltbox_roles`     |
 | [Plex Auto Languages](../sandbox/apps/plex_auto_languages.md) |   `sandbox-plex-auto-languages`    |             `sandbox_roles`              |
 | [Plex DupeFinder](../sandbox/apps/plex_dupefinder.md)         |     `sandbox-plex-dupefinder`      |             `sandbox_roles`              |
-| [PlexShare](../sandbox/apps/plexshare.md)                     |        `sandbox-plexshare`         |             `sandbox_roles`              |
 | [Wizarr](../sandbox/apps/wizarr.md)                           |          `sandbox-wizarr`          |             `sandbox_roles`              |
 
 ### For Collection Manager

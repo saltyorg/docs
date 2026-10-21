@@ -13,7 +13,7 @@ saltbox_automation:
       type: documentation
       purpose: manual
     - name: Releases
-      url: https://hub.docker.com/r/chewbaka/plexshare/tags
+      url: https://hub.docker.com/r/xirg/docker-puddletag/tags
       type: docker
       purpose: release
     - name: Community

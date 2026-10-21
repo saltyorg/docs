@@ -121,13 +121,6 @@ phpmyadmin_docker_healthcheck:
   retries: 10
   start_period: 10s
 
-plexshare_docker_healthcheck:
-  test: ["CMD", "curl", "--fail", "http://localhost:{{ plexshare_web_port }}"]
-  interval: 10s
-  timeout: 5s
-  retries: 10
-  start_period: 10s
-
 reposilite_docker_healthcheck:
   test: ["CMD", "curl", "--fail", "http://localhost:{{ reposilite_web_port }}"]
   interval: 10s

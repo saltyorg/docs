@@ -5,6 +5,9 @@ on:
     paths:
       - '.github/scripts/pr_preview.py'
       - '.github/scripts/test_pr_preview.py'
+      - '.github/scripts/commit_generated.cjs'
+      - '.github/scripts/test_commit_generated.cjs'
+      - '.github/workflows/automation.yml'
       - '.github/workflows/build-pr.yml'
       - '.github/workflows/notify.yml'
       - '.github/workflows/trigger-pr-build.yml'
@@ -16,6 +19,9 @@ on:
     paths:
       - '.github/scripts/pr_preview.py'
       - '.github/scripts/test_pr_preview.py'
+      - '.github/scripts/commit_generated.cjs'
+      - '.github/scripts/test_commit_generated.cjs'
+      - '.github/workflows/automation.yml'
       - '.github/workflows/build-pr.yml'
       - '.github/workflows/notify.yml'
       - '.github/workflows/trigger-pr-build.yml'
@@ -34,6 +40,16 @@ jobs:
       - name: Test PR preview reporting
         run: python3 .github/scripts/test_pr_preview.py -v
 
+      - name: Test signed documentation commits against the GitHub schema
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          GITHUB_COMMITTABLE_BRANCH_FIELDS=$(gh api graphql \
+            -f query='query { __type(name: "CommittableBranch") { inputFields { name } } }' \
+            --jq '[.data.__type.inputFields[].name]')
+          export GITHUB_COMMITTABLE_BRANCH_FIELDS
+          node --test .github/scripts/test_commit_generated.cjs
+
       - name: Compile PR preview reporting
         run: python3 -m compileall -q .github/scripts/pr_preview.py
 
@@ -46,7 +62,8 @@ jobs:
             .github/workflows/build-pr.yml \
             .github/workflows/notify.yml \
             .github/workflows/trigger-pr-build.yml \
-            .github/workflows/workflow-result-ci.yml
+            .github/workflows/workflow-result-ci.yml \
+            .github/workflows/automation.yml
 
       - name: Check whitespace errors
         run: git diff --check

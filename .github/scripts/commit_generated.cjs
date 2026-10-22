@@ -39,10 +39,11 @@ module.exports = async function commitGenerated({ github, core, context }) {
   const { owner, repo } = context.repo;
   const branch = context.ref.slice('refs/heads/'.length);
   let sha;
+  let commitError;
   try {
     const result = await github.graphql(MUTATION, {
       input: {
-        branch: { repositoryNameWithOwner: `${owner}/${repo}`, refName: branch },
+        branch: { repositoryNameWithOwner: `${owner}/${repo}`, branchName: branch },
         expectedHeadOid: base,
         message: {
           headline: MESSAGE.split('\n')[0],
@@ -52,7 +53,8 @@ module.exports = async function commitGenerated({ github, core, context }) {
       },
     });
     sha = result.createCommitOnBranch.commit.oid;
-  } catch {
+  } catch (error) {
+    commitError = error;
     // A lost response may follow a successful commit. Observe before replaying.
     core.info('Commit response unavailable; checking the branch for the exact update');
     const ref = await github.rest.git.getRef({ owner, repo, ref: `heads/${branch}` });
@@ -62,7 +64,8 @@ module.exports = async function commitGenerated({ github, core, context }) {
   if (commit.parents.length !== 1 || commit.parents[0].sha !== base ||
       commit.commit.tree.sha !== tree || commit.commit.message.trimEnd() !== MESSAGE ||
       commit.commit.verification.verified !== true) {
-    throw new Error('Could not confirm the exact signed documentation commit; refusing to overwrite the branch');
+    const detail = commitError instanceof Error ? ` GitHub request failed: ${commitError.message}` : '';
+    throw new Error(`Could not confirm the exact signed documentation commit; refusing to overwrite the branch.${detail}`);
   }
   core.info(`Created verified documentation commit ${sha}`);
   core.setOutput('commit-sha', sha);

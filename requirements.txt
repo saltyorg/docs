@@ -6,4 +6,4 @@ mkdocs-placeholder-plugin==0.7.0
 mkdocs-redirects==1.2.3
 termynal==0.14.0
 # https://github.com/blueswen/mkdocs-glightbox/issues/74
-selectolax==1.0.0
+selectolax==1.0.2

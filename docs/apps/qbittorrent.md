@@ -273,13 +273,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`qbittorrent_role_host_branch`{ .sb-show-on-unchecked }`qbittorrent2_host_branch`{ .sb-show-on-checked }"
 
         ```yaml { .sb-show-on-unchecked }
-        # Options are: libtorrent1 (latest), libtorrent2 (latest) or legacy (4.3.9)
+        # Options are: libtorrent1 (1.2 latest), libtorrent2 (2.0 latest), libtorrent21 (2.1 latest) or legacy (4.3.9)
         # Type: string
         qbittorrent_role_host_branch: libtorrent1
         ```
 
         ```yaml { .sb-show-on-checked }
-        # Options are: libtorrent1 (latest), libtorrent2 (latest) or legacy (4.3.9)
+        # Options are: libtorrent1 (1.2 latest), libtorrent2 (2.0 latest), libtorrent21 (2.1 latest) or legacy (4.3.9)
         # Type: string
         qbittorrent2_host_branch: libtorrent1
         ```
@@ -351,17 +351,21 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-unchecked }
         # Type: string
         qbittorrent_role_host_version: "{{ 'release-' + (qbittorrent_host_version_response.content | from_json).qbittorrent
-                                           + '_v' + ((qbittorrent_host_version_response.content | from_json).libtorrent_2_0
-                                                     if lookup('role_var', '_host_branch', role='qbittorrent') == 'libtorrent2'
-                                                     else (qbittorrent_host_version_response.content | from_json).libtorrent_1_2) }}"
+                                           + '_v' + ((qbittorrent_host_version_response.content | from_json).libtorrent_2_1
+                                                     if lookup('role_var', '_host_branch', role='qbittorrent') == 'libtorrent21'
+                                                     else (qbittorrent_host_version_response.content | from_json).libtorrent_2_0
+                                                          if lookup('role_var', '_host_branch', role='qbittorrent') == 'libtorrent2'
+                                                          else (qbittorrent_host_version_response.content | from_json).libtorrent_1_2) }}"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
         qbittorrent2_host_version: "{{ 'release-' + (qbittorrent_host_version_response.content | from_json).qbittorrent
-                                       + '_v' + ((qbittorrent_host_version_response.content | from_json).libtorrent_2_0
-                                                 if lookup('role_var', '_host_branch', role='qbittorrent') == 'libtorrent2'
-                                                 else (qbittorrent_host_version_response.content | from_json).libtorrent_1_2) }}"
+                                       + '_v' + ((qbittorrent_host_version_response.content | from_json).libtorrent_2_1
+                                                 if lookup('role_var', '_host_branch', role='qbittorrent') == 'libtorrent21'
+                                                 else (qbittorrent_host_version_response.content | from_json).libtorrent_2_0
+                                                      if lookup('role_var', '_host_branch', role='qbittorrent') == 'libtorrent2'
+                                                      else (qbittorrent_host_version_response.content | from_json).libtorrent_1_2) }}"
         ```
 
     ??? variable string "`qbittorrent_role_service_name`{ .sb-show-on-unchecked }`qbittorrent2_service_name`{ .sb-show-on-checked }"
@@ -801,6 +805,8 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: string
         qbittorrent2_docker_image_repo: "saltydk/qbittorrent"
         ```
+
+    <h5>Options are: latest or libtorrent1 (libtorrent 1.2), libtorrent2 (libtorrent 2.0), libtorrent21 (libtorrent 2.1) or legacy (4.3.9)</h5>
 
     ??? variable string "`qbittorrent_role_docker_image_tag`{ .sb-show-on-unchecked }`qbittorrent2_docker_image_tag`{ .sb-show-on-checked }"
 

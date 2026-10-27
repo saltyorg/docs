@@ -181,7 +181,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable bool "`rclone_enable_metrics`"
 
         ```yaml
-        # Enforces the use of auth (your accounts.yml credentials) on rclone rc when enabled
+        # Enables Prometheus metrics and serves rclone rc on all interfaces instead of only localhost (both use your accounts.yml credentials)
         # Type: bool (true/false)
         rclone_enable_metrics: false
         ```
@@ -217,21 +217,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         rclone_vfs_refresh_interval: 10800
         ```
 
-    ??? variable string "`rclone_vfs_refresh_auth_args`"
-
-        ```yaml
-        # Type: string
-        rclone_vfs_refresh_auth_args: " --user='{{ user.name }}' --pass='{{ user.pass }}'"
-        ```
-
     ??? variable string "`rclone_vfs_refresh_command`"
 
         ```yaml
         # Type: string
-        rclone_vfs_refresh_command: |-
-          /usr/bin/rclone rc vfs/refresh recursive=true --url http://127.0.0.1:{{ rclone_port_assignment.ports.rc }}{{ rclone_vfs_refresh_auth_args
-                                                                                                                    if (rclone_enable_metrics | bool)
-                                                                                                                    else '' }} _async=true
+        rclone_vfs_refresh_command: "/usr/bin/rclone rc vfs/refresh recursive=true --url http://127.0.0.1:{{ rclone_port_assignment.ports.rc }} _async=true"
         ```
 
 === "NFS"

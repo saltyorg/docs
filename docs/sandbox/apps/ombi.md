@@ -339,12 +339,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        ombi_role_docker_image_repo: "lscr.io/linuxserver/ombi"
+        ombi_role_docker_image_repo: "linuxserver/ombi"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        ombi2_docker_image_repo: "lscr.io/linuxserver/ombi"
+        ombi2_docker_image_repo: "linuxserver/ombi"
         ```
 
     ??? variable string "`ombi_role_docker_image_tag`{ .sb-show-on-unchecked }`ombi2_docker_image_tag`{ .sb-show-on-checked }"

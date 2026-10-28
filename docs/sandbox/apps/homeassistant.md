@@ -238,7 +238,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        homeassistant_role_docker_image_repo: "lscr.io/linuxserver/homeassistant"
+        homeassistant_role_docker_image_repo: "linuxserver/homeassistant"
         ```
 
     ??? variable string "`homeassistant_role_docker_image_tag`"

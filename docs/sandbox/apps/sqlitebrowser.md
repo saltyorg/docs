@@ -238,7 +238,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        sqlitebrowser_role_docker_image_repo: "lscr.io/linuxserver/sqlitebrowser"
+        sqlitebrowser_role_docker_image_repo: "linuxserver/sqlitebrowser"
         ```
 
     ??? variable string "`sqlitebrowser_role_docker_image_tag`"

@@ -494,12 +494,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        calibre_role_docker_image_repo: "lscr.io/linuxserver/calibre"
+        calibre_role_docker_image_repo: "linuxserver/calibre"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        calibre2_docker_image_repo: "lscr.io/linuxserver/calibre"
+        calibre2_docker_image_repo: "linuxserver/calibre"
         ```
 
     ??? variable string "`calibre_role_docker_image_tag`{ .sb-show-on-unchecked }`calibre2_docker_image_tag`{ .sb-show-on-checked }"

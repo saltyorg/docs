@@ -105,7 +105,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        docker_socket_proxy_role_docker_image_repo: "lscr.io/linuxserver/socket-proxy"
+        docker_socket_proxy_role_docker_image_repo: "linuxserver/socket-proxy"
         ```
 
     ??? variable string "`docker_socket_proxy_role_docker_image_tag`"

@@ -237,7 +237,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        bookstack_role_docker_image_repo: "lscr.io/linuxserver/bookstack"
+        bookstack_role_docker_image_repo: "linuxserver/bookstack"
         ```
 
     ??? variable string "`bookstack_role_docker_image_tag`"

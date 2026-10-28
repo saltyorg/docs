@@ -177,12 +177,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        mariadb_role_docker_image_migration: "lscr.io/linuxserver/mariadb:10.6.13"
+        mariadb_role_docker_image_migration: "linuxserver/mariadb:10.6.13"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        mariadb2_docker_image_migration: "lscr.io/linuxserver/mariadb:10.6.13"
+        mariadb2_docker_image_migration: "linuxserver/mariadb:10.6.13"
         ```
 
     ??? variable list "`mariadb_role_docker_volumes_migration`{ .sb-show-on-unchecked }`mariadb2_docker_volumes_migration`{ .sb-show-on-checked }"

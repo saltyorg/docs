@@ -797,12 +797,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        emby_role_docker_image_repo: "lscr.io/linuxserver/emby"
+        emby_role_docker_image_repo: "linuxserver/emby"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        emby2_docker_image_repo: "lscr.io/linuxserver/emby"
+        emby2_docker_image_repo: "linuxserver/emby"
         ```
 
     ??? variable string "`emby_role_docker_image_tag`{ .sb-show-on-unchecked }`emby2_docker_image_tag`{ .sb-show-on-checked }"

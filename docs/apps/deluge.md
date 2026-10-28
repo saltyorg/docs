@@ -473,12 +473,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        deluge_role_docker_image_repo: "lscr.io/linuxserver/deluge"
+        deluge_role_docker_image_repo: "linuxserver/deluge"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        deluge2_docker_image_repo: "lscr.io/linuxserver/deluge"
+        deluge2_docker_image_repo: "linuxserver/deluge"
         ```
 
     ??? variable string "`deluge_role_docker_image_tag`{ .sb-show-on-unchecked }`deluge2_docker_image_tag`{ .sb-show-on-checked }"

@@ -377,12 +377,12 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml { .sb-show-on-unchecked }
         # Type: string
-        transmission_role_docker_image_repo: "lscr.io/linuxserver/transmission"
+        transmission_role_docker_image_repo: "linuxserver/transmission"
         ```
 
         ```yaml { .sb-show-on-checked }
         # Type: string
-        transmission2_docker_image_repo: "lscr.io/linuxserver/transmission"
+        transmission2_docker_image_repo: "linuxserver/transmission"
         ```
 
     ??? variable string "`transmission_role_docker_image_tag`{ .sb-show-on-unchecked }`transmission2_docker_image_tag`{ .sb-show-on-checked }"

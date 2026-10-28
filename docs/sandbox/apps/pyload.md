@@ -232,7 +232,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        pyload_role_docker_image_repo: "lscr.io/linuxserver/pyload-ng"
+        pyload_role_docker_image_repo: "linuxserver/pyload-ng"
         ```
 
     ??? variable string "`pyload_role_docker_image_tag`"

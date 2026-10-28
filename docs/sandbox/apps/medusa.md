@@ -235,7 +235,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        medusa_role_docker_image_repo: "lscr.io/linuxserver/medusa"
+        medusa_role_docker_image_repo: "linuxserver/medusa"
         ```
 
     ??? variable string "`medusa_role_docker_image`"

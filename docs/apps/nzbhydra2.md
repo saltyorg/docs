@@ -372,7 +372,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        nzbhydra2_role_docker_image_repo: "lscr.io/linuxserver/nzbhydra2"
+        nzbhydra2_role_docker_image_repo: "linuxserver/nzbhydra2"
         ```
 
     ??? variable string "`nzbhydra2_role_docker_image_tag`"

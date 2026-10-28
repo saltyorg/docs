@@ -247,7 +247,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        beets_role_docker_image_repo: "lscr.io/linuxserver/beets"
+        beets_role_docker_image_repo: "linuxserver/beets"
         ```
 
     ??? variable string "`beets_role_docker_image_tag`"

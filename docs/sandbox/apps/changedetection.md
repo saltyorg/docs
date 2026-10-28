@@ -229,7 +229,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        changedetection_role_docker_image_repo: "lscr.io/linuxserver/changedetection.io"
+        changedetection_role_docker_image_repo: "linuxserver/changedetection.io"
         ```
 
     ??? variable string "`changedetection_role_docker_image_tag`"

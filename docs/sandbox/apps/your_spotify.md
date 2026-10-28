@@ -252,7 +252,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        your_spotify_role_docker_image_repo: "lscr.io/linuxserver/your_spotify"
+        your_spotify_role_docker_image_repo: "linuxserver/your_spotify"
         ```
 
     ??? variable string "`your_spotify_role_docker_image_tag`"

@@ -326,7 +326,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        unifi_network_application_role_docker_image_repo: "lscr.io/linuxserver/unifi-network-application"
+        unifi_network_application_role_docker_image_repo: "linuxserver/unifi-network-application"
         ```
 
     ??? variable string "`unifi_network_application_role_docker_image`"

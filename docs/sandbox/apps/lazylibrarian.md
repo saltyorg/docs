@@ -236,7 +236,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        lazylibrarian_role_docker_image_repo: "lscr.io/linuxserver/lazylibrarian"
+        lazylibrarian_role_docker_image_repo: "linuxserver/lazylibrarian"
         ```
 
     ??? variable string "`lazylibrarian_role_docker_image`"

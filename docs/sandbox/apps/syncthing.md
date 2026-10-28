@@ -228,7 +228,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        syncthing_role_docker_image_repo: "lscr.io/linuxserver/syncthing"
+        syncthing_role_docker_image_repo: "linuxserver/syncthing"
         ```
 
     ??? variable string "`syncthing_role_docker_image_tag`"

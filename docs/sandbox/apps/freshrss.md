@@ -229,7 +229,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        freshrss_role_docker_image_repo: "lscr.io/linuxserver/freshrss"
+        freshrss_role_docker_image_repo: "linuxserver/freshrss"
         ```
 
     ??? variable string "`freshrss_role_docker_image_tag`"

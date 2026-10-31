@@ -2,6 +2,15 @@
 
 :root {
   --md-default-bg-color: inherit;
+  --md-code-hl-comment-color: inherit;
+  --color-text: inherit;
+  --sb-blink1-color: #6366f1;
+  --sb-blink2-color: #8b5cf6;
+  --sb-blink3-color: #a855f7;
+  --sb-blink4-color: #d946ef;
+  --sb-cli-heading-color: #4ca3b0;
+  --sb-cli-command-color: #d9b972;
+  --sb-cli-flag-color: #4aa27b;
 }
 
 .md-typeset {
@@ -42,19 +51,19 @@
         padding: .625em clamp(.2em, 3vw, 2em);
 
         &:nth-child(1) {
-          background-color: #6366f1;
+          background-color: var(--sb-blink1-color);
         }
 
         &:nth-child(2) {
-          background-color: #8b5cf6;
+          background-color: var(--sb-blink2-color);
         }
 
         &:nth-child(3) {
-          background-color: #a855f7;
+          background-color: var(--sb-blink3-color);
         }
 
         &:nth-child(4) {
-          background-color: #d946ef;
+          background-color: var(--sb-blink4-color);
         }
       }
     }
@@ -100,6 +109,22 @@
       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='299' height='331'%3E%3Cg opacity='0.5'%3E%3Ccircle cx='60' cy='60' r='0.8' fill='%23ffffff'/%3E%3Ccircle cx='200' cy='180' r='1.1' fill='%237ee8e3'/%3E%3Ccircle cx='250' cy='100' r='0.6' fill='%23ffffff'/%3E%3Ccircle cx='120' cy='280' r='0.9' fill='%235ecbcd'/%3E%3Ccircle cx='180' cy='40' r='0.4' fill='%236b5cb7'/%3E%3Ccircle cx='80' cy='160' r='1.4' fill='%23ffffff'/%3E%3Ccircle cx='240' cy='240' r='0.5' fill='%237ee8e3'/%3E%3Ccircle cx='40' cy='220' r='0.7' fill='%235ecbcd'/%3E%3C/g%3E%3C/svg%3E") repeat right bottom / 299px 331px,
       #281c3d;
       padding-inline: clamp(15px, 5vw, 45px);
+
+      ::highlight(ty-heading) {
+        color: var(--sb-cli-heading-color);
+      }
+
+      ::highlight(ty-command) {
+        color: var(--sb-cli-command-color);
+      }
+
+      ::highlight(ty-flag) {
+        color: var(--sb-cli-flag-color);
+      }
+
+      ::highlight(ty-argument) {
+        color: color-mix(in srgb, var(--color-text) 50%, transparent);
+      }
 
       [data-ty] {
         overflow-x: auto;

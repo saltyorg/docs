@@ -26,7 +26,7 @@ hide:
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 <!-- termynal -->
 
-```console
+```
 $ sb --help
 Saltbox CLI                                                                                                           
          

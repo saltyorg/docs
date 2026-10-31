@@ -147,6 +147,18 @@ Are you setting Saltbox up for the first time?
 
 </div>
 
+## Troubleshooting
+
+??? question "I can't log in to qBittorrent using the credentials in `accounts.yml`"
+
+    This can happen following an interrupted run, a version rollback or upstream configuration format changes. In such cases, a temporary password should appear in the logs. To retrieve it:
+
+    ```shell
+    docker logs qbittorrent 2>&1 | grep -i password
+    ```
+
+    Log in with `admin` and the temporary password, then set a new password in the UI.
+
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
 ## Role Defaults<label class="sb-toggle--override-scope md-annotation__index" title="Supports multiple instances! Click to toggle override scope"><input type="checkbox" name="scope" hidden/></label>

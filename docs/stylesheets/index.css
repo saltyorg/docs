@@ -144,26 +144,6 @@
   p:has(img[src$="#only-dark"]) {
     display: none;
   }
-
-  [data-termynal] {
-    background: linear-gradient(to bottom, #87CEEB 0%, #B0E0E6 40%, #E0F6FF 100%);
-
-    color: black;
-
-    &::before,
-    &::after {
-      color: inherit;
-    }
-
-    * {
-      color: inherit;
-
-      &::before,
-      &::after {
-        color: inherit;
-      }
-    }
-  }
 }
 
 

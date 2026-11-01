@@ -41,7 +41,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://github.com/Novik/ruTorrent/wiki){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/kudeta/ru-rtorrent/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/crazymax/rtorrent-rutorrent/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Community**](https://github.com/Novik/ruTorrent/discussions){ .md-button .md-button--stretch }
 

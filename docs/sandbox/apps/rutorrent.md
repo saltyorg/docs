@@ -15,7 +15,7 @@ saltbox_automation:
       type: documentation
       purpose: manual
     - name: Releases
-      url: https://hub.docker.com/r/kudeta/ru-rtorrent/tags
+      url: https://hub.docker.com/r/crazymax/rtorrent-rutorrent/tags
       type: docker
       purpose: release
     - name: Community
@@ -50,6 +50,12 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
+???+warning "Migrating from the old Docker image"
+
+    On November 1, 2026, this role switched to *crazymax/rtorrent-rutorrent*, which uses a different layout for its application data than the previous image.
+
+    There is no automatic migration. The role now stores the data in `/opt/rtorrent-rutorrent` (by default), so the existing `/opt/rutorrent` folder is left untouched. If you wish to carry the data over, you must move the relevant parts to where the new container expects them.
+
 ## Deployment
 
 ```shell
@@ -58,11 +64,15 @@ sb install sandbox-rutorrent
 
 ## Usage
 
-Visit <https://rutorrent.iYOUR_DOMAIN_NAMEi>.
+| Service | URL                                           | Access control |
+|---------|-----------------------------------------------|----------------|
+| Web     | <https://rutorrent.iYOUR_DOMAIN_NAMEi>        | Traefik SSO    |
+| WebDAV  | <https://rutorrent-webdav.iYOUR_DOMAIN_NAMEi> | Basic Auth     |
+| API     | <https://rutorrent.iYOUR_DOMAIN_NAMEi/RPC>    | Basic Auth     |
 
 ### Unpacking
 
-You will most likely want to run [Unpackerr](../../apps/unpackerr.md) for this purpose. If so, it is recommended to disable ruTorrent's *unpack* plugin (along with other plugins you do not require) to save resources.
+[Unpackerr](../../apps/unpackerr.md) is the recommended tool for the job. This role removes ruTorrent's *unpack* plugin by default, as its functionality is too limited for standard Saltbox workflows.
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

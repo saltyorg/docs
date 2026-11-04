@@ -332,31 +332,19 @@ Make changes in the following sections:
 
             3. Add the following:
 
-                Name: ruTorrent
+                Name: `ruTorrent` or any value you like
 
                 Enable: `Yes`
 
                 Host: `rutorrent`
 
-                Port: `80`
-
-                URL Path: `RPC2`
+                Port: `8000`
 
                 Use SSL: `No`
 
-                Username: [Your ruTorrent Username](../sandbox/apps/rutorrent.md)
+                Category: `sonarr` or any value you like
 
-                Password: [Your ruTorrent Password](../sandbox/apps/rutorrent.md)
-
-                Category: `sonarr`
-
-                Directory: _Leave Blank_
-
-            4.  Your settings will now look like this:
-
-                ![sonarr ruTorrent Downloader](../images/sonarr/sonarr-rtorrent.png)
-
-            5. Click "Save" to add ruTorrent.
+            4. Click "Save" to add ruTorrent.
 
         === "qBittorrent"
 

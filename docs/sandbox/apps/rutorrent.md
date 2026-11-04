@@ -64,11 +64,11 @@ sb install sandbox-rutorrent
 
 ## Usage
 
-| Service | URL                                           | Access control |
-|---------|-----------------------------------------------|----------------|
-| Web     | <https://rutorrent.iYOUR_DOMAIN_NAMEi>        | Traefik SSO    |
-| WebDAV  | <https://rutorrent-webdav.iYOUR_DOMAIN_NAMEi> | Basic Auth     |
-| API     | <https://rutorrent.iYOUR_DOMAIN_NAMEi/RPC>    | Basic Auth     |
+| Service | Public URL                                                                                                                                                   | Private URL                                                                                                      | Access control |
+|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|----------------|
+| Web     | <https://rutorrent.iYOUR_DOMAIN_NAMEi>{ .sb-show-on-unchecked } <https://rutorrentiINSTANCE_SUFFIXi.iYOUR_DOMAIN_NAMEi>{ .sb-show-on-checked }               | `http://rutorrent:8080`{ .sb-show-on-unchecked } `http://rutorrentiINSTANCE_SUFFIXi:8080`{ .sb-show-on-checked } | Traefik SSO    |
+| API     | <https://rutorrent.iYOUR_DOMAIN_NAMEi/RPC>{ .sb-show-on-unchecked } <https://rutorrentiINSTANCE_SUFFIXi.iYOUR_DOMAIN_NAMEi/RPC>{ .sb-show-on-checked }       | `http://rutorrent:8000`{ .sb-show-on-unchecked } `http://rutorrentiINSTANCE_SUFFIXi:8000`{ .sb-show-on-checked } | Basic Auth     |
+| WebDAV  | <https://rutorrent-webdav.iYOUR_DOMAIN_NAMEi>{ .sb-show-on-unchecked } <https://rutorrentiINSTANCE_SUFFIXi-webdav.iYOUR_DOMAIN_NAMEi>{ .sb-show-on-checked } | `http://rutorrent:9000`{ .sb-show-on-unchecked } `http://rutorrentiINSTANCE_SUFFIXi:9000`{ .sb-show-on-checked } | Basic Auth     |
 
 ### Unpacking
 

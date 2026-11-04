@@ -13,6 +13,7 @@ placeholders:
   INSTANCE_SUFFIX:
     default: 4k
     description: Instance suffix
+    replace_everywhere: true
   CUSTOM_SUBDOMAIN_NAME:
     default: requests
     description: Name of your custom subdomain

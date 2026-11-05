@@ -72,7 +72,7 @@ saltbox_automation:
 
 ## Pre-deployment
 
-The [Bookdrop](https://grimmory.org/docs/bookdrop) location is managed by the role and defaults to `/mnt/unionfs/downloads/bookdrop` (based on your [downloads root](../../reference/accounts.md#__tabbed_2_2)), where other apps have access to place downloads in.
+The [Bookdrop](https://grimmory.org/docs/bookdrop) location is managed by the role and defaults to `/mnt/unionfs/downloads/bookdrop` (based on your [downloads root](/reference/accounts.md#downloads)), where other apps have access to place downloads in.
 
 To rename the subdirectory, you can use `grimmory_role_bookdrop_subfolder`, detailed in the Settings tab below.
 

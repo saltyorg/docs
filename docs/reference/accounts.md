@@ -5,6 +5,7 @@ tags:
   - accounts
   - settings
   - advanced
+toc_depth: 2
 ---
 
 # Accounts and Settings
@@ -15,9 +16,11 @@ tags:
 
 On this page, we break down the options available in the following files:
 
-- `/srv/git/saltbox/accounts.yml`
-- `/srv/git/saltbox/settings.yml`
-- `/srv/git/saltbox/adv_settings.yml`
+[`/srv/git/saltbox/accounts.yml`](#options-in-accountsyml)
+
+[`/srv/git/saltbox/settings.yml`](#options-in-settingsyml)
+
+[`/srv/git/saltbox/adv_settings.yml`](#options-in-adv_settingsyml)
 
 IMPORTANT: If you make changes to values in these files, you will have to run the relevant role(s) to make them take effect. For example, if you change traefik-related settings, you will need to rerun the traefik tag for them to take effect. The only thing that looks at these settings files is the Ansible script.
 
@@ -39,15 +42,9 @@ If validation fails, the error messages will indicate which file and setting hav
 
 **Note**: There must always be a space between the key and the value in YAML files. `key: value` NOT `key:value`
 
-Each tab shows a "section" in the file.
+-   ### `apprise`
 
-=== "apprise"
-
-    ```yaml
-    apprise:
-    ```
-
-    `apprise` - Apprise notification URL
+    Apprise notification URL
 
     This parameter is optional.
     Information about constructing the URL can be found [here](https://github.com/caronc/apprise#supported-notifications).
@@ -66,63 +63,48 @@ Each tab shows a "section" in the file.
       somescheme://something_else_here/perhaps_a_token
     ```
 
-=== "cloudflare"
+-   ### `cloudflare.api`
 
-    ```yaml
-    cloudflare:
-      api:
-      email:
-      scoped_token:
-    ```
+    Preferred [Global API Key](domain.md#get-cloudflare-credentials).
 
-    `scoped_token`: Supported alternative Cloudflare account-owned or user-owned API token. Follow the [Cloudflare credential instructions](domain.md#get-cloudflare-credentials) for the exact dashboard sections, permissions, and zone scope.
+-   ### `cloudflare.email`
 
-    `api`: Preferred [Global API Key](domain.md#get-cloudflare-credentials).
-
-    `email`: E-mail address required with the Global API Key.
+    E-mail address required with the Global API Key.
 
     These parameters are optional.
     Default is blank.
     Configure `scoped_token`, or configure `api` and `email` together, to enable Cloudflare automation. The two authentication modes cannot be combined. Leave all three blank to disable Cloudflare functions.
     Cloudflare does not support all top-level domains though its API. Refer to [this page](https://support.cloudflare.com/hc/en-us/articles/360020296512-DNS-Troubleshooting-FAQ#h_84167303211544035341531). As of 2022/11/03:  "DNS API cannot be used for domains with .cf, .ga, .gq, .ml, or .tk TLDs."
 
-=== "dockerhub"
+-   ### `cloudflare.scoped_token`
 
-    ```yaml
-    dockerhub:
-      user:
-      token:
-    ```
+    Supported alternative Cloudflare account-owned or user-owned API token. Follow the [Cloudflare credential instructions](domain.md#get-cloudflare-credentials) for the exact dashboard sections, permissions, and zone scope.
 
-    `user` - Docker Hub username.
+-   ### `dockerhub.user`
 
-    `token` - Docker Hub access token.
+    Docker Hub username.
+
+-   ### `dockerhub.token`
+
+    Docker Hub access token.
 
     Note that this is a Docker Hub *token*, not your Docker Hub password. You create one of these in the security tab of your account settings at dockerhub, and it will look something like: `dckr_pat_EZ-YVvzrb_OzZyToNyGeEzErBiLl`
 
     This parameter is optional.
     Entering Dockerhub credentials increases the number of images one can pull.
 
-=== "user"
+-   ### `user.name`
 
-    ```yaml
-    ---
-    user:
-      name: seed
-      pass: password1234
-      domain: xYOUR_DOMAIN_NAMEx
-      email: your@email.com
-      ssh_key:
-    ```
-
-    `name`: User name for the server.
+    Username for the server.
 
     This parameter is **required**.
     If user account with this name does not already exist, it will be created during install.
     Also used to create first-time logins for various apps.
     Default is `seed`.
 
-    `pass`: Password for the user account and for misc apps.
+-   ### `user.pass`
+
+    Password for the user account and for misc apps.
 
     This parameter is **required**. Minimum 12 characters.
     Sets password for the server's user account when creating a new account. This will not change the password of an existing account.
@@ -132,25 +114,29 @@ Each tab shows a "section" in the file.
     See the [password considerations](#password-considerations) below.
     [Relevant XKCD](https://xkcd.com/936/)
 
-    `domain`: Domain name for the Saltbox server.
+-   ### `user.domain`
+
+    Domain name for the Saltbox server.
 
     This parameter is **required**.
     If you don't have one, see [here](domain.md).
     This should be the domain "below" the saltbox subdomains. For example, if you want to access Sonarr at "sonarr.xYOUR_DOMAIN_NAMEx", enter "xYOUR_DOMAIN_NAMEx". If you want "sonarr.foo.xYOUR_DOMAIN_NAMEx", enter "foo.xYOUR_DOMAIN_NAMEx".
 
-    `email`: E-mail address.
+-   ### `user.email`
+
+    E-mail address.
 
     This parameter is **required** if you're using the reverse proxy.
     This is used for the Let's Encrypt SSL certificates.
     It does not have to be an email address at the domain above.
 
-    `ssh_key`: SSH Key
+-   ### `user.ssh_key`
+
+    SSH Key
 
     This parameter is optional.
     This is used to provision a SSH key in your user's `authorized_keys` file
     This parameter accepts either the public key or a GitHub url (i.e. [https://github.com/charlie.keys](https://github.com/charlie.keys)) which will pull the keys you have added to your GitHub account.
-
----
 
 ## Options in settings.yml
 
@@ -158,57 +144,29 @@ Each tab shows a "section" in the file.
 
 **Note**: There must always be a space between the key and the value in YAML files. `key: value` NOT `key:value`
 
-Each tab shows a "section" in the file.
+-   ### `authelia.master`
 
-=== "authelia"
+    Is this the master machine in a split feeder/media setup?
 
-    ```yaml
-    authelia:
-      master: yes
-      subdomain: login
-    ```
+-   ### `authelia.subdomain`
 
-    `master` - Is this the master machine in a split feeder/media setup?
-
-    `subdomain` - subdomain for the Authelia login page
+    Name of the Authelia login page subdomain.
 
     Default is `login`.
 
-=== "downloads"
+-   ### `downloads`
 
-    ```yaml
-    ---
-    downloads: /mnt/unionfs/downloads
-    ```
-
-    `downloads`: Where downloads go.
+    Where downloads go.
 
     Default is `/mnt/unionfs/downloads`.
 
-=== "rclone"
+-   ### `rclone.enabled`
 
-    ```yaml
-    rclone:
-      enabled: yes
-      remotes:
-        - remote: google
-          settings:
-            enable_refresh: no
-            mount: yes
-            template: google
-            union: yes
-            upload: yes
-            upload_from: /mnt/local/Media
-            vfs_cache:
-              enabled: no
-              max_age: 504h
-              size: 50G
-      version: latest
-    ```
+    Use this to toggle Rclone related deployments like mounts and cloudplow.
 
-    `enabled`: Use this to toggle Rclone related deployments like mounts and cloudplow.
+-   ### `rclone.remotes`
 
-    `remotes`: This variable takes a list of dictionaries formatted like the example. Add as many remotes as you wish, like this:
+    This variable takes a list of dictionaries formatted like the example. Add as many remotes as you wish, like this:
 
     ```yaml
     rclone:
@@ -231,190 +189,170 @@ Each tab shows a "section" in the file.
           ...
     ```
 
-    `remotes/remote`: The name of the rclone remote for this mount. You can also specify a path to use for the remote. `remote: "google:Media"` or `remote: "my-sftp:/path/to/my/files"`  Quotes are important.
+    -   #### `remote`
 
-    `remotes/settings/enable_refresh`: Toggles whether this remote required a refresh service to look for new files (for example, an `sftp` remote).
+        The name of the rclone remote for this mount. You can also specify a path to use for the remote. `remote: "google:Media"` or `remote: "my-sftp:/path/to/my/files"`  Quotes are important.
 
-    `remotes/settings/mount`: Toggles whether you want this remote mounted in the file system.
+    -   #### `settings.enable_refresh`
 
-    `remotes/settings/template`: The name of the template you want to use for the mount. Currently Saltbox supports 4 options: `google`, `dropbox`, `sftp` and a path to a file ("/opt/mount-templates/remote.j2") containing either jinja2 template or an actual copy of a systemd service file. A [community repo](https://github.com/saltyorg/mount-templates) is maintained of user submitted mount options which can be referenced via path (i.e. `/opt/mount-templates/generic.j2`.) We recommend saving your own custom templates/services in `/opt/mount-templates/custom` to ensure they are backed up and not subject to being overwritten by the repo.
+        Toggles whether this remote required a refresh service to look for new files (for example, an `sftp` remote).
 
-    `remotes/settings/union`: Toggles whether you want to add this remote mount to `/mnt/unionfs`. This requires that `mount` be enabled.
+    -   #### `settings.mount`
 
-    `remotes/settings/upload`: Toggles whether you intend to upload to this remote using Cloudplow.
+        Toggles whether you want this remote mounted in the file system.
 
-    `remotes/settings/upload_from`: The local path Cloudplow will use to upload from if the remote was upload enabled.
+    -   #### `settings.template`
 
-    `remotes/settings/vfs_cache/enabled`: Toggle for using Rclone VFS file cache.
+        The name of the template you want to use for the mount. Currently Saltbox supports 4 options: `google`, `dropbox`, `sftp` and a path to a file ("/opt/mount-templates/remote.j2") containing either jinja2 template or an actual copy of a systemd service file. A [community repo](https://github.com/saltyorg/mount-templates) is maintained of user submitted mount options which can be referenced via path (i.e. `/opt/mount-templates/generic.j2`.) We recommend saving your own custom templates/services in `/opt/mount-templates/custom` to ensure they are backed up and not subject to being overwritten by the repo.
 
-    `remotes/settings/vfs_cache/max_age`: Defines the max age of files in the cache.
+    -   #### `settings.union`
 
-    `remotes/settings/vfs_cache/size`: Defines the max size of the cache. The cache can grow above this value in actual usage (polls the cache once a minute) so leave some headroom when using this.
+        Toggles whether you want to add this remote mount to `/mnt/unionfs`. This requires that `mount` be enabled.
 
-    `version`: Rclone version that is installed by Saltbox.
+    -   #### `settings.upload`
+
+        Toggles whether you intend to upload to this remote using Cloudplow.
+
+    -   #### `settings.upload_from`
+
+        The local path Cloudplow will use to upload from if the remote was upload enabled.
+
+    -   #### `settings.vfs_cache.enabled`
+
+        Toggle for using Rclone VFS file cache.
+
+    -   #### `settings.vfs_cache.max_age`
+
+        Defines the max age of files in the cache.
+
+    -   #### `settings.vfs_cache.size`
+
+        Defines the max size of the cache. The cache can grow above this value in actual usage (polls the cache once a minute) so leave some headroom when using this.
+
+-   ### `rclone.version`
+
+    Rclone version that is installed by Saltbox.
     Choices are `latest`, `current`, `beta`, or a specific version number (e.g. `1.42`).
     Default is `latest`.
 
-=== "shell"
+-   ### `shell`
 
-    ```yaml
-    shell: bash
-    ```
-
-    `shell`: Type of shell to use.
+    Type of shell to use.
 
     Choices are `bash` or `zsh`.
     Default is `bash`.
 
-=== "transcodes"
+-   ### `transcodes`
 
-    ```yaml
-    transcodes: /mnt/local/transcodes
-    ```
-
-    `transcodes`: Path of temporary transcoding files.
+    Path of temporary transcoding files.
 
     Default is `"/mnt/local/transcodes"`.
 
     Note: It is recommended to **not** use `/tmp` or `/dev/shm` as a transcode location because the paths are cleared on reboots, causing Docker to create the folder as root and Plex transcoder to crash. Another reason why not to: [https://forums.plex.tv/discussion/comment/1502936/#Comment_1502936](https://forums.plex.tv/discussion/comment/1502936/#Comment_1502936).
 
----
-
 ## Options in adv_settings.yml
 
 **Note**: There must always be a space between the key and the value in YAML files. `key: value` NOT `key:value`
 
-Each tab shows a "section" in the file.
+-   ### `dns.ipv4`
 
-=== "dns"
-
-    ```yaml
-    dns:
-      ipv4: yes
-      ipv6: no
-      proxied: no
-    ```
-
-    `ipv4`: Enable/disable IPv4 configuration.
+    Enable/disable IPv4 configuration.
 
     Default is `yes`.
 
-    `ipv6`: Enable/disable IPv6 configuration.
+-   ### `dns.ipv6`
+
+    Enable/disable IPv6 configuration.
 
     Default is `no`.
 
-    `proxied` - Controls whether Cloudflare records should be "proxied" or "DNS only".
+-   ### `dns.proxied`
+
+    Controls whether Cloudflare records should be "proxied" or "DNS only".
 
     Default is `no`.
 
     This is a global flag; if you want to override this for individual apps you can do so in the inventory.
 
-=== "docker"
+-   ### `docker.json_driver`
 
-    ```yaml
-    docker:
-      json_driver: no
-    ```
+    make docker logs available as JSON
 
-    `json_driver` - make docker logs available as JSON
+-   ### `gpu.intel`
 
-=== "gpu"
-
-    ```yaml
-    gpu:
-      intel: yes
-    ```
-
-    `intel`: Should system be set up for Intel GPU?
+    Should system be set up for Intel GPU?
 
     Default is `yes`.
 
-=== "mounts"
+-   ### `mounts.ipv4_only`
 
-    ```yaml
-    mounts:
-      ipv4_only: no
-    ```
-
-    `ipv4_only`: Should Rclone use IPv4 only?
+    Should Rclone use IPv4 only?
 
     Default is `no`.
 
-=== "system"
+-   ### `system.timezone`
 
-    ```yaml
-    ---
-    system:
-      timezone: auto
-    ```
-
-    `timezone`: Timezone to use on the server.
+    Timezone to use on the server.
 
     Default is `auto`, which will pick the timezone based on geolocation of the server.
     Enter a "TZ database name" as shown in [this table](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). For example, "America/Costa_Rica".
     `timedatectl list-timezones` at your server's command prompt will also list the options.
 
-=== "traefik"
+-   ### `traefik.cert.additional_domains`
 
-    ```yaml
-    traefik:
-      cert:
-        additional_domains: []
-        http_validation: no
-        zerossl: no
-      error_pages: no
-      hsts: no
-      metrics: no
-      provider: cloudflare
-      subdomains:
-        dash: dash
-        metrics: metrics
-      tracing: no
-    ```
-
-    `cert.additional_domains`: Additional wildcard certificate bases managed by Traefik. Enter base domains such as `home.example.co.uk`; Traefik requests both the base and `*.home.example.co.uk`. This requires DNS certificate validation. Cloudflare-backed domains must belong to a zone accessible to the configured credentials.
+    Additional wildcard certificate bases managed by Traefik. Enter base domains such as `home.example.co.uk`; Traefik requests both the base and `*.home.example.co.uk`. This requires DNS certificate validation. Cloudflare-backed domains must belong to a zone accessible to the configured credentials.
 
     Default is `[]`.
 
-    `cert.http_validation`: Use HTTP (HTTP-01) certificate validation method.
+-   ### `traefik.cert.http_validation`
+
+    Use HTTP (HTTP-01) certificate validation method.
     Required when you are not using one of the supported DNS validation providers.
 
     Default is `no`.
 
-    `cert.zerossl`: Use ZeroSSL instead of Let's Encrypt for generation of certificates.
+-   ### `traefik.cert.zerossl`
+
+    Use ZeroSSL instead of Let's Encrypt for generation of certificates.
 
     Default is `no`.
 
-    `error_pages`: enable styled error pages.
+-   ### `traefik.error_pages`
+
+    enable styled error pages.
 
     Default is `no`.
     See [here](../advanced/styled-error-pages.md) for configuration details.
 
-    `hsts`: enable [HSTS](https://developer.mozilla.org/en-US/docs/Glossary/HSTS).
+-   ### `traefik.hsts`
+
+    enable [HSTS](https://developer.mozilla.org/en-US/docs/Glossary/HSTS).
 
     Default is `no`.
 
-    `metrics`: enable metrics subdomain.
+-   ### `traefik.metrics`
+
+    enable metrics subdomain.
 
     Default is `no`.
 
-    `provider`: DNS provider.
+-   ### `traefik.provider`
+
+    DNS provider.
 
     Default is `cloudflare`.
 
-    `subdomain.dash`: traefik dashboard subdomain.
+-   ### `traefik.subdomain.dash`
+
+    traefik dashboard subdomain.
 
     Default is `dash`.
 
-    `subdomain.metrics`: traefik metrics subdomain.
+-   ### `traefik.subdomain.metrics`
+
+    traefik metrics subdomain.
 
     Default is `metrics`.
-
-    `tracing`: Enable tracing.
-
-    Default is `no`.
-
----
 
 ## Password considerations
 

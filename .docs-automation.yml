@@ -32,7 +32,6 @@ blacklist:
   docs_coverage:
     saltbox:
       - "authentik_worker"
-      - "cloudflare"
       - "cloudplow_disable"
       - "hetzner"
       - "index"

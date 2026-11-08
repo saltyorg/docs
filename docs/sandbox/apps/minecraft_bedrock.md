@@ -9,7 +9,7 @@ saltbox_automation:
       url: https://github.com/itzg/docker-minecraft-bedrock-server
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/itzg/minecraft-bedrock-server/tags
       type: docker
       purpose: release

@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://github.com/nicolargo/glances/wiki
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/nicolargo/glances/tags
       type: docker
       purpose: release

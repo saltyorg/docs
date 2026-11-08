@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://docs.firefly-iii.org
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/fireflyiii/core/tags
       type: docker
       purpose: release

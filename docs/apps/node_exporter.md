@@ -18,7 +18,7 @@ saltbox_automation:
       purpose: manual
     - name: Releases
       url: https://github.com/prometheus/node_exporter/releases
-      type: github
+      type: releases
       purpose: release
     - name: Community
       url: https://prometheus.io/community

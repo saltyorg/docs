@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://github.com/Threadfin/Threadfin
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/fyb3roptik/threadfin/tags
       type: docker
       purpose: release

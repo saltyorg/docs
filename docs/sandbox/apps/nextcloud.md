@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://docs.nextcloud.com/server/latest/admin_manual/contents.html
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/_/nextcloud/tags
       type: docker
       purpose: release

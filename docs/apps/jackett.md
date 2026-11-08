@@ -10,9 +10,9 @@ saltbox_automation:
       url: https://github.com/Jackett/Jackett/wiki
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/hotio/jackett/pkgs/container/jackett
-      type: github
+      type: docker
       purpose: release
     - name: Community
       url:

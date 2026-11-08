@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://github.com/saltydk/nabarr/blob/master/README.md#introduction
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/saltydk/nabarr/tags
       type: docker
       purpose: release

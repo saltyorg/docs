@@ -14,7 +14,7 @@ saltbox_automation:
       url: https://dev.deluge-torrent.org/wiki/UserGuide
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/binhex/arch-delugevpn/tags
       type: docker
       purpose: release

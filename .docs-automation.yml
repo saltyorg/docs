@@ -338,15 +338,15 @@ docker_overrides:
 docker_metadata:
   icon: material/docker
   release_link:
-    name: Image tags
+    name: Versions
   overrides:
     ghcr.io/imagegenius/immich:
       url: https://github.com/imagegenius/docker-immich/pkgs/container/immich
-      type: github
+      type: docker
   rules:
     - pattern: '^ghcr\.io/([^/]+)/([^/]+)$'
       url: https://github.com/$1/$2/pkgs/container/$2
-      type: github
+      type: docker
     - pattern: '^lscr\.io/linuxserver/([^/]+)$'
       url: https://hub.docker.com/r/linuxserver/$1/tags
       type: docker
@@ -371,7 +371,6 @@ docker_metadata:
   ignore:
     - gcr.io/cadvisor/cadvisor
     - docker.n8n.io/n8nio/n8n
-    - docker.io/ajslater/codex
     - docker.elastic.co/elasticsearch/elasticsearch
 
 # =============================================================================

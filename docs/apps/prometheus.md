@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://prometheus.io/docs/introduction/overview
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/prom/prometheus/tags
       type: docker
       purpose: release

@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://github.com/janeczku/calibre-web/wiki
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/linuxserver/calibre-web/tags
       type: docker
       purpose: release

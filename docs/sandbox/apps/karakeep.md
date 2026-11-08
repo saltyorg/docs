@@ -12,9 +12,9 @@ saltbox_automation:
       url: https://docs.karakeep.app
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/karakeep-app/karakeep/pkgs/container/karakeep
-      type: github
+      type: docker
       purpose: release
     - name: Community
       url: https://discord.gg/NrgeYywsFh

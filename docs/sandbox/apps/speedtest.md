@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://github.com/librespeed/speedtest/blob/master/doc.md
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/linuxserver/librespeed/tags
       type: docker
       purpose: release

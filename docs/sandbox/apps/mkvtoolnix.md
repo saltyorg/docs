@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://mkvtoolnix.download/docs.html
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/jlesage/mkvtoolnix/tags
       type: docker
       purpose: release

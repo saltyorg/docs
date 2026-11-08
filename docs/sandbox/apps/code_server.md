@@ -14,7 +14,7 @@ saltbox_automation:
       url: https://code.visualstudio.com/docs
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/codercom/code-server/tags
       type: docker
       purpose: release

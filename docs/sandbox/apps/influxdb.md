@@ -13,7 +13,7 @@ saltbox_automation:
       url: hhttps://docs.influxdata.com/influxdb/v1
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/_/influxdb/tags
       type: docker
       purpose: release

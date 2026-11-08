@@ -10,9 +10,9 @@ saltbox_automation:
       url:
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/hotio/jellyfin/pkgs/container/jellyfin
-      type: github
+      type: docker
       purpose: release
     - name: Community
       url: https://forum.jellyfin.org

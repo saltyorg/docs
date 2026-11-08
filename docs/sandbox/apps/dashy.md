@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://dashy.to/docs
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/lissy93/dashy/tags
       type: docker
       purpose: release

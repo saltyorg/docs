@@ -11,9 +11,9 @@ saltbox_automation:
       url: https://wg-easy.github.io/wg-easy/edge/guides/setup
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/wg-easy/wg-easy/pkgs/container/wg-easy
-      type: github
+      type: docker
       purpose: release
     - name: Community
       url: https://github.com/wg-easy/wg-easy/discussions

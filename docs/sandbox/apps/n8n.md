@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://docs.n8n.io
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/n8nio/n8n/tags
       type: docker
       purpose: release

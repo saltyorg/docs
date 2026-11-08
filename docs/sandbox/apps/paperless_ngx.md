@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://paperless-ngx.readthedocs.io/en/latest/index.html
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/paperlessngx/paperless-ngx/tags
       type: docker
       purpose: release

@@ -11,7 +11,7 @@ saltbox_automation:
       url: https://foundryvtt.com/kb
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/ajnart/Foundry/tags
       type: docker
       purpose: release

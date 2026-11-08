@@ -13,9 +13,9 @@ saltbox_automation:
       url: https://docs.tofa.tv
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/orgs/tofatv/packages/container/package/tofa
-      type: releases
+      type: docker
       purpose: release
     - name: Community
       url: https://tofa.tv/discord

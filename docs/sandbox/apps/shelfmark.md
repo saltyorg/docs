@@ -11,9 +11,9 @@ saltbox_automation:
       url: https://github.com/calibrain/shelfmark/tree/main/docs
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/calibrain/shelfmark/pkgs/container/shelfmark
-      type: github
+      type: docker
       purpose: release
     - name: Community
       url: https://github.com/calibrain/shelfmark/discussions

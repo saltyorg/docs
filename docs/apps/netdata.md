@@ -10,7 +10,7 @@ saltbox_automation:
       url: https://learn.netdata.cloud/docs
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/netdata/netdata/tags
       type: docker
       purpose: release

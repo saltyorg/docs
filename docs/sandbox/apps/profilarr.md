@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://dictionarry.dev/profilarr-setup/101
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/dictionarry-hub/profilarr/pkgs/container/profilarr
       type: docker
       purpose: release

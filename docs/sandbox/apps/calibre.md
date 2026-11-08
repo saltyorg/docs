@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://manual.calibre-ebook.com
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/linuxserver/calibre/tags
       type: docker
       purpose: release

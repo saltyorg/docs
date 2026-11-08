@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://github.com/miniflux/v2
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/miniflux/miniflux/tags
       type: docker
       purpose: release

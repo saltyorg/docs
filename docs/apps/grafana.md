@@ -10,7 +10,7 @@ saltbox_automation:
       url: https://grafana.com/docs/grafana
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/grafana/grafana/tags
       type: docker
       purpose: release

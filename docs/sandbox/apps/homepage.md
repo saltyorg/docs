@@ -12,9 +12,9 @@ saltbox_automation:
       url: https://gethomepage.dev/latest/configs
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/gethomepage/homepage/pkgs/container/homepage
-      type: releases
+      type: docker
       purpose: release
     - name: Community
       url:

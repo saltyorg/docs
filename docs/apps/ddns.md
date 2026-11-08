@@ -14,7 +14,7 @@ saltbox_automation:
       url: https://docs.saltbox.dev
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/saltydk/dns/tags
       type: docker
       purpose: release

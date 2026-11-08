@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://docs.puddletag.net/docs.html
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/xirg/docker-puddletag/tags
       type: docker
       purpose: release

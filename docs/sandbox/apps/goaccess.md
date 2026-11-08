@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://goaccess.io/man
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/gregyankovoy/goaccess/tags
       type: docker
       purpose: release

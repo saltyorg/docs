@@ -13,9 +13,9 @@ saltbox_automation:
       url: https://github.com/google/cadvisor/tree/master/docs
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://console.cloud.google.com/artifacts/docker/cadvisor/us/gcr.io/cadvisor
-      type: releases
+      type: docker
       purpose: release
     - name: Community
       url:

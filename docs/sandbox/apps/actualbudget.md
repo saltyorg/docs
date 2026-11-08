@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://actualbudget.org/docs
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/actualbudget/actual-server/tags
       type: docker
       purpose: release

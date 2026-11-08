@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://apprise.apps.merit.edu
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/linuxserver/apprise-api/tags
       type: docker
       purpose: release

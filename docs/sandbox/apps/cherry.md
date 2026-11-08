@@ -12,9 +12,9 @@ saltbox_automation:
       url: https://cherry.haishan.me/docs/intro
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/haishanh/cherry/tags
-      type: releases
+      type: docker
       purpose: release
     - name: Community
       url:

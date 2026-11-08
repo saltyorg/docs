@@ -12,9 +12,9 @@ saltbox_automation:
       url: https://docs.stashapp.cc
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/hotio/stash/pkgs/container/stash
-      type: github
+      type: docker
       purpose: release
     - name: Community
       url: https://docs.stashapp.cc/#support

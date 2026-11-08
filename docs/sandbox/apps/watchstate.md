@@ -14,9 +14,9 @@ saltbox_automation:
       url: https://github.com/ArabCoders/watchstate/blob/master/FAQ.md
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/arabcoders/watchstate/pkgs/container/watchstate
-      type: github
+      type: docker
       purpose: release
     - name: Community
       url: https://discord.gg/haUXHJyj6Y

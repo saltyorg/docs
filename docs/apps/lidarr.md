@@ -10,9 +10,9 @@ saltbox_automation:
       url: https://wiki.servarr.com/en/lidarr
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/hotio/lidarr/pkgs/container/lidarr
-      type: github
+      type: docker
       purpose: release
     - name: Community
       url: https://lidarr.audio/discord

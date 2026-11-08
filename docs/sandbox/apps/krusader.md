@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://github.com/binhex/arch-krusader
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/binhex/arch-krusader/tags
       type: docker
       purpose: release

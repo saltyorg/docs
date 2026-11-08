@@ -11,7 +11,7 @@ saltbox_automation:
       url: https://github.com/saltydk/autoscan/blob/master/README.md#overview
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/saltydk/autoscan/tags
       type: docker
       purpose: release

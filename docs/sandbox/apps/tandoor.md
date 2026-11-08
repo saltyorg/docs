@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://docs.tandoor.dev
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/vabene1111/recipes/tags
       type: docker
       purpose: release

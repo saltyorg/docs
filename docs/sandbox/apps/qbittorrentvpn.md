@@ -14,7 +14,7 @@ saltbox_automation:
       url: https://github.com/binhex/arch-qbittorrentvpn
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/binhex/arch-qbittorrentvpn/tags
       type: docker
       purpose: release

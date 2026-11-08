@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://mosquitto.org/man/mosquitto-conf-5.html
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/_/eclipse-mosquitto/tags
       type: docker
       purpose: release

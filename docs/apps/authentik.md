@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://docs.goauthentik.io/docs
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/beryju/authentik/tags
       type: docker
       purpose: release

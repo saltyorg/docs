@@ -12,9 +12,9 @@ saltbox_automation:
       url: https://forgejo.org/docs
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://codeberg.org/forgejo/-/packages/container/forgejo/versions
-      type: releases
+      type: docker
       purpose: release
     - name: Community
       url:

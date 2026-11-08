@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://github.com/nirui/sshwifty
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/niruix/sshwifty/tags
       type: docker
       purpose: release

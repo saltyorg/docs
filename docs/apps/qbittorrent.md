@@ -11,7 +11,7 @@ saltbox_automation:
       url: https://wiki.qbittorrent.org
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/saltydk/qbittorrent/tags
       type: docker
       purpose: release

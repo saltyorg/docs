@@ -12,9 +12,9 @@ saltbox_automation:
       url:
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/alexta69/metube/pkgs/container/metube
-      type: github
+      type: docker
       purpose: release
     - name: Community
       url: https://github.com/alexta69/metube/discussions

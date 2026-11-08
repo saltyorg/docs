@@ -13,9 +13,9 @@ saltbox_automation:
       url: https://openobserve.ai/docs
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://gallery.ecr.aws/zinclabs/openobserve
-      type: releases
+      type: docker
       purpose: release
     - name: Community
       url:

@@ -11,9 +11,9 @@ saltbox_automation:
       url: https://nzbget.com/documentation
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/hotio/nzbget/pkgs/container/nzbget
-      type: github
+      type: docker
       purpose: release
     - name: Community
       url: https://nzbget.com/contact

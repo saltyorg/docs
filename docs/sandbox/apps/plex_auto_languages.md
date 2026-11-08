@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://github.com/RemiRigal/Plex-Auto-Languages
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/remirigal/plex-auto-languages/tags
       type: docker
       purpose: release

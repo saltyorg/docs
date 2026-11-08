@@ -15,7 +15,7 @@ saltbox_automation:
       purpose: manual
     - name: Releases
       url: https://github.com/autobrr/tqm/tags
-      type: github
+      type: releases
       purpose: release
     - name: Community
       url: https://discord.autobrr.com

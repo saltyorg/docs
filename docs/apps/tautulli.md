@@ -10,9 +10,9 @@ saltbox_automation:
       url: https://github.com/Tautulli/Tautulli/wiki
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/hotio/tautulli/pkgs/container/tautulli
-      type: github
+      type: docker
       purpose: release
     - name: Community
       url: https://tautulli.com/discord

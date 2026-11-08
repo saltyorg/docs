@@ -11,7 +11,7 @@ saltbox_automation:
       url: https://www.postgresql.org/docs/12/index.html
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/_/postgres/tags
       type: docker
       purpose: release

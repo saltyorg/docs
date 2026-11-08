@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://duplicati.readthedocs.io/en/latest
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/linuxserver/duplicati/tags
       type: docker
       purpose: release

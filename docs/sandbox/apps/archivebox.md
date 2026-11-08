@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://github.com/ArchiveBox/ArchiveBox/wiki
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/archivebox/archivebox/tags
       type: docker
       purpose: release

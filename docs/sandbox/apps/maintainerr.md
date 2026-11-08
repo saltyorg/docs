@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://docs.maintainerr.info
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/maintainerr/maintainerr/tags
       type: docker
       purpose: release

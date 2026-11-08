@@ -17,7 +17,7 @@ saltbox_automation:
       purpose: manual
     - name: Releases
       url: https://github.com/aristocratos/btop/tags
-      type: github
+      type: releases
       purpose: release
     - name: Community
       url: https://github.com/aristocratos/btop/discussions

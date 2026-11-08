@@ -11,7 +11,7 @@ saltbox_automation:
       url: https://github.com/comixed/comixed/wiki
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/comixed/comixed/tags
       type: docker
       purpose: release

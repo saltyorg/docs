@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://homarr.dev/docs/getting-started
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/ajnart/homarr/tags
       type: docker
       purpose: release

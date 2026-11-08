@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://github.com/Yoruio/Membarr
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/yoruio/membarr/tags
       type: docker
       purpose: release

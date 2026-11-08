@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://handbrake.fr/docs
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/jlesage/handbrake/tags
       type: docker
       purpose: release

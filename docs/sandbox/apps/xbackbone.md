@@ -14,7 +14,7 @@ saltbox_automation:
       url: https://xbackbone.app/clients.html
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/linuxserver/xbackbone/tags
       type: docker
       purpose: release

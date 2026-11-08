@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://docs.tdarr.io/docs/installation/getting-started
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/haveagitgat/tdarr/tags
       type: docker
       purpose: release

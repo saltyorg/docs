@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://mylarcomics.com/docs/category/guides
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/linuxserver/mylar3/tags
       type: docker
       purpose: release

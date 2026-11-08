@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://www.elastic.co/docs
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/_/elasticsearch/tags
       type: docker
       purpose: release

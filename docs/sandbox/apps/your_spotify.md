@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://github.com/Yooooomi/your_spotify?tab=readme-ov-file#table-of-contents
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/linuxserver/your_spotify/tags
       type: docker
       purpose: release

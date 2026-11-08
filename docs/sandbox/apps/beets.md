@@ -12,7 +12,7 @@ saltbox_automation:
       url: http://beets.readthedocs.org
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/linuxserver/beets/tags
       type: docker
       purpose: release

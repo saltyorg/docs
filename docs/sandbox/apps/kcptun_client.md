@@ -16,7 +16,7 @@ saltbox_automation:
       url: https://github.com/xtaci/kcptun
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/horjulf/kcptun/tags
       type: docker
       purpose: release

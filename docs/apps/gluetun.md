@@ -11,7 +11,7 @@ saltbox_automation:
       url: https://github.com/qdm12/gluetun-wiki
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/qmcgaw/gluetun/tags
       type: docker
       purpose: release

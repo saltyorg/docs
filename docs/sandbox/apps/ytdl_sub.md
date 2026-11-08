@@ -13,9 +13,9 @@ saltbox_automation:
       url: https://ytdl-sub.readthedocs.io
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/jmbannon/ytdl-sub/pkgs/container/ytdl-sub
-      type: github
+      type: docker
       purpose: release
     - name: Community
       url:

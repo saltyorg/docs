@@ -21,7 +21,7 @@ saltbox_automation:
       url: https://doc.traefik.io/traefik
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/_/traefik/tags
       type: docker
       purpose: release

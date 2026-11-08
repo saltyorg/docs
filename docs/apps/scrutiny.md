@@ -13,9 +13,9 @@ saltbox_automation:
       url: https://github.com/AnalogJ/scrutiny/blob/master/README.md
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/analogj/scrutiny/pkgs/container/scrutiny
-      type: github
+      type: docker
       purpose: release
     - name: Community
       url:

@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://github.com/clusterzx/paperless-ai/wiki/1.-Home
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/clusterzx/paperless-ai/tags
       type: docker
       purpose: release

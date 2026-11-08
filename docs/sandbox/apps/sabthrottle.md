@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://github.com/8a8al00ey/sabthrottle#installation
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/8a8al00ey/sabthrottle/tags
       type: docker
       purpose: release

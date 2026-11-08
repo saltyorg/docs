@@ -13,9 +13,9 @@ saltbox_automation:
       url: https://immich.app/docs/overview/introduction
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/imagegenius/docker-immich/pkgs/container/immich
-      type: releases
+      type: docker
       purpose: release
     - name: Community
       url:

@@ -14,7 +14,7 @@ saltbox_automation:
       url:
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/rocketchat/rocketchat/tags
       type: docker
       purpose: release

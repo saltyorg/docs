@@ -14,7 +14,7 @@ saltbox_automation:
       url: https://github.com/daghaian/nzbthrottle#readme
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/daghaian/nzbthrottle/tags
       type: docker
       purpose: release

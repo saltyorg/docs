@@ -11,7 +11,7 @@ saltbox_automation:
       url: https://www.authelia.com/configuration/prologue/introduction
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/authelia/authelia/tags
       type: docker
       purpose: release

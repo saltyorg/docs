@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://docs.olivetin.app
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/jamesread/olivetin/tags
       type: docker
       purpose: release

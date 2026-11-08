@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://docs.gitea.io
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/gitea/gitea/tags
       type: docker
       purpose: release

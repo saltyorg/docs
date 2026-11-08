@@ -12,9 +12,9 @@ saltbox_automation:
       url: https://github.com/Taxel/PlexTraktSync/blob/main/README.md#setup
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/linuxserver-labs/docker-plextraktsync/pkgs/container/plextraktsync
-      type: github
+      type: docker
       purpose: release
     - name: Community
       url: https://github.com/Taxel/PlexTraktSync/discussions

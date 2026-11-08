@@ -12,9 +12,9 @@ saltbox_automation:
       url: https://getarcane.app/docs/remote/environments
       type: documentation
       purpose: manual
-    - name: Image tags
+    - name: Versions
       url: https://github.com/getarcaneapp/agent/pkgs/container/agent
-      type: github
+      type: docker
       purpose: release
     - name: Community
       url: https://discord.gg/WyXYpdyV3Z

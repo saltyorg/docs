@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://kb.adguard.com/en/home/overview
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/adguard/adguardhome/tags
       type: docker
       purpose: release

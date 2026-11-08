@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://docs.influxdata.com/telegraf/v1.20
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/_/telegraf/tags
       type: docker
       purpose: release

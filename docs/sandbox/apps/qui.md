@@ -13,9 +13,9 @@ saltbox_automation:
       url: https://github.com/autobrr/qui/blob/main/README.md#configuration
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/autobrr/qui/pkgs/container/qui
-      type: github
+      type: docker
       purpose: release
     - name: Community
       url: https://discord.autobrr.com/qui

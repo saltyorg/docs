@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://github.com/FlareSolverr/FlareSolverr
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/flaresolverr/flaresolverr/tags
       type: docker
       purpose: release

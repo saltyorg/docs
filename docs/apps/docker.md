@@ -15,9 +15,9 @@ saltbox_automation:
       url: https://docs.docker.com
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://docs.docker.com/engine/release-notes
-      type: releases
+      type: docker
       purpose: release
     - name: Community
       url: https://forums.docker.com

@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://github.com/alexandermarston/vnstat-dashboard/blob/master/README.md
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/amarston/vnstat-dashboard/tags
       type: docker
       purpose: release

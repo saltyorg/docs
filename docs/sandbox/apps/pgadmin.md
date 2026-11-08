@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://www.pgadmin.org/docs/pgadmin4/6.14/getting_started.html
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/dpage/pgadmin4/tags
       type: docker
       purpose: release

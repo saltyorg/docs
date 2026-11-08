@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://docs.linuxserver.io/images/docker-znc
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/linuxserver/znc/tags
       type: docker
       purpose: release

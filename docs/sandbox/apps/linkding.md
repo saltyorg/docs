@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://github.com/sissbruecker/linkding#documentation
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/sissbruecker/linkding/tags
       type: docker
       purpose: release

@@ -13,9 +13,9 @@ saltbox_automation:
       url: https://docs.linkwarden.app
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/linkwarden/linkwarden/pkgs/container/linkwarden
-      type: github
+      type: docker
       purpose: release
     - name: Community
       url: https://discord.gg/CtuYV47nuJ

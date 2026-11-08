@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://github.com/teslamate-org/teslamate
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/teslamate/teslamate/tags
       type: docker
       purpose: release

@@ -10,7 +10,7 @@ saltbox_automation:
       url: https://crazymax.dev/diun/notif/discord
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/crazymax/diun/tags
       type: docker
       purpose: release

@@ -11,9 +11,9 @@ saltbox_automation:
       url:
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/timescale/timescaledb-ha/tags
-      type: github
+      type: docker
       purpose: release
     - name: Community
       url:

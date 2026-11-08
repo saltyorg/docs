@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://github.com/vrana/adminer/#readme
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/_/adminer//tags
       type: docker
       purpose: release

@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://nginx.org/en/docs
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/linuxserver/nginx/tags
       type: docker
       purpose: release

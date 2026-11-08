@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://www.nodered.org/docs/user-guide
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/nodered/node-red/tags
       type: docker
       purpose: release

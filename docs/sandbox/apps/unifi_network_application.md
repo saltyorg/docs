@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://github.com/linuxserver/docker-unifi-network-application/blob/main/README.md
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/linuxserver/unifi-network-application/tags
       type: docker
       purpose: release

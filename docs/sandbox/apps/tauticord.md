@@ -13,9 +13,9 @@ saltbox_automation:
       url: https://github.com/nwithan8/tauticord
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/nwithan8/tauticord/tags
-      type: releases
+      type: docker
       purpose: release
     - name: Community
       url:

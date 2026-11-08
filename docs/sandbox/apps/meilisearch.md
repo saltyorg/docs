@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://www.meilisearch.com/docs
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/getmeili/meilisearch/tags
       type: docker
       purpose: release

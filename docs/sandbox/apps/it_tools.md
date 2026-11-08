@@ -13,7 +13,7 @@ saltbox_automation:
       url:
       type: manual
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/corentinth/it-tools/tags
       type: docker
       purpose: release

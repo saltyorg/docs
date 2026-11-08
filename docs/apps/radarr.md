@@ -10,9 +10,9 @@ saltbox_automation:
       url: https://wiki.servarr.com/radarr
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/hotio/radarr/pkgs/container/radarr
-      type: github
+      type: docker
       purpose: release
     - name: Community
       url: https://radarr.video/discord

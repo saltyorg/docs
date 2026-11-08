@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://joplinapp.org/desktop
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/florider89/joplin-server/tags
       type: docker
       purpose: release

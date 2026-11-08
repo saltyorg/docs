@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://support.plex.tv/articles/categories/plex-media-server
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/jlesage/firefox/tags
       type: docker
       purpose: release

@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://www.home-assistant.io/docs
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/linuxserver/homeassistant/tags
       type: docker
       purpose: release

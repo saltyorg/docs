@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://github.com/tubearchivist/tubearchivist/wiki
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/bbilly1/tubearchivist/tags
       type: docker
       purpose: release

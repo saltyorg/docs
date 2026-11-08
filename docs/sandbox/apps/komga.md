@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://komga.org/installation/docker.html
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/gotson/komga/tags
       type: docker
       purpose: release

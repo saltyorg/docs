@@ -10,9 +10,9 @@ saltbox_automation:
       url: https://unpackerr.zip/docs/introduction
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/hotio/unpackerr/pkgs/container/unpackerr
-      type: github
+      type: docker
       purpose: release
     - name: Community
       url: https://golift.io/discord

@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://github.com/Unmanic/unmanic/blob/master/docs/configuration/README.md
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/josh5/unmanic/tags
       type: docker
       purpose: release

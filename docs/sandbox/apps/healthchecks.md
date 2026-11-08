@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://healthchecks.io/docs
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/linuxserver/healthchecks/tags
       type: docker
       purpose: release

@@ -16,9 +16,9 @@ saltbox_automation:
       url: https://ddclient.net/general
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/linuxserver/ddclient/tags
-      type: releases
+      type: docker
       purpose: release
     - name: Community
       url:

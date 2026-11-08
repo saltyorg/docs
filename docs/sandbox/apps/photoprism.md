@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://docs.photoprism.app
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/photoprism/photoprism/tags
       type: docker
       purpose: release

@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://docs.semaphoreui.com/user-guide/projects
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/semaphoreui/semaphore/tags
       type: docker
       purpose: release

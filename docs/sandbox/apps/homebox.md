@@ -12,9 +12,9 @@ saltbox_automation:
       url: https://homebox.software/en/quick-start.html
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/sysadminsmedia/homebox/pkgs/container/homebox
-      type: releases
+      type: docker
       purpose: release
     - name: Community
       url:

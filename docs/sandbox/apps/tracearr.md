@@ -12,9 +12,9 @@ saltbox_automation:
       url: https://docs.tracearr.com
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/connorgallopo/Tracearr/pkgs/container/tracearr
-      type: github
+      type: docker
       purpose: release
     - name: Community
       url: https://discord.gg/a7n3sFd2Yw

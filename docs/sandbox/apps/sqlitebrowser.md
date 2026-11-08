@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://github.com/sqlitebrowser/sqlitebrowser/wiki
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/linuxserver/sqlitebrowser/tags
       type: docker
       purpose: release

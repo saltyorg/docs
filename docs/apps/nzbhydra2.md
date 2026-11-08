@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://github.com/theotherp/nzbhydra2/wiki
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/linuxserver/nzbhydra2/tags
       type: docker
       purpose: release

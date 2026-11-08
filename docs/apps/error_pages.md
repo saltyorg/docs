@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://github.com/tarampampam/error-pages/blob/master/README.md#-usage-scenarios
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/tarampampam/error-pages/tags
       type: docker
       purpose: release

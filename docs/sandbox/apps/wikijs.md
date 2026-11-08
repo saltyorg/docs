@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://docs.requarks.io
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/requarks/wiki/tags
       type: docker
       purpose: release

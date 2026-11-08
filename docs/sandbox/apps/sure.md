@@ -11,9 +11,9 @@ saltbox_automation:
       url:
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/we-promise/sure/pkgs/container/sure
-      type: github
+      type: docker
       purpose: release
     - name: Community
       url:

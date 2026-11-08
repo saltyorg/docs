@@ -11,7 +11,7 @@ saltbox_automation:
       url: https://docs.organizr.app
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/organizr/organizr/tags
       type: docker
       purpose: release

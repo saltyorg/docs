@@ -10,7 +10,7 @@ saltbox_automation:
       url: https://dozzle.dev/guide/what-is-dozzle
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/amir20/dozzle/tags
       type: docker
       purpose: release

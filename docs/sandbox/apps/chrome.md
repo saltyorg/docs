@@ -13,9 +13,9 @@ saltbox_automation:
       url:
       type: manual
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://console.cloud.google.com/artifacts/docker/zenika-hub/us/gcr.io/alpine-chrome
-      type: releases
+      type: docker
       purpose: release
     - name: Community
       url:

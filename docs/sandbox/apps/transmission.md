@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://github.com/transmission/transmission/wiki
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/linuxserver/transmission/tags
       type: docker
       purpose: release

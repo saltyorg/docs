@@ -10,9 +10,9 @@ saltbox_automation:
       url: https://docs.petio.tv
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/petio-team/petio/pkgs/container/petio
-      type: github
+      type: docker
       purpose: release
     - name: Community
       url: https://discord.gg/bseGmrUd3N

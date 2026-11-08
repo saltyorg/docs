@@ -11,7 +11,7 @@ saltbox_automation:
       url: https://mariadb.com/docs
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/_/mariadb/tags
       type: docker
       purpose: release

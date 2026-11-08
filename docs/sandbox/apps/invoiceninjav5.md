@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://invoiceninja.github.io
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/invoiceninja/invoiceninja/tags
       type: docker
       purpose: release

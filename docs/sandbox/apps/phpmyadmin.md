@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://www.phpmyadmin.net/docs
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/phpmyadmin/phpmyadmin/tags
       type: docker
       purpose: release

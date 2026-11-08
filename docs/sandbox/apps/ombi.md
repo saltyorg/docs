@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://docs.linuxserver.io/general/container-customization
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/linuxserver/ombi/tags
       type: docker
       purpose: release

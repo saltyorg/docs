@@ -11,7 +11,7 @@ saltbox_automation:
       url: https://github.com/ajslater/codex#%EF%B8%8F-configuration
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/ajslater/codex/tags
       type: docker
       purpose: release

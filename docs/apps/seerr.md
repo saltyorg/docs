@@ -14,9 +14,9 @@ saltbox_automation:
       url: https://docs.seerr.dev/category/using-seerr
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/hotio/seerr/pkgs/container/seerr
-      type: github
+      type: docker
       purpose: release
     - name: Community
       url: https://discord.gg/seerr

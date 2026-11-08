@@ -10,9 +10,9 @@ saltbox_automation:
       url: https://docker-minecraft-server.readthedocs.io/en/latest/commands
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/itzg/minecraft-server/tags
-      type: releases
+      type: docker
       purpose: release
     - name: Community
       url:

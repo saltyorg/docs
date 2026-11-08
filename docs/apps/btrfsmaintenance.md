@@ -16,7 +16,7 @@ saltbox_automation:
       purpose: manual
     - name: Releases
       url: https://github.com/kdave/btrfsmaintenance/tags
-      type: github
+      type: releases
       purpose: release
     - name: Community
       url:

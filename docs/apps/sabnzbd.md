@@ -13,9 +13,9 @@ saltbox_automation:
       url: https://sabnzbd.org/wiki
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://github.com/hotio/sabnzbd/pkgs/container/sabnzbd
-      type: github
+      type: docker
       purpose: release
     - name: Community
       url: https://forums.sabnzbd.org

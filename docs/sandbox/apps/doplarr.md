@@ -12,7 +12,7 @@ saltbox_automation:
       url: https://kiranshila.github.io/Doplarr/#/configuration
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/linuxserver/doplarr/tags
       type: docker
       purpose: release

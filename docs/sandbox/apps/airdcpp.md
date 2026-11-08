@@ -13,7 +13,7 @@ saltbox_automation:
       url: https://airdcpp-web.github.io/docs
       type: documentation
       purpose: manual
-    - name: Releases
+    - name: Versions
       url: https://hub.docker.com/r/gangefors/airdcpp-webclient/tags
       type: docker
       purpose: release

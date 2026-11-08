@@ -1689,6 +1689,20 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         rutorrent2_docker_restart_policy: unless-stopped
         ```
 
+    <h5>Stop Timeout</h5>
+
+    ??? variable int "`rutorrent_role_docker_stop_timeout`{ .sb-show-on-unchecked }`rutorrent2_docker_stop_timeout`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: int
+        rutorrent_role_docker_stop_timeout: 900
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: int
+        rutorrent2_docker_stop_timeout: 900
+        ```
+
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
@@ -2527,18 +2541,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: string
         rutorrent2_docker_stop_signal:
-        ```
-
-    ??? variable int "`rutorrent_role_docker_stop_timeout`{ .sb-show-on-unchecked }`rutorrent2_docker_stop_timeout`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: int
-        rutorrent_role_docker_stop_timeout:
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: int
-        rutorrent2_docker_stop_timeout:
         ```
 
     <h5>Other Options</h5>

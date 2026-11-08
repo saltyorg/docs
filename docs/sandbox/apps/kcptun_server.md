@@ -43,7 +43,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://github.com/xtaci/kcptun){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/horjulf/kcptun/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://hub.docker.com/r/horjulf/kcptun/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 

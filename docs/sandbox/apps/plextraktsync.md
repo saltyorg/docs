@@ -39,7 +39,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://github.com/Taxel/PlexTraktSync/blob/main/README.md#setup){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/linuxserver-labs/docker-plextraktsync/pkgs/container/plextraktsync){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/linuxserver-labs/docker-plextraktsync/pkgs/container/plextraktsync){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Community**](https://github.com/Taxel/PlexTraktSync/discussions){ .md-button .md-button--stretch }
 

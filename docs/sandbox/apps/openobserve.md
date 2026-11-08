@@ -40,7 +40,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://openobserve.ai/docs){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-newspaper:**Releases**](https://gallery.ecr.aws/zinclabs/openobserve){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://gallery.ecr.aws/zinclabs/openobserve){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 

@@ -37,7 +37,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/cleanuparr/cleanuparr/pkgs/container/cleanuparr){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/cleanuparr/cleanuparr/pkgs/container/cleanuparr){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 

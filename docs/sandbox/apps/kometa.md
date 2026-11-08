@@ -39,7 +39,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://kometa.wiki){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/kometateam/kometa/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://hub.docker.com/r/kometateam/kometa/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 

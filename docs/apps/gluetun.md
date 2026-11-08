@@ -38,7 +38,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://github.com/qdm12/gluetun-wiki){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/qmcgaw/gluetun/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://hub.docker.com/r/qmcgaw/gluetun/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Community**](https://github.com/passteque/gluetun/discussions){ .md-button .md-button--stretch }
 

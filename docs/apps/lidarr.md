@@ -37,7 +37,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://wiki.servarr.com/en/lidarr){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/hotio/lidarr/pkgs/container/lidarr){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/hotio/lidarr/pkgs/container/lidarr){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://lidarr.audio/discord){ .md-button .md-button--stretch }
 

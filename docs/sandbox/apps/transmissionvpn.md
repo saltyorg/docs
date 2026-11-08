@@ -41,7 +41,7 @@ OpenVPN and Transmission with WebUI is a Docker container configuration that run
 
 [:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/haugene/transmission-openvpn/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://hub.docker.com/r/haugene/transmission-openvpn/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Community**](https://github.com/haugene/docker-transmission-openvpn/discussions){ .md-button .md-button--stretch }
 

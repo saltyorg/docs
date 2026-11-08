@@ -38,7 +38,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://www.authelia.com/configuration/prologue/introduction){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/authelia/authelia/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://hub.docker.com/r/authelia/authelia/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://discord.authelia.com){ .md-button .md-button--stretch }
 

@@ -40,7 +40,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://docs.linuxserver.io/images/docker-znc){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/znc/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://hub.docker.com/r/linuxserver/znc/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://linuxserver.io/discord){ .md-button .md-button--stretch }
 

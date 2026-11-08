@@ -39,7 +39,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://kiranshila.github.io/Doplarr/#/configuration){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/doplarr/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://hub.docker.com/r/linuxserver/doplarr/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://discord.gg/884mGq2fV6){ .md-button .md-button--stretch }
 

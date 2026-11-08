@@ -40,7 +40,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://sabnzbd.org/wiki){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/hotio/sabnzbd/pkgs/container/sabnzbd){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/hotio/sabnzbd/pkgs/container/sabnzbd){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](https://forums.sabnzbd.org){ .md-button .md-button--stretch }
 

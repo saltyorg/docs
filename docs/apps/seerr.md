@@ -43,7 +43,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://docs.seerr.dev/category/using-seerr){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/hotio/seerr/pkgs/container/seerr){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/hotio/seerr/pkgs/container/seerr){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://discord.gg/seerr){ .md-button .md-button--stretch }
 

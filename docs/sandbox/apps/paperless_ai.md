@@ -40,7 +40,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://github.com/clusterzx/paperless-ai/wiki/1.-Home){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/clusterzx/paperless-ai/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://hub.docker.com/r/clusterzx/paperless-ai/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://discord.gg/AvNekAfK38){ .md-button .md-button--stretch }
 

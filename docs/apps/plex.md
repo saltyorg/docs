@@ -49,7 +49,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://support.plex.tv/articles/categories/plex-media-server){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/plexinc/pms-docker/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://hub.docker.com/r/plexinc/pms-docker/tags){ .md-button .md-button--stretch }
 
 [:material-plex:**Community**](https://forums.plex.tv){ .md-button .md-button--stretch }
 

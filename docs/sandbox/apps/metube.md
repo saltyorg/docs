@@ -38,7 +38,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/alexta69/metube/pkgs/container/metube){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/alexta69/metube/pkgs/container/metube){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](https://github.com/alexta69/metube/discussions){ .md-button .md-button--stretch }
 

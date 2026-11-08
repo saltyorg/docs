@@ -38,7 +38,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://getarcane.app/docs/remote/environments){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Image tags**](https://github.com/getarcaneapp/agent/pkgs/container/agent){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/getarcaneapp/agent/pkgs/container/agent){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](https://discord.gg/WyXYpdyV3Z){ .md-button .md-button--stretch }
 

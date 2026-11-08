@@ -40,7 +40,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://autobrr.com/3rd-party-tools/manage-torrents#tqm){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/autobrr/tqm/tags){ .md-button .md-button--stretch }
+[:fontawesome-solid-newspaper:**Releases**](https://github.com/autobrr/tqm/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://discord.autobrr.com){ .md-button .md-button--stretch }
 

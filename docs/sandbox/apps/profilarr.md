@@ -40,7 +40,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://dictionarry.dev/profilarr-setup/101){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://github.com/dictionarry-hub/profilarr/pkgs/container/profilarr){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/dictionarry-hub/profilarr/pkgs/container/profilarr){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://discord.gg/XGdTJP5G8a){ .md-button .md-button--stretch }
 

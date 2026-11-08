@@ -41,7 +41,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://docs.tracearr.com){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/connorgallopo/Tracearr/pkgs/container/tracearr){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/connorgallopo/Tracearr/pkgs/container/tracearr){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://discord.gg/a7n3sFd2Yw){ .md-button .md-button--stretch }
 

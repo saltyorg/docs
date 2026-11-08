@@ -41,7 +41,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://github.com/StuffAnThings/qbit_manage/wiki){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/hotio/qbitmanage/pkgs/container/qbitmanage){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/hotio/qbitmanage/pkgs/container/qbitmanage){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://notifiarr.com/discord){ .md-button .md-button--stretch }
 

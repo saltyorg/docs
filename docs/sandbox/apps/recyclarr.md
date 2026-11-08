@@ -40,7 +40,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://recyclarr.dev/wiki){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/recyclarr/recyclarr/pkgs/container/recyclarr){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/recyclarr/recyclarr/pkgs/container/recyclarr){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://discord.com/invite/Vau8dZ3){ .md-button .md-button--stretch }
 

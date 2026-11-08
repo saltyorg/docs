@@ -37,7 +37,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://wiki.sonarr.tv){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/hotio/sonarr/pkgs/container/sonarr){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/hotio/sonarr/pkgs/container/sonarr){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://discord.sonarr.tv){ .md-button .md-button--stretch }
 

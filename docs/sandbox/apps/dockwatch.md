@@ -39,7 +39,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://github.com/Notifiarr/dockwatch#environment-variables){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-newspaper:**Releases**](https://github.com/notifiarr/dockwatch/pkgs/container/dockwatch){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/notifiarr/dockwatch/pkgs/container/dockwatch){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 

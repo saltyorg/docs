@@ -34,7 +34,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/socket-proxy/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://hub.docker.com/r/linuxserver/socket-proxy/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Community**](https://github.com/Tecnativa/docker-socket-proxy/discussions){ .md-button .md-button--stretch }
 

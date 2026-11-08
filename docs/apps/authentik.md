@@ -39,7 +39,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://docs.goauthentik.io/docs){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/beryju/authentik/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://hub.docker.com/r/beryju/authentik/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://goauthentik.io/discord){ .md-button .md-button--stretch }
 

@@ -37,7 +37,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://wiki.bazarr.media){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/hotio/bazarr/pkgs/container/bazarr){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/hotio/bazarr/pkgs/container/bazarr){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://discord.gg/MH2e2eb){ .md-button .md-button--stretch }
 

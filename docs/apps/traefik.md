@@ -48,7 +48,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://doc.traefik.io/traefik){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/_/traefik/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://hub.docker.com/_/traefik/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](https://community.traefik.io){ .md-button .md-button--stretch }
 

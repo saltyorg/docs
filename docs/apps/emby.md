@@ -37,7 +37,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://support.emby.media/support/home){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/emby/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://hub.docker.com/r/linuxserver/emby/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](https://emby.media/community){ .md-button .md-button--stretch }
 

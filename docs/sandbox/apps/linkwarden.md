@@ -40,7 +40,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://docs.linkwarden.app){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/linkwarden/linkwarden/pkgs/container/linkwarden){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/linkwarden/linkwarden/pkgs/container/linkwarden){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://discord.gg/CtuYV47nuJ){ .md-button .md-button--stretch }
 

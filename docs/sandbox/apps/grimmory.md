@@ -42,7 +42,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://grimmory.org/docs/getting-started){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/grimmory/grimmory/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://hub.docker.com/r/grimmory/grimmory/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://discord.gg/9YJ7HB4n8T){ .md-button .md-button--stretch }
 

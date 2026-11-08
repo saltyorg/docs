@@ -38,7 +38,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://mariadb.com/docs){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/_/mariadb/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://hub.docker.com/_/mariadb/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 

@@ -37,7 +37,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://autobrr.com/configuration/indexers){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/autobrr/autobrr/pkgs/container/autobrr){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/autobrr/autobrr/pkgs/container/autobrr){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://discord.autobrr.com){ .md-button .md-button--stretch }
 

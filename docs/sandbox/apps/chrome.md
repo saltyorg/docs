@@ -40,7 +40,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-newspaper:**Releases**](https://console.cloud.google.com/artifacts/docker/zenika-hub/us/gcr.io/alpine-chrome){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://console.cloud.google.com/artifacts/docker/zenika-hub/us/gcr.io/alpine-chrome){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 

@@ -40,7 +40,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://github.com/nwithan8/tauticord){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-newspaper:**Releases**](https://hub.docker.com/r/nwithan8/tauticord/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://hub.docker.com/r/nwithan8/tauticord/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 

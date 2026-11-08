@@ -37,7 +37,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://docs.portainer.io){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/portainer/portainer-ce/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://hub.docker.com/r/portainer/portainer-ce/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](https://portainer.io/slack){ .md-button .md-button--stretch }
 

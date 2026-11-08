@@ -42,7 +42,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://github.com/bcicen/ctop/blob/master/README.md#usage){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/bcicen/ctop/tags){ .md-button .md-button--stretch }
+[:fontawesome-solid-newspaper:**Releases**](https://github.com/bcicen/ctop/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 

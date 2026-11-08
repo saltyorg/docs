@@ -37,7 +37,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://github.com/Tautulli/Tautulli/wiki){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/hotio/tautulli/pkgs/container/tautulli){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/hotio/tautulli/pkgs/container/tautulli){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://tautulli.com/discord){ .md-button .md-button--stretch }
 

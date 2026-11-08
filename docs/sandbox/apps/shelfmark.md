@@ -40,7 +40,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://github.com/calibrain/shelfmark/tree/main/docs){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/calibrain/shelfmark/pkgs/container/shelfmark){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/calibrain/shelfmark/pkgs/container/shelfmark){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Community**](https://github.com/calibrain/shelfmark/discussions){ .md-button .md-button--stretch }
 

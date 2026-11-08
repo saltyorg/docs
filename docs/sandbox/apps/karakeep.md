@@ -39,7 +39,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://docs.karakeep.app){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/karakeep-app/karakeep/pkgs/container/karakeep){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/karakeep-app/karakeep/pkgs/container/karakeep){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://discord.gg/NrgeYywsFh){ .md-button .md-button--stretch }
 

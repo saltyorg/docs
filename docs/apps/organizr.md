@@ -38,7 +38,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://docs.organizr.app){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/organizr/organizr/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://hub.docker.com/r/organizr/organizr/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://organizr.app/discord){ .md-button .md-button--stretch }
 

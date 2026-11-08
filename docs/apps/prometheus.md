@@ -40,7 +40,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://prometheus.io/docs/introduction/overview){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/prom/prometheus/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://hub.docker.com/r/prom/prometheus/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](https://prometheus.io/community){ .md-button .md-button--stretch }
 

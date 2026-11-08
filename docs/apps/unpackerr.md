@@ -37,7 +37,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://unpackerr.zip/docs/introduction){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/hotio/unpackerr/pkgs/container/unpackerr){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/hotio/unpackerr/pkgs/container/unpackerr){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://golift.io/discord){ .md-button .md-button--stretch }
 

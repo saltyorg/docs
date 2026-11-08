@@ -39,7 +39,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://healthchecks.io/docs){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/linuxserver/healthchecks/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://hub.docker.com/r/linuxserver/healthchecks/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Community**](https://github.com/healthchecks/healthchecks/discussions){ .md-button .md-button--stretch }
 

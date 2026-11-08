@@ -42,7 +42,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/aristocratos/btop/tags){ .md-button .md-button--stretch }
+[:fontawesome-solid-newspaper:**Releases**](https://github.com/aristocratos/btop/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Community**](https://github.com/aristocratos/btop/discussions){ .md-button .md-button--stretch }
 

@@ -42,7 +42,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://docs.docker.com){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-newspaper:**Releases**](https://docs.docker.com/engine/release-notes){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://docs.docker.com/engine/release-notes){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](https://forums.docker.com){ .md-button .md-button--stretch }
 

@@ -37,7 +37,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://docs.petio.tv){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/petio-team/petio/pkgs/container/petio){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/petio-team/petio/pkgs/container/petio){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://discord.gg/bseGmrUd3N){ .md-button .md-button--stretch }
 

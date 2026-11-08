@@ -41,7 +41,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://github.com/ArabCoders/watchstate/blob/master/FAQ.md){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/arabcoders/watchstate/pkgs/container/watchstate){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/arabcoders/watchstate/pkgs/container/watchstate){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://discord.gg/haUXHJyj6Y){ .md-button .md-button--stretch }
 

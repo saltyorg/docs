@@ -39,7 +39,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://gethomepage.dev/latest/configs){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-newspaper:**Releases**](https://github.com/gethomepage/homepage/pkgs/container/homepage){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/gethomepage/homepage/pkgs/container/homepage){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 

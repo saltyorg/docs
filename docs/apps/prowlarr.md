@@ -37,7 +37,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://wiki.servarr.com/en/prowlarr){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/hotio/prowlarr/pkgs/container/prowlarr){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/hotio/prowlarr/pkgs/container/prowlarr){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://prowlarr.com/discord){ .md-button .md-button--stretch }
 

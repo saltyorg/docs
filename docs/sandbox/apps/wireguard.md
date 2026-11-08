@@ -38,7 +38,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://wg-easy.github.io/wg-easy/edge/guides/setup){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/wg-easy/wg-easy/pkgs/container/wg-easy){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/wg-easy/wg-easy/pkgs/container/wg-easy){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-github:**Community**](https://github.com/wg-easy/wg-easy/discussions){ .md-button .md-button--stretch }
 

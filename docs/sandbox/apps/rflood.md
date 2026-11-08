@@ -38,7 +38,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/hotio/rflood/pkgs/container/rflood){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/hotio/rflood/pkgs/container/rflood){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://hotio.dev/discord){ .md-button .md-button--stretch }
 

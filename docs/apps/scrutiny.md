@@ -40,7 +40,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://github.com/AnalogJ/scrutiny/blob/master/README.md){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/analogj/scrutiny/pkgs/container/scrutiny){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/analogj/scrutiny/pkgs/container/scrutiny){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 

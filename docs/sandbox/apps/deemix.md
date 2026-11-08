@@ -40,7 +40,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://gitlab.com/Bockiii/deemix-docker){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-gitlab:**Releases**](https://gitlab.com/Bockiii/deemix-docker/container_registry){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://gitlab.com/Bockiii/deemix-docker/container_registry){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](){ .md-button .md-button--stretch }
 

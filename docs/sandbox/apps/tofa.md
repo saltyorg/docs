@@ -42,7 +42,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://docs.tofa.tv){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-newspaper:**Releases**](https://github.com/orgs/tofatv/packages/container/package/tofa){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/orgs/tofatv/packages/container/package/tofa){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://tofa.tv/discord){ .md-button .md-button--stretch }
 

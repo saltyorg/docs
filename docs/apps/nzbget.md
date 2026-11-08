@@ -38,7 +38,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://nzbget.com/documentation){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/hotio/nzbget/pkgs/container/nzbget){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/hotio/nzbget/pkgs/container/nzbget){ .md-button .md-button--stretch }
 
 [:fontawesome-solid-comments:**Community**](https://nzbget.com/contact){ .md-button .md-button--stretch }
 

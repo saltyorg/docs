@@ -37,7 +37,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://wiki.servarr.com/en/whisparr/quick-start-guide){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-github:**Releases**](https://github.com/hotio/whisparr/pkgs/container/whisparr){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://github.com/hotio/whisparr/pkgs/container/whisparr){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://whisparr.com/discord){ .md-button .md-button--stretch }
 

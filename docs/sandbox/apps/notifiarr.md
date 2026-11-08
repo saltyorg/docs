@@ -40,7 +40,7 @@ saltbox_automation:
 
 [:fontawesome-solid-book-open:**Manual**](https://notifiarr.wiki){ .md-button .md-button--stretch }
 
-[:fontawesome-brands-docker:**Releases**](https://hub.docker.com/r/golift/notifiarr/tags){ .md-button .md-button--stretch }
+[:fontawesome-brands-docker:**Versions**](https://hub.docker.com/r/golift/notifiarr/tags){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-discord:**Community**](https://notifiarr.com/discord){ .md-button .md-button--stretch }
 

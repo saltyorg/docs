@@ -1,4 +1,6 @@
 ---
+extra_stylesheets:
+  - stylesheets/basics.css
 hide:
   - tags
 tags:
@@ -67,46 +69,36 @@ tags:
 
 ## How does Saltbox function?
 
-[Sonarr](https://sonarr.tv/) manages downloading your favorite TV shows and [Radarr](https://radarr.video/) manages downloading your favorite movies. Both use Usenet (via [SABnzbd](https://sabnzbd.org/)) and/or Torrents (via [qBittorrent](https://github.com/qbittorrent/qBittorrent)) to do this.[^1] [^2]
+<div class="sb-flow" markdown>
 
-Once the downloads are complete, Sonarr & Radarr will move (or copy/link in the case of torrents) these downloads to your server's `/mnt/local/Media/` folder[^3] and send a notification to _Autoscan_.
+<p class="sb-flow__lede" markdown="span">From the moment Sonarr or Radarr asks for a release to the moment it sits on remote storage, every app works with a single path: `/mnt/unionfs`.</p>
 
-The original seeding torrents will remain in the download directory (they never leave the local machine) until they are deleted by you or some form of automation.
+<figure class="sb-flow__figure" markdown>
+<div class="sb-flow__canvas" markdown="span">
+![How a file moves through Saltbox](../../images/basics-flow-wide.svg#only-light)
+![How a file moves through Saltbox](../../images/basics-flow-wide-dark.svg#only-dark)
+</div>
+<figcaption markdown="span">A new file is written through `/mnt/unionfs`, lands on `/mnt/local`, and is later moved to remote storage by Cloudplow. Its path under `/mnt/unionfs` stays the same the whole time, so Sonarr, Radarr and the media server never notice the move.</figcaption>
+</figure>
 
-[Autoscan](https://github.com/cloudbox/autoscan/) will, in turn, tell your media server to scan for the newly downloaded show or movie, by only scanning the specific season or movie folder. This will
+### The seven steps
 
-- Make the media appear in the media server sooner than what a full library scan would have been able to do, and
-- Reduce the chances of Cloud Storage API bans for excessive activity.
+<ol class="sb-flow__steps" markdown>
+  <li markdown><span class="sb-flow__badge sb-flow__badge--msg">1</span><p markdown="span">**Grab.** [Sonarr](../../apps/sonarr.md) (TV) or [Radarr](../../apps/radarr.md) (movies) sends a release to [SABnzbd](../../apps/sabnzbd.md) for Usenet or [qBittorrent](../../apps/qbittorrent.md) for torrents.[^1] [^2]</p></li>
+  <li markdown><span class="sb-flow__badge sb-flow__badge--file">2</span><p markdown="span">**Download.** The client saves it under `/mnt/unionfs/downloads`. Torrents keep seeding from there, and never leave the server, until you or an automation remove them.</p></li>
+  <li markdown><span class="sb-flow__badge sb-flow__badge--file">3</span><p markdown="span">**Import.** Sonarr or Radarr moves the file into `/mnt/unionfs/Media`. Torrent files are hardlinked or copied instead, so the seed stays intact.</p></li>
+  <li markdown><span class="sb-flow__badge sb-flow__badge--msg">4</span><p markdown="span">**Notify.** Sonarr or Radarr tells [Autoscan](../../apps/autoscan.md) which folder changed.</p></li>
+  <li markdown><span class="sb-flow__badge sb-flow__badge--msg">5</span><p markdown="span">**Scan.** Autoscan waits ten minutes,[^3] then asks the media server to scan only that season or movie folder. New media appears sooner than with a full library scan, and there is less risk of cloud storage API bans.</p></li>
+  <li markdown><span class="sb-flow__badge sb-flow__badge--read">6</span><p markdown="span">**Play.** [Plex](../../apps/plex.md), [Emby](../../apps/emby.md), or [Jellyfin](../../apps/jellyfin.md) reads everything through `/mnt/unionfs/Media`, wherever the file physically is.</p></li>
+  <li markdown><span class="sb-flow__badge sb-flow__badge--file">7</span><p markdown="span">**Upload.** [Cloudplow](../../apps/cloudplow.md) checks every 30 minutes. Once 200 GB is staged in `/mnt/local`, it moves `Media` to remote storage and frees the local disk.[^4]</p></li>
+</ol>
 
-In the default config, this scan occurs **ten minutes**[^4] after Radarr/Sonarr sent the notification.
+<p class="sb-flow__note" markdown="span">`/mnt/unionfs` is a `mergerfs` union of the server's own disk, `/mnt/local`, and an [Rclone](../../apps/rclone.md) VFS mount of your remote storage under `/mnt/remote`. Existing files stay readable and writable wherever they are, but new files are only ever written to `/mnt/local`. See [Paths](paths.md) for the full folder layout.</p>
 
-[Cloudplow](https://github.com/Saltbox/Saltbox/wiki/Cloudplow) will eventually move everything from `/mnt/local/Media/` to a folder named `Media` on the remote storage,[^5] [^6] thereby reducing storage used on the (local) server.
+</div>
 
-During this migration, the media files will continue to be accessible to media servers (e.g. Plex) because the remote storage (e.g. Google Drive) will be mounted on to the server as if it were a local drive. This is accomplished with an [Rclone](https://rclone.org/) VFS mount pointing to the remote storage, and a union of that mount with the server’s own local storage (accomplished via [`mergerfs`](https://github.com/trapexit/mergerfs)).
-
-```mermaid
-flowchart TB
-    Cloud@{ shape: cloud, label: "Remote Storage"}
-    Cloudplow@{ shape: trapezoid-top, label: "Cloudplow"}
-    LocalMedia@{ shape: disk, label: "/mnt/local/Media"}
-    RemoteMedia@{ shape: disk, label: "/mnt/remote/*/Media"}
-    UnionfsMedia@{ shape: disk, label: "/mnt/unionfs/Media"}
-    Sonarr@{ shape: procs, label: "Sonarr, etc."}
-    Plex@{ shape: procs, label: "Plex/Emby"}
-
-    Cloud ~~~ Cloudplow
-    Cloudplow <-->|Monitor size| LocalMedia
-    Cloudplow e1@-->|Move when threshold reached| Cloud
-    e1@{ animate: true }
-    Cloud <-->|"R/W* connection via rclone_vfs"| RemoteMedia
-
-    LocalMedia <-->|R/W| UnionfsMedia
-    RemoteMedia <-->|R/W*| UnionfsMedia
-    UnionfsMedia <-->|"R/W (import)"| Sonarr
-    UnionfsMedia <-->|"R/W (Metadata)"| Plex
-```
-
-\* The remote mount is R/W for existing files, but new files will be written to /mnt/local/Media
+!!! tip "Tuning the defaults"
+    The ten-minute scan delay and the 200 GB upload threshold are defaults. Change them in the [Autoscan config](../../apps/autoscan.md#usage) and the [Cloudplow upload settings](../../apps/cloudplow.md#upload-settings).
 
 ***
 
@@ -114,12 +106,8 @@ flowchart TB
 
 [^2]: If you want to use torrents, it is recommended to be a member of a private tracker as opposed to using public ones. If you want to use Usenet, you will need to purchase Usenet provider service (or multiple services) and also be a member of one or more Usenet indexers.
 
-[^3]: The move to `/mnt/local/Media` is indirect; Radarr/Sonarr are using `/mnt/unionfs/Media`, and they move the file _there_, however, `/mnt/local` is the only _writeable_ part of the Mergerfs (for the purpose of creating new files), so the newly written files will be placed in `/mnt/local`.
+[^3]: The delay ensures that the file is completely copied into the media directory before the media server scans it, and it allows a season of TV to be collected and sent to the media server as a single scan. Each new episode in a given season resets the timer, so the scan request goes to the media server ten minutes after the last episode finished downloading.
 
-[^4]: This ten-minute delay can be changed in the Autoscan config file. It's here for two reasons; it ensures that the file is completely copied into the media directory before the media server scans it, and it allows a season of TV to be collected and sent to the media server as a single scan. In the TV case, each new episode in a given season resets the timer, so the scan request would go to the media server ten minutes after the last episode completed downloading.
-
-[^5]: By default, Cloudplow will check every half-hour to see if there is 200GB of data staged in `/mnt/local` and if there is, all that data is pushed to your Google Drive. This threshold can be adjusted as needed in the Cloudplow config.
-
-[^6]: **Note:** Due to changes in Google Drive this doesn't really apply anymore. Limits are much tighter, and the multiple shared drives setup is no longer useful or recommended. ~~There is presently a 750GB/day upload limitation on Google accounts. The standard Saltbox setup will create a set of shared drives and service accounts. The service accounts can be enabled in cloudplow to exceed this limit on uploads (750 GB/day/service account).~~
+[^4]: **Note:** Due to changes in Google Drive, upload limits are much tighter than they used to be, and the multiple shared drives setup is no longer useful or recommended. ~~There is presently a 750GB/day upload limitation on Google accounts. The standard Saltbox setup will create a set of shared drives and service accounts. The service accounts can be enabled in cloudplow to exceed this limit on uploads (750 GB/day/service account).~~
 
 Next, let's discuss the [Prerequisites](../prerequisites/prerequisites.md) for Saltbox installation.

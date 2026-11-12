@@ -1,0 +1,113 @@
+/* "How does Saltbox function?" flow section on saltbox/basics/basics.md.
+   Badge colours match the arrow colours in images/basics-flow-wide(-dark).svg. */
+
+.sb-flow {
+  --sb-flow-file: #7e56c2;
+  --sb-flow-read: #212121;
+  --sb-flow-msg: #5c5c5c;
+  --sb-flow-badge-ink: #ffffff;
+  /* Secondary text: the theme's muted grey is too faint on white, so light mode uses a darker grey. */
+  --sb-flow-muted: #424242;
+  --sb-flow-line: var(--md-default-fg-color--lightest);
+}
+
+[data-md-color-scheme="slate"] .sb-flow {
+  --sb-flow-file: #a47bea;
+  --sb-flow-read: #bfc1c6;
+  --sb-flow-msg: #8c8e95;
+  --sb-flow-badge-ink: #1e2129;
+  --sb-flow-muted: var(--md-default-fg-color--light);
+}
+
+.md-typeset .sb-flow__lede {
+  max-width: 65ch;
+  font-size: 0.85rem;
+  color: var(--sb-flow-muted);
+}
+
+/* Figure: diagram in a bordered card, caption underneath. */
+.md-typeset .sb-flow__figure {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  margin: 1.5em 0;
+}
+
+.md-typeset .sb-flow__canvas {
+  border: 1px solid var(--sb-flow-line);
+  border-radius: 10px;
+  padding: 0.6rem;
+  overflow-x: auto;
+  background: var(--md-default-bg-color);
+}
+
+/* No display rule here: the theme hides the #only-light / #only-dark copy with display. */
+.md-typeset .sb-flow__canvas img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  vertical-align: top;
+}
+
+/* On phones, keep the diagram legible and let it scroll sideways. */
+@media screen and (max-width: 44.9375em) {
+  .md-typeset .sb-flow__canvas img {
+    min-width: 640px;
+  }
+}
+
+.md-typeset .sb-flow__figure figcaption {
+  max-width: 78ch;
+  margin: 0.8em 0 0;
+  text-align: left;
+  font-style: normal;
+  font-size: 0.75rem;
+  color: var(--sb-flow-muted);
+}
+
+/* Steps: two-column grid of numbered badges. */
+.md-typeset ol.sb-flow__steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 0.8rem 1.6rem;
+  margin: 0.8em 0 1.4em;
+  padding: 0;
+  list-style: none;
+}
+
+.md-typeset ol.sb-flow__steps > li {
+  display: grid;
+  grid-template-columns: 1.3rem 1fr;
+  gap: 0.6rem;
+  align-items: start;
+  margin: 0;
+}
+
+.md-typeset ol.sb-flow__steps > li > p {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.55;
+}
+
+.sb-flow__badge {
+  display: grid;
+  place-items: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-top: 0.05rem;
+  border-radius: 50%;
+  font-size: 0.62rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--sb-flow-badge-ink);
+}
+
+.sb-flow__badge--file { background: var(--sb-flow-file); }
+.sb-flow__badge--read { background: var(--sb-flow-read); }
+.sb-flow__badge--msg  { background: var(--sb-flow-msg); }
+
+.md-typeset .sb-flow__note {
+  max-width: 78ch;
+  font-size: 0.7rem;
+  color: var(--sb-flow-muted);
+}

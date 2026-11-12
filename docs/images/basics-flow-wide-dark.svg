@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="24 24 1122 648" width="1122" height="648" role="img" aria-label="How a file moves through Saltbox: a new file is written through /mnt/unionfs, lands on /mnt/local, and is later moved to remote storage by Cloudplow, while its path under /mnt/unionfs stays the same.">
+  <style>
+    text { font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: #bfc1c6; }
+    .path, .chip-path { font-family: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace; }
+    .title, .path { font-size: 14px; font-weight: 600; }
+    .chip-path { font-size: 13px; font-weight: 500; }
+    .label { font-size: 12.5px; font-weight: 500; }
+    .note { font-size: 12px; fill: #8c8e95; }
+    .mid { text-anchor: middle; }
+    .end { text-anchor: end; }
+    .bg { fill: #1e2129; }
+    .box { fill: #272a35; stroke: #5d5f66; stroke-width: 1.25; }
+    .box-union { fill: #27253e; stroke: #a47bea; stroke-width: 1.5; }
+    .box-cloud { fill: #272a35; stroke: #8c8e95; stroke-width: 1.25; stroke-dasharray: 6 4; }
+    .chip { fill: #363840; }
+    .flow-file { fill: none; stroke: #a47bea; stroke-width: 2.25; }
+    .flow-read { fill: none; stroke: #bfc1c6; stroke-width: 1.5; }
+    .flow-msg { fill: none; stroke: #8c8e95; stroke-width: 1.5; stroke-dasharray: 5 4; }
+    .head-file, .num-file { fill: #a47bea; }
+    .head-read, .num-read { fill: #bfc1c6; }
+    .head-msg, .num-msg { fill: #8c8e95; }
+    .num-bg { fill: #1e2129; }
+    .num-text { font-size: 12px; font-weight: 700; fill: #1e2129; text-anchor: middle; }
+  </style>
+  <rect class="bg" x="24" y="24" width="1122" height="648" rx="8"/>
+  <defs>
+    <marker id="head-file" viewBox="0 0 10 10" refX="1" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto-start-reverse"><path class="head-file" d="M0 0L10 5L0 10z"/></marker>
+    <marker id="head-read" viewBox="0 0 10 10" refX="1" refY="5" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path class="head-read" d="M0 0L10 5L0 10z"/></marker>
+    <marker id="head-msg" viewBox="0 0 10 10" refX="1" refY="5" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path class="head-msg" d="M0 0L10 5L0 10z"/></marker>
+  </defs>
+  <path class="flow-msg" d="M340 72H245" marker-end="url(#head-msg)"/>
+  <path class="flow-msg" d="M530 72H625" marker-end="url(#head-msg)"/>
+  <path class="flow-msg" d="M830 72H925" marker-end="url(#head-msg)"/>
+  <path class="flow-file" d="M135 104V196.1" marker-end="url(#head-file)"/>
+  <path class="flow-file" d="M435 104V196.1" marker-end="url(#head-file)"/>
+  <path class="flow-file" d="M285 276V352.1" marker-end="url(#head-file)"/>
+  <path class="flow-file" d="M402 468V546.1" marker-end="url(#head-file)"/>
+  <path class="flow-file" d="M512 594H624.1" marker-end="url(#head-file)"/>
+  <path class="flow-read" d="M1035 212V119" marker-end="url(#head-read)"/>
+  <path class="flow-read" d="M885 291V353" marker-start="url(#head-read)" marker-end="url(#head-read)"/>
+  <path class="flow-read" d="M885 483V547" marker-start="url(#head-read)" marker-end="url(#head-read)"/>
+  <rect class="box" x="40" y="40" width="190" height="64" rx="8"/>
+  <text class="title mid" x="135" y="68">SABnzbd · qBittorrent</text>
+  <text class="note mid" x="135" y="86">Usenet and torrent clients</text>
+  <rect class="box" x="340" y="40" width="190" height="64" rx="8"/>
+  <text class="title mid" x="435" y="68">Sonarr · Radarr</text>
+  <text class="note mid" x="435" y="86">TV and movie managers</text>
+  <rect class="box" x="640" y="40" width="190" height="64" rx="8"/>
+  <text class="title mid" x="735" y="68">Autoscan</text>
+  <text class="note mid" x="735" y="86">scan dispatcher</text>
+  <rect class="box" x="940" y="40" width="190" height="64" rx="8"/>
+  <text class="title mid" x="1035" y="68">Plex · Emby · Jellyfin</text>
+  <text class="note mid" x="1035" y="86">media server</text>
+  <text class="label mid" x="285" y="54">sends release</text>
+  <text class="label mid" x="585" y="54">notifies</text>
+  <text class="label mid" x="885" y="54">scan one folder</text>
+  <text class="note mid" x="885" y="99">after 10 min</text>
+  <text class="label" x="155" y="151">saves the download</text>
+  <text class="note" x="155" y="167">into downloads/</text>
+  <text class="label" x="455" y="151">imports into Media/</text>
+  <text class="note" x="455" y="167">moved, or hardlinked/copied for torrents</text>
+  <text class="label end" x="1015" y="151">reads Media/</text>
+  <text class="note end" x="1015" y="167">library scans and playback</text>
+  <rect class="box-union" x="40" y="212" width="1090" height="64" rx="8"/>
+  <text class="path mid" x="585" y="240">/mnt/unionfs</text>
+  <text class="note mid" x="585" y="259">mergerfs union of the two folders below · the one path every app uses</text>
+  <text class="label" x="305" y="314">every new file lands here</text>
+  <text class="note" x="305" y="330">only /mnt/local accepts new files</text>
+  <text class="label" x="905" y="314">uploaded files open from here</text>
+  <text class="note" x="905" y="330">same path as before the upload</text>
+  <rect class="box" x="40" y="368" width="490" height="100" rx="8"/>
+  <text class="path" x="58" y="392">/mnt/local</text>
+  <text class="note" x="154" y="392">disk in the server</text>
+  <rect class="chip" x="58" y="404" width="220" height="50" rx="6"/>
+  <text class="chip-path" x="70" y="424">downloads/</text>
+  <text class="note" x="70" y="441">torrents keep seeding from here</text>
+  <rect class="chip" x="292" y="404" width="220" height="50" rx="6"/>
+  <text class="chip-path" x="304" y="424">Media/</text>
+  <text class="note" x="304" y="441">waits here until uploaded</text>
+  <rect class="box" x="640" y="368" width="490" height="100" rx="8"/>
+  <text class="path" x="658" y="392">/mnt/remote/*</text>
+  <text class="note" x="779" y="392">rclone VFS mount</text>
+  <rect class="chip" x="658" y="404" width="454" height="50" rx="6"/>
+  <text class="chip-path" x="670" y="424">Media/</text>
+  <text class="note" x="670" y="441">the remote's Media folder, mounted as if it were a local drive</text>
+  <text class="label" x="422" y="508">checks every 30 min</text>
+  <text class="note" x="422" y="524">moves Media/ once 200 GB is staged</text>
+  <text class="label" x="905" y="508">rclone VFS mount</text>
+  <text class="note" x="905" y="524">existing files stay read/write</text>
+  <rect class="box" x="292" y="562" width="220" height="64" rx="8"/>
+  <text class="title mid" x="402" y="590">Cloudplow</text>
+  <text class="note mid" x="402" y="608">frees up the local disk</text>
+  <text class="label mid" x="573" y="584">uploads</text>
+  <rect class="box-cloud" x="640" y="562" width="490" height="64" rx="32"/>
+  <text class="title mid" x="885" y="590">Remote storage</text>
+  <text class="note mid" x="885" y="608">e.g. Google Drive, in a folder named Media</text>
+  <circle class="num-bg" cx="285" cy="72" r="11"/><circle class="num-msg" cx="285" cy="72" r="11"/><text class="num-text" x="285" y="76">1</text>
+  <circle class="num-bg" cx="135" cy="155" r="11"/><circle class="num-file" cx="135" cy="155" r="11"/><text class="num-text" x="135" y="159">2</text>
+  <circle class="num-bg" cx="435" cy="155" r="11"/><circle class="num-file" cx="435" cy="155" r="11"/><text class="num-text" x="435" y="159">3</text>
+  <circle class="num-bg" cx="585" cy="72" r="11"/><circle class="num-msg" cx="585" cy="72" r="11"/><text class="num-text" x="585" y="76">4</text>
+  <circle class="num-bg" cx="885" cy="72" r="11"/><circle class="num-msg" cx="885" cy="72" r="11"/><text class="num-text" x="885" y="76">5</text>
+  <circle class="num-bg" cx="1035" cy="155" r="11"/><circle class="num-read" cx="1035" cy="155" r="11"/><text class="num-text" x="1035" y="159">6</text>
+  <circle class="num-bg" cx="402" cy="512" r="11"/><circle class="num-file" cx="402" cy="512" r="11"/><text class="num-text" x="402" y="516">7</text>
+  <path class="flow-file" d="M40 656H62.1" marker-end="url(#head-file)"/>
+  <text class="note" x="80" y="660">new file written/moved</text>
+  <path class="flow-read" d="M250 656H273" marker-end="url(#head-read)"/>
+  <text class="note" x="290" y="660">access to existing files</text>
+  <path class="flow-msg" d="M470 656H493" marker-end="url(#head-msg)"/>
+  <text class="note" x="510" y="660">app-to-app message</text>
+</svg>

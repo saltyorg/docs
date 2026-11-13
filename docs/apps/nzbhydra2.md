@@ -483,6 +483,15 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         nzbhydra2_role_docker_restart_policy: unless-stopped
         ```
 
+    <h5>Stop Timeout</h5>
+
+    ??? variable int "`nzbhydra2_role_docker_stop_timeout`"
+
+        ```yaml
+        # Type: int
+        nzbhydra2_role_docker_stop_timeout: 120
+        ```
+
 === "Docker+"
 
     The following advanced options are available via create_docker_container but are not defined in the role. See: [docker_container module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html)
@@ -983,13 +992,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         nzbhydra2_role_docker_stop_signal:
-        ```
-
-    ??? variable int "`nzbhydra2_role_docker_stop_timeout`"
-
-        ```yaml
-        # Type: int
-        nzbhydra2_role_docker_stop_timeout:
         ```
 
     <h5>Other Options</h5>

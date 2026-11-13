@@ -235,7 +235,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        forgejo_role_docker_image_tag: "16" # the Codeberg container registry does not provide a "latest" tag
+        forgejo_role_docker_image_tag: "17" # the Codeberg container registry does not provide a "latest" tag
         ```
 
     ??? variable string "`forgejo_role_docker_image`"

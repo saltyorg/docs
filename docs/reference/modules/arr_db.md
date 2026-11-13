@@ -18,11 +18,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Arr DB
+# arr_db
 
 ## Overview
 
-Arr DB is a Saltbox module that performs maintenance operations on SQLite databases used by Sonarr, Radarr, Lidarr, Whisparr, Prowlarr and Tautulli instances.
+`arr_db` is a Saltbox module that performs maintenance operations on SQLite databases used by Sonarr, Radarr, Lidarr, Whisparr, Prowlarr and Tautulli instances.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

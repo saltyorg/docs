@@ -19,11 +19,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Remote
+# remote
 
 ## Overview
 
-Remote is a Saltbox module that manages remote storage mounts.
+`remote` is a Saltbox module that manages remote storage mounts.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

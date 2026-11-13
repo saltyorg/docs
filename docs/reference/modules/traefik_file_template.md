@@ -19,11 +19,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Traefik File Template
+# traefik_file_template
 
 ## Overview
 
-Traefik File Template is a Saltbox module that generates a Traefik file template.
+`traefik_file_template` is a Saltbox module that generates a Traefik file template.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

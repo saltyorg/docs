@@ -12,11 +12,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Plex Auth Token
+# plex_auth_token
 
 ## Overview
 
-Plex Auth Token is a Saltbox module that generates and validates Plex authentication tokens for API access, prompting user login if needed and storing credentials securely.
+`plex_auth_token` is a Saltbox module that generates and validates Plex authentication tokens for API access, prompting user login if needed and storing credentials securely.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

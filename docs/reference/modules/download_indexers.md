@@ -12,11 +12,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Download Indexers
+# download_indexers
 
 ## Overview
 
-Download Indexers is a Saltbox module that deploys your assigned download indexer apps stack.
+`download_indexers` is a Saltbox module that deploys your assigned download indexer apps stack.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

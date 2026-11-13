@@ -17,11 +17,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Kernel
+# kernel
 
 ## Overview
 
-Kernel is a Saltbox module that manages the Linux kernel.
+`kernel` is a Saltbox module that manages the Linux kernel.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

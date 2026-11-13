@@ -22,7 +22,7 @@ saltbox_automation:
 
 ## Overview
 
-diag is a diagnostic role that displays important Saltbox configuration information and system state.
+`diag` is a diagnostic role that displays important Saltbox configuration information and system state.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

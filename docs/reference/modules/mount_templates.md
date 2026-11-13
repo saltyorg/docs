@@ -10,11 +10,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Mount Templates
+# mount_templates
 
 ## Overview
 
-Mount Templates is a Saltbox module that creates a local copy of the mount-templates repository.
+`mount_templates` is a Saltbox module that creates a local copy of the mount-templates repository.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

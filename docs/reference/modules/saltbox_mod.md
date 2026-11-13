@@ -10,11 +10,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Saltbox Mod
+# saltbox_mod
 
 ## Overview
 
-Saltbox Mod is a Saltbox module that creates a local copy of the saltbox_mod repository.
+`saltbox_mod` is a Saltbox module that creates a local copy of the saltbox_mod repository.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

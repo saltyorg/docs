@@ -21,7 +21,7 @@ saltbox_automation:
 
 ## Overview
 
-common is a Saltbox module that sets up common directories, installs essential packages, handles BTRFS optimizations, and configures basic system tools.
+`common` is a Saltbox module that sets up common directories, installs essential packages, handles BTRFS optimizations, and configures basic system tools.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

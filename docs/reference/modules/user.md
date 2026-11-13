@@ -12,11 +12,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# User
+# user
 
 ## Overview
 
-User is a Saltbox module that creates and configures your user account.
+`user` is a Saltbox module that creates and configures your user account.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

@@ -9,11 +9,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Main Tags
+# main_tags
 
 ## Overview
 
-Main Tags is a Saltbox module that deploys your assigned saltbox (all-in-one), mediabox or feederbox app stack.
+`main_tags` is a Saltbox module that deploys your assigned saltbox (all-in-one), mediabox or feederbox app stack.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

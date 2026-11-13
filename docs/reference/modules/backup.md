@@ -20,11 +20,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Standard Backup
+# backup
 
 ## Overview
 
-Standard Backup is a Saltbox module that performs a backup of your Saltbox managed data.
+`backup` is a Saltbox module that performs a standard backup of your Saltbox managed data.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

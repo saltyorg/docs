@@ -18,11 +18,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# System
+# system
 
 ## Overview
 
-System is a Saltbox module that configures system-wide settings including APT updates, network optimizations, sysctl tunings, CPU performance mode, timezone, locale, and log rotation.
+`system` is a Saltbox module that configures system-wide settings including APT updates, network optimizations, sysctl tunings, CPU performance mode, timezone, locale, and log rotation.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

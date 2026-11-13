@@ -18,11 +18,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Traefik Template
+# traefik_template
 
 ## Overview
 
-Traefik Template is a Saltbox module that generates a Docker Compose template with Traefik publishing.
+`traefik_template` is a Saltbox module that generates a Docker Compose template with Traefik publishing.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

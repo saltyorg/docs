@@ -14,11 +14,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Plex DB
+# plex_db
 
 ## Overview
 
-Plex DB is a Saltbox module that performs maintenance operations on SQLite databases used by Plex Media Server instances.
+`plex_db` is a Saltbox module that performs maintenance operations on SQLite databases used by Plex Media Server instances.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

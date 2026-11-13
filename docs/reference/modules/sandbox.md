@@ -16,11 +16,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Sandbox
+# sandbox
 
 ## Overview
 
-[Sandbox](https://github.com/saltyorg/Sandbox) is a repository that serves as a community-driven space for unofficial Saltbox enhancements and is included in a standard Saltbox installation.
+[sandbox](https://github.com/saltyorg/Sandbox) is a repository that serves as a community-driven space for unofficial Saltbox enhancements and is included in a standard Saltbox installation.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

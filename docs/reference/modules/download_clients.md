@@ -17,7 +17,7 @@ saltbox_automation:
 
 ## Overview
 
-download_clients is a Saltbox module that deploys your assigned download client apps stack.
+`download_clients` is a Saltbox module that deploys your assigned download client apps stack.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

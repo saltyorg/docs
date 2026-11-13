@@ -35,7 +35,7 @@ saltbox_automation:
 
 ## Overview
 
-OpenVPN and Transmission with WebUI is a Docker container configuration that runs the Transmission BitTorrent client securely through an OpenVPN tunnel
+`OpenVPN and Transmission with WebUI` is a Docker container configuration that runs the Transmission BitTorrent client securely through an OpenVPN tunnel
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 

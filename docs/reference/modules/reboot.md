@@ -10,11 +10,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Reboot
+# reboot
 
 ## Overview
 
-Reboot is a Saltbox module that checks for system reboot requirements and optionally reboots the host if configured.
+`reboot` is a Saltbox module that checks for system reboot requirements and optionally reboots the host if configured.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

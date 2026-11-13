@@ -18,11 +18,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Shell
+# shell
 
 ## Overview
 
-Shell is a Saltbox module that installs and configures a user's shell (Bash or Zsh).
+`shell` is a Saltbox module that installs and configures a user's shell (Bash or Zsh).
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

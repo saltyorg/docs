@@ -12,11 +12,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Media Server
+# media_server
 
 ## Overview
 
-Media Server is a Saltbox module that deploys your assigned media server apps stack.
+`media_server` is a Saltbox module that deploys your assigned media server apps stack.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

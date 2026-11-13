@@ -15,11 +15,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Hetzner VLAN
+# hetzner_vlan
 
 ## Overview
 
-Hetzner VLAN is a Saltbox module that configures VLAN interfaces on a Hetzner host.
+`hetzner_vlan` is a Saltbox module that configures VLAN interfaces on a Hetzner host.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

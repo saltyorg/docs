@@ -13,11 +13,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Streamed Backup (backup2)
+# backup2
 
 ## Overview
 
-Streamed Backup (backup2) is a Saltbox module that performs a backup of your Saltbox managed data, backing up directly to the remote destination.
+`backup2` is a Saltbox module that performs a backup of your Saltbox managed data, backing up directly to the remote destination.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

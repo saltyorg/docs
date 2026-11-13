@@ -12,11 +12,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Restore
+# restore
 
 ## Overview
 
-Restore is a Saltbox module that restores a backup performed with one of the Saltbox backup modules.
+`restore` is a Saltbox module that restores a backup performed with one of the Saltbox backup modules.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

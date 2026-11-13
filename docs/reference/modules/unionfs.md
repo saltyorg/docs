@@ -20,11 +20,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# UnionFS
+# unionfs
 
 ## Overview
 
-UnionFS is a Saltbox module that installs and configures MergerFS to create a union filesystem merging local and remote storage paths, managing Docker services during mount operations.
+`unionfs` is a Saltbox module that installs and configures MergerFS to create a union filesystem merging local and remote storage paths, managing Docker services during mount operations.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

@@ -18,11 +18,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Fix Permissions
+# fix_permissions
 
 ## Overview
 
-Fix Permissions is a Saltbox module that resets ownership and permissions to the configured user's on key locations.
+`fix_permissions` is a Saltbox module that resets ownership and permissions to the configured user's on key locations.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

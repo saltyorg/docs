@@ -11,11 +11,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Plex Fix Futures
+# plex_fix_futures
 
 ## Overview
 
-Plex Fix Futures is a Saltbox module that Sets Plex items stuck in the future back to the past.
+`plex_fix_futures` is a Saltbox module that Sets Plex items stuck in the future back to the past.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

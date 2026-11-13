@@ -1,6 +1,5 @@
 ---
 icon: material/tag
-title: download_clients
 saltbox_automation:
   inventory:
     example_overrides:

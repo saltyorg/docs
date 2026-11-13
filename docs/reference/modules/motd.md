@@ -1,6 +1,6 @@
 ---
 icon: material/cogs
-title: MOTD
+title: motd
 status: draft
 hide:
   - tags
@@ -8,18 +8,18 @@ tags:
   - motd
 saltbox_automation:
   project_description:
-    name: MOTD
+    name: motd
     summary: |-
-      a Saltbox module that enhances the Message of the Day (MOTD) displayed upon user login to provide personalized information.
+      a Saltbox module that enhances the Message of the Day (MOTD) displayed upon user login to provide Saltbox-managed information.
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# MOTD
+# motd
 
 ## Overview
 
-MOTD is a Saltbox module that enhances the Message of the Day (MOTD) displayed upon user login to provide personalized information.
+motd is a Saltbox module that enhances the Message of the Day (MOTD) displayed upon user login to provide Saltbox-managed information.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
@@ -32,10 +32,24 @@ sb install motd
 ```
 
 ```shell
-sb install motd-generate-config # (1)!
+sb install motd-generate-config
 ```
 
-1.  This optional tag deploys MOTD and regenerates the Saltbox MOTD config file based on current instance info (Plex, Sonarr, Radarr, Lidarr, NZBGet, SABnzbd, etc.), effectively synchronizing the MOTD with your services' configuration.
+<div class="result" markdown>
+
+Updates the settings file with current instance info (Plex, Sonarr, Radarr, Lidarr, NZBGet, SABnzbd, etc.), effectively synchronizing the MOTD with your services' configuration.
+
+</div>
+
+## Usage
+
+Settings are available in `/srv/git/saltbox/motd.yml`.
+
+Preview  with:
+
+```shell
+sb motd --all
+```
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->

@@ -11,7 +11,7 @@ tags:
   - zsh
 saltbox_automation:
   project_description:
-    name: Shell
+    name: shell
     summary: |-
       a Saltbox module that installs and configures a user's shell (Bash or Zsh).
 ---

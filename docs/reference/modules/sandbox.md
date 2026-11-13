@@ -8,7 +8,7 @@ saltbox_automation:
   sections:
     inventory: false
   project_description:
-    name: Sandbox
+    name: sandbox
     summary: |-
       a repository that serves as a community-driven space for unofficial Saltbox enhancements and is included in a standard Saltbox installation.
     link: https://github.com/saltyorg/Sandbox

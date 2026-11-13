@@ -13,9 +13,9 @@ saltbox_automation:
         - "./seerr/.cache/*"
         - ".*/[Ll]ogs/*" # Use this pattern with caution. Matches any path containing a "Logs"/"logs" folder.
   project_description:
-    name: Standard Backup
+    name: backup
     summary: |-
-      a Saltbox module that performs a backup of your Saltbox managed data.
+      a Saltbox module that performs a standard backup of your Saltbox managed data.
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->

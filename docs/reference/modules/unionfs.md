@@ -1,6 +1,5 @@
 ---
 icon: material/server-network-outline
-title: UnionFS
 status: draft
 hide:
   - tags
@@ -14,7 +13,7 @@ saltbox_automation:
     hide_sections:
       - MergerFS
   project_description:
-    name: UnionFS
+    name: unionfs
     summary: |-
       a Saltbox module that installs and configures MergerFS to create a union filesystem merging local and remote storage paths, managing Docker services during mount operations.
 ---

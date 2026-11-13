@@ -1,12 +1,11 @@
 ---
 icon: material/tag
-title: Download Indexers
 saltbox_automation:
   inventory:
     example_overrides:
       download_indexers_enabled: ["prowlarr"]
   project_description:
-    name: Download Indexers
+    name: download_indexers
     summary: |-
       a Saltbox module that deploys your assigned download indexer apps stack.
 ---

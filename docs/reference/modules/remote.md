@@ -12,7 +12,7 @@ tags:
   - storage
 saltbox_automation:
   project_description:
-    name: Remote
+    name: remote
     summary: |-
       a Saltbox module that manages remote storage mounts.
 ---

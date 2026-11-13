@@ -1,6 +1,5 @@
 ---
 icon: material/play
-title: Traefik File Template
 hide:
   - tags
 tags:
@@ -13,7 +12,7 @@ saltbox_automation:
   sections:
     inventory: false
   project_description:
-    name: Traefik File Template
+    name: traefik_file_template
     summary: |-
       a Saltbox module that generates a Traefik file template.
 ---

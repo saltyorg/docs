@@ -1,23 +1,23 @@
 ---
 icon: material/tag
-title: Download Clients
+title: download_clients
 saltbox_automation:
   inventory:
     example_overrides:
       download_clients_enabled: ["deluge", "nzbget"]
   project_description:
-    name: Download Clients
+    name: download_clients
     summary: |-
       a Saltbox module that deploys your assigned download client apps stack.
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Download Clients
+# download_clients
 
 ## Overview
 
-Download Clients is a Saltbox module that deploys your assigned download client apps stack.
+download_clients is a Saltbox module that deploys your assigned download client apps stack.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

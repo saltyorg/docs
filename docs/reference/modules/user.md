@@ -5,7 +5,7 @@ saltbox_automation:
   sections:
     inventory: false
   project_description:
-    name: User
+    name: user
     summary: |-
       a Saltbox module that creates and configures your user account.
 ---

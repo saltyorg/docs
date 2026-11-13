@@ -6,7 +6,7 @@ tags:
   - backup2
 saltbox_automation:
   project_description:
-    name: Streamed Backup (backup2)
+    name: backup2
     summary: |-
       a Saltbox module that performs a backup of your Saltbox managed data, backing up directly to the remote destination.
 ---

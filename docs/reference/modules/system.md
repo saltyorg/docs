@@ -11,7 +11,7 @@ tags:
   - tuning
 saltbox_automation:
   project_description:
-    name: System
+    name: system
     summary: |-
       a Saltbox module that configures system-wide settings including APT updates, network optimizations, sysctl tunings, CPU performance mode, timezone, locale, and log rotation.
 ---

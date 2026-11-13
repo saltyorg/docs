@@ -1,6 +1,5 @@
 ---
 icon: material/play
-title: Plex DB
 status: outdated
 hide:
   - tags
@@ -8,7 +7,7 @@ tags:
   - plex-db
 saltbox_automation:
   project_description:
-    name: Plex DB
+    name: plex_db
     summary: |-
       a Saltbox module that performs maintenance operations on SQLite databases used by Plex Media Server instances.
 ---

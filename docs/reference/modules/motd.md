@@ -1,6 +1,5 @@
 ---
 icon: material/cogs
-title: motd
 status: draft
 hide:
   - tags
@@ -19,7 +18,7 @@ saltbox_automation:
 
 ## Overview
 
-motd is a Saltbox module that enhances the Message of the Day (MOTD) displayed upon user login to provide Saltbox-managed information.
+`motd` is a Saltbox module that enhances the Message of the Day (MOTD) displayed upon user login to provide Saltbox-managed information.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

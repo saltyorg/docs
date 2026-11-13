@@ -1,12 +1,11 @@
 ---
 icon: material/tag
-title: Media Server
 saltbox_automation:
   inventory:
     example_overrides:
       media_servers_enabled: ["emby", "jellyfin"]
   project_description:
-    name: Media Server
+    name: media_server
     summary: |-
       a Saltbox module that deploys your assigned media server apps stack.
 ---

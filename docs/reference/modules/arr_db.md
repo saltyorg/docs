@@ -1,6 +1,5 @@
 ---
 icon: material/play
-title: Arr DB
 hide:
   - tags
 tags:
@@ -12,7 +11,7 @@ saltbox_automation:
     hide_sections:
     - Variables
   project_description:
-    name: Arr DB
+    name: arr_db
     summary: |-
       a Saltbox module that performs maintenance operations on SQLite databases used by Sonarr, Radarr, Lidarr, Whisparr, Prowlarr and Tautulli instances.
 ---

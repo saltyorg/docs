@@ -10,7 +10,7 @@ saltbox_automation:
   sections:
     inventory: true
   project_description:
-    name: Kernel
+    name: kernel
     summary: |-
       a Saltbox module that manages the Linux kernel.
 ---

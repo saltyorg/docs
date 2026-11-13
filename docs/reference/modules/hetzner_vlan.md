@@ -1,6 +1,5 @@
 ---
 icon: material/cogs
-title: Hetzner VLAN
 status: draft2
 hide:
   - tags
@@ -9,7 +8,7 @@ tags:
   - vlan
 saltbox_automation:
   project_description:
-    name: Hetzner VLAN
+    name: hetzner_vlan
     summary: |-
       a Saltbox module that configures VLAN interfaces on a Hetzner host.
 ---

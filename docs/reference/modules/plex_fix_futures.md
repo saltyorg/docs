@@ -1,11 +1,10 @@
 ---
 icon: material/play
-title: Plex Fix Futures
 saltbox_automation:
   sections:
     inventory: false
   project_description:
-    name: Plex Fix Futures
+    name: plex_fix_futures
     summary: |-
       a Saltbox module that Sets Plex items stuck in the future back to the past.
 ---

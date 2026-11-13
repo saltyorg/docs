@@ -1,10 +1,9 @@
 ---
 icon: material/source-repository
-title: Saltbox Mod
 status: draft
 saltbox_automation:
   project_description:
-    name: Saltbox Mod
+    name: saltbox_mod
     summary: |-
       a Saltbox module that creates a local copy of the saltbox_mod repository.
 ---

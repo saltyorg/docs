@@ -1,10 +1,9 @@
 ---
 icon: material/source-repository
-title: Mount Templates
 status: draft
 saltbox_automation:
   project_description:
-    name: Mount Templates
+    name: mount_templates
     summary: |-
       a Saltbox module that creates a local copy of the mount-templates repository.
 ---

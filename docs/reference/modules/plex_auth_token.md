@@ -1,12 +1,11 @@
 ---
 icon: material/play
-title: Plex Auth Token
 status: draft
 saltbox_automation:
   sections:
     inventory: false
   project_description:
-    name: Plex Auth Token
+    name: plex_auth_token
     summary: |-
       a Saltbox module that generates and validates Plex authentication tokens for API access, prompting user login if needed and storing credentials securely.
 ---

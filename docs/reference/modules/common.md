@@ -9,7 +9,7 @@ tags:
   - nano
 saltbox_automation:
   project_description:
-    name: Common
+    name: common
     summary: |-
       a Saltbox module that sets up common directories, installs essential packages, handles BTRFS optimizations, and configures basic system tools.
     link:
@@ -17,11 +17,11 @@ saltbox_automation:
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Common
+# common
 
 ## Overview
 
-Common is a Saltbox module that sets up common directories, installs essential packages, handles BTRFS optimizations, and configures basic system tools.
+common is a Saltbox module that sets up common directories, installs essential packages, handles BTRFS optimizations, and configures basic system tools.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

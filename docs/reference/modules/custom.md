@@ -15,18 +15,18 @@ saltbox_automation:
       custom_deb: ["https://example.com/package.deb"]
       custom_pip: ["plex-mpv-shim", "yt-dlp"]
   project_description:
-    name: Custom
+    name: custom
     summary: |-
       a Saltbox module that allows you to install additional software packages (APT, DEB, and pip modules) that are not included in the default Saltbox installation, giving you the flexibility to add tools and dependencies specific to your needs.
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Custom
+# custom
 
 ## Overview
 
-Custom is a Saltbox module that allows you to install additional software packages (APT, DEB, and pip modules) that are not included in the default Saltbox installation, giving you the flexibility to add tools and dependencies specific to your needs.
+`custom` is a Saltbox module that allows you to install additional software packages (APT, DEB, and pip modules) that are not included in the default Saltbox installation, giving you the flexibility to add tools and dependencies specific to your needs.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

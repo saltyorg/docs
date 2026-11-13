@@ -11,18 +11,18 @@ saltbox_automation:
   sections:
     inventory: false
   project_description:
-    name: Diag
+    name: diag
     summary: |-
       a diagnostic role that displays important Saltbox configuration information and system state.
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Diag
+# diag
 
 ## Overview
 
-Diag is a diagnostic role that displays important Saltbox configuration information and system state.
+diag is a diagnostic role that displays important Saltbox configuration information and system state.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

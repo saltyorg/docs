@@ -6,18 +6,18 @@ saltbox_automation:
     example_overrides:
       sandbox_roles: ["flaresolverr", "qui", "requestrr"]
   project_description:
-    name: Sandbox Main Tag
+    name: main_tag
     summary: |-
       a Sandbox module that deploys your assigned Sandbox apps stack.
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->
 <!-- This section is managed by sb-docs - DO NOT EDIT MANUALLY -->
-# Sandbox Main Tag
+# main_tag
 
 ## Overview
 
-Sandbox Main Tag is a Sandbox module that deploys your assigned Sandbox apps stack.
+`main_tag` is a Sandbox module that deploys your assigned Sandbox apps stack.
 
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->

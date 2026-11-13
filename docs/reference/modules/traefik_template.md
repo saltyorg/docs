@@ -1,6 +1,5 @@
 ---
 icon: material/play
-title: Traefik Template
 hide:
   - tags
 tags:
@@ -12,7 +11,7 @@ saltbox_automation:
   sections:
     inventory: false
   project_description:
-    name: Traefik Template
+    name: traefik_template
     summary: |-
       a Saltbox module that generates a Docker Compose template with Traefik publishing.
 ---

@@ -3,7 +3,7 @@ icon: material/play
 status: draft
 saltbox_automation:
   project_description:
-    name: Reboot
+    name: reboot
     summary: |-
       a Saltbox module that checks for system reboot requirements and optionally reboots the host if configured.
 ---

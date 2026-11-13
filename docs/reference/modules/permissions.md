@@ -1,6 +1,5 @@
 ---
 icon: material/play
-title: Fix Permissions
 status: draft
 hide:
   - tags
@@ -12,7 +11,7 @@ tags:
   - permissions
 saltbox_automation:
   project_description:
-    name: Fix Permissions
+    name: fix_permissions
     summary: |-
       a Saltbox module that resets ownership and permissions to the configured user's on key locations.
 ---

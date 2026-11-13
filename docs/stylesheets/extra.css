@@ -316,6 +316,14 @@ Custom admonitions for variables.
     background-color: transparent;
   }
 
+  /* Emphasize overview role name when it has no link */
+  h2#overview + p > code:first-child {
+    background-color: transparent;
+    font-size: inherit;
+    padding: 0 .1em 0 0;
+    color: rgb(from var(--md-default-fg-color) r g b / 1);
+  }
+
   /* Rounded code blocks */
   .highlight {
     > pre,

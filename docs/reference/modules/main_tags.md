@@ -1,9 +1,8 @@
 ---
 icon: material/tag
-title: Main Tags
 saltbox_automation:
   project_description:
-    name: Main Tags
+    name: main_tags
     summary: |-
       a Saltbox module that deploys your assigned saltbox (all-in-one), mediabox or feederbox app stack.
 ---

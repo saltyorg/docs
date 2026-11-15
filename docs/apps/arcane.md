@@ -91,7 +91,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`arcane_role_admin_username`"
 
         ```yaml
-        # Used only while the initial administrator still has its default credentials.
+        # Used only while the initial administrator still has its generated password.
         # Type: string
         arcane_role_admin_username: "{{ user.name }}"
         ```
@@ -399,13 +399,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
-          APP_URL: "{{ lookup('role_var', '_web_url', role='arcane') }}"
-          ENCRYPTION_KEY: "{{ lookup('role_var', '_encryption_key', role='arcane') }}"
-          DATABASE_URL: "{{ lookup('role_var', '_postgres_url', role='arcane')
-                         if (lookup('role_var', '_postgres_enabled', role='arcane') | bool)
-                         else 'file:/app/data/arcane.db?_pragma=journal_mode(WAL)&_pragma=busy_timeout(2500)&_txlock=immediate' }}"
-          PROJECTS_DIRECTORY: "{{ lookup('role_var', '_paths_projects_location', role='arcane') }}"
-          TRUSTED_PROXIES: "{{ lookup('role_var', '_trusted_proxies', role='arcane', default=omit, default_if_empty=true) }}"
+          ARCANE_APP_URL: "{{ lookup('role_var', '_web_url', role='arcane') }}"
+          ARCANE_ENCRYPTION_KEY: "{{ lookup('role_var', '_encryption_key', role='arcane') }}"
+          ARCANE_DATABASE_URL: "{{ lookup('role_var', '_postgres_url', role='arcane')
+                                if (lookup('role_var', '_postgres_enabled', role='arcane') | bool)
+                                else 'file:/app/data/arcane.db?_pragma=journal_mode(WAL)&_pragma=busy_timeout(2500)&_txlock=immediate' }}"
+          ARCANE_PROJECTS_DIRECTORY: "{{ lookup('role_var', '_paths_projects_location', role='arcane') }}"
+          ARCANE_TRUSTED_PROXIES: "{{ lookup('role_var', '_trusted_proxies', role='arcane', default=omit, default_if_empty=true) }}"
         ```
 
     ??? variable dict "`arcane_role_docker_envs_custom`"

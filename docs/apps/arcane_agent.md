@@ -98,9 +98,10 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
     ??? variable string "`arcane_agent_role_token`"
 
         ```yaml
-        # Create an Edge environment in the manager and copy its generated agent token here.
-        # Use a different token for each agent. It is passed to the container as AGENT_TOKEN.
-        # After regenerating the token in Arcane, update this value and reinstall the agent.
+        # Add an agent in the manager and copy its generated enrollment token here.
+        # Use a different token for each agent. It is passed to the container as ARCANE_AGENT_TOKEN.
+        # The agent exchanges the token for its own key on first start and keeps the key in its data directory.
+        # After generating a new enrollment token in Arcane, update this value and reinstall the agent.
         # Type: string
         arcane_agent_role_token: ""
         ```
@@ -109,10 +110,9 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # WebSocket keeps an outbound HTTPS connection open and needs no inbound agent port,
-        # gRPC router or Traefik entrypoint timeout changes. Other supported values are auto,
-        # grpc and poll. Auto prefers gRPC with WebSocket fallback; grpc disables fallback.
-        # Poll opens a gRPC or WebSocket tunnel on demand. Using gRPC requires an h2c router
-        # and a disabled read timeout on the manager's HTTPS entrypoint.
+        # gRPC router or Traefik entrypoint timeout changes. Other supported values are auto
+        # and grpc. Auto prefers gRPC with WebSocket fallback; grpc disables fallback.
+        # Using gRPC requires an h2c router and a disabled read timeout on the manager's HTTPS entrypoint.
         # Type: string
         arcane_agent_role_transport: websocket
         ```
@@ -168,11 +168,11 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
           PUID: "{{ uid }}"
           PGID: "{{ gid }}"
           TZ: "{{ tz }}"
-          EDGE_AGENT: "true"
-          EDGE_TRANSPORT: "{{ lookup('role_var', '_transport', role='arcane_agent') }}"
-          MANAGER_API_URL: "{{ lookup('role_var', '_manager_url', role='arcane_agent') }}"
-          AGENT_TOKEN: "{{ lookup('role_var', '_token', role='arcane_agent') }}"
-          PROJECTS_DIRECTORY: "{{ lookup('role_var', '_paths_projects_location', role='arcane_agent') }}"
+          ARCANE_AGENT: "true"
+          ARCANE_AGENT_TRANSPORT: "{{ lookup('role_var', '_transport', role='arcane_agent') }}"
+          ARCANE_MANAGER_API_URL: "{{ lookup('role_var', '_manager_url', role='arcane_agent') }}"
+          ARCANE_AGENT_TOKEN: "{{ lookup('role_var', '_token', role='arcane_agent') }}"
+          ARCANE_PROJECTS_DIRECTORY: "{{ lookup('role_var', '_paths_projects_location', role='arcane_agent') }}"
         ```
 
     ??? variable dict "`arcane_agent_role_docker_envs_custom`"
@@ -215,25 +215,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: string
         arcane_agent_role_docker_cgroupns_mode: host
-        ```
-
-    <h5>Healthcheck</h5>
-
-    ??? variable dict "`arcane_agent_role_docker_healthcheck`"
-
-        ```yaml
-        # Type: dict
-        arcane_agent_role_docker_healthcheck:
-          test:
-            - CMD
-            - ./arcane-agent
-            - health
-            - --timeout
-            - 2s
-          interval: 10s
-          timeout: 3s
-          retries: 5
-          start_period: 15s
         ```
 
     <h5>Hostname</h5>
@@ -671,6 +652,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml
         # Type: bool (true/false)
         arcane_agent_role_docker_force_kill:
+        ```
+
+    ??? variable dict "`arcane_agent_role_docker_healthcheck`"
+
+        ```yaml
+        # Type: dict
+        arcane_agent_role_docker_healthcheck:
         ```
 
     ??? variable int "`arcane_agent_role_docker_healthy_wait_timeout`"

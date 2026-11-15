@@ -18,16 +18,18 @@ concurrency:
   group: pull-request-builds
   cancel-in-progress: false
 
-permissions:
-  actions: read
-  contents: read
-  pull-requests: write
+permissions: {}
 
 jobs:
   preview:
     if: contains(fromJSON('["success", "failure", "timed_out", "startup_failure", "cancelled"]'), github.event.workflow_run.conclusion)
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    # The job reads the triggering run and comments on its pull request.
+    permissions:
+      actions: read
+      contents: read
+      pull-requests: write
     steps:
       - name: Checkout trusted reporting code
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1

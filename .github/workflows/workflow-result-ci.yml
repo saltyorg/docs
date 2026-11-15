@@ -31,11 +31,18 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
   validate:
     runs-on: ubuntu-24.04
+    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
       - name: Test PR preview reporting
         run: python3 .github/scripts/test_pr_preview.py -v
@@ -54,15 +61,13 @@ jobs:
         run: python3 -m compileall -q .github/scripts/pr_preview.py
 
       - name: Validate result workflows
-        run: |
-          docker run --rm \
-            --volume "$PWD:/repo:ro" \
-            --workdir /repo \
-            rhysd/actionlint:1.7.12 \
-            .github/workflows/build-pr.yml \
-            .github/workflows/notify.yml \
-            .github/workflows/trigger-pr-build.yml \
-            .github/workflows/workflow-result-ci.yml \
+        uses: saltyorg/github-actions/jactionlint@v1.5.0
+        with:
+          files: |
+            .github/workflows/build-pr.yml
+            .github/workflows/notify.yml
+            .github/workflows/trigger-pr-build.yml
+            .github/workflows/workflow-result-ci.yml
             .github/workflows/automation.yml
 
       - name: Check whitespace errors

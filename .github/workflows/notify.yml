@@ -1,10 +1,17 @@
 name: Notify
 
 on:
+  # Notifications follow finished build runs, which only workflow_run reports.
+  # The job checks out no code and hands the event only to a Saltyorg action.
+  # jactionlint ignore=dangerous-triggers
   workflow_run:
     workflows: ["Build & Deploy", "Build PR & Deploy"]
     types:
       - completed
+
+concurrency:
+  group: notify-${{ github.event.workflow_run.id }}
+  cancel-in-progress: true
 
 permissions:
   actions: read
@@ -15,6 +22,7 @@ jobs:
   notify:
     if: contains(fromJSON('["success", "failure", "timed_out", "startup_failure", "cancelled"]'), github.event.workflow_run.conclusion)
     runs-on: ubuntu-24.04
+    timeout-minutes: 10
     steps:
       - name: Notify workflow completion
         uses: saltyorg/github-actions/notify@v1.4.3

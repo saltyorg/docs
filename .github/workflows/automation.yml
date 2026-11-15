@@ -21,6 +21,7 @@ jobs:
   docs-automation:
     name: Documentation Automation
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     if: github.event.repository.fork == false && (github.event_name != 'push' || !contains(github.event.head_commit.message, 'Generated with sb-docs') || (github.actor != 'saltbox-automation[bot]' && github.event.head_commit.author.name != 'github-actions[bot]'))
     concurrency:
       group: documentation-automation
@@ -33,28 +34,30 @@ jobs:
 
     steps:
       - name: Checkout docs repository
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           path: docs
           fetch-depth: 0
           persist-credentials: false
 
       - name: Checkout Saltbox repository
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: saltyorg/Saltbox
           path: saltbox
           fetch-depth: 1
+          persist-credentials: false
 
       - name: Checkout Sandbox repository
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: saltyorg/Sandbox
           path: sandbox
           fetch-depth: 1
+          persist-credentials: false
 
       - name: Install sb-docs
-        uses: jaxxstorm/action-install-gh-release@v3.0.0
+        uses: jaxxstorm/action-install-gh-release@25e24d2d23ae098373794ef1d6faecb48ee52da8 # v3.0.0
         with:
           repo: saltyorg/docs-automation
           tag: latest
@@ -65,7 +68,7 @@ jobs:
           chmod: "0755"
 
       - name: Install sb binary (for CLI help generation)
-        uses: jaxxstorm/action-install-gh-release@v3.0.0
+        uses: jaxxstorm/action-install-gh-release@25e24d2d23ae098373794ef1d6faecb48ee52da8 # v3.0.0
         with:
           repo: saltyorg/sb-go
           tag: latest
@@ -86,7 +89,7 @@ jobs:
 
       - name: Create documentation commit token
         id: app-token
-        uses: actions/create-github-app-token@v3.3.0
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
         with:
           client-id: ${{ vars.SALTBOX_AUTOMATION_APP_ID }}
           private-key: ${{ secrets.SALTBOX_AUTOMATION_PRIVATE_KEY }}
@@ -95,7 +98,7 @@ jobs:
           permission-contents: write
 
       - name: Commit signed documentation changes
-        uses: actions/github-script@v9
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           github-token: ${{ steps.app-token.outputs.token }}
           script: |

@@ -574,6 +574,18 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         plex2_web_insecure_url: "{{ lookup('role_web', role='plex', scheme='http') }}"
         ```
 
+    ??? variable string "`plex_role_web_serverstransport`{ .sb-show-on-unchecked }`plex2_web_serverstransport`{ .sb-show-on-checked }"
+
+        ```yaml { .sb-show-on-unchecked }
+        # Type: string
+        plex_role_web_serverstransport: "skipverify@file"
+        ```
+
+        ```yaml { .sb-show-on-checked }
+        # Type: string
+        plex2_web_serverstransport: "skipverify@file"
+        ```
+
 === "DNS"
 
     ??? variable string "`plex_role_dns_record`{ .sb-show-on-unchecked }`plex2_dns_record`{ .sb-show-on-checked }"
@@ -762,18 +774,6 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         ```yaml { .sb-show-on-checked }
         # Type: bool (true/false)
         plex2_traefik_middleware_http_insecure: "{{ lookup('role_var', '_insecure', role='plex') | bool }}"
-        ```
-
-    ??? variable string "`plex_role_web_serverstransport`{ .sb-show-on-unchecked }`plex2_web_serverstransport`{ .sb-show-on-checked }"
-
-        ```yaml { .sb-show-on-unchecked }
-        # Type: string
-        plex_role_web_serverstransport: "skipverify@file"
-        ```
-
-        ```yaml { .sb-show-on-checked }
-        # Type: string
-        plex2_web_serverstransport: "skipverify@file"
         ```
 
 === "Theme"

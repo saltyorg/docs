@@ -96,6 +96,17 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         motd_cli_flags: "--all --title 'Saltbox' --font ivrit --type parchment"
         ```
 
+    ??? variable bool "`motd_use_pam_exec`"
+
+        ```yaml
+        # Setting this to true runs the motd scripts separately for each SSH login through pam_exec, instead of through pam_motd's shared /run/motd.dynamic file
+        # This stops the motd from coming up blank when another SSH connection starts at the same moment, such as MobaXterm's SFTP file browser
+        # Saltbox edits /etc/pam.d/sshd for this and saves a timestamped backup next to it (sshd.<number>.<date>@<time>~) every time it changes the file
+        # Setting this to false puts the stock pam_motd line back; if you changed /etc/pam.d/sshd yourself, you can restore one of the backups manually
+        # Type: bool (true/false)
+        motd_use_pam_exec: true
+        ```
+
 === "Service Definitions"
 
     ??? variable list "`motd_services`"

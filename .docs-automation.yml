@@ -50,6 +50,7 @@ blacklist:
       - "sure_worker"  # internal helper documented by sure
       # Deprecated roles
       - "booklore"  # deprecated
+      - "silo" # disabled
       - "unifi"  # deprecated
       - "hoarder"  # deprecated
       - "plex_meta_manager"  # deprecated
@@ -99,6 +100,7 @@ path_overrides:
     arr_db: "docs/reference/modules/arr_db.md"
     backup2: "docs/reference/modules/backup2.md"
     backup: "docs/reference/modules/backup.md"
+    cloudflare: "docs/reference/modules/cloudflare.md"
     common: "docs/reference/modules/common.md"
     custom: "docs/reference/modules/custom.md"
     diag: "docs/reference/modules/diag.md"

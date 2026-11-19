@@ -561,6 +561,7 @@ nav:
           - reference/modules/arr_db.md
           - reference/modules/common.md
           - reference/modules/custom.md
+          - reference/modules/cloudflare.md
           - reference/modules/diag.md
           - reference/modules/download_clients.md
           - reference/modules/download_indexers.md

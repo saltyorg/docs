@@ -63,6 +63,7 @@ tags:
 |                                         |     :material-monitor-arrow-down:{.xl}      |
 |-----------------------------------------|:-------------------------------------------:|
 | [Arr DB](arr_db.md)                     |                  `arr-db`                   |
+| [Cloudflare](cloudflare.md)             |                `cloudflare`                 |
 | [Diag](diag.md)                         |                   `diag`                    |
 | [Hetzner VLAN](hetzner_vlan.md)         | `hetzner-vlan-deploy` `hetzner-vlan-remove` |
 | [Plex Auth Token](plex_auth_token.md)   |              `plex-auth-token`              |

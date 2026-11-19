@@ -10,7 +10,7 @@ tags:
 saltbox_automation:
   app_links:
     - name: Manual
-      url: https://mylarcomics.com/docs/category/guides
+      url: https://mylar.nerdfirehurricane.com/docs/category/guides
       type: documentation
       purpose: manual
     - name: Versions
@@ -18,14 +18,14 @@ saltbox_automation:
       type: docker
       purpose: release
     - name: Community
-      url: https://forum.mylarcomics.com
-      type: community
+      url: https://discord.gg/6qpyCZRZRB
+      type: discord
       purpose: community
   project_description:
     name: Mylar3
     summary: |-
       an automated Comic Book downloader (cbr/cbz) for use with NZB and torrents written in python. It supports SABnzbd, NZBGET, and many torrent clients in addition to DDL.
-    link: https://mylarcomics.com
+    link: https://mylar.nerdfirehurricane.com
 ---
 
 <!-- BEGIN SALTBOX MANAGED OVERVIEW SECTION -->

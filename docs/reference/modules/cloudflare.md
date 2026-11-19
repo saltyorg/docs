@@ -1,4 +1,6 @@
 ---
+icon: material/play
+status: draft
 hide:
   - tags
 tags:

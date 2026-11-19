@@ -34,15 +34,15 @@ saltbox_automation:
 
 ## Overview
 
-[Mylar3](https://mylarcomics.com) is an automated Comic Book downloader (cbr/cbz) for use with NZB and torrents written in python. It supports SABnzbd, NZBGET, and many torrent clients in addition to DDL.
+[Mylar3](https://mylar.nerdfirehurricane.com) is an automated Comic Book downloader (cbr/cbz) for use with NZB and torrents written in python. It supports SABnzbd, NZBGET, and many torrent clients in addition to DDL.
 
 <div class="grid grid--buttons" markdown data-search-exclude>
 
-[:fontawesome-solid-book-open:**Manual**](https://mylarcomics.com/docs/category/guides){ .md-button .md-button--stretch }
+[:fontawesome-solid-book-open:**Manual**](https://mylar.nerdfirehurricane.com/docs/category/guides){ .md-button .md-button--stretch }
 
 [:fontawesome-brands-docker:**Versions**](https://hub.docker.com/r/linuxserver/mylar3/tags){ .md-button .md-button--stretch }
 
-[:fontawesome-solid-comments:**Community**](https://forum.mylarcomics.com){ .md-button .md-button--stretch }
+[:fontawesome-brands-discord:**Community**](https://discord.gg/6qpyCZRZRB){ .md-button .md-button--stretch }
 
 </div>
 

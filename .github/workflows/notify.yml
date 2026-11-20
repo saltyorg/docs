@@ -21,7 +21,7 @@ permissions:
 jobs:
   notify:
     if: contains(fromJSON('["success", "failure", "timed_out", "startup_failure", "cancelled"]'), github.event.workflow_run.conclusion)
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 10
     steps:
       - name: Notify workflow completion

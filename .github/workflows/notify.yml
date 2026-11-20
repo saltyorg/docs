@@ -25,7 +25,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Notify workflow completion
-        uses: saltyorg/github-actions/notify@v1.4.3
+        uses: saltyorg/github-actions/notify@v1.5.4
         with:
           github-token: ${{ github.token }}
           discord-webhook: ${{ secrets.DISCORD_WEBHOOK }}

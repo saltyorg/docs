@@ -61,7 +61,7 @@ jobs:
         run: python3 -m compileall -q .github/scripts/pr_preview.py
 
       - name: Validate result workflows
-        uses: saltyorg/github-actions/jactionlint@v1.5.0
+        uses: saltyorg/github-actions/jactionlint@v1.5.4
         with:
           files: |
             .github/workflows/build-pr.yml

@@ -21,7 +21,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: BobAnkh/add-contributors@master
+      - uses: BobAnkh/add-contributors@8bd02ce413bee09225ff2f27791ecb78ea273743 # master
         with:
           REPO_NAME: 'saltyorg/docs'
           CONTRIBUTOR: '### Contributors'

@@ -233,7 +233,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        cadvisor_role_docker_image_repo: "gcr.io/cadvisor/cadvisor"
+        cadvisor_role_docker_image_repo: "ghcr.io/google/cadvisor"
         ```
 
     ??? variable string "`cadvisor_role_docker_image_tag`"

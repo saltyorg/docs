@@ -138,11 +138,13 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
 === "Settings"
 
-    ??? variable string "`recyclarr_role_cron_schedule`"
+    ??? variable string "`recyclarr_role_api_key`"
 
         ```yaml
+        # Key that protects the Recyclarr server and that its command-line client
+        # uses to send commands to it. Must be at least 32 characters.
         # Type: string
-        recyclarr_role_cron_schedule: "@daily"
+        recyclarr_role_api_key: "{{ recyclarr_saltbox_facts.facts.api_key }}"
         ```
 
 === "Docker"
@@ -176,7 +178,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
 
         ```yaml
         # Type: string
-        recyclarr_role_docker_image_tag: "8"
+        recyclarr_role_docker_image_tag: "9"
         ```
 
     ??? variable string "`recyclarr_role_docker_image`"
@@ -194,8 +196,7 @@ Variables can be customized using the [Inventory](/saltbox/inventory/index.md#ov
         # Type: dict
         recyclarr_role_docker_envs_default:
           TZ: "{{ tz }}"
-          CRON_SCHEDULE: "{{ lookup('role_var', '_cron_schedule', role='recyclarr') }}"
-          RECYCLARR_CREATE_CONFIG: "true"
+          RECYCLARR_API_KEY: "{{ lookup('role_var', '_api_key', role='recyclarr') }}"
         ```
 
     ??? variable dict "`recyclarr_role_docker_envs_custom`"

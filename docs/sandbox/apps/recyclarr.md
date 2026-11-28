@@ -49,44 +49,63 @@ saltbox_automation:
 ---
 <!-- END SALTBOX MANAGED OVERVIEW SECTION -->
 
-## Pre-deployment
+## Deployment
 
-Edit the Recyclarr section in Sandbox `settings.yml` and enter your desired update schedule using standard cron syntax.
-
-```yaml
-     recyclarr:
-       cron_schedule: "@daily"
+```shell
+sb install sandbox-recyclarr
 ```
 
-!!! note
-    If you change this value, you must re-run `sb install sandbox-recyclarr` for it take effect.
+## Usage
 
-If a config file does not exist, a default config is generated but it is not functional out of the box. Edit the file `/opt/recyclarr/recyclarr.yml` to provision your Sonarr/Radarr details and preferred settings.
+Recyclarr runs as a server that stays up and syncs on a schedule. The role generates the API key the server requires, so there is nothing to set up for it.
+
+### Configuration
+
+If no configuration file exists, the role creates a starter `/opt/recyclarr/recyclarr.yml`. It is not functional out of the box; edit it to provision your Sonarr/Radarr details and preferred settings.
 
 - Configure Sonarr section
 
   ```yaml
-      sonarr:
-        sonarr:
-          base_url: http://sonarr:8989
-          api_key: your_sonarr_api_key
+  sonarr:
+    sonarr:
+      base_url: http://sonarr:8989
+      api_key: your_sonarr_api_key
   ```
 
 - Configure Radarr section
 
   ```yaml
-      radarr:
-        radarr:
-          base_url: http://radarr:7878
-          api_key: your_radarr_api_key
+  radarr:
+    radarr:
+      base_url: http://radarr:7878
+      api_key: your_radarr_api_key
   ```
 
-Follow documentation to complete configuration
+Follow the [configuration reference](https://recyclarr.dev/reference/configuration/) to complete the configuration. Recyclarr picks up changes to this file within about a minute, without a restart.
 
-## Deployment
+!!! warning
+    Recyclarr checks every configuration file when it starts and refuses to start if any of them has an error, which shows up as the container restarting in a loop. Run `docker logs recyclarr` to see what needs fixing.
+
+### Schedule
+
+Recyclarr syncs daily at midnight by default. To use a different schedule, set it in `/opt/recyclarr/settings.yml` using standard cron syntax.
+
+```yaml
+server:
+  schedule:
+    cron: "0 4 * * *"
+```
+
+Restart the container for the change to take effect.
 
 ```shell
-sb install sandbox-recyclarr
+docker restart recyclarr
+```
+
+### Manual sync
+
+```shell
+docker exec recyclarr recyclarr sync
 ```
 
 <!-- BEGIN SALTBOX MANAGED VARIABLES SECTION -->
